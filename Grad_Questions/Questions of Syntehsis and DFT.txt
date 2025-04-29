@@ -29,7 +29,18 @@ We don't have to use the input capacitance on a std_cell instead we look for the
 
 
 
-3- During DFT formal verification, we encountered a mismatch on a net related to scan_cg_en_i and test_mode. The implementation had test_mode set to '0' (functional mode), while in the RTL, scan_cg_en_i was set to '1', leading to a comparison failure. However, since this signal was inserted in the original RTL solely for DFT purposes, can it be safely ignored in the equivalence check?
+3- When I used a list in target_library "set target_library [list $SSLIB $TTLIB $FFLIB]" I get an error "cant' read link library" but if I used only one corner inside the list there is no error so why is this happening?
+
+## Standard Cell libraries 
+set target_library [list $SSLIB]
+
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $target_library]
+
+
+
+
+4- During DFT formal verification, we encountered a mismatch on a net related to scan_cg_en_i and test_mode. The implementation had test_mode set to '0' (functional mode), while in the RTL, scan_cg_en_i was set to '1', leading to a comparison failure. However, since this signal was inserted in the original RTL solely for DFT purposes, can it be safely ignored in the equivalence check?
 
 
 
