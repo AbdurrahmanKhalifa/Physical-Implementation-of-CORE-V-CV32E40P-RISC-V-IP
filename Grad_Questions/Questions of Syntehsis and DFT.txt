@@ -25,7 +25,7 @@ set_load 10 [all_outputs]
 
 Answer:
 
-We don't have to use the input capacitance on a std_cell instead we look for the maximum capacitance that the std_cell that will be connected to the output can handle and based on whether we work on an IP that will be connected to another module or we work on chip level and model the output load capacitance of another module or the external world  
+We don't have to use the input capacitance on a std_cell instead we look for the maximum capacitance that the std_cell output pin that will be connected to the output can handle and based on whether we work on an IP that will be connected to another module or we work on chip level and model the output load capacitance of another module or the external world  
 
 
 
