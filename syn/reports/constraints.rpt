@@ -1,0 +1,47 @@
+Error: Cannot read file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-58)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Tue Apr 29 20:03:05 2025
+****************************************
+
+
+   max_fanout
+
+                             Required        Actual
+   Net                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   rst_ni (dont_touch)          4.00        2257.00       -2253.00  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1               -2253.00  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   rst_ni (dont_touch)         17.28        1062.08       -1044.80  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1               -1044.80  
+
+   min_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   core_i/ex_stage_i/alu_i/n2044     0.15      0.14          -0.01  (VIOLATED)
+   core_i/ex_stage_i/alu_i/n2051     0.15      0.14          -0.01  (VIOLATED)
+   core_i/ex_stage_i/alu_i/n2067     0.15      0.14          -0.01  (VIOLATED)
+   core_i/ex_stage_i/alu_i/n2079     0.15      0.14          -0.01  (VIOLATED)
+   core_i/id_stage_i/decoder_i/n157     0.15     0.14        -0.01  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/n248     0.15     0.14    -0.01 (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      6                  -0.05  
+
+1
