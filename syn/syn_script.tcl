@@ -1,4 +1,9 @@
 
+sh mkdir -p netlists
+sh mkdir -p sdf
+sh mkdir -p sdc
+sh mkdir -p reports
+
 ########################### Define Top Module ############################
                                                    
 set top_module cv32e40p_top
@@ -32,7 +37,7 @@ set TTLIB "saed14hvt_tt0p6v25c.db"
 set FFLIB "saed14hvt_ff0p88v125c.db" 
 
 ## Standard Cell libraries 
-set target_library [list $SSLIB $TTLIB $FFLIB]
+set target_library [list $SSLIB]
 
 ## Standard Cell & Hard Macros libraries 
 set link_library [list * $target_library]
@@ -131,25 +136,21 @@ set_svf -off
 # Write out files
 #############################################################################
 
-sh mkdir -p netlists
-
 write -f ddc -hierarchy -output netlists/$top_module.ddc
 write_file -format verilog -hierarchy -output netlists/$top_module.sv
 write_sdf  sdf/$top_module.sdf
 write_sdc  -nosplit sdc/$top_module.sdc
 
-####################### reporting ##########################################
-
-sh mkdir -p reports	
+####################### reporting ##########################################	
 
 report_area -hierarchy > reports/area.rpt
-report_cell > ./reports/cells.rpt
-report_qor > ./reports/qor.rpt
+report_cell > reports/cells.rpt
+report_qor > reports/qor.rpt
 report_power -hierarchy > reports/power.rpt
 #report_timing -delay_type min -max_paths 10 > reports/hold.rpt
 report_timing -delay_type max -max_paths 10 > reports/setup.rpt
 report_clock -attributes > reports/clocks.rpt
-report_resources > ./reports/resources.rpt
+report_resources > reports/resources.rpt
 report_constraint -all_violators -nosplit > reports/constraints.rpt
 
 ############################################################################

@@ -3,7 +3,7 @@
 Report : qor
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Tue Apr 29 20:02:08 2025
+Date   : Tue Apr 29 22:25:44 2025
 ****************************************
 
 
@@ -25,12 +25,12 @@ Date   : Tue Apr 29 20:02:08 2025
   -----------------------------------
   Hierarchical Cell Count:         74
   Hierarchical Port Count:      11572
-  Leaf Cell Count:              34907
-  Buf/Inv Cell Count:           14878
-  Buf Cell Count:                5280
-  Inv Cell Count:                9994
+  Leaf Cell Count:              34595
+  Buf/Inv Cell Count:           14562
+  Buf Cell Count:                4891
+  Inv Cell Count:               10069
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:     32649
+  Combinational Cell Count:     32337
   Sequential Cell Count:         2258
   Macro Count:                      0
   -----------------------------------
@@ -38,21 +38,21 @@ Date   : Tue Apr 29 20:02:08 2025
 
   Area
   -----------------------------------
-  Combinational Area:    11183.782702
-  Noncombinational Area:  2407.989685
-  Buf/Inv Area:           3462.889207
-  Total Buffer Area:          1758.24
-  Total Inverter Area:        2161.79
+  Combinational Area:    11101.598298
+  Noncombinational Area:  2407.767685
+  Buf/Inv Area:           3374.000403
+  Total Buffer Area:          1656.39
+  Total Inverter Area:        2177.07
   Macro/Black Box Area:      0.000000
-  Net Area:              20316.845665
+  Net Area:              20317.273936
   -----------------------------------
-  Cell Area:             13591.772387
-  Design Area:           33908.618052
+  Cell Area:             13509.365983
+  Design Area:           33826.639919
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:         37394
+  Total Number of Nets:         37081
   Nets With Violations:             1
   Max Trans Violations:             0
   Max Cap Violations:               1
@@ -64,12 +64,12 @@ Date   : Tue Apr 29 20:02:08 2025
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                   68.92
-  Logic Optimization:                109.53
-  Mapping Optimization:              243.67
+  Resource Sharing:                   40.38
+  Logic Optimization:                 84.93
+  Mapping Optimization:              224.17
   -----------------------------------------
-  Overall Compile Time:              448.14
-  Overall Compile Wall Clock Time:   449.91
+  Overall Compile Time:              369.87
+  Overall Compile Wall Clock Time:   370.40
 
   --------------------------------------------------------------------
 

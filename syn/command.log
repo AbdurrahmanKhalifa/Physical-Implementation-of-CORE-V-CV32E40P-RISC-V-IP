@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Tue Apr 29 19:52:09 2025
+#@ # Date:   Tue Apr 29 22:18:36 2025
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6628,6 +6628,11 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/syn/syn_script.tcl
 #@ # -- Starting source /home/ICer/ITI/PnR_Grad/syn/syn_script.tcl
 
 #@ 
+#@ sh mkdir -p netlists
+#@ sh mkdir -p sdf
+#@ sh mkdir -p sdc
+#@ sh mkdir -p reports
+#@ 
 #@ ########################### Define Top Module ############################
 #@ 
 #@ set top_module cv32e40p_top
@@ -6661,7 +6666,7 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/syn/syn_script.tcl
 #@ set FFLIB "saed14hvt_ff0p88v125c.db" 
 #@ 
 #@ ## Standard Cell libraries 
-#@ set target_library [list $SSLIB $TTLIB $FFLIB]
+#@ set target_library [list $SSLIB]
 #@ 
 #@ ## Standard Cell & Hard Macros libraries 
 #@ set link_library [list * $target_library]
@@ -6933,10 +6938,10 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/syn/syn_script.tcl
 #@ # Define the Worst Library for Max(#setup) analysis
 #@ # Define the Best Library for Min(hold) analysis
 #@ 
-#@ set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
+#@ #set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
 #@ 
 #@ #set_operating_conditions -min_library "saed14hvt_tt0p6v25c" -min "tt0p6v25c" -max_library "saed14hvt_tt0p6v25c" -max "tt0p6v25c"
-#@ #set_operating_conditions -min_library "saed14hvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
+#@ set_operating_conditions -min_library "saed14hvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
 #@ #set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ff0p88v125c" -max "ff0p88v125c"
 #@ 
 #@ #ungroup -flatten -all
@@ -6965,18 +6970,16 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/syn/syn_script.tcl
 #@ write_sdf  sdf/$top_module.sdf
 #@ write_sdc  -nosplit sdc/$top_module.sdc
 #@ 
-#@ ####################### reporting ##########################################
-#@ 
-#@ sh mkdir -p reports	
+#@ ####################### reporting ##########################################	
 #@ 
 #@ report_area -hierarchy > reports/area.rpt
-#@ report_cell > ./reports/cells.rpt
-#@ report_qor > ./reports/qor.rpt
+#@ report_cell > reports/cells.rpt
+#@ report_qor > reports/qor.rpt
 #@ report_power -hierarchy > reports/power.rpt
 #@ #report_timing -delay_type min -max_paths 10 > reports/hold.rpt
 #@ report_timing -delay_type max -max_paths 10 > reports/setup.rpt
 #@ report_clock -attributes > reports/clocks.rpt
-#@ report_resources > ./reports/resources.rpt
+#@ report_resources > reports/resources.rpt
 #@ report_constraint -all_violators -nosplit > reports/constraints.rpt
 #@ 
 #@ ############################################################################

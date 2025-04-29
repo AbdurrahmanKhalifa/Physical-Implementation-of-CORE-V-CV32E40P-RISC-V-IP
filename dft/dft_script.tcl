@@ -1,3 +1,7 @@
+sh mkdir -p reports
+sh mkdir -p netlists
+sh mkdir -p sdf
+sh mkdir -p sdc
 
 ########################### Define Top Module ############################
                                                    
@@ -33,7 +37,7 @@ set TTLIB "saed14hvt_tt0p6v25c.db"
 set FFLIB "saed14hvt_ff0p88v125c.db" 
 
 ## Standard Cell libraries 
-set target_library [list $SSLIB $TTLIB $FFLIB]
+set target_library [list $SSLIB]
 
 ## Standard Cell & Hard Macros libraries 
 set link_library [list * $target_library]  
@@ -100,8 +104,6 @@ link
 puts "###############################################"
 puts "######## checking design consistency ##########"
 puts "###############################################"
-
-sh mkdir -p reports
 
 check_design >> reports/check_design.rpt
 
@@ -183,10 +185,6 @@ set_svf -off
 #############################################################################
 # Write out files
 #############################################################################
-
-sh mkdir -p netlists
-sh mkdir -p sdf
-sh mkdir -p sdc
 
 write_file -format verilog -hierarchy -output netlists/$top_module.ddc
 write_file -format verilog -hierarchy -output netlists/$top_module.sv

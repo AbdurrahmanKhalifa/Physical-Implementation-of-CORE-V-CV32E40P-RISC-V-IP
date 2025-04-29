@@ -48,10 +48,10 @@ set_max_fanout 4 [current_design]
 # Define the Worst Library for Max(#setup) analysis
 # Define the Best Library for Min(hold) analysis
 
-set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
+#set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
 
 #set_operating_conditions -min_library "saed14hvt_tt0p6v25c" -min "tt0p6v25c" -max_library "saed14hvt_tt0p6v25c" -max "tt0p6v25c"
-#set_operating_conditions -min_library "saed14hvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
+set_operating_conditions -min_library "saed14hvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14hvt_ss0p6v125c" -max "ss0p6v125c"
 #set_operating_conditions -min_library "saed14hvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14hvt_ff0p88v125c" -max "ff0p88v125c"
 
 #ungroup -flatten -all

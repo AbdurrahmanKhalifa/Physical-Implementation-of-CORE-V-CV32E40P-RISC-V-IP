@@ -20,6 +20,10 @@
             or distribution of this software is strictly prohibited.
 Initializing...
 Initializing gui preferences from file  /home/ICer/.synopsys_dv_prefs.tcl
+sh mkdir -p reports
+sh mkdir -p netlists
+sh mkdir -p sdf
+sh mkdir -p sdc
 ########################### Define Top Module ############################
 set top_module cv32e40p_top
 cv32e40p_top
@@ -58,11 +62,11 @@ saed14hvt_tt0p6v25c.db
 set FFLIB "saed14hvt_ff0p88v125c.db" 
 saed14hvt_ff0p88v125c.db
 ## Standard Cell libraries 
-set target_library [list $SSLIB $TTLIB $FFLIB]
-saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db
+set target_library [list $SSLIB]
+saed14hvt_ss0p6v125c.db
 ## Standard Cell & Hard Macros libraries 
 set link_library [list * $target_library]  
-* {saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db}
+* saed14hvt_ss0p6v125c.db
 ######################## Reading RTL Files #################################
 puts "###########################################"
 ###########################################
@@ -77,20 +81,19 @@ Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_pkg.sv
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_pkg.sv:37: Parameter keyword used in local parameter declaration. (VER-329)
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
+Loading db file '/mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_ss0p6v125c.db'
+Information: Using CCS timing libraries. (TIM-024)
 1
 analyze -format $file_format cv32e40p_fpu_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_fpu_pkg.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_apu_core_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_apu_core_pkg.sv
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_apu_core_pkg.sv:25: Parameter keyword used in local parameter declaration. (VER-329)
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format fpnew_pkg.sv
 Running PRESTO HDLC
@@ -99,189 +102,153 @@ Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.s
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:360: signed to unsigned conversion occurs. (VER-318)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:490: signed to unsigned assignment occurs. (VER-318)
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_aligner.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_aligner.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_alu.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_alu.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_alu_div.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_alu_div.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_apu_disp.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_apu_disp.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_compressed_decoder.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_compressed_decoder.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_controller.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_controller.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_core.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_core.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_cs_registers.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_cs_registers.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_decoder.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_decoder.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_ex_stage.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_ex_stage.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_ff_one.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_ff_one.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_fifo.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_fifo.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_fp_wrapper.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_fp_wrapper.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_hwloop_regs.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_hwloop_regs.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_id_stage.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_id_stage.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_if_stage.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_if_stage.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_int_controller.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_int_controller.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_load_store_unit.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_load_store_unit.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_mult.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_mult.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_obi_interface.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_obi_interface.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_popcnt.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_popcnt.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_prefetch_buffer.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_prefetch_buffer.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_prefetch_controller.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_prefetch_controller.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_register_file_ff.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_register_file_ff.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 ##analyze -format $file_format cv32e40p_register_file_latch.sv
 analyze -format $file_format cv32e40p_clock_gate.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_clock_gate.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format cv32e40p_sleep_unit.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/cv32e40p_sleep_unit.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format mux2X1.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/mux2X1.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 analyze -format $file_format /home/ICer/ITI/PnR_Grad/rtl/dft_top/cv32e40p_top.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/dft_top/cv32e40p_top.sv
 Presto compilation completed successfully.
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 1
 elaborate -lib WORK cv32e40p_top
-Loading db file '/mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_ss0p6v125c.db'
-Information: Using CCS timing libraries. (TIM-024)
-Loading db file '/mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_tt0p6v25c.db'
-Loading db file '/mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_ff0p88v125c.db'
 Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/gtech.db'
 Loading db file '/home/synopsys/syn/O-2018.06-SP1/libraries/syn/standard.sldb'
   Loading link library 'saed14hvt_ss0p6v125c'
-  Loading link library 'saed14hvt_tt0p6v25c'
-  Loading link library 'saed14hvt_ff0p88v125c'
   Loading link library 'gtech'
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 Running PRESTO HDLC
 Presto compilation completed successfully.
 Elaborated 1 design.
@@ -1286,8 +1253,6 @@ link
   --------------------------------------------------------------------------
   * (26 designs)              /home/ICer/ITI/PnR_Grad/dft/cv32e40p_top.db, etc
   saed14hvt_ss0p6v125c (library) /mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_ss0p6v125c.db
-  saed14hvt_tt0p6v25c (library) /mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_tt0p6v25c.db
-  saed14hvt_ff0p88v125c (library) /mnt/hgfs/saed14_pdk/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/db_ccs/saed14hvt_ff0p88v125c.db
 
 1
 #################### Liniking All The Design Parts #########################
@@ -1297,7 +1262,6 @@ puts "######## checking design consistency ##########"
 ######## checking design consistency ##########
 puts "###############################################"
 ###############################################
-sh mkdir -p reports
 check_design >> reports/check_design.rpt
 #################### Define Design Constraints #########################
 puts "###############################################"
@@ -1438,7 +1402,6 @@ puts "###############################################"
 #test_ready compile
 compile -scan
 Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 Information: Evaluating DesignWare library utilization. (UISN-27)
 
 ============================================================================
@@ -1460,9 +1423,6 @@ Warning: No single bit degenerate for multibit library cell 'SAEDHVT14_FSDN2_V2_
 Warning: No single bit degenerate for multibit library cell 'SAEDHVT14_FSDN2_V2_2'. (OPT-914)
 Warning: No single bit degenerate for multibit library cell 'SAEDHVT14_FSDN2_V2_1'. (OPT-914)
 Warning: No single bit degenerate for multibit library cell 'SAEDHVT14_FSDN2_V2_0P5'. (OPT-914)
-Warning: Operating condition ss0p6v125c set on design cv32e40p_top has different process,
-voltage and temperatures parameters than the parameters at which target library 
-saed14hvt_tt0p6v25c is characterized. Delays may be inaccurate as a result. (OPT-998)
 
   Beginning Pass 1 Mapping
   ------------------------
@@ -1824,9 +1784,9 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:02:37   15159.7    104.30  123593.9     187.1                          
-    0:02:37   15159.7    104.30  123593.9     187.1                          
-    0:02:42   15600.8      3.24    1157.8      51.4                          
+    0:02:12   15159.7    104.30  123593.9     187.1                          
+    0:02:12   15159.7    104.30  123593.9     187.1                          
+    0:02:17   15600.8      3.24    1157.8      51.4                          
 Information: The register 'core_i/id_stage_i/apu_lat_ex_o_reg[1]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/apu_op_ex_o_reg[0]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/apu_lat_ex_o_reg[0]' is a constant and will be removed. (OPT-1206)
@@ -1972,21 +1932,21 @@ Information: The register 'core_i/id_stage_i/mult_imm_ex_o_reg[4]' is a constant
 Information: The register 'core_i/id_stage_i/mult_operator_ex_o_reg[0]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/mult_sel_subword_ex_o_reg' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a constant and will be removed. (OPT-1206)
-    0:03:06   16825.3      0.00       0.0      14.9                          
-    0:03:07   16825.3      0.00       0.0      14.9                          
-    0:03:07   16825.3      0.00       0.0      14.9                          
-    0:03:07   16825.3      0.00       0.0      14.9                          
-    0:03:08   16825.3      0.00       0.0      14.9                          
-    0:03:32   13406.2      0.00       0.0      14.9                          
-    0:03:35   13404.4      0.00       0.0      14.4                          
-    0:03:41   13403.4      0.00       0.0      14.4                          
-    0:03:42   13403.4      0.00       0.0      14.4                          
-    0:03:42   13403.4      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
+    0:02:41   16825.3      0.00       0.0      14.9                          
+    0:02:42   16825.3      0.00       0.0      14.9                          
+    0:02:42   16825.3      0.00       0.0      14.9                          
+    0:02:42   16825.3      0.00       0.0      14.9                          
+    0:02:42   16825.3      0.00       0.0      14.9                          
+    0:03:06   13406.2      0.00       0.0      14.9                          
+    0:03:09   13404.4      0.00       0.0      14.4                          
+    0:03:15   13403.4      0.00       0.0      14.4                          
+    0:03:16   13403.4      0.00       0.0      14.4                          
+    0:03:16   13403.4      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
 
 
 
@@ -1997,9 +1957,9 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:43   13403.3      0.00       0.0      14.4                          
+    0:03:16   13403.3      0.00       0.0      14.4                          
+    0:03:17   13403.3      0.00       0.0      14.4                          
+    0:03:17   13403.3      0.00       0.0      14.4                          
 
 
   Beginning Design Rule Fixing  (min_capacitance)
@@ -2009,7 +1969,7 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:43   13403.3      0.00       0.0      14.4                          
+    0:03:17   13403.3      0.00       0.0      14.4                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -2019,27 +1979,27 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:03:43   13403.3      0.00       0.0      14.4                          
-    0:03:44   13403.3      0.00       0.0      14.4                          
-    0:03:50   13328.1      0.00       0.0      14.4                          
-    0:03:52   13311.2      0.00       0.0      14.4                          
-    0:03:54   13308.0      0.00       0.0      14.4                          
-    0:03:54   13307.3      0.00       0.0      14.4                          
-    0:03:54   13306.5      0.00       0.0      14.4                          
-    0:03:54   13305.8      0.00       0.0      14.4                          
-    0:03:55   13305.4      0.00       0.0      14.4                          
-    0:03:55   13304.9      0.00       0.0      14.4                          
-    0:03:55   13304.5      0.00       0.0      14.4                          
-    0:03:56   13304.1      0.00       0.0      14.4                          
-    0:03:56   13304.1      0.00       0.0      14.4                          
-    0:03:57   13303.7      0.00       0.0      14.4                          
-    0:03:57   13301.4      0.00       0.0      14.4                          
-    0:03:57   13301.4      0.00       0.0      14.4                          
-    0:03:57   13301.4      0.00       0.0      14.4                          
-    0:03:57   13301.4      0.00       0.0      14.4                          
-    0:03:58   13301.4      0.00       0.0      14.4                          
-    0:03:58   13301.4      0.00       0.0      14.4                          
-    0:04:00   11746.4      0.00       0.0      14.4                          
+    0:03:17   13403.3      0.00       0.0      14.4                          
+    0:03:17   13403.3      0.00       0.0      14.4                          
+    0:03:22   13328.1      0.00       0.0      14.4                          
+    0:03:24   13311.2      0.00       0.0      14.4                          
+    0:03:25   13308.0      0.00       0.0      14.4                          
+    0:03:26   13307.3      0.00       0.0      14.4                          
+    0:03:26   13306.5      0.00       0.0      14.4                          
+    0:03:26   13305.8      0.00       0.0      14.4                          
+    0:03:26   13305.4      0.00       0.0      14.4                          
+    0:03:26   13304.9      0.00       0.0      14.4                          
+    0:03:26   13304.5      0.00       0.0      14.4                          
+    0:03:28   13304.1      0.00       0.0      14.4                          
+    0:03:28   13304.1      0.00       0.0      14.4                          
+    0:03:28   13303.7      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:29   13301.4      0.00       0.0      14.4                          
+    0:03:31   11746.4      0.00       0.0      14.4                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -2100,7 +2060,6 @@ Information: Identified active low asynchronous control port scan_rst. (TEST-266
 ###################### Pre-DFT Design Rule Checking #######################
 dft_drc -verbose
 In mode: all_dft...
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
   Pre-DFT DRC enabled
 Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 
@@ -4407,7 +4366,6 @@ Information: Test design rule checking completed. (TEST-123)
 1
 ############################# Preview DFT ##############################
 preview_dft -show scan_summary
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
   Information: Using test design rule information from previous dft_drc run.
   Architecting Scan Chains
@@ -4417,7 +4375,7 @@ Preview_dft report
 For    : 'Insert_dft' command
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Tue Apr 29 20:51:51 2025
+Date   : Tue Apr 29 22:32:51 2025
 ****************************************
 
 Number of chains: 5
@@ -4440,7 +4398,6 @@ S 5        SI[0] -->  SO[0]                     451   core_i/id_stage_i/register
 1
 ############################# Insert DFT ##############################
 insert_dft
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
   Information: Using test design rule information from previous dft_drc run.
   Architecting Scan Chains
@@ -4470,14 +4427,10 @@ Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1
 ######################## Optimize Logic post DFT #######################
 compile -scan -incremental
 Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
 
 Information: There are 4762 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
-Warning: Operating condition ss0p6v125c set on design cv32e40p_top has different process,
-voltage and temperatures parameters than the parameters at which target library 
-saed14hvt_tt0p6v25c is characterized. Delays may be inaccurate as a result. (OPT-998)
 
   Beginning Pass 1 Mapping  (Incremental)
   ------------------------
@@ -4508,9 +4461,14 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
   Selecting implementations
   Selecting implementations
   Selecting implementations
+  Building model 'DW01_NAND2'
+  Building model 'DW01_inc_width64' (rpl)
   Selecting implementations
   Selecting implementations
+  Building model 'DW01_add_width37' (rpl)
   Selecting implementations
+  Building model 'DW01_add_width19' (rpl)
+  Building model 'DW01_add_width20' (rpl)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_0.
  	Skipping incremental implementation selection for that design. (SYNH-45)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_1.
@@ -4523,10 +4481,12 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_5.
  	Skipping incremental implementation selection for that design. (SYNH-45)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_6.
  	Skipping incremental implementation selection for that design. (SYNH-45)
+  Building model 'DW01_add_width34' (rpl)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
  	Skipping incremental implementation selection for that design. (SYNH-45)
   Selecting implementations
   Selecting implementations
+  Building model 'DW01_sub_width32' (rpl)
 
   Beginning Delay Optimization Phase
   ----------------------------------
@@ -4535,9 +4495,9 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:25   11702.4      0.06       0.7      14.4                          
-    0:00:32   11818.7      0.00       0.0      14.4                          
-    0:00:33   11818.7      0.00       0.0      14.4                          
+    0:00:23   11702.4      0.06       0.7      14.4                          
+    0:00:29   11809.6      0.00       0.0      14.4                          
+    0:00:30   11809.6      0.00       0.0      14.4                          
 
 
   Beginning Design Rule Fixing  (min_capacitance)
@@ -4547,7 +4507,7 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:33   11818.7      0.00       0.0      14.4                          
+    0:00:30   11809.6      0.00       0.0      14.4                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -4561,7 +4521,6 @@ Warning: Design 'cv32e40p_top' contains 1 high-fanout nets. A fanout number of 1
 ###################### Design Rule Checking #######################
 dft_drc -verbose -coverage_estimate
 In mode: Internal_scan...
-Warning: Can't read link_library file 'saed14hvt_ss0p6v125c.db saed14hvt_tt0p6v25c.db saed14hvt_ff0p88v125c.db'. (UID-3)
   Design has scan chains in this mode
   Design is scan routed
   Post-DFT DRC enabled
@@ -4622,7 +4581,6 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
          core_i/if_stage_i/instr_rdata_id_o_reg[21]
          core_i/if_stage_i/instr_rdata_id_o_reg[20]
          core_i/if_stage_i/instr_rdata_id_o_reg[1]
-         core_i/if_stage_i/instr_rdata_id_o_reg[31]
          core_i/if_stage_i/instr_rdata_id_o_reg[0]
          core_i/if_stage_i/instr_rdata_id_o_reg[11]
          core_i/if_stage_i/instr_rdata_id_o_reg[10]
@@ -4680,6 +4638,7 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
          core_i/if_stage_i/instr_rdata_id_o_reg[18]
          core_i/if_stage_i/instr_rdata_id_o_reg[15]
          core_i/if_stage_i/pc_id_o_reg[2]
+         core_i/if_stage_i/instr_rdata_id_o_reg[31]
          core_i/id_stage_i/id_valid_q_reg
          core_i/id_stage_i/alu_clpx_shift_ex_o_reg[1]
          core_i/id_stage_i/pc_ex_o_reg[31]
@@ -6872,92 +6831,87 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
 ....Inferring feed-through connections....
 Information: Test design rule checking completed. (TEST-123)
   Running test coverage estimation...
- 195128 faults were added to fault list.
- ATPG performed for stuck fault model using internal pattern source.
- ----------------------------------------------------------
- #patterns     #faults     #ATPG faults  test      process
- stored     detect/active  red/au/abort  coverage  CPU time
- ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=155739, abort_limit=10...
- 0           70834  84904         1/0/0    51.38%      0.34
- 0           20204  64700         1/0/0    62.95%      0.62
- 0           10702  53991         6/0/0    69.07%      0.88
- 0            8772  45207        15/0/0    74.10%      1.14
- 0            5663  39534        24/0/0    77.35%      1.34
- 0            3502  36020        33/0/0    79.36%      1.56
- 0            3059  32951        39/0/0    81.12%      1.73
- 0            3060  29876        49/0/1    82.88%      1.95
- 0            2621  27243        59/0/1    84.38%      2.15
- 0            1735  25494        69/0/1    85.38%      2.34
- 0            1380  24087        81/0/1    86.19%      2.56
- 0             943  23123        95/0/1    86.74%      2.78
- 0             893  22204       115/0/1    87.26%      3.00
- 0            1246  20931       133/0/1    87.99%      3.23
- 0            1017  19899       145/0/3    88.58%      3.45
- 0             913  18956       163/0/3    89.12%      3.65
- 0             836  18090       182/0/4    89.61%      3.91
- 0             586  17471       203/0/5    89.97%      4.19
- 0             490  16951       224/0/6    90.26%      4.46
- 0             593  16327       246/0/7    90.62%      4.76
- 0             501  15801       264/0/8    90.92%      5.05
- 0             454  15305      295/0/10    91.20%      5.51
- 0             450  14827      317/0/12    91.48%      5.71
- 0             355  14441      337/0/13    91.70%      5.93
- 0             335  14060      370/0/14    91.91%      6.19
- 0             388  13571      438/0/15    92.19%      6.55
- 0             330  13173      479/0/15    92.41%      6.85
- 0             316  12823      504/0/15    92.61%      7.22
- 0             272  12523      527/0/15    92.79%      7.56
- 0             193  12296      552/0/15    92.91%      7.91
- 0             153  12108      580/0/15    93.02%      8.27
- 0             177  11889      607/0/15    93.15%      8.65
- 0             295  11555      633/0/17    93.34%      8.98
- 0             197  11312      664/0/17    93.47%      9.31
- 0             120  11154      691/0/19    93.56%      9.62
- 0             149  10830      787/1/24    93.74%     10.03
- 0             196  10512      879/1/34    93.92%     10.50
- 0             193  10245      937/1/35    94.07%     10.88
- 0             129  10016     1012/1/36    94.20%     11.29
- 0              93   9708     1188/1/40    94.37%     11.97
- 0             110   9556     1218/1/40    94.46%     12.35
- 0             107   9404     1247/1/41    94.55%     12.73
- 0              92   9271     1275/1/41    94.62%     13.11
- 0              96   9129     1303/1/41    94.70%     13.37
- 0             105   8972     1340/1/41    94.79%     13.72
- 0             102   8818     1376/1/41    94.88%     14.05
- 0              74   8698     1406/1/42    94.95%     14.38
- 0              69   8590     1435/1/43    95.01%     14.72
- 0              98   8427     1474/1/43    95.10%     15.24
- 0             118   8238     1517/1/44    95.21%     15.78
- 0              81   8107     1549/1/44    95.28%     16.26
- 0              75   7981     1582/1/44    95.36%     16.76
- 0              58   7856     1619/1/44    95.43%     17.22
- 0              85   7727     1652/1/44    95.50%     17.56
- 0              77   7601     1685/1/45    95.57%     17.93
- 0              63   7485     1718/2/46    95.64%     18.25
- 0              69   7358     1766/2/47    95.71%     18.68
- 0              87   7227     1799/2/47    95.78%     19.14
- 0              83   7080     1843/3/61    95.87%     19.75
- 0              69   6950     1886/3/74    95.94%     20.31
- 0              48   6851     1925/3/81    96.00%     20.83
- 0              65   6647     1998/3/86    96.11%     21.36
- 0              48   6531     2042/3/86    96.18%     21.78
- 0              54   6416     2083/3/87    96.24%     22.25
- 0              55   6308     2118/3/87    96.31%     22.62
- 0              48   6209     2155/3/88    96.36%     23.09
- 0              58   6073     2199/3/88    96.44%     23.71
- 0              58   5948     2251/3/88    96.51%     24.49
- 0              58   5820     2294/8/89    96.58%     25.26
- 0              74   5437     2506/8/89    96.80%     26.68
- 0              81   5302     2542/8/94    96.88%     27.28
- 0              59   5186     2580/8/96    96.94%     27.91
- 0              57   4540     2923/8/99    97.31%     31.07
- 0              32   4456    2959/8/100    97.36%     31.45
- 0              42   4354    2997/8/101    97.42%     31.88
- 0              51    560    5576/8/103    99.64%     57.83
- 0              37    420    5640/8/103    99.73%     58.05
- 0              45    342    5663/8/103    99.77%     58.25
- 0               2    144    5797/8/105    99.89%     59.32
+ 195116 faults were added to fault list.
+ 0           74868  80856         1/0/0    53.69%      0.35
+ 0           21492  59362         3/0/0    66.00%      0.61
+ 0            7565  51794         5/0/0    70.33%      0.80
+ 0            6489  45305         5/0/0    74.05%      0.96
+ 0            4265  41030        11/0/0    76.49%      1.19
+ 0            4101  36919        18/0/2    78.85%      1.41
+ 0            2481  34426        28/0/2    80.27%      1.61
+ 0            3234  31180        37/0/3    82.13%      1.81
+ 0            2241  28912        49/0/3    83.43%      2.03
+ 0            2044  26844        63/0/3    84.61%      2.26
+ 0            1755  25072        75/0/3    85.62%      2.49
+ 0            1326  23722        92/0/3    86.39%      2.73
+ 0            1314  22379       113/0/3    87.16%      2.95
+ 0            1358  21000       129/0/3    87.95%      3.20
+ 0            1081  19896       147/0/4    88.58%      3.46
+ 0             988  18883       165/0/4    89.16%      3.69
+ 0             757  18100       181/0/4    89.61%      3.96
+ 0             474  17603       198/0/5    89.89%      4.23
+ 0             566  17009       217/0/5    90.23%      4.47
+ 0             378  16596       239/0/5    90.47%      4.76
+ 0             531  16035       259/0/5    90.79%      5.03
+ 0             474  15526       281/0/5    91.08%      5.29
+ 0             463  15017       314/0/8    91.37%      5.79
+ 0             352  14634       338/0/8    91.58%      6.07
+ 0             383  14210       367/0/8    91.83%      6.32
+ 0             378  13785       398/0/9    92.07%      6.61
+ 0             377  13286      481/0/10    92.35%      6.99
+ 0             210  13044      505/0/10    92.49%      7.36
+ 0             218  12794      527/0/10    92.63%      7.67
+ 0             190  12570      551/0/12    92.76%      8.02
+ 0             200  12333      577/0/12    92.89%      8.39
+ 0             210  12088      600/0/12    93.03%      8.77
+ 0             287  11763      627/0/12    93.22%      9.10
+ 0             267  11454      657/0/12    93.39%      9.38
+ 0             129  11287      684/0/12    93.49%      9.69
+ 0             215  11001      729/0/13    93.65%      9.99
+ 0             146  10637      864/0/29    93.85%     10.52
+ 0             149  10403      926/0/29    93.98%     10.96
+ 0             137  10154     1011/0/29    94.12%     11.41
+ 0              77   9857     1180/0/33    94.29%     12.08
+ 0             113   9704     1208/0/34    94.37%     12.48
+ 0              77   9585     1237/0/35    94.44%     12.90
+ 0              93   9453     1264/0/36    94.52%     13.33
+ 0             138   9274     1293/0/36    94.62%     13.60
+ 0              85   9151     1321/0/36    94.69%     13.90
+ 0             124   8974     1358/0/38    94.79%     14.20
+ 0              83   8847     1388/0/39    94.86%     14.56
+ 0              95   8712     1418/0/39    94.94%     14.89
+ 0              96   8570     1447/0/39    95.02%     15.22
+ 0              73   8458     1476/0/40    95.08%     15.55
+ 0              58   8312     1529/0/40    95.17%     16.20
+ 0              89   8178     1561/0/41    95.24%     16.66
+ 0              82   8053     1591/0/41    95.31%     17.12
+ 0              90   7914     1625/0/41    95.39%     17.62
+ 0              56   7802     1656/1/41    95.46%     18.10
+ 0              85   7664     1694/1/41    95.53%     18.47
+ 0              67   7556     1726/1/41    95.60%     18.86
+ 0              45   7465     1757/1/41    95.65%     19.25
+ 0              60   7354     1789/1/41    95.71%     19.65
+ 0             106   7185     1839/1/42    95.81%     20.23
+ 0              90   7045     1877/1/57    95.89%     20.76
+ 0              71   6914     1922/1/71    95.96%     21.39
+ 0              49   6809     1962/1/79    96.02%     21.83
+ 0              64   6609     2039/1/81    96.14%     22.23
+ 0              57   6488     2083/1/82    96.21%     22.63
+ 0              48   6392     2117/1/82    96.26%     23.12
+ 0              67   6275     2152/1/82    96.33%     23.51
+ 0              55   6167     2191/1/83    96.39%     24.03
+ 0              69   5983     2256/1/83    96.49%     24.91
+ 0              52   5879     2292/1/83    96.55%     25.55
+ 0              46   5494     2513/6/86    96.77%     27.15
+ 0             103   5340     2549/6/90    96.86%     27.81
+ 0              67   5219     2586/6/94    96.93%     28.44
+ 0              46   4583     2924/7/96    97.29%     31.68
+ 0              33   4499     2963/7/96    97.34%     32.07
+ 0              38   4406     2998/7/96    97.39%     32.49
+ 0              41   4313     3036/7/97    97.45%     32.93
+ 0              70    481    5620/7/101    99.69%     59.05
+ 0              41    407    5642/7/101    99.74%     59.28
+ 0              30    143    5798/7/103    99.89%     60.50
  
             Pattern Summary Report
  -----------------------------------------------
@@ -6969,13 +6923,13 @@ Information: Test design rule checking completed. (TEST-123)
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT     165944
+ Detected                         DT     165931
  Possibly detected                PT          0
- Undetectable                     UD      29005
- ATPG untestable                  AU         35
- Not detected                     ND        144
+ Undetectable                     UD      29009
+ ATPG untestable                  AU         33
+ Not detected                     ND        143
  -----------------------------------------------
- total faults                            195128
+ total faults                            195116
  test coverage                            99.89%
  -----------------------------------------------
   Information: The test coverage above may be inferior
@@ -6988,9 +6942,6 @@ set_svf -off
 #############################################################################
 # Write out files
 #############################################################################
-sh mkdir -p netlists
-sh mkdir -p sdf
-sh mkdir -p sdc
 write_file -format verilog -hierarchy -output netlists/$top_module.ddc
 Writing verilog file '/home/ICer/ITI/PnR_Grad/dft/netlists/cv32e40p_top.ddc'.
 Warning: Verilog writer has added 2 nets to module cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
@@ -7040,8 +6991,8 @@ dft_drc -coverage_estimate > reports/dft_drc_post_dft.rpt
 #gui_start
 exit
 
-Memory usage for main task 1552 Mbytes.
-Memory usage for this session 1552 Mbytes.
-CPU usage for this session 506 seconds ( 0.14 hours ).
+Memory usage for main task 1439 Mbytes.
+Memory usage for this session 1439 Mbytes.
+CPU usage for this session 424 seconds ( 0.12 hours ).
 
 Thank you...

@@ -6,7 +6,7 @@ Report : timing
         -max_paths 100
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Tue Apr 29 20:54:30 2025
+Date   : Tue Apr 29 22:35:24 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.

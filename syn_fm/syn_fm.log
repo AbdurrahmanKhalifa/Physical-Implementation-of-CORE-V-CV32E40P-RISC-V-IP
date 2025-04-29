@@ -19,7 +19,7 @@
 
 Build: 4031317
 Hostname: IC (RHEL64)
-Current time: Tue Apr 29 21:05:12 2025
+Current time: Tue Apr 29 22:40:12 2025
 
 Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
 ############################  Search PATH ################################
@@ -355,7 +355,7 @@ Status:  Processing Guide Commands...
                                          Status
 Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
 ----------------------------------------------------------------------------
-environment         :          3          0          0          0          3
+environment         :          2          0          0          0          2
 instance_map        :         24          0          0          0         24
 mark                :         32          0          0          0         32
 multiplier          :          9          0          0          0          9
@@ -406,6 +406,7 @@ Implementation design is 'Imp:/WORK/cv32e40p_top'
 ****************************************************************************************
 
 Status:  Verifying...
+.
 
 ************ RTL Interpretation Summary ************
 ************ Design: Ref:/WORK/cv32e40p_top

@@ -1,15 +1,15 @@
 ****************************************************
 
-Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_2/SUM[1] is undriven.
-Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_2/SUM[0] is undriven.
-Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_2/CO is undriven.
+Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_0/SUM[1] is undriven.
+Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_0/SUM[0] is undriven.
+Info:  Net Imp:/WORK/cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_0/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_aligner_DW01_add_0/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_aligner_DW01_add_1/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_DW01_add_2/SUM[0] is undriven.
 Info:  Net Imp:/WORK/cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_DW01_add_2/CO is undriven.
-Info:  Net Imp:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_4/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_6/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_8/CO is undriven.
+Info:  Net Imp:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_10/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_alu_div_DW01_sub_0/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_alu_div_DW01_add_0/CO is undriven.
 Info:  Net Imp:/WORK/cv32e40p_alu_div_DW01_sub_1/CO is undriven.
@@ -127,23 +127,23 @@ Info:  Net Imp:/WORK/cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0
 Info:  Net Imp:/WORK/cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1_DW01_cmp6_0/LE is undriven.
 Info:  Net Imp:/WORK/cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1_DW01_cmp6_0/GE is undriven.
 Info:  Net Imp:/WORK/cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1_DW01_cmp6_0/NE is undriven.
-Info:  guide_uniquify 446 (Line: 3566)  Cannot find object "core_i/load_store_unit_i/dp_cluster_0/mult_add_346_aco" in design 'cv32e40p_top'.
-Info:  SVF Operation 446 (Line: 3566) - uniquify.  Status: rejected
-Info:  guide_uniquify 447 (Line: 3570)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_266" in design 'cv32e40p_top'.
-Info:  SVF Operation 447 (Line: 3570) - uniquify.  Status: rejected
-Info:  guide_uniquify 448 (Line: 3574)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_267" in design 'cv32e40p_top'.
-Info:  SVF Operation 448 (Line: 3574) - uniquify.  Status: rejected
-Info:  guide_uniquify 449 (Line: 3578)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_268" in design 'cv32e40p_top'.
-Info:  SVF Operation 449 (Line: 3578) - uniquify.  Status: rejected
-Info:  guide_uniquify 450 (Line: 3582)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_269" in design 'cv32e40p_top'.
-Info:  SVF Operation 450 (Line: 3582) - uniquify.  Status: rejected
-Info:  guide_uniquify 451 (Line: 3586)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_2/mult_224" in design 'cv32e40p_top'.
-Info:  SVF Operation 451 (Line: 3586) - uniquify.  Status: rejected
-Info:  guide_uniquify 452 (Line: 3590)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_1/mult_299" in design 'cv32e40p_top'.
-Info:  SVF Operation 452 (Line: 3590) - uniquify.  Status: rejected
-Info:  guide_uniquify 453 (Line: 3594)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_1/mult_300" in design 'cv32e40p_top'.
-Info:  SVF Operation 453 (Line: 3594) - uniquify.  Status: rejected
-Info:  guide_uniquify 454 (Line: 3598)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_0/mult_110" in design 'cv32e40p_top'.
+Info:  guide_uniquify 445 (Line: 3563)  Cannot find object "core_i/load_store_unit_i/dp_cluster_0/mult_add_346_aco" in design 'cv32e40p_top'.
+Info:  SVF Operation 445 (Line: 3563) - uniquify.  Status: rejected
+Info:  guide_uniquify 446 (Line: 3567)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_266" in design 'cv32e40p_top'.
+Info:  SVF Operation 446 (Line: 3567) - uniquify.  Status: rejected
+Info:  guide_uniquify 447 (Line: 3571)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_267" in design 'cv32e40p_top'.
+Info:  SVF Operation 447 (Line: 3571) - uniquify.  Status: rejected
+Info:  guide_uniquify 448 (Line: 3575)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_268" in design 'cv32e40p_top'.
+Info:  SVF Operation 448 (Line: 3575) - uniquify.  Status: rejected
+Info:  guide_uniquify 449 (Line: 3579)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_269" in design 'cv32e40p_top'.
+Info:  SVF Operation 449 (Line: 3579) - uniquify.  Status: rejected
+Info:  guide_uniquify 450 (Line: 3583)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_2/mult_224" in design 'cv32e40p_top'.
+Info:  SVF Operation 450 (Line: 3583) - uniquify.  Status: rejected
+Info:  guide_uniquify 451 (Line: 3587)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_1/mult_299" in design 'cv32e40p_top'.
+Info:  SVF Operation 451 (Line: 3587) - uniquify.  Status: rejected
+Info:  guide_uniquify 452 (Line: 3591)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_1/mult_300" in design 'cv32e40p_top'.
+Info:  SVF Operation 452 (Line: 3591) - uniquify.  Status: rejected
+Info:  guide_uniquify 453 (Line: 3595)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_0/mult_110" in design 'cv32e40p_top'.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_110 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_224 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_266 SUCCEEDED.

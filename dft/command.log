@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Tue Apr 29 20:46:04 2025
+#@ # Date:   Tue Apr 29 22:28:27 2025
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6627,6 +6627,10 @@ source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 source -echo -verbose /home/ICer/ITI/PnR_Grad/dft/dft_script.tcl
 #@ # -- Starting source /home/ICer/ITI/PnR_Grad/dft/dft_script.tcl
 
+#@ sh mkdir -p reports
+#@ sh mkdir -p netlists
+#@ sh mkdir -p sdf
+#@ sh mkdir -p sdc
 #@ 
 #@ ########################### Define Top Module ############################
 #@ 
@@ -6662,7 +6666,7 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/dft/dft_script.tcl
 #@ set FFLIB "saed14hvt_ff0p88v125c.db" 
 #@ 
 #@ ## Standard Cell libraries 
-#@ set target_library [list $SSLIB $TTLIB $FFLIB]
+#@ set target_library [list $SSLIB]
 #@ 
 #@ ## Standard Cell & Hard Macros libraries 
 #@ set link_library [list * $target_library]  
@@ -6729,8 +6733,6 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/dft/dft_script.tcl
 #@ puts "###############################################"
 #@ puts "######## checking design consistency ##########"
 #@ puts "###############################################"
-#@ 
-#@ sh mkdir -p reports
 #@ 
 #@ check_design >> reports/check_design.rpt
 #@ 
@@ -6949,10 +6951,6 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/dft/dft_script.tcl
 #@ #############################################################################
 #@ # Write out files
 #@ #############################################################################
-#@ 
-#@ sh mkdir -p netlists
-#@ sh mkdir -p sdf
-#@ sh mkdir -p sdc
 #@ 
 #@ write_file -format verilog -hierarchy -output netlists/$top_module.ddc
 #@ write_file -format verilog -hierarchy -output netlists/$top_module.sv

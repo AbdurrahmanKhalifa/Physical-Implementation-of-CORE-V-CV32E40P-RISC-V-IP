@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : O-2018.06-SP1
-// Date      : Tue Apr 29 20:53:46 2025
+// Date      : Tue Apr 29 22:34:42 2025
 /////////////////////////////////////////////////////////////
 
 
@@ -430,7 +430,6 @@ module cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1 ( clk,
   SAEDHVT14_NR2_MM_1 U120 ( .A1(cnt_q[1]), .A2(cnt_q[0]), .X(n157) );
   SAEDHVT14_NR3_1 U121 ( .A1(n7), .A2(n22), .A3(state_q), .X(n5) );
   SAEDHVT14_INV_S_1 U122 ( .A(hwlp_jump_i), .X(n22) );
-  SAEDHVT14_TIE1_4 U123 ( .X(\*Logic1* ) );
   SAEDHVT14_NR2_1 U124 ( .A1(n145), .A2(n9), .X(next_state) );
   SAEDHVT14_ND2_CDC_0P5 U125 ( .A1(n160), .A2(n2), .X(n171) );
   SAEDHVT14_AOI22_0P5 U126 ( .A1(trans_addr_incr[31]), .A2(n9), .B1(
@@ -617,10 +616,11 @@ module cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1 ( clk,
         n50, n50, n50, n50, n50, n50, n50, n50, n50, \*Logic1* , n50, n50}), 
         .CI(n50), .SUM({trans_addr_incr[31:2], SYNOPSYS_UNCONNECTED__0, 
         SYNOPSYS_UNCONNECTED__1}) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n50) );
-  SAEDHVT14_ND2_MM_1 U24 ( .A1(n142), .A2(n141), .X(trans_addr_o[31]) );
-  SAEDHVT14_ND2_MM_1 U25 ( .A1(branch_addr_i[31]), .A2(n6), .X(n142) );
-  SAEDHVT14_ND2_ECO_1 U115 ( .A1(n142), .A2(n25), .X(n143) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U24 ( .X(n50) );
+  SAEDHVT14_ND2_MM_1 U25 ( .A1(n142), .A2(n141), .X(trans_addr_o[31]) );
+  SAEDHVT14_ND2_CDC_1 U115 ( .A1(branch_addr_i[31]), .A2(n6), .X(n142) );
+  SAEDHVT14_ND2_ECO_1 U123 ( .A1(n142), .A2(n25), .X(n143) );
   SAEDHVT14_BUF_ECO_3 U246 ( .A(test_se), .X(n1) );
   SAEDHVT14_BUF_ECO_3 U247 ( .A(test_se), .X(n144) );
   SAEDHVT14_BUF_ECO_3 U248 ( .A(test_se), .X(n173) );
@@ -1926,7 +1926,7 @@ module cv32e40p_obi_interface_TRANS_STABLE0_test_1 ( clk, rst_n, trans_valid_i,
   SAEDHVT14_MUXI2_U_0P5 U348 ( .D0(n103), .D1(n104), .S(n11), .X(n269) );
   SAEDHVT14_MUXI2_U_0P5 U349 ( .D0(n104), .D1(n103), .S(n26), .X(
         obi_addr_o[31]) );
-  SAEDHVT14_INV_0P75 U3 ( .A(trans_addr_i[31]), .X(n104) );
+  SAEDHVT14_INV_S_1 U3 ( .A(trans_addr_i[31]), .X(n104) );
   SAEDHVT14_BUF_ECO_3 U282 ( .A(test_se), .X(n30) );
   SAEDHVT14_BUF_ECO_3 U350 ( .A(test_se), .X(n76) );
   SAEDHVT14_BUF_ECO_3 U351 ( .A(test_se), .X(n105) );
@@ -2026,7 +2026,6 @@ module cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1 ( clk, rst_n,
         n4), .X(fetch_rdata_o[8]) );
   SAEDHVT14_AO22_1 U38 ( .A1(resp_rdata[24]), .A2(n6), .B1(fifo_rdata[24]), 
         .B2(n2), .X(fetch_rdata_o[24]) );
-  SAEDHVT14_TIE1_4 U39 ( .X(\*Logic1* ) );
   SAEDHVT14_INV_1 U40 ( .A(n7), .X(n1) );
   SAEDHVT14_INV_1 U41 ( .A(n7), .X(n2) );
   SAEDHVT14_INV_1 U42 ( .A(n7), .X(n3) );
@@ -2065,7 +2064,8 @@ module cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1 ( clk, rst_n,
         .obi_addr_o(instr_addr_o), .obi_rdata_i(instr_rdata_i), .obi_rvalid_i(
         instr_rvalid_i), .obi_err_i(instr_err_i), .test_si(n11), .test_so(n10), 
         .test_se(n8) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(fifo_flush_but_first) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U39 ( .X(fifo_flush_but_first) );
   SAEDHVT14_BUF_S_10 U44 ( .A(test_se), .X(n8) );
 endmodule
 
@@ -3090,7 +3090,6 @@ module cv32e40p_aligner_test_1 ( clk, rst_n, fetch_valid_i, aligner_ready_o,
   SAEDHVT14_INV_S_1 U413 ( .A(hwlp_addr_i[0]), .X(n143) );
   SAEDHVT14_INV_S_1 U414 ( .A(hwlp_addr_i[31]), .X(n174) );
   SAEDHVT14_INV_S_1 U415 ( .A(hwlp_addr_i[1]), .X(n144) );
-  SAEDHVT14_TIE1_4 U416 ( .X(\*Logic1* ) );
   SAEDHVT14_BUF_ECO_1 U417 ( .A(branch_i), .X(n44) );
   SAEDHVT14_INV_0P5 U418 ( .A(n215), .X(n37) );
   cv32e40p_aligner_DW01_add_0 add_64 ( .A(pc_o), .B({n88, n88, n88, n88, n88, 
@@ -3099,7 +3098,8 @@ module cv32e40p_aligner_test_1 ( clk, rst_n, fetch_valid_i, aligner_ready_o,
   cv32e40p_aligner_DW01_add_1 add_63 ( .A(pc_o), .B({n88, n88, n88, n88, n88, 
         n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, 
         n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, n88, \*Logic1* , n88}), .CI(n88), .SUM(pc_plus2) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n88) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U416 ( .X(n88) );
   SAEDHVT14_BUF_ECO_3 U419 ( .A(test_se), .X(n179) );
   SAEDHVT14_BUF_ECO_3 U420 ( .A(test_se), .X(n180) );
   SAEDHVT14_BUF_ECO_3 U421 ( .A(test_se), .X(n181) );
@@ -3427,83 +3427,81 @@ endmodule
   output [31:0] SUM;
   input CI;
   output CO;
-  wire   \A[1] , n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13;
+  wire   \A[1] , n1, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11;
   wire   [31:1] carry;
   assign SUM[1] = \A[1] ;
   assign \A[1]  = A[1];
   assign carry[3] = A[2];
 
-  SAEDHVT14_ADDF_V2_2 U1_16 ( .A(A[16]), .B(n13), .CI(carry[16]), .CO(
+  SAEDHVT14_ADDF_V2_2 U1_20 ( .A(A[20]), .B(n11), .CI(carry[20]), .CO(
+        carry[21]), .S(SUM[20]) );
+  SAEDHVT14_ADDF_V2_2 U1_21 ( .A(A[21]), .B(n11), .CI(carry[21]), .CO(
+        carry[22]), .S(SUM[21]) );
+  SAEDHVT14_ADDF_V2_2 U1_15 ( .A(A[15]), .B(n11), .CI(carry[15]), .CO(
+        carry[16]), .S(SUM[15]) );
+  SAEDHVT14_ADDF_V2_2 U1_16 ( .A(A[16]), .B(n11), .CI(carry[16]), .CO(
         carry[17]), .S(SUM[16]) );
-  SAEDHVT14_ADDF_V2_1 U1_30 ( .A(A[30]), .B(n13), .CI(carry[30]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_30 ( .A(A[30]), .B(n11), .CI(carry[30]), .CO(
         carry[31]), .S(SUM[30]) );
-  SAEDHVT14_ADDF_V2_1 U1_29 ( .A(A[29]), .B(n13), .CI(carry[29]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_29 ( .A(A[29]), .B(n11), .CI(carry[29]), .CO(
         carry[30]), .S(SUM[29]) );
-  SAEDHVT14_ADDF_V2_1 U1_28 ( .A(A[28]), .B(n13), .CI(carry[28]), .CO(
-        carry[29]), .S(SUM[28]) );
-  SAEDHVT14_ADDF_V2_1 U1_27 ( .A(A[27]), .B(n13), .CI(carry[27]), .CO(
-        carry[28]), .S(SUM[27]) );
-  SAEDHVT14_ADDF_V2_1 U1_26 ( .A(A[26]), .B(n13), .CI(carry[26]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_26 ( .A(A[26]), .B(n11), .CI(carry[26]), .CO(
         carry[27]), .S(SUM[26]) );
-  SAEDHVT14_ADDF_V2_1 U1_25 ( .A(A[25]), .B(n13), .CI(carry[25]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_25 ( .A(A[25]), .B(n11), .CI(carry[25]), .CO(
         carry[26]), .S(SUM[25]) );
-  SAEDHVT14_ADDF_V2_1 U1_24 ( .A(A[24]), .B(n13), .CI(carry[24]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_24 ( .A(A[24]), .B(n11), .CI(carry[24]), .CO(
         carry[25]), .S(SUM[24]) );
-  SAEDHVT14_ADDF_V2_1 U1_23 ( .A(A[23]), .B(n13), .CI(carry[23]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_23 ( .A(A[23]), .B(n11), .CI(carry[23]), .CO(
         carry[24]), .S(SUM[23]) );
-  SAEDHVT14_ADDF_V2_1 U1_22 ( .A(A[22]), .B(n13), .CI(carry[22]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_22 ( .A(A[22]), .B(n11), .CI(carry[22]), .CO(
         carry[23]), .S(SUM[22]) );
-  SAEDHVT14_ADDF_V2_1 U1_19 ( .A(A[19]), .B(n13), .CI(carry[19]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_19 ( .A(A[19]), .B(n11), .CI(carry[19]), .CO(
         carry[20]), .S(SUM[19]) );
-  SAEDHVT14_ADDF_V2_1 U1_18 ( .A(A[18]), .B(n13), .CI(carry[18]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_18 ( .A(A[18]), .B(n11), .CI(carry[18]), .CO(
         carry[19]), .S(SUM[18]) );
-  SAEDHVT14_ADDF_V2_1 U1_17 ( .A(A[17]), .B(n13), .CI(carry[17]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_17 ( .A(A[17]), .B(n11), .CI(carry[17]), .CO(
         carry[18]), .S(SUM[17]) );
-  SAEDHVT14_ADDF_V2_1 U1_14 ( .A(A[14]), .B(n13), .CI(carry[14]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_14 ( .A(A[14]), .B(n11), .CI(carry[14]), .CO(
         carry[15]), .S(SUM[14]) );
-  SAEDHVT14_ADDF_V2_1 U1_13 ( .A(A[13]), .B(n13), .CI(carry[13]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_13 ( .A(A[13]), .B(n11), .CI(carry[13]), .CO(
         carry[14]), .S(SUM[13]) );
-  SAEDHVT14_ADDF_V2_1 U1_12 ( .A(A[12]), .B(n13), .CI(carry[12]), .CO(
+  SAEDHVT14_ADDF_V2_1 U1_12 ( .A(A[12]), .B(n11), .CI(carry[12]), .CO(
         carry[13]), .S(SUM[12]) );
-  SAEDHVT14_TIE0_V1_2 U1 ( .X(n13) );
-  SAEDHVT14_EO2_V1_0P75 U2 ( .A1(A[15]), .A2(carry[15]), .X(SUM[15]) );
-  SAEDHVT14_ND2_1 U3 ( .A1(A[15]), .A2(carry[15]), .X(n1) );
-  SAEDHVT14_INV_PS_2 U4 ( .A(n1), .X(carry[16]) );
-  SAEDHVT14_EO2_V1_0P75 U5 ( .A1(A[21]), .A2(carry[21]), .X(SUM[21]) );
-  SAEDHVT14_ND2_1 U6 ( .A1(A[21]), .A2(carry[21]), .X(n2) );
-  SAEDHVT14_INV_PS_2 U7 ( .A(n2), .X(carry[22]) );
-  SAEDHVT14_EO2_V1_0P75 U8 ( .A1(A[20]), .A2(carry[20]), .X(SUM[20]) );
-  SAEDHVT14_ND2_1 U9 ( .A1(A[20]), .A2(carry[20]), .X(n3) );
-  SAEDHVT14_INV_PS_2 U10 ( .A(n3), .X(carry[21]) );
-  SAEDHVT14_INV_PECO_1 U11 ( .A(n6), .X(carry[10]) );
-  SAEDHVT14_ND2_CDC_0P5 U12 ( .A1(A[9]), .A2(carry[9]), .X(n6) );
-  SAEDHVT14_INV_PECO_1 U13 ( .A(n5), .X(carry[11]) );
-  SAEDHVT14_ND2_CDC_0P5 U14 ( .A1(A[10]), .A2(carry[10]), .X(n5) );
-  SAEDHVT14_INV_PECO_1 U15 ( .A(n12), .X(carry[4]) );
-  SAEDHVT14_ND2_MM_1 U16 ( .A1(A[3]), .A2(carry[3]), .X(n12) );
-  SAEDHVT14_EO2_1 U17 ( .A1(A[31]), .A2(carry[31]), .X(SUM[31]) );
-  SAEDHVT14_EO2_V1_0P75 U18 ( .A1(A[11]), .A2(carry[11]), .X(SUM[11]) );
-  SAEDHVT14_ND2_1 U19 ( .A1(A[11]), .A2(carry[11]), .X(n4) );
-  SAEDHVT14_INV_PS_2 U20 ( .A(n4), .X(carry[12]) );
-  SAEDHVT14_EO2_V1_0P75 U21 ( .A1(A[10]), .A2(carry[10]), .X(SUM[10]) );
-  SAEDHVT14_EO2_V1_0P75 U22 ( .A1(A[9]), .A2(carry[9]), .X(SUM[9]) );
-  SAEDHVT14_EO2_V1_0P75 U23 ( .A1(A[8]), .A2(carry[8]), .X(SUM[8]) );
-  SAEDHVT14_ND2_1 U24 ( .A1(A[8]), .A2(carry[8]), .X(n7) );
-  SAEDHVT14_INV_PS_2 U25 ( .A(n7), .X(carry[9]) );
-  SAEDHVT14_EO2_V1_0P75 U26 ( .A1(A[7]), .A2(carry[7]), .X(SUM[7]) );
-  SAEDHVT14_ND2_1 U27 ( .A1(A[7]), .A2(carry[7]), .X(n8) );
-  SAEDHVT14_INV_PS_2 U28 ( .A(n8), .X(carry[8]) );
-  SAEDHVT14_EO2_V1_0P75 U29 ( .A1(A[6]), .A2(carry[6]), .X(SUM[6]) );
-  SAEDHVT14_ND2_1 U30 ( .A1(A[6]), .A2(carry[6]), .X(n9) );
-  SAEDHVT14_INV_PS_2 U31 ( .A(n9), .X(carry[7]) );
-  SAEDHVT14_EO2_V1_0P75 U32 ( .A1(A[5]), .A2(carry[5]), .X(SUM[5]) );
-  SAEDHVT14_ND2_1 U33 ( .A1(A[5]), .A2(carry[5]), .X(n10) );
-  SAEDHVT14_INV_PS_2 U34 ( .A(n10), .X(carry[6]) );
-  SAEDHVT14_EO2_V1_0P75 U35 ( .A1(A[4]), .A2(carry[4]), .X(SUM[4]) );
-  SAEDHVT14_ND2_1 U36 ( .A1(A[4]), .A2(carry[4]), .X(n11) );
-  SAEDHVT14_INV_PS_2 U37 ( .A(n11), .X(carry[5]) );
-  SAEDHVT14_EO2_V1_0P75 U38 ( .A1(A[3]), .A2(carry[3]), .X(SUM[3]) );
-  SAEDHVT14_INV_PS_2 U39 ( .A(carry[3]), .X(SUM[2]) );
+  SAEDHVT14_ADDF_V2_1 U1_11 ( .A(A[11]), .B(n11), .CI(carry[11]), .CO(
+        carry[12]), .S(SUM[11]) );
+  SAEDHVT14_TIE0_V1_2 U1 ( .X(n11) );
+  SAEDHVT14_EO2_V1_1P5 U2 ( .A1(A[31]), .A2(carry[31]), .X(SUM[31]) );
+  SAEDHVT14_EO2_V1_1P5 U3 ( .A1(A[28]), .A2(carry[28]), .X(SUM[28]) );
+  SAEDHVT14_ND2_1 U4 ( .A1(A[28]), .A2(carry[28]), .X(n1) );
+  SAEDHVT14_INV_PS_2 U5 ( .A(n1), .X(carry[29]) );
+  SAEDHVT14_EO2_V1_1P5 U6 ( .A1(A[27]), .A2(carry[27]), .X(SUM[27]) );
+  SAEDHVT14_ND2_1 U7 ( .A1(A[27]), .A2(carry[27]), .X(n2) );
+  SAEDHVT14_INV_PS_2 U8 ( .A(n2), .X(carry[28]) );
+  SAEDHVT14_INV_S_1 U9 ( .A(n5), .X(carry[9]) );
+  SAEDHVT14_ND2_CDC_0P5 U10 ( .A1(A[8]), .A2(carry[8]), .X(n5) );
+  SAEDHVT14_INV_PECO_1 U11 ( .A(n4), .X(carry[10]) );
+  SAEDHVT14_ND2_CDC_0P5 U12 ( .A1(A[9]), .A2(carry[9]), .X(n4) );
+  SAEDHVT14_INV_PECO_1 U13 ( .A(n10), .X(carry[4]) );
+  SAEDHVT14_ND2_MM_1 U14 ( .A1(A[3]), .A2(carry[3]), .X(n10) );
+  SAEDHVT14_EO2_V1_1P5 U15 ( .A1(A[10]), .A2(carry[10]), .X(SUM[10]) );
+  SAEDHVT14_ND2_1 U16 ( .A1(A[10]), .A2(carry[10]), .X(n3) );
+  SAEDHVT14_INV_PS_2 U17 ( .A(n3), .X(carry[11]) );
+  SAEDHVT14_EO2_V1_1P5 U18 ( .A1(A[9]), .A2(carry[9]), .X(SUM[9]) );
+  SAEDHVT14_EO2_V1_1P5 U19 ( .A1(A[8]), .A2(carry[8]), .X(SUM[8]) );
+  SAEDHVT14_EO2_V1_1P5 U20 ( .A1(A[7]), .A2(carry[7]), .X(SUM[7]) );
+  SAEDHVT14_ND2_1 U21 ( .A1(A[7]), .A2(carry[7]), .X(n6) );
+  SAEDHVT14_INV_PS_2 U22 ( .A(n6), .X(carry[8]) );
+  SAEDHVT14_EO2_V1_1P5 U23 ( .A1(A[6]), .A2(carry[6]), .X(SUM[6]) );
+  SAEDHVT14_ND2_1 U24 ( .A1(A[6]), .A2(carry[6]), .X(n7) );
+  SAEDHVT14_INV_PS_2 U25 ( .A(n7), .X(carry[7]) );
+  SAEDHVT14_EO2_V1_1P5 U26 ( .A1(A[5]), .A2(carry[5]), .X(SUM[5]) );
+  SAEDHVT14_ND2_1 U27 ( .A1(A[5]), .A2(carry[5]), .X(n8) );
+  SAEDHVT14_INV_PS_2 U28 ( .A(n8), .X(carry[6]) );
+  SAEDHVT14_EO2_V1_1P5 U29 ( .A1(A[4]), .A2(carry[4]), .X(SUM[4]) );
+  SAEDHVT14_ND2_1 U30 ( .A1(A[4]), .A2(carry[4]), .X(n9) );
+  SAEDHVT14_INV_PS_2 U31 ( .A(n9), .X(carry[5]) );
+  SAEDHVT14_EO2_V1_1P5 U32 ( .A1(A[3]), .A2(carry[3]), .X(SUM[3]) );
+  SAEDHVT14_INV_PS_2 U33 ( .A(carry[3]), .X(SUM[2]) );
 endmodule
 
 
@@ -3613,9 +3611,6 @@ endmodule
   SAEDHVT14_FSDPRBQ_V2LP_1 \instr_rdata_id_o_reg[1]  ( .D(n314), .SI(
         instr_rdata_id_o[0]), .SE(n233), .CK(clk), .RD(n57), .Q(
         instr_rdata_id_o[1]) );
-  SAEDHVT14_FSDPRBQ_V2LP_1 \instr_rdata_id_o_reg[31]  ( .D(n284), .SI(
-        instr_rdata_id_o[30]), .SE(n233), .CK(clk), .RD(n58), .Q(
-        instr_rdata_id_o[31]) );
   SAEDHVT14_FSDPRBQ_V2LP_1 \instr_rdata_id_o_reg[0]  ( .D(n315), .SI(
         illegal_c_insn_id_o), .SE(n233), .CK(clk), .RD(n57), .Q(
         instr_rdata_id_o[0]) );
@@ -3800,7 +3795,6 @@ endmodule
   SAEDHVT14_AN2_MM_0P5 U48 ( .A1(n12), .A2(n194), .X(n5) );
   SAEDHVT14_INV_S_1 U49 ( .A(branch_req), .X(n54) );
   SAEDHVT14_INV_S_1 U50 ( .A(pc_mux_i[0]), .X(n59) );
-  SAEDHVT14_ND2_CDC_0P5 U51 ( .A1(jump_target_id_i[31]), .A2(n6), .X(n225) );
   SAEDHVT14_NR3_1 U52 ( .A1(pc_mux_i[0]), .A2(n60), .A3(pc_mux_i[2]), .X(n6)
          );
   SAEDHVT14_NR3_1 U53 ( .A1(n64), .A2(n191), .A3(n192), .X(n7) );
@@ -3955,7 +3949,6 @@ endmodule
   SAEDHVT14_INV_S_1 U150 ( .A(clear_instr_valid_i), .X(n232) );
   SAEDHVT14_AN2_MM_0P5 U151 ( .A1(pc_mux_i[3]), .A2(n227), .X(n18) );
   SAEDHVT14_INV_S_1 U152 ( .A(pc_mux_i[3]), .X(n226) );
-  SAEDHVT14_TIE1_4 U153 ( .X(\*Logic1* ) );
   SAEDHVT14_ND2_CDC_1 U154 ( .A1(n225), .A2(n224), .X(n229) );
   SAEDHVT14_ND2_CDC_0P5 U155 ( .A1(pc_mux_i[1]), .A2(n226), .X(n60) );
   SAEDHVT14_ND2B_U_0P5 U156 ( .A(trap_addr_mux_i[1]), .B(trap_addr_mux_i[0]), 
@@ -3967,8 +3960,6 @@ endmodule
         depc_i[31]), .B2(n35), .C1(uepc_i[31]), .C2(n42), .X(n67) );
   SAEDHVT14_OR3_0P75 U159 ( .A1(pc_mux_i[0]), .A2(pc_mux_i[1]), .A3(
         pc_mux_i[2]), .X(n62) );
-  SAEDHVT14_AOI222_1 U160 ( .A1(hwlp_target_i[31]), .A2(n50), .B1(N196), .B2(
-        n9), .C1(boot_addr_i[31]), .C2(n28), .X(n66) );
   SAEDHVT14_ND2_CDC_0P5 U161 ( .A1(n17), .A2(n63), .X(n192) );
   SAEDHVT14_AOI22_0P5 U162 ( .A1(dm_halt_addr_i[31]), .A2(n31), .B1(
         dm_exception_addr_i[31]), .B2(n34), .X(n65) );
@@ -4377,8 +4368,15 @@ endmodule
         N170, N169, N168, N167, N166, SYNOPSYS_UNCONNECTED__0}) );
   SAEDHVT14_FSDPRBQ_V2LP_2 \pc_id_o_reg[2]  ( .D(n318), .SI(pc_id_o[1]), .SE(
         n237), .CK(clk), .RD(n57), .Q(pc_id_o[2]) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n70) );
-  SAEDHVT14_AN4_4 U163 ( .A1(n68), .A2(n67), .A3(n66), .A4(n65), .X(n224) );
+  SAEDHVT14_FSDPRBQ_V3_4 \instr_rdata_id_o_reg[31]  ( .D(n284), .SI(
+        instr_rdata_id_o[30]), .SE(n233), .CK(clk), .RD(n58), .Q(
+        instr_rdata_id_o[31]) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U51 ( .X(n70) );
+  SAEDHVT14_ND2_MM_1 U153 ( .A1(jump_target_id_i[31]), .A2(n6), .X(n225) );
+  SAEDHVT14_AN4_4 U160 ( .A1(n68), .A2(n67), .A3(n66), .A4(n65), .X(n224) );
+  SAEDHVT14_AOI222_2 U163 ( .A1(hwlp_target_i[31]), .A2(n50), .B1(N196), .B2(
+        n9), .C1(boot_addr_i[31]), .C2(n28), .X(n66) );
   SAEDHVT14_ND2_ECO_1 U164 ( .A1(n225), .A2(n224), .X(n230) );
   SAEDHVT14_BUF_PECO_1 U335 ( .A(test_se), .X(n233) );
   SAEDHVT14_BUF_PECO_1 U336 ( .A(test_se), .X(n234) );
@@ -15771,8 +15769,8 @@ endmodule
         csr_op_o[1]) );
   SAEDHVT14_AO221_1 U357 ( .A1(n278), .A2(n307), .B1(instr_rdata_i[14]), .B2(
         csr_access_o), .C(alu_op_b_mux_sel_o[0]), .X(alu_op_a_mux_sel_o[1]) );
-  SAEDHVT14_TIE1_4 U358 ( .X(\*Logic1* ) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(\*Logic0* ) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U358 ( .X(\*Logic0* ) );
 endmodule
 
 
@@ -16974,7 +16972,6 @@ endmodule
   SAEDHVT14_NR2_MM_1 U23 ( .A1(n181), .A2(n185), .X(n191) );
   SAEDHVT14_NR2_MM_1 U24 ( .A1(n49), .A2(n50), .X(n48) );
   SAEDHVT14_OAI21_0P75 U25 ( .A1(n2), .A2(n140), .B(n141), .X(n139) );
-  SAEDHVT14_INV_S_1 U26 ( .A(B[31]), .X(n29) );
   SAEDHVT14_INV_S_1 U27 ( .A(n188), .X(n181) );
   SAEDHVT14_INV_S_1 U28 ( .A(n44), .X(n49) );
   SAEDHVT14_INV_S_1 U29 ( .A(n38), .X(n182) );
@@ -16991,22 +16988,16 @@ endmodule
   SAEDHVT14_OAI21_0P75 U40 ( .A1(n182), .A2(n40), .B(n37), .X(n179) );
   SAEDHVT14_OAI21_0P75 U41 ( .A1(n18), .A2(n117), .B(n118), .X(n114) );
   SAEDHVT14_INV_S_1 U42 ( .A(n119), .X(n117) );
-  SAEDHVT14_OAI21_0P75 U43 ( .A1(n23), .A2(n91), .B(n92), .X(n88) );
-  SAEDHVT14_INV_S_1 U44 ( .A(n93), .X(n91) );
   SAEDHVT14_OAI21_0P75 U45 ( .A1(n134), .A2(n3), .B(n135), .X(n132) );
   SAEDHVT14_INV_S_1 U46 ( .A(n136), .X(n134) );
   SAEDHVT14_OAI21_0P75 U47 ( .A1(n19), .A2(n121), .B(n122), .X(n119) );
   SAEDHVT14_INV_S_1 U48 ( .A(n123), .X(n121) );
   SAEDHVT14_OAI21_0P75 U49 ( .A1(n20), .A2(n126), .B(n127), .X(n123) );
-  SAEDHVT14_INV_S_1 U50 ( .A(n128), .X(n126) );
-  SAEDHVT14_OAI21_0P75 U51 ( .A1(n21), .A2(n130), .B(n131), .X(n128) );
-  SAEDHVT14_INV_S_1 U52 ( .A(n132), .X(n130) );
   SAEDHVT14_OAI21_0P75 U53 ( .A1(n24), .A2(n95), .B(n96), .X(n93) );
   SAEDHVT14_INV_S_1 U54 ( .A(n97), .X(n95) );
   SAEDHVT14_OAI21_0P75 U55 ( .A1(n25), .A2(n99), .B(n100), .X(n97) );
   SAEDHVT14_INV_S_1 U56 ( .A(n101), .X(n99) );
   SAEDHVT14_OAI21_0P75 U57 ( .A1(n22), .A2(n103), .B(n104), .X(n101) );
-  SAEDHVT14_INV_S_1 U58 ( .A(n105), .X(n103) );
   SAEDHVT14_INV_S_1 U59 ( .A(n65), .X(n196) );
   SAEDHVT14_AOI21_0P75 U60 ( .A1(n1), .A2(n64), .B(n14), .X(n197) );
   SAEDHVT14_INV_S_1 U61 ( .A(n58), .X(n61) );
@@ -17017,6 +17008,7 @@ endmodule
   SAEDHVT14_NR2_MM_1 U66 ( .A1(n185), .A2(n15), .X(n183) );
   SAEDHVT14_NR2_MM_1 U67 ( .A1(n17), .A2(n182), .X(n184) );
   SAEDHVT14_ND2_CDC_0P5 U68 ( .A1(n112), .A2(n113), .X(n109) );
+  SAEDHVT14_ND2_CDC_0P5 U69 ( .A1(n114), .A2(n115), .X(n113) );
   SAEDHVT14_ND2_CDC_0P5 U70 ( .A1(n86), .A2(n87), .X(n84) );
   SAEDHVT14_ND2_CDC_0P5 U71 ( .A1(n88), .A2(n89), .X(n87) );
   SAEDHVT14_ND2_CDC_0P5 U72 ( .A1(n198), .A2(n199), .X(n149) );
@@ -17095,7 +17087,6 @@ endmodule
   SAEDHVT14_OAI21_0P75 U145 ( .A1(n81), .A2(n82), .B(n83), .X(n77) );
   SAEDHVT14_ND2_CDC_0P5 U146 ( .A1(A[28]), .A2(n31), .X(n83) );
   SAEDHVT14_NR2_MM_1 U147 ( .A1(A[28]), .A2(n31), .X(n82) );
-  SAEDHVT14_INV_S_1 U148 ( .A(n84), .X(n81) );
   SAEDHVT14_ND2_CDC_0P5 U149 ( .A1(B[5]), .A2(A[5]), .X(n53) );
   SAEDHVT14_ND2_CDC_0P5 U150 ( .A1(B[9]), .A2(A[9]), .X(n37) );
   SAEDHVT14_ND2_CDC_0P5 U151 ( .A1(n35), .A2(n175), .X(n148) );
@@ -17154,19 +17145,24 @@ endmodule
   SAEDHVT14_ND2_CDC_0P5 U204 ( .A1(n58), .A2(n59), .X(n57) );
   SAEDHVT14_EO2_V1_0P75 U205 ( .A1(n59), .A2(n60), .X(SUM[4]) );
   SAEDHVT14_EO2_V1_0P75 U206 ( .A1(n62), .A2(n63), .X(SUM[3]) );
-  SAEDHVT14_EO2_V1_0P75 U207 ( .A1(n67), .A2(n68), .X(SUM[31]) );
   SAEDHVT14_EO2_V1_0P75 U208 ( .A1(n31), .A2(A[31]), .X(n68) );
+  SAEDHVT14_EO2_V1_0P75 U209 ( .A1(n72), .A2(n73), .X(SUM[30]) );
   SAEDHVT14_EO2_V1_0P75 U210 ( .A1(n31), .A2(A[30]), .X(n73) );
   SAEDHVT14_EO2_V1_0P75 U211 ( .A1(n1), .A2(n78), .X(SUM[2]) );
+  SAEDHVT14_EO2_V1_0P75 U212 ( .A1(n77), .A2(n80), .X(SUM[29]) );
   SAEDHVT14_EO2_V1_0P75 U213 ( .A1(n31), .A2(A[29]), .X(n80) );
   SAEDHVT14_EO2_V1_0P75 U214 ( .A1(n84), .A2(n85), .X(SUM[28]) );
   SAEDHVT14_EO2_V1_0P75 U215 ( .A1(n31), .A2(A[28]), .X(n85) );
   SAEDHVT14_EO2_V1_0P75 U216 ( .A1(n88), .A2(n10), .X(SUM[27]) );
   SAEDHVT14_EO2_V1_0P75 U217 ( .A1(n93), .A2(n94), .X(SUM[26]) );
   SAEDHVT14_EO2_V1_0P75 U218 ( .A1(n97), .A2(n98), .X(SUM[25]) );
+  SAEDHVT14_EO2_V1_0P75 U219 ( .A1(n101), .A2(n102), .X(SUM[24]) );
   SAEDHVT14_EO2_V1_0P75 U220 ( .A1(n105), .A2(n106), .X(SUM[23]) );
   SAEDHVT14_EO2_V1_0P75 U221 ( .A1(n109), .A2(n8), .X(SUM[22]) );
+  SAEDHVT14_EO2_V1_0P75 U222 ( .A1(n114), .A2(n9), .X(SUM[21]) );
   SAEDHVT14_EO2_V1_0P75 U223 ( .A1(n119), .A2(n120), .X(SUM[20]) );
+  SAEDHVT14_EO2_V1_0P75 U224 ( .A1(n123), .A2(n125), .X(SUM[19]) );
+  SAEDHVT14_EO2_V1_0P75 U225 ( .A1(n128), .A2(n129), .X(SUM[18]) );
   SAEDHVT14_EO2_V1_0P75 U226 ( .A1(n132), .A2(n133), .X(SUM[17]) );
   SAEDHVT14_EO2_V1_0P75 U227 ( .A1(n137), .A2(n3), .X(SUM[16]) );
   SAEDHVT14_EO2_V1_0P75 U228 ( .A1(n156), .A2(n11), .X(SUM[15]) );
@@ -17176,13 +17172,15 @@ endmodule
   SAEDHVT14_EO2_V1_0P75 U232 ( .A1(n186), .A2(n187), .X(SUM[11]) );
   SAEDHVT14_ND2_CDC_0P5 U233 ( .A1(n188), .A2(n189), .X(n186) );
   SAEDHVT14_EO2_V1_0P75 U234 ( .A1(n190), .A2(n191), .X(SUM[10]) );
-  SAEDHVT14_EO2_MM_1 U69 ( .A1(n72), .A2(n73), .X(SUM[30]) );
-  SAEDHVT14_EO2_MM_1 U209 ( .A1(n77), .A2(n80), .X(SUM[29]) );
-  SAEDHVT14_EO2_MM_1 U212 ( .A1(n128), .A2(n129), .X(SUM[18]) );
-  SAEDHVT14_EO2_MM_1 U219 ( .A1(n101), .A2(n102), .X(SUM[24]) );
-  SAEDHVT14_EO2_MM_1 U222 ( .A1(n123), .A2(n125), .X(SUM[19]) );
-  SAEDHVT14_EO2_MM_1 U224 ( .A1(n114), .A2(n9), .X(SUM[21]) );
-  SAEDHVT14_ND2_ECO_1 U225 ( .A1(n114), .A2(n115), .X(n113) );
+  SAEDHVT14_EO2_0P5 U26 ( .A1(n67), .A2(n68), .X(SUM[31]) );
+  SAEDHVT14_INV_0P75 U43 ( .A(n105), .X(n103) );
+  SAEDHVT14_OAI21_0P5 U44 ( .A1(n21), .A2(n130), .B(n131), .X(n128) );
+  SAEDHVT14_INV_0P75 U50 ( .A(n132), .X(n130) );
+  SAEDHVT14_INV_0P75 U51 ( .A(n128), .X(n126) );
+  SAEDHVT14_OAI21_0P5 U52 ( .A1(n23), .A2(n91), .B(n92), .X(n88) );
+  SAEDHVT14_INV_0P75 U58 ( .A(n93), .X(n91) );
+  SAEDHVT14_INV_0P75 U148 ( .A(n84), .X(n81) );
+  SAEDHVT14_INV_0P5 U207 ( .A(B[31]), .X(n29) );
 endmodule
 
 
@@ -17216,6 +17214,7 @@ endmodule
   SAEDHVT14_ND2_CDC_0P5 U2 ( .A1(n25), .A2(n212), .X(n205) );
   SAEDHVT14_INV_S_1 U3 ( .A(n157), .X(n202) );
   SAEDHVT14_OA21_1 U4 ( .A1(n3), .A2(n150), .B(n151), .X(n1) );
+  SAEDHVT14_AN2_1 U5 ( .A1(n146), .A2(n147), .X(n2) );
   SAEDHVT14_OA21_1 U6 ( .A1(n152), .A2(n153), .B(n154), .X(n3) );
   SAEDHVT14_OA21_1 U7 ( .A1(n19), .A2(n186), .B(n187), .X(n5) );
   SAEDHVT14_INV_S_1 U8 ( .A(n32), .X(n30) );
@@ -17226,6 +17225,7 @@ endmodule
   SAEDHVT14_INV_S_1 U13 ( .A(n26), .X(n31) );
   SAEDHVT14_INV_S_1 U14 ( .A(n26), .X(n32) );
   SAEDHVT14_INV_S_1 U15 ( .A(n144), .X(n142) );
+  SAEDHVT14_OAI21_0P75 U16 ( .A1(n12), .A2(n127), .B(n128), .X(n125) );
   SAEDHVT14_OAI21_0P75 U17 ( .A1(n11), .A2(n109), .B(n110), .X(n107) );
   SAEDHVT14_INV_S_1 U18 ( .A(n111), .X(n109) );
   SAEDHVT14_INV_S_1 U19 ( .A(n26), .X(n33) );
@@ -17333,6 +17333,7 @@ endmodule
   SAEDHVT14_ND2_CDC_0P5 U127 ( .A1(n82), .A2(n83), .X(n63) );
   SAEDHVT14_ND2_CDC_0P5 U128 ( .A1(n84), .A2(n85), .X(n83) );
   SAEDHVT14_NR2_MM_1 U129 ( .A1(n48), .A2(n49), .X(n47) );
+  SAEDHVT14_NR2_MM_1 U130 ( .A1(A[30]), .A2(B[30]), .X(n71) );
   SAEDHVT14_INV_S_1 U131 ( .A(A[0]), .X(n212) );
   SAEDHVT14_AN2_MM_0P5 U132 ( .A1(n205), .A2(n132), .X(SUM[0]) );
   SAEDHVT14_AN2B_MM_1 U133 ( .B(n82), .A(n131), .X(n130) );
@@ -17392,6 +17393,7 @@ endmodule
   SAEDHVT14_ND2_CDC_0P5 U187 ( .A1(B[8]), .A2(A[8]), .X(n39) );
   SAEDHVT14_INV_PS_1 U188 ( .A(n136), .X(n134) );
   SAEDHVT14_OAI21_0P5 U189 ( .A1(n18), .A2(n138), .B(n139), .X(n136) );
+  SAEDHVT14_INV_PS_1 U190 ( .A(n129), .X(n127) );
   SAEDHVT14_OAI21_0P5 U191 ( .A1(n15), .A2(n134), .B(n135), .X(n129) );
   SAEDHVT14_ND2_CDC_1 U192 ( .A1(n118), .A2(n119), .X(n115) );
   SAEDHVT14_INV_PS_1 U193 ( .A(n78), .X(n75) );
@@ -17408,6 +17410,12 @@ endmodule
   SAEDHVT14_OAI21_0P75 U204 ( .A1(n160), .A2(n161), .B(n162), .X(n159) );
   SAEDHVT14_ND2_CDC_1 U205 ( .A1(n113), .A2(n114), .X(n111) );
   SAEDHVT14_INV_PS_1 U206 ( .A(n125), .X(n123) );
+  SAEDHVT14_OAI21_0P75 U207 ( .A1(n87), .A2(n88), .B(n89), .X(n78) );
+  SAEDHVT14_INV_PS_1 U208 ( .A(n90), .X(n87) );
+  SAEDHVT14_INV_PS_1 U209 ( .A(n140), .X(n138) );
+  SAEDHVT14_OAI21_0P75 U210 ( .A1(n142), .A2(n2), .B(n143), .X(n140) );
+  SAEDHVT14_OAI21_0P75 U211 ( .A1(n13), .A2(n97), .B(n98), .X(n94) );
+  SAEDHVT14_INV_PS_1 U212 ( .A(n99), .X(n97) );
   SAEDHVT14_OAI21_0P5 U213 ( .A1(n17), .A2(n105), .B(n106), .X(n103) );
   SAEDHVT14_INV_PS_1 U214 ( .A(n107), .X(n105) );
   SAEDHVT14_OAI21_0P5 U215 ( .A1(n16), .A2(n101), .B(n102), .X(n99) );
@@ -17435,22 +17443,12 @@ endmodule
   SAEDHVT14_EO2_V1_0P75 U241 ( .A1(n195), .A2(n196), .X(SUM[11]) );
   SAEDHVT14_ND2_CDC_0P5 U242 ( .A1(n197), .A2(n198), .X(n195) );
   SAEDHVT14_EO2_V1_0P75 U243 ( .A1(n199), .A2(n200), .X(SUM[10]) );
-  SAEDHVT14_NR2_1 U5 ( .A1(A[30]), .A2(B[30]), .X(n71) );
-  SAEDHVT14_OAI21_0P5 U16 ( .A1(n12), .A2(n127), .B(n128), .X(n125) );
-  SAEDHVT14_INV_0P75 U21 ( .A(n140), .X(n138) );
-  SAEDHVT14_OAI21_0P5 U57 ( .A1(n87), .A2(n88), .B(n89), .X(n78) );
-  SAEDHVT14_INV_0P5 U73 ( .A(n90), .X(n87) );
-  SAEDHVT14_OAI21_0P5 U75 ( .A1(n142), .A2(n2), .B(n143), .X(n140) );
-  SAEDHVT14_AN2_MM_0P5 U96 ( .A1(n146), .A2(n147), .X(n2) );
-  SAEDHVT14_INV_0P75 U97 ( .A(n129), .X(n127) );
-  SAEDHVT14_OAI21_0P5 U130 ( .A1(n13), .A2(n97), .B(n98), .X(n94) );
-  SAEDHVT14_INV_0P5 U190 ( .A(n99), .X(n97) );
-  SAEDHVT14_EO2_MM_1 U207 ( .A1(n30), .A2(A[31]), .X(n69) );
-  SAEDHVT14_EO2_MM_1 U208 ( .A1(n30), .A2(A[30]), .X(n74) );
-  SAEDHVT14_EO2_MM_1 U209 ( .A1(n30), .A2(A[29]), .X(n86) );
-  SAEDHVT14_ND2_MM_0P5 U210 ( .A1(A[29]), .A2(n30), .X(n77) );
-  SAEDHVT14_EO2_MM_1 U211 ( .A1(n99), .A2(n100), .X(SUM[26]) );
-  SAEDHVT14_EO2_MM_1 U212 ( .A1(n120), .A2(n8), .X(SUM[21]) );
+  SAEDHVT14_EO2_MM_1 U21 ( .A1(n30), .A2(A[31]), .X(n69) );
+  SAEDHVT14_EO2_MM_1 U57 ( .A1(n30), .A2(A[30]), .X(n74) );
+  SAEDHVT14_EO2_MM_1 U73 ( .A1(n30), .A2(A[29]), .X(n86) );
+  SAEDHVT14_ND2_MM_0P5 U75 ( .A1(A[29]), .A2(n30), .X(n77) );
+  SAEDHVT14_EO2_MM_1 U96 ( .A1(n99), .A2(n100), .X(SUM[26]) );
+  SAEDHVT14_EO2_MM_1 U97 ( .A1(n120), .A2(n8), .X(SUM[21]) );
   SAEDHVT14_ND2_MM_0P5 U228 ( .A1(A[28]), .A2(n30), .X(n89) );
   SAEDHVT14_EO2_MM_1 U229 ( .A1(n30), .A2(A[28]), .X(n91) );
   SAEDHVT14_ND2_ECO_1 U231 ( .A1(n120), .A2(n121), .X(n119) );
@@ -17471,6 +17469,29 @@ endmodule
   assign SUM[0] = \A[0] ;
   assign \A[0]  = A[0];
 
+  SAEDHVT14_ADDF_V2_1 U1_31 ( .A(A[31]), .B(B[31]), .CI(carry[31]), .S(SUM[31]) );
+  SAEDHVT14_ADDF_V2_1 U1_30 ( .A(A[30]), .B(B[30]), .CI(carry[30]), .CO(
+        carry[31]), .S(SUM[30]) );
+  SAEDHVT14_ADDF_V2_1 U1_29 ( .A(A[29]), .B(B[29]), .CI(carry[29]), .CO(
+        carry[30]), .S(SUM[29]) );
+  SAEDHVT14_ADDF_V2_1 U1_28 ( .A(A[28]), .B(B[28]), .CI(carry[28]), .CO(
+        carry[29]), .S(SUM[28]) );
+  SAEDHVT14_ADDF_V2_1 U1_27 ( .A(A[27]), .B(B[27]), .CI(carry[27]), .CO(
+        carry[28]), .S(SUM[27]) );
+  SAEDHVT14_ADDF_V2_1 U1_26 ( .A(A[26]), .B(B[26]), .CI(carry[26]), .CO(
+        carry[27]), .S(SUM[26]) );
+  SAEDHVT14_ADDF_V2_1 U1_25 ( .A(A[25]), .B(B[25]), .CI(carry[25]), .CO(
+        carry[26]), .S(SUM[25]) );
+  SAEDHVT14_ADDF_V2_1 U1_24 ( .A(A[24]), .B(B[24]), .CI(carry[24]), .CO(
+        carry[25]), .S(SUM[24]) );
+  SAEDHVT14_ADDF_V2_1 U1_23 ( .A(A[23]), .B(B[23]), .CI(carry[23]), .CO(
+        carry[24]), .S(SUM[23]) );
+  SAEDHVT14_ADDF_V2_1 U1_22 ( .A(A[22]), .B(B[22]), .CI(carry[22]), .CO(
+        carry[23]), .S(SUM[22]) );
+  SAEDHVT14_ADDF_V2_1 U1_21 ( .A(A[21]), .B(B[21]), .CI(carry[21]), .CO(
+        carry[22]), .S(SUM[21]) );
+  SAEDHVT14_ADDF_V2_1 U1_20 ( .A(A[20]), .B(B[20]), .CI(carry[20]), .CO(
+        carry[21]), .S(SUM[20]) );
   SAEDHVT14_ADDF_V2_1 U1_19 ( .A(A[19]), .B(B[19]), .CI(carry[19]), .CO(
         carry[20]), .S(SUM[19]) );
   SAEDHVT14_ADDF_V2_1 U1_18 ( .A(A[18]), .B(B[18]), .CI(carry[18]), .CO(
@@ -17507,31 +17528,7 @@ endmodule
         .S(SUM[3]) );
   SAEDHVT14_ADDF_V2_1 U1_2 ( .A(A[2]), .B(B[2]), .CI(carry[2]), .CO(carry[3]), 
         .S(SUM[2]) );
-  SAEDHVT14_ADDF_V2_2 U1_20 ( .A(A[20]), .B(B[20]), .CI(carry[20]), .CO(
-        carry[21]), .S(SUM[20]) );
-  SAEDHVT14_ADDF_V2_2 U1_21 ( .A(A[21]), .B(B[21]), .CI(carry[21]), .CO(
-        carry[22]), .S(SUM[21]) );
-  SAEDHVT14_ADDF_V2_2 U1_22 ( .A(A[22]), .B(B[22]), .CI(carry[22]), .CO(
-        carry[23]), .S(SUM[22]) );
-  SAEDHVT14_ADDF_V2_2 U1_23 ( .A(A[23]), .B(B[23]), .CI(carry[23]), .CO(
-        carry[24]), .S(SUM[23]) );
-  SAEDHVT14_ADDF_V2_2 U1_24 ( .A(A[24]), .B(B[24]), .CI(carry[24]), .CO(
-        carry[25]), .S(SUM[24]) );
-  SAEDHVT14_ADDF_V2_2 U1_25 ( .A(A[25]), .B(B[25]), .CI(carry[25]), .CO(
-        carry[26]), .S(SUM[25]) );
-  SAEDHVT14_ADDF_V2_2 U1_26 ( .A(A[26]), .B(B[26]), .CI(carry[26]), .CO(
-        carry[27]), .S(SUM[26]) );
-  SAEDHVT14_ADDF_V2_2 U1_27 ( .A(A[27]), .B(B[27]), .CI(carry[27]), .CO(
-        carry[28]), .S(SUM[27]) );
-  SAEDHVT14_ADDF_V2_2 U1_28 ( .A(A[28]), .B(B[28]), .CI(carry[28]), .CO(
-        carry[29]), .S(SUM[28]) );
-  SAEDHVT14_ADDF_V2_2 U1_29 ( .A(A[29]), .B(B[29]), .CI(carry[29]), .CO(
-        carry[30]), .S(SUM[29]) );
-  SAEDHVT14_ADDF_V2_2 U1_30 ( .A(A[30]), .B(B[30]), .CI(carry[30]), .CO(
-        carry[31]), .S(SUM[30]) );
-  SAEDHVT14_EO3_2 U1_31 ( .A1(A[31]), .A2(B[31]), .A3(carry[31]), .X(SUM[31])
-         );
-  SAEDHVT14_EO2_V1_0P75 U1 ( .A1(B[1]), .A2(A[1]), .X(SUM[1]) );
+  SAEDHVT14_EO2_V1_1P5 U1 ( .A1(B[1]), .A2(A[1]), .X(SUM[1]) );
   SAEDHVT14_ND2_1 U2 ( .A1(B[1]), .A2(A[1]), .X(n1) );
   SAEDHVT14_INV_PS_2 U3 ( .A(n1), .X(carry[2]) );
 endmodule
@@ -20034,6 +20031,7 @@ endmodule
   SAEDHVT14_BUF_S_1 U226 ( .A(n163), .X(n194) );
   SAEDHVT14_INV_S_1 U227 ( .A(n320), .X(n318) );
   SAEDHVT14_INV_S_1 U228 ( .A(n320), .X(n319) );
+  SAEDHVT14_ND2_CDC_0P5 U229 ( .A1(N231), .A2(n4), .X(n454) );
   SAEDHVT14_AO222_1 U230 ( .A1(N142), .A2(n220), .B1(N206), .B2(n4), .C1(N174), 
         .C2(n223), .X(jump_target_o[6]) );
   SAEDHVT14_AO222_1 U231 ( .A1(N141), .A2(n220), .B1(N205), .B2(n4), .C1(N173), 
@@ -21863,9 +21861,8 @@ endmodule
         N158, N157, N156, N155, N154, N153, N152, N151, N150, N149, N148, N147, 
         N146, N145, N144, N143, N142, N141, N140, N139, N138, N137, N136}) );
   SAEDHVT14_TIE0_V1_2 U3 ( .X(net134110) );
-  SAEDHVT14_ND2_CDC_1 U4 ( .A1(N231), .A2(n4), .X(n454) );
-  SAEDHVT14_BUF_S_1 U5 ( .A(n305), .X(n459) );
-  SAEDHVT14_INV_S_1 U229 ( .A(n307), .X(n305) );
+  SAEDHVT14_BUF_S_1 U4 ( .A(n305), .X(n459) );
+  SAEDHVT14_INV_S_1 U5 ( .A(n307), .X(n305) );
   SAEDHVT14_INV_0P5 U1272 ( .A(test_se), .X(n307) );
   SAEDHVT14_BUF_PECO_1 U1507 ( .A(n305), .X(n521) );
   SAEDHVT14_BUF_PECO_1 U1508 ( .A(n305), .X(n661) );
@@ -26285,7 +26282,6 @@ module cv32e40p_alu_test_1 ( clk, rst_n, enable_i, operator_i, operand_a_i,
   SAEDHVT14_INV_S_1 U753 ( .A(is_subrot_i), .X(n261) );
   SAEDHVT14_INV_S_1 U754 ( .A(bmask_b_i[4]), .X(n186) );
   SAEDHVT14_INV_S_1 U755 ( .A(N109), .X(n74) );
-  SAEDHVT14_TIE1_4 U756 ( .X(net91217) );
   SAEDHVT14_AO22_0P5 U757 ( .A1(shift_result[1]), .A2(n51), .B1(
         shift_result[0]), .B2(n35), .X(n52) );
   SAEDHVT14_AO22_0P5 U758 ( .A1(shift_result[5]), .A2(n51), .B1(
@@ -29073,7 +29069,8 @@ module cv32e40p_alu_test_1 ( clk, rst_n, enable_i, operator_i, operand_a_i,
         adder_result_expanded_4, adder_result_expanded_3, 
         adder_result_expanded_2, adder_result_expanded_1, 
         SYNOPSYS_UNCONNECTED__36}) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n1) );
+  SAEDHVT14_TIE1_4 U3 ( .X(net91217) );
+  SAEDHVT14_TIE0_V1_2 U756 ( .X(n1) );
 endmodule
 
 
@@ -38712,7 +38709,6 @@ module cv32e40p_mult_test_1 ( clk, rst_n, enable_i, operator_i,
   SAEDHVT14_INV_S_1 U650 ( .A(dot_op_c_i[13]), .X(n216) );
   SAEDHVT14_INV_S_1 U651 ( .A(dot_op_c_i[14]), .X(n217) );
   SAEDHVT14_INV_S_1 U652 ( .A(dot_op_c_i[15]), .X(n218) );
-  SAEDHVT14_TIE1_4 U653 ( .X(net85817) );
   SAEDHVT14_OAI22_1 U654 ( .A1(n409), .A2(n71), .B1(n406), .B2(n73), .X(n400)
          );
   SAEDHVT14_OAI22_1 U655 ( .A1(n85), .A2(n52), .B1(n84), .B2(n56), .X(n402) );
@@ -38951,7 +38947,8 @@ module cv32e40p_mult_test_1 ( clk, rst_n, enable_i, operator_i,
         n396, n397, n398, n399, n253, n370, n371, n372, n373, n374, n375, n376, 
         n377, n378, n380, n381, n382, n383, n384, n385, n386, n387, n388, n389, 
         n391, n392, n393}), .CI(n420), .SUM(dot_char_result) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n420) );
+  SAEDHVT14_TIE1_4 U3 ( .X(net85817) );
+  SAEDHVT14_TIE0_V1_2 U653 ( .X(n420) );
 endmodule
 
 
@@ -39572,7 +39569,6 @@ endmodule
   SAEDHVT14_ND2_CDC_0P5 U68 ( .A1(regfile_waddr_i[3]), .A2(n37), .X(n17) );
   SAEDHVT14_ND2_CDC_0P5 U69 ( .A1(regfile_waddr_i[4]), .A2(n37), .X(n18) );
   SAEDHVT14_ND2_CDC_0P5 U70 ( .A1(regfile_waddr_i[5]), .A2(n37), .X(n19) );
-  SAEDHVT14_TIE1_4 U71 ( .X(\*Logic1* ) );
   SAEDHVT14_AOI22_0P5 U72 ( .A1(alu_result[1]), .A2(n10), .B1(mult_result[1]), 
         .B2(n6), .X(n34) );
   SAEDHVT14_AO21B_0P5 U73 ( .A1(csr_rdata_i[1]), .A2(n31), .B(n34), .X(
@@ -39601,7 +39597,8 @@ endmodule
         mult_result), .multicycle_o(mult_multicycle_o), .ready_o(mult_ready), 
         .ex_ready_i(ex_ready_o), .test_si(n41), .test_so(n40), .test_se(
         test_se) );
-  SAEDHVT14_TIE0_V1_2 U3 ( .X(n7) );
+  SAEDHVT14_TIE1_4 U3 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U71 ( .X(n7) );
 endmodule
 
 
@@ -39855,7 +39852,7 @@ module cv32e40p_load_store_unit_PULP_OBI0_test_1_DW01_add_0 ( A, B, CI, SUM,
         .S(SUM[2]) );
   SAEDHVT14_ADDF_V2_1 U1_1 ( .A(A[1]), .B(B[1]), .CI(carry[1]), .CO(carry[2]), 
         .S(SUM[1]) );
-  SAEDHVT14_EO2_V1_0P75 U1 ( .A1(B[0]), .A2(A[0]), .X(SUM[0]) );
+  SAEDHVT14_EO2_V1_1P5 U1 ( .A1(B[0]), .A2(A[0]), .X(SUM[0]) );
   SAEDHVT14_ND2_1 U2 ( .A1(B[0]), .A2(A[0]), .X(n1) );
   SAEDHVT14_INV_PS_2 U3 ( .A(n1), .X(carry[1]) );
 endmodule
@@ -46521,7 +46518,6 @@ endmodule
   SAEDHVT14_NR2_MM_1 U1572 ( .A1(n1068), .A2(n402), .X(n105) );
   SAEDHVT14_INV_S_1 U1573 ( .A(mtvec_o[23]), .X(n573) );
   SAEDHVT14_INV_S_1 U1574 ( .A(mtvec_mode_o[0]), .X(n1320) );
-  SAEDHVT14_TIE1_4 U1575 ( .X(\*Logic1* ) );
   SAEDHVT14_OR3_0P5 U1576 ( .A1(N82), .A2(N81), .A3(N83), .X(n121) );
   SAEDHVT14_AN3_0P5 U1577 ( .A1(n198), .A2(N79), .A3(N80), .X(n192) );
   SAEDHVT14_AN2_1 U1578 ( .A1(\mhpmevent_q[3][0] ), .A2(n200), .X(N902) );
@@ -47338,7 +47334,8 @@ endmodule
   cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0_PULP_SECURE0_USE_PMP0_N_PMP_ENTRIES16_NUM_MHPMCOUNTERS1_COREV_PULP0_COREV_CLUSTER0_DEBUG_TRIGGER_EN1_DW01_cmp6_0 eq_1307 ( 
         .A(pc_id_i), .B(\gen_trigger_regs.tmatch_value_q ), .TC(n1599), .EQ(
         N1598) );
-  SAEDHVT14_TIE0_V1_2 U4 ( .X(n1599) );
+  SAEDHVT14_TIE1_4 U4 ( .X(\*Logic1* ) );
+  SAEDHVT14_TIE0_V1_2 U1575 ( .X(n1599) );
   SAEDHVT14_INV_PS_2 U1975 ( .A(n1115), .X(n1111) );
   SAEDHVT14_INV_PS_2 U1976 ( .A(n1115), .X(n1112) );
   SAEDHVT14_INV_PS_2 U1977 ( .A(n1115), .X(n1113) );
@@ -47714,7 +47711,6 @@ endmodule
   assign test_so4 = fetch_enable;
   assign test_so1 = mtvec[13];
 
-  SAEDHVT14_TIE1_4 U2 ( .X(n1) );
   SAEDHVT14_INV_S_1 U4 ( .A(csr_access_ex), .X(n2) );
   SAEDHVT14_BUF_S_1 U5 ( .A(rst_ni), .X(n3) );
   SAEDHVT14_BUF_S_1 U6 ( .A(rst_ni), .X(n4) );
@@ -48036,6 +48032,7 @@ endmodule
         net137739), .apu_contention_i(net137739), .apu_dep_i(perf_apu_dep), 
         .apu_wb_i(net137739), .test_si2(test_si2), .test_si1(test_si1), 
         .test_se(n23) );
+  SAEDHVT14_TIE1_4 U2 ( .X(n1) );
   SAEDHVT14_TIE0_V1_2 U3 ( .X(net137739) );
   SAEDHVT14_BUF_S_1 U42 ( .A(test_se), .X(n27) );
   SAEDHVT14_BUF_PECO_1 U43 ( .A(test_se), .X(n23) );

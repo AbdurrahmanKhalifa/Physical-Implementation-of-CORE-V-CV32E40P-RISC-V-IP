@@ -131,55 +131,14 @@ Info:  Net Imp:/WORK/cv32e40p_cs_registers_N_HWLP2_APU0_A_EXTENSION0_FPU0_ZFINX0
 Info:  guide_instance_map 2 (Line: 82)  Cannot find instance reference 'U0_mux2X1'.
 Info:  SVF Operation 2 (Line: 82) - instance_map.  Status: rejected
 
-Info:  SVF Operation 20 (Line: 157) - replace.  Status: rejected
-
-Info:  SVF Operation 61 (Line: 337) - replace.  Status: rejected
-
 Info:  guide_uniquify 78 (Line: 417)  Cannot find object "U0_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 78 (Line: 417)  Cannot find object "U1_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 78 (Line: 417)  Cannot find object "U2_mux2X1" in design 'cv32e40p_top'.
-Info:  SVF Operation 133 (Line: 787) - transformation_tree.  Status: rejected
-
-Info:  SVF Operation 134 (Line: 801) - transformation_tree.  Status: rejected
-
-Info:  SVF Operation 135 (Line: 821) - transformation_tree.  Status: rejected
-
-Info:  SVF Operation 136 (Line: 835) - transformation_tree.  Status: rejected
-
-Info:  SVF Operation 163 (Line: 1136) - transformation_tree.  Status: rejected
-
 Info:  guide_uniquify 402 (Line: 3033)  Cannot find object "U2_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 402 (Line: 3033)  Cannot find object "U1_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 402 (Line: 3033)  Cannot find object "U2_mux2X1/U1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 402 (Line: 3033)  Cannot find object "U1_mux2X1/U1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 402 (Line: 3033)  Cannot find object "U0_mux2X1/U1" in design 'cv32e40p_top'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_18_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_19_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_14_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_15_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_12_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_16_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_17_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_13_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  guide_transformation 405 (Line: 3063)  Could not find pre_resource 'add_11_root_add_60' in design 'cv32e40p_popcnt'.
-Info:  SVF Operation 405 (Line: 3063) - transformation_tree.  Status: rejected
-
-Info:  guide_transformation 426 (Line: 3329)  Could not find pre_resource 'add_1_root_add_271_4' in design 'cv32e40p_mult'.
-Info:  guide_transformation 426 (Line: 3329)  Could not find pre_resource 'add_0_root_add_271_4' in design 'cv32e40p_mult'.
-Info:  SVF Operation 426 (Line: 3329) - transformation_tree.  Status: rejected
-
-Info:  guide_transformation 435 (Line: 3431)  Could not find pre_resource 'add_1_root_add_224_2' in design 'cv32e40p_mult'.
-Info:  guide_transformation 435 (Line: 3431)  Could not find pre_resource 'add_0_root_add_224_2' in design 'cv32e40p_mult'.
-Info:  SVF Operation 435 (Line: 3431) - transformation_tree.  Status: rejected
-
-Info:  guide_transformation 439 (Line: 3478)  Could not find pre_resource 'add_1_root_add_305_2' in design 'cv32e40p_mult'.
-Info:  guide_transformation 439 (Line: 3478)  Could not find pre_resource 'add_0_root_add_305_2' in design 'cv32e40p_mult'.
-Info:  SVF Operation 439 (Line: 3478) - transformation_tree.  Status: rejected
-
-Info:  guide_transformation 444 (Line: 3536)  Could not find pre_resource 'add_1_root_add_111_2' in design 'cv32e40p_mult'.
-Info:  guide_transformation 444 (Line: 3536)  Could not find pre_resource 'add_0_root_add_111_2' in design 'cv32e40p_mult'.
-Info:  SVF Operation 444 (Line: 3536) - transformation_tree.  Status: rejected
-
 Info:  guide_uniquify 448 (Line: 3583)  Cannot find object "core_i/load_store_unit_i/dp_cluster_0/mult_add_346_aco" in design 'cv32e40p_top'.
 Info:  SVF Operation 448 (Line: 3583) - uniquify.  Status: rejected
 Info:  guide_uniquify 449 (Line: 3587)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_3/mult_266" in design 'cv32e40p_top'.
@@ -197,11 +156,6 @@ Info:  SVF Operation 454 (Line: 3607) - uniquify.  Status: rejected
 Info:  guide_uniquify 455 (Line: 3611)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_1/mult_299" in design 'cv32e40p_top'.
 Info:  SVF Operation 455 (Line: 3611) - uniquify.  Status: rejected
 Info:  guide_uniquify 456 (Line: 3615)  Cannot find object "core_i/ex_stage_i/mult_i/dp_cluster_0/mult_110" in design 'cv32e40p_top'.
-Info:  guide_multiplier 602 (Line: 4489) Cannot find reference cell for instance 'core_i/load_store_unit_i/mult_add_346_aco' in design 'cv32e40p_top'.
-Info:  guide_multiplier 602 (Line: 4489) Cannot find reference cell for instance 'core_i/load_store_unit_i/mult_add_346_aco' in design 'cv32e40p_top'.
-Info:  guide_multiplier 602 (Line: 4489) Cannot find reference cell for instance 'core_i/load_store_unit_i/mult_add_346_aco' in design 'cv32e40p_top'.
-Info:  SVF Operation 602 (Line: 4489) - multiplier.  Status: rejected
-
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_110 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_224 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_266 SUCCEEDED.
@@ -210,6 +164,7 @@ Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_268 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_269 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_299 SUCCEEDED.
 Info:  Pre-verification of Ref:/WORK/cv32e40p_mult/mult_300 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/cv32e40p_load_store_unit_PULP_OBI0/mult_add_346_aco SUCCEEDED.
 Info:  guide_ununiquify 631 (Line: 4616)  Cannot find object "U1_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_ununiquify 631 (Line: 4616)  Cannot find object "U0_mux2X1" in design 'cv32e40p_top'.
 Info:  guide_uniquify 632 (Line: 4621)  Cannot find object "U2_mux2X1" in design 'cv32e40p_top'.
