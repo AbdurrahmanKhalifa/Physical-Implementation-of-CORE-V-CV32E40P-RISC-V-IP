@@ -1,7 +1,10 @@
 #!/bin/bash
 
 INPUT_FILE="$1"
-OUTPUT_FILE="unique_lint.log"
+OUTPUT_DIR="lint_log"
+OUTPUT_FILE="$OUTPUT_DIR/unique_lint.log"
+
+mkdir -p "$OUTPUT_DIR"
 
 echo "UNIQUE LINT WARNINGS EXTRACTED"
 echo "==============================" > "$OUTPUT_FILE"
