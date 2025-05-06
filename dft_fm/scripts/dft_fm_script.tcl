@@ -135,10 +135,10 @@ analyze_points -failing
 }
 
 ########################### Reporting ############################# 
-report_passing_points > ../reports/passing_points.rpt
-report_failing_points > ../reports/failing_points.rpt
-report_aborted_points > ../reports/aborted_points.rpt
-report_unverified_points > ../reports/unverified_points.rpt
+report_passing_points > reports/passing_points.rpt
+report_failing_points > reports/failing_points.rpt
+report_aborted_points > reports/aborted_points.rpt
+report_unverified_points > reports/unverified_points.rpt
 
 
 start_gui

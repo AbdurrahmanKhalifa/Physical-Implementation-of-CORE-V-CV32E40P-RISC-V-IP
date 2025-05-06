@@ -1,7 +1,3 @@
-sh mkdir -p reports
-sh mkdir -p netlists
-sh mkdir -p sdf
-sh mkdir -p sdc
 
 ########################### Define Top Module ############################
                                                    

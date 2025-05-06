@@ -1,9 +1,4 @@
 
-sh mkdir -p netlists
-sh mkdir -p sdf
-sh mkdir -p sdc
-sh mkdir -p reports
-
 ########################### Define Top Module ############################
                                                    
 set top_module cv32e40p_top
