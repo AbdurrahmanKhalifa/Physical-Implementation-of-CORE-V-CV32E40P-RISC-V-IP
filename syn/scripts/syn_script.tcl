@@ -50,8 +50,8 @@ puts "###########################################"
 
 set file_format sverilog
 
-#analyze -format $file_format [glob ../$rtl/*]
-#analyze -format $file_format [glob ../rtl/include/*]
+#analyze -format $file_format [glob $rtl/*]
+#analyze -format $file_format [glob rtl/include/*]
 
 analyze -format $file_format cv32e40p_pkg.sv
 analyze -format $file_format cv32e40p_fpu_pkg.sv
@@ -109,15 +109,15 @@ puts "###############################################"
 puts "######## checking design consistency ##########"
 puts "###############################################"
 
-check_design >> ../reports/check_design.rpt
+check_design >> reports/check_design.rpt
 
 #################### Define Design Constraints #########################
 puts "###############################################"
 puts "############ Design Constraints #### ##########"
 puts "###############################################"
 
-source -echo -v ../cons/cv32e40p_core.sdc
-source -echo -v ../cons/cons.tcl
+source -echo -v cons/cv32e40p_core.sdc
+source -echo -v cons/cons.tcl
 
 ###################### Mapping and optimization ########################
 puts "###############################################"
@@ -135,21 +135,21 @@ set_svf -off
 # Write out files
 #############################################################################
 
-write -f ddc -hierarchy -output ../netlists/$top_module.ddc
-write_file -format verilog -hierarchy -output ../netlists/$top_module.sv
-write_sdf  ../sdf/$top_module.sdf
-write_sdc  -nosplit ../sdc/$top_module.sdc
+write -f ddc -hierarchy -output netlists/$top_module.ddc
+write_file -format verilog -hierarchy -output netlists/$top_module.sv
+write_sdf  sdf/$top_module.sdf
+write_sdc  -nosplit sdc/$top_module.sdc
 
 ####################### reporting ##########################################	
 
-report_area -hierarchy > ../reports/area.rpt
-report_cell > ../reports/cells.rpt
-report_qor > ../reports/qor.rpt
-report_power -hierarchy > ../reports/power.rpt
-report_timing -delay_type max -max_paths 10 > ../reports/setup.rpt
-report_clock -attributes > ../reports/clocks.rpt
-report_resources > ../reports/resources.rpt
-report_constraint -all_violators -nosplit > ../reports/constraints.rpt
+report_area -hierarchy > reports/area.rpt
+report_cell > reports/cells.rpt
+report_qor > reports/qor.rpt
+report_power -hierarchy > reports/power.rpt
+report_timing -delay_type max -max_paths 10 > reports/setup.rpt
+report_clock -attributes > reports/clocks.rpt
+report_resources > reports/resources.rpt
+report_constraint -all_violators -nosplit > reports/constraints.rpt
 
 ############################################################################
 # DFT Preparation Section
