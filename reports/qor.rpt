@@ -1,0 +1,75 @@
+****************************************
+Report : qor
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May  8 16:45:16 2025
+****************************************
+Information: The stitching and editing of coupling caps is turned OFF for design 'cv32e40p.dlib:cv32e40p_floorpaln.design'. (TIM-125)
+Warning: Technology layer 'MRDL' setting 'routing-direction' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: Design Average RC for design cv32e40p_floorpaln  (NEX-011)
+Information: r = 2.475848 ohm/um, via_r = 0.477246 ohm/cut, c = 0.088007 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.824338 ohm/um, via_r = 0.544226 ohm/cut, c = 0.089764 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'cv32e40p_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 27889, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+
+Scenario           'default'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     19
+Critical Path Length:              0.95
+Critical Path Slack:               1.05
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             77
+Hierarchical Port Count:          11652
+Leaf Cell Count:                  25646
+Buf/Inv Cell Count:                5750
+Buf Cell Count:                    1242
+Inv Cell Count:                    4508
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         23388
+Sequential Cell Count:             2258
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:             8908.68
+Noncombinational Area:          2907.89
+Buf/Inv Area:                   1196.80
+Total Buffer Area:               394.67
+Total Inverter Area:             802.13
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          11816.57
+Cell Area (netlist and physical only):        12571.55
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             28210
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

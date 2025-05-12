@@ -1,0 +1,100 @@
+
+
+
+                              IC Compiler II (TM)
+
+             Version O-2018.06-SP1 for linux64 - Jul 17, 2018 -SLE
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+# ================================================ #
+# ================== Search path ================= #
+# ================================================ #
+set search_path /mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/
+/mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/
+# ================================================ #
+# ================== NDM_library ================= #
+# ================================================ #
+set reference_library /mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/ndm/saed14hvt_frame_timing_ccs.ndm
+/mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/ndm/saed14hvt_frame_timing_ccs.ndm
+# ================================================ #
+# =================== Techfile =================== #
+# ================================================ #
+set TECH_FILE $search_path/saed14nm_1p9m_mw.tf
+/mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt//saed14nm_1p9m_mw.tf
+# ================================================ #
+# ================ Design Library ================ #
+# ================================================ #
+sh rm -rf cv32e40p.dlib
+create_lib -technology $TECH_FILE -ref_libs $reference_library cv32e40p.dlib
+Warning: Pitch 0.600000 for layer MRDL is less than sum(4.000000) of minSpacing(2.000000) and minWidth(2.000000).(saed14nm_1p9m_mw.tf line:1445) (TECH-223)
+Warning: saed14nm_1p9m_mw.tf line 868, 'cutNameTbl' on Layer 'VIA4' has cut name 'VIA4BAR1' with no matching ContactCode found. (TECH-252)
+Warning: The value of the pitch attribute of layer MRDL is invalid. Attribute pitch should not be less than sum of attribute minWidth and minSpacing. (saed14nm_1p9m_mw.tf line 1445) (TECH-050)
+Information: Loading technology file '/mnt/hgfs/virtual_share/SAED14nm_EDK_CORE_HVT_v_062020/stdcell_hvt/saed14nm_1p9m_mw.tf' (FILE-007)
+{cv32e40p.dlib}
+# ================================================ #
+# ================== Load Design ================= #
+# ================================================ #
+read_verilog -top cv32e40p_top ../../dft/netlists/cv32e40p_top.ddc
+Information: Reading Verilog into new design 'cv32e40p_top' in library 'cv32e40p.dlib'. (VR-012)
+Loading verilog file '/mnt/hgfs/virtual_share/Physical-Implementation-of-CORE-V-CV32E40P-RISC-V-IP-main/dft/netlists/cv32e40p_top.ddc'
+Information: Renamed scalar net '*Logic1*' to '*Logic1*1' in design 'cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1'. (VR-002)
+Information: Renamed scalar net '*Logic1*' to '*Logic1*1' in design 'cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1'. (VR-002)
+Information: Renamed scalar net '*Logic1*' to '*Logic1*1' in design 'cv32e40p_aligner_test_1'. (VR-002)
+Information: Renamed scalar net '*Logic1*' to '*Logic1*1' in design 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1'. (VR-002)
+Number of modules read: 78
+Top level ports: 392
+Total ports in all modules: 12044
+Total nets in all modules: 40293
+Total instances in all modules: 25723
+Elapsed = 00:00:00.42, CPU = 00:00:00.37
+1
+# ----------- Read_SDC ----------- #
+read_sdc ../../dft/sdc/cv32e40p_top.sdc
+Using libraries: cv32e40p.dlib saed14hvt_frame_timing_ccs
+Linking block cv32e40p.dlib:cv32e40p_top.design
+Information: User units loaded from library 'saed14hvt_frame_timing_ccs' (LNK-040)
+Design 'cv32e40p_top' was successfully linked.
+Information: Loading SDC version 2.1 file '/mnt/hgfs/virtual_share/Physical-Implementation-of-CORE-V-CV32E40P-RISC-V-IP-main/dft/sdc/cv32e40p_top.sdc' (FILE-007)
+Begin building search trees for block cv32e40p.dlib:cv32e40p_top.design
+Done building search trees for block cv32e40p.dlib:cv32e40p_top.design (time 0s)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+1
+# -----------  Linking ----------- #
+link_block
+Warning: Block 'cv32e40p.dlib:cv32e40p_top.design' is already linked. (LNK-067)
+0
+# ================================================ #
+# ===================== TLU+ ===================== #
+# ================================================ #
+read_parasitic_tech  -tlup $search_path/saed14nm_1p9m_Cmax.tluplus -name maxTLU
+1
+read_parasitic_tech  -tlup $search_path/saed14nm_1p9m_Cmin.tluplus  -name minTLU
+1
+set_parasitic_parameters -late_spec maxTLU -early_spec minTLU
+1
+# ================================================ #
+# =================== End_Step =================== #
+# ================================================ #
+save_block -as cv32e40p_setup cv32e40p.dlib:cv32e40p_top.design
+Information: Saving 'cv32e40p.dlib:cv32e40p_top.design' to 'cv32e40p.dlib:cv32e40p_setup.design'. (DES-028)
+1
+1
+icc2_shell> quit
+Maximum memory usage for this session: 240.08 MB
+CPU usage for this session:      8 seconds (  0.00 hours)
+Elapsed time for this session:     65 seconds (  0.02 hours)
+Thank you for using IC Compiler II.
