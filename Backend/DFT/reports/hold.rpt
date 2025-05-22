@@ -1,0 +1,387 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Wed May 21 23:54:12 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ff0p88v125c   Library: saed14rvt_ff0p88v125c
+Wire Load Model Mode: top
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[1]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[2]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[1]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[1]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[2]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[2]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[3]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[2]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[3]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[3]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[3]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[4]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[3]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[3]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[4]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[4]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[5]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[4]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[5]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[5]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[5]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[6]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[5]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[5]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[6]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[6]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[6]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[7]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[6]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[6]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[7]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[7]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[7]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[8]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[7]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[7]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[8]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[8]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[8]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[9]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[8]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[8]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[9]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[9]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[9]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[10]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[9]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[9]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[10]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[10]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+  Startpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[10]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mult_operand_c_ex_o_reg[11]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       16000                 saed14rvt_ss0p6v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[10]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[10]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                         -0.23      -0.23 f
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[11]/SI (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.01      -0.23 f
+  data arrival time                                                 -0.23
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.05       0.05
+  core_i/id_stage_i/mult_operand_c_ex_o_reg[11]/CK (SAEDRVT14_FSDPRBQ_V2LP_1)
+                                                          0.00       0.05 r
+  library hold time                                       0.01       0.06
+  data required time                                                 0.06
+  --------------------------------------------------------------------------
+  data required time                                                 0.06
+  data arrival time                                                  0.23
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.29
+
+
+1

@@ -1,0 +1,616 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May  8 22:52:48 2025
+****************************************
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[29] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U68/X (SAEDHVT14_OA21_1)       0.01      0.73 r
+  core_i/if_stage_i/U57/X (SAEDHVT14_AN2_MM_0P5)   0.01      0.74 r
+  core_i/if_stage_i/U18/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U171/X (SAEDHVT14_AOI222_1)    0.02      0.78 f
+  core_i/if_stage_i/U175/X (SAEDHVT14_AN4_1)       0.01      0.79 f
+  core_i/if_stage_i/U176/X (SAEDHVT14_AO21B_0P5)   0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U131/X (SAEDHVT14_AOI22_0P5)
+                                                   0.02      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U133/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.82 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U65/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U345/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.13      0.96 r
+  instr_addr_o[29] (out)                           0.00      0.96 r
+  data arrival time                                          0.96
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.96
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.04
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[31] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U68/X (SAEDHVT14_OA21_1)       0.01      0.73 r
+  core_i/if_stage_i/U57/X (SAEDHVT14_AN2_MM_0P5)   0.01      0.74 r
+  core_i/if_stage_i/U18/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U157/X (SAEDHVT14_AOI222_1)    0.03      0.79 f
+  core_i/if_stage_i/U160/X (SAEDHVT14_AN4_4)       0.01      0.80 f
+  core_i/if_stage_i/U154/X (SAEDHVT14_ND2_CDC_1)   0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U115/X (SAEDHVT14_ND2_CDC_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U25/X (SAEDHVT14_ND2_MM_1)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U3/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U349/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.14      0.96 r
+  instr_addr_o[31] (out)                           0.01      0.96 r
+  data arrival time                                          0.96
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.96
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.04
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[30] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U68/X (SAEDHVT14_OA21_1)       0.01      0.73 r
+  core_i/if_stage_i/U57/X (SAEDHVT14_AN2_MM_0P5)   0.01      0.74 r
+  core_i/if_stage_i/U18/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U165/X (SAEDHVT14_AOI222_1)    0.02      0.78 f
+  core_i/if_stage_i/U169/X (SAEDHVT14_AN4_1)       0.01      0.79 f
+  core_i/if_stage_i/U170/X (SAEDHVT14_AO21B_0P5)   0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U130/X (SAEDHVT14_AO21B_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U36/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U347/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.14      0.95 r
+  instr_addr_o[30] (out)                           0.00      0.96 r
+  data arrival time                                          0.96
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.96
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.04
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[28] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U21/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U180/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U181/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U84/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U136/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U137/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U64/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U343/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.13      0.95 r
+  instr_addr_o[28] (out)                           0.00      0.96 r
+  data arrival time                                          0.96
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.96
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.04
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[27] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U21/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U185/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U186/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U85/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U140/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U141/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U63/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U341/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.13      0.95 r
+  instr_addr_o[27] (out)                           0.00      0.95 r
+  data arrival time                                          0.95
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.95
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.05
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[26] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U21/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U190/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U191/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U86/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U145/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U147/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U62/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U339/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.13      0.95 r
+  instr_addr_o[26] (out)                           0.00      0.95 r
+  data arrival time                                          0.95
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.95
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.05
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[25] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U20/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U195/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U196/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U87/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U150/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U151/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U61/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U337/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.13      0.94 r
+  instr_addr_o[25] (out)                           0.00      0.95 r
+  data arrival time                                          0.95
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.95
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.05
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[24] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U21/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U200/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U201/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U88/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U154/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U155/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U60/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U335/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.12      0.94 r
+  instr_addr_o[24] (out)                           0.00      0.95 r
+  data arrival time                                          0.95
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.95
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.05
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[23] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U405/X (SAEDHVT14_OR4_1)
+                                                   0.04      0.69 r
+  core_i/if_stage_i/U5/X (SAEDHVT14_INV_S_1)       0.01      0.70 f
+  core_i/if_stage_i/U98/X (SAEDHVT14_NR4_0P75)     0.02      0.72 r
+  core_i/if_stage_i/U161/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.73 f
+  core_i/if_stage_i/U56/X (SAEDHVT14_NR3_1)        0.02      0.74 r
+  core_i/if_stage_i/U21/X (SAEDHVT14_BUF_S_1)      0.02      0.76 r
+  core_i/if_stage_i/U205/X (SAEDHVT14_AOI222_1)    0.02      0.79 f
+  core_i/if_stage_i/U206/X (SAEDHVT14_AN4_1)       0.01      0.80 f
+  core_i/if_stage_i/U89/X (SAEDHVT14_INV_S_1)      0.00      0.80 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U158/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.81 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U160/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U59/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.82 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U333/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.12      0.94 r
+  instr_addr_o[23] (out)                           0.00      0.94 r
+  data arrival time                                          0.94
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.94
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.06
+
+
+
+  Startpoint: debug_req_i (input port clocked by clk_i)
+  Endpoint: instr_addr_o[2] (output port clocked by clk_i)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk_i
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                             0.50      0.50
+
+  debug_req_i (in)                                 0.00      0.50 f
+  core_i/id_stage_i/controller_i/U187/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.50 r
+  core_i/id_stage_i/controller_i/U321/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.52 f
+  core_i/id_stage_i/controller_i/U322/X (SAEDHVT14_OAI21_0P5)
+                                                   0.01      0.53 r
+  core_i/id_stage_i/controller_i/U99/X (SAEDHVT14_ND2B_U_0P5)
+                                                   0.01      0.54 f
+  core_i/id_stage_i/controller_i/U357/X (SAEDHVT14_OR3_0P75)
+                                                   0.02      0.56 f
+  core_i/id_stage_i/controller_i/U38/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.10      0.65 r
+  core_i/id_stage_i/controller_i/U103/X (SAEDHVT14_AN2_MM_0P5)
+                                                   0.12      0.77 r
+  core_i/id_stage_i/controller_i/U373/X (SAEDHVT14_NR2_1)
+                                                   0.03      0.80 f
+  core_i/id_stage_i/controller_i/U186/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.81 r
+  core_i/U26/X (SAEDHVT14_INV_S_1)                 0.00      0.81 f
+  core_i/U25/X (SAEDHVT14_NR2_MM_1)                0.01      0.82 r
+  core_i/if_stage_i/U307/X (SAEDHVT14_AOI222_1)    0.02      0.84 f
+  core_i/if_stage_i/U311/X (SAEDHVT14_AN4_1)       0.01      0.85 f
+  core_i/if_stage_i/U83/X (SAEDHVT14_INV_S_1)      0.00      0.85 r
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U243/X (SAEDHVT14_OA2BB2_V1_1)
+                                                   0.01      0.86 f
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U244/X (SAEDHVT14_ND2_CDC_0P5)
+                                                   0.01      0.86 r
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U38/X (SAEDHVT14_INV_S_1)
+                                                   0.00      0.87 f
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U291/X (SAEDHVT14_MUXI2_U_0P5)
+                                                   0.08      0.94 r
+  instr_addr_o[2] (out)                            0.00      0.94 r
+  data arrival time                                          0.94
+
+  clock clk_i (rise edge)                          5.00      5.00
+  clock network delay (ideal)                      0.00      5.00
+  output external delay                           -3.00      2.00
+  data required time                                         2.00
+  ------------------------------------------------------------------------
+  data required time                                         2.00
+  data arrival time                                         -0.94
+  ------------------------------------------------------------------------
+  slack (MET)                                                1.06
+
+
+1
