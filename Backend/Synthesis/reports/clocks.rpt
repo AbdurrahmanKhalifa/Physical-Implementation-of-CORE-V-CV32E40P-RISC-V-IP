@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Wed May 21 23:15:04 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk_i            5.00   {0 2.5}             d         {clk_i}
+--------------------------------------------------------------------------------
+1
