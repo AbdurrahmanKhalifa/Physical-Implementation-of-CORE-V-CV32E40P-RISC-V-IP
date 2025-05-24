@@ -3,7 +3,7 @@
 Report : qor
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Wed May 21 23:14:32 2025
+Date   : Sat May 24 22:45:34 2025
 ****************************************
 
 
@@ -64,12 +64,12 @@ Date   : Wed May 21 23:14:32 2025
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                   45.13
-  Logic Optimization:                 56.75
-  Mapping Optimization:              262.19
+  Resource Sharing:                   44.81
+  Logic Optimization:                 57.24
+  Mapping Optimization:              273.40
   -----------------------------------------
-  Overall Compile Time:              388.80
-  Overall Compile Wall Clock Time:   389.89
+  Overall Compile Time:              400.20
+  Overall Compile Wall Clock Time:   402.79
 
   --------------------------------------------------------------------
 

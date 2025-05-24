@@ -6,7 +6,7 @@ Report : timing
         -max_paths 10
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Wed May 21 23:54:12 2025
+Date   : Sat May 24 22:47:43 2025
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
@@ -127,14 +127,14 @@ Wire Load Model Mode: top
   core_i/id_stage_i/r153/U1_31/X (SAEDRVT14_EO3_1)        0.06       1.70 f
   core_i/id_stage_i/r153/SUM[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.70 f
-  core_i/id_stage_i/U1955/X (SAEDRVT14_AOI222_1)          0.06       1.76 r
-  core_i/id_stage_i/U970/X (SAEDRVT14_INV_S_0P5)          0.01       1.77 f
+  core_i/id_stage_i/U1953/X (SAEDRVT14_AOI222_1)          0.06       1.76 r
+  core_i/id_stage_i/U968/X (SAEDRVT14_INV_S_0P5)          0.01       1.77 f
   core_i/id_stage_i/jump_target_o[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.77 f
   core_i/if_stage_i/jump_target_id_i[31] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.77 f
-  core_i/if_stage_i/U666/X (SAEDRVT14_AO221_2)            0.04       1.80 f
-  core_i/if_stage_i/U418/X (SAEDRVT14_OR3_1)              0.02       1.83 f
+  core_i/if_stage_i/U665/X (SAEDRVT14_AO221_2)            0.04       1.80 f
+  core_i/if_stage_i/U417/X (SAEDRVT14_OR3_1)              0.02       1.83 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[31] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.83 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[31] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -286,14 +286,14 @@ Wire Load Model Mode: top
                                                           0.08       1.66 f
   core_i/id_stage_i/r153/SUM[30] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.66 f
-  core_i/id_stage_i/U1724/X (SAEDRVT14_AOI222_1)          0.06       1.72 r
-  core_i/id_stage_i/U1397/X (SAEDRVT14_INV_S_1)           0.01       1.74 f
+  core_i/id_stage_i/U1722/X (SAEDRVT14_AOI222_1)          0.06       1.72 r
+  core_i/id_stage_i/U1395/X (SAEDRVT14_INV_S_1)           0.01       1.74 f
   core_i/id_stage_i/jump_target_o[30] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.74 f
   core_i/if_stage_i/jump_target_id_i[30] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.74 f
-  core_i/if_stage_i/U425/X (SAEDRVT14_AO221_0P5)          0.04       1.77 f
-  core_i/if_stage_i/U422/X (SAEDRVT14_OR3_1)              0.03       1.81 f
+  core_i/if_stage_i/U424/X (SAEDRVT14_AO221_0P5)          0.04       1.77 f
+  core_i/if_stage_i/U421/X (SAEDRVT14_OR3_1)              0.03       1.81 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[30] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.81 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[30] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -445,14 +445,14 @@ Wire Load Model Mode: top
                                                           0.08       1.62 f
   core_i/id_stage_i/r153/SUM[29] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.62 f
-  core_i/id_stage_i/U1725/X (SAEDRVT14_AOI222_1)          0.06       1.68 r
-  core_i/id_stage_i/U1398/X (SAEDRVT14_INV_S_1)           0.01       1.69 f
+  core_i/id_stage_i/U1723/X (SAEDRVT14_AOI222_1)          0.06       1.68 r
+  core_i/id_stage_i/U1396/X (SAEDRVT14_INV_S_1)           0.01       1.69 f
   core_i/id_stage_i/jump_target_o[29] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.69 f
   core_i/if_stage_i/jump_target_id_i[29] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.69 f
-  core_i/if_stage_i/U428/X (SAEDRVT14_AO221_0P5)          0.04       1.73 f
-  core_i/if_stage_i/U426/X (SAEDRVT14_OR3_1)              0.03       1.77 f
+  core_i/if_stage_i/U427/X (SAEDRVT14_AO221_0P5)          0.04       1.73 f
+  core_i/if_stage_i/U425/X (SAEDRVT14_OR3_1)              0.03       1.77 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[29] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.77 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[29] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -602,14 +602,14 @@ Wire Load Model Mode: top
                                                           0.04       1.55 f
   core_i/id_stage_i/r153/SUM[28] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.55 f
-  core_i/id_stage_i/U1726/X (SAEDRVT14_AOI222_1)          0.06       1.61 r
-  core_i/id_stage_i/U1399/X (SAEDRVT14_INV_S_1)           0.01       1.62 f
+  core_i/id_stage_i/U1724/X (SAEDRVT14_AOI222_1)          0.06       1.61 r
+  core_i/id_stage_i/U1397/X (SAEDRVT14_INV_S_1)           0.01       1.62 f
   core_i/id_stage_i/jump_target_o[28] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.62 f
   core_i/if_stage_i/jump_target_id_i[28] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.62 f
-  core_i/if_stage_i/U432/X (SAEDRVT14_AO221_0P5)          0.04       1.66 f
-  core_i/if_stage_i/U430/X (SAEDRVT14_OR3_1)              0.03       1.69 f
+  core_i/if_stage_i/U431/X (SAEDRVT14_AO221_0P5)          0.04       1.66 f
+  core_i/if_stage_i/U429/X (SAEDRVT14_OR3_1)              0.03       1.69 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[28] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.69 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[28] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -757,14 +757,14 @@ Wire Load Model Mode: top
                                                           0.08       1.54 f
   core_i/id_stage_i/r153/SUM[27] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.54 f
-  core_i/id_stage_i/U1727/X (SAEDRVT14_AOI222_1)          0.06       1.60 r
-  core_i/id_stage_i/U1400/X (SAEDRVT14_INV_S_1)           0.01       1.62 f
+  core_i/id_stage_i/U1725/X (SAEDRVT14_AOI222_1)          0.06       1.60 r
+  core_i/id_stage_i/U1398/X (SAEDRVT14_INV_S_1)           0.01       1.62 f
   core_i/id_stage_i/jump_target_o[27] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.62 f
   core_i/if_stage_i/jump_target_id_i[27] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.62 f
-  core_i/if_stage_i/U436/X (SAEDRVT14_AO221_0P5)          0.04       1.65 f
-  core_i/if_stage_i/U434/X (SAEDRVT14_OR3_1)              0.03       1.69 f
+  core_i/if_stage_i/U435/X (SAEDRVT14_AO221_0P5)          0.04       1.65 f
+  core_i/if_stage_i/U433/X (SAEDRVT14_OR3_1)              0.03       1.69 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[27] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.69 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[27] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -910,14 +910,14 @@ Wire Load Model Mode: top
                                                           0.08       1.50 f
   core_i/id_stage_i/r153/SUM[26] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.50 f
-  core_i/id_stage_i/U1728/X (SAEDRVT14_AOI222_1)          0.06       1.56 r
-  core_i/id_stage_i/U1401/X (SAEDRVT14_INV_S_1)           0.01       1.57 f
+  core_i/id_stage_i/U1726/X (SAEDRVT14_AOI222_1)          0.06       1.56 r
+  core_i/id_stage_i/U1399/X (SAEDRVT14_INV_S_1)           0.01       1.57 f
   core_i/id_stage_i/jump_target_o[26] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.57 f
   core_i/if_stage_i/jump_target_id_i[26] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.57 f
-  core_i/if_stage_i/U440/X (SAEDRVT14_AO221_0P5)          0.04       1.61 f
-  core_i/if_stage_i/U438/X (SAEDRVT14_OR3_1)              0.03       1.65 f
+  core_i/if_stage_i/U439/X (SAEDRVT14_AO221_0P5)          0.04       1.61 f
+  core_i/if_stage_i/U437/X (SAEDRVT14_OR3_1)              0.03       1.65 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[26] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.65 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[26] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -1061,14 +1061,14 @@ Wire Load Model Mode: top
                                                           0.08       1.46 f
   core_i/id_stage_i/r153/SUM[25] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.46 f
-  core_i/id_stage_i/U1729/X (SAEDRVT14_AOI222_1)          0.06       1.52 r
-  core_i/id_stage_i/U1402/X (SAEDRVT14_INV_S_1)           0.01       1.53 f
+  core_i/id_stage_i/U1727/X (SAEDRVT14_AOI222_1)          0.06       1.52 r
+  core_i/id_stage_i/U1400/X (SAEDRVT14_INV_S_1)           0.01       1.53 f
   core_i/id_stage_i/jump_target_o[25] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.53 f
   core_i/if_stage_i/jump_target_id_i[25] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.53 f
-  core_i/if_stage_i/U444/X (SAEDRVT14_AO221_0P5)          0.04       1.57 f
-  core_i/if_stage_i/U442/X (SAEDRVT14_OR3_1)              0.03       1.60 f
+  core_i/if_stage_i/U443/X (SAEDRVT14_AO221_0P5)          0.04       1.57 f
+  core_i/if_stage_i/U441/X (SAEDRVT14_OR3_1)              0.03       1.60 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[25] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.60 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[25] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -1210,14 +1210,14 @@ Wire Load Model Mode: top
                                                           0.08       1.41 f
   core_i/id_stage_i/r153/SUM[24] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.41 f
-  core_i/id_stage_i/U1730/X (SAEDRVT14_AOI222_1)          0.06       1.47 r
-  core_i/id_stage_i/U1403/X (SAEDRVT14_INV_S_1)           0.01       1.49 f
+  core_i/id_stage_i/U1728/X (SAEDRVT14_AOI222_1)          0.06       1.47 r
+  core_i/id_stage_i/U1401/X (SAEDRVT14_INV_S_1)           0.01       1.49 f
   core_i/id_stage_i/jump_target_o[24] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.49 f
   core_i/if_stage_i/jump_target_id_i[24] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.49 f
-  core_i/if_stage_i/U448/X (SAEDRVT14_AO221_0P5)          0.04       1.52 f
-  core_i/if_stage_i/U446/X (SAEDRVT14_OR3_1)              0.03       1.56 f
+  core_i/if_stage_i/U447/X (SAEDRVT14_AO221_0P5)          0.04       1.52 f
+  core_i/if_stage_i/U445/X (SAEDRVT14_OR3_1)              0.03       1.56 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[24] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.56 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[24] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -1357,14 +1357,14 @@ Wire Load Model Mode: top
                                                           0.08       1.37 f
   core_i/id_stage_i/r153/SUM[23] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
                                                           0.00       1.37 f
-  core_i/id_stage_i/U1737/X (SAEDRVT14_AOI222_1)          0.06       1.43 r
-  core_i/id_stage_i/U1410/X (SAEDRVT14_INV_S_1)           0.01       1.44 f
+  core_i/id_stage_i/U1735/X (SAEDRVT14_AOI222_1)          0.06       1.43 r
+  core_i/id_stage_i/U1408/X (SAEDRVT14_INV_S_1)           0.01       1.44 f
   core_i/id_stage_i/jump_target_o[23] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       1.44 f
   core_i/if_stage_i/jump_target_id_i[23] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
                                                           0.00       1.44 f
-  core_i/if_stage_i/U452/X (SAEDRVT14_AO221_0P5)          0.04       1.48 f
-  core_i/if_stage_i/U450/X (SAEDRVT14_OR3_1)              0.03       1.52 f
+  core_i/if_stage_i/U451/X (SAEDRVT14_AO221_0P5)          0.04       1.48 f
+  core_i/if_stage_i/U449/X (SAEDRVT14_OR3_1)              0.03       1.52 f
   core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[23] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
                                                           0.00       1.52 f
   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[23] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
@@ -1421,8 +1421,8 @@ Wire Load Model Mode: top
                                                           0.00 #     0.00 r
   core_i/id_stage_i/alu_operand_a_ex_o_reg[0]/Q (SAEDRVT14_FSDPRBQ_V2LP_1)
                                                           0.04       0.04 r
-  core_i/id_stage_i/U888/X (SAEDRVT14_INV_S_0P5)          0.02       0.06 f
-  core_i/id_stage_i/U889/X (SAEDRVT14_INV_S_0P5)          0.02       0.08 r
+  core_i/id_stage_i/U885/X (SAEDRVT14_INV_S_0P5)          0.02       0.06 f
+  core_i/id_stage_i/U886/X (SAEDRVT14_INV_S_0P5)          0.02       0.08 r
   core_i/id_stage_i/alu_operand_a_ex_o[0] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
                                                           0.00       0.08 r
   core_i/U228/CKOUT (SAEDRVT14_CLKSPLT_1)                 0.04       0.12 r

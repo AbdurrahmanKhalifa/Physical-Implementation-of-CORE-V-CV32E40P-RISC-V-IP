@@ -1248,7 +1248,7 @@ link
   Linking design 'cv32e40p_top'
   Using the following designs and libraries:
   --------------------------------------------------------------------------
-  * (25 designs)              /home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/cv32e40p_top.db, etc
+  * (25 designs)              /home/ICer/ITI/PnR_Grad/Backend/Synthesis/cv32e40p_top.db, etc
   saed14rvt_ss0p6v125c (library) /mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ss0p6v125c.db
   saed14rvt_tt0p6v25c (library) /mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_tt0p6v25c.db
   saed14rvt_ff0p88v125c (library) /mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ff0p88v125c.db
@@ -1996,8 +1996,6 @@ Warning: Design rule attributes from the driving cell will be
 ####################################################################################
 set_load 0.3956 [all_outputs] 
 1
-#input cap of buf_1
-#set_load 1.59 [all_outputs]   input cap of buf_16
 #set_load 10 [all_outputs]
 set_max_fanout 4 [current_design]
 Current design is 'cv32e40p_top'.
@@ -2013,7 +2011,6 @@ set_operating_conditions -min_library "saed14rvt_ff0p88v125c" -min "ff0p88v125c"
 Using operating conditions 'ss0p6v125c' found in library 'saed14rvt_ss0p6v125c'.
 Using operating conditions 'ff0p88v125c' found in library 'saed14rvt_ff0p88v125c'.
 1
-#set_operating_conditions -min_library "saed14rvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14rvt_ss0p6v125c" -max "ss0p6v125c"
 #ungroup -flatten -all
 ###################### Mapping and optimization ########################
 puts "###############################################"
@@ -2550,29 +2547,29 @@ Information: The register 'core_i/id_stage_i/alu_vec_mode_ex_o_reg[0]' is a cons
 Information: The register 'core_i/id_stage_i/apu_en_ex_o_reg' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/data_load_event_ex_o_reg' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a constant and will be removed. (OPT-1206)
-    0:02:23   16770.4      0.00      -0.0    9368.2                          
-    0:02:23   16770.4      0.00      -0.0    9368.2                          
-    0:02:23   16770.4      0.00      -0.0    9368.2                          
-    0:02:23   16770.4      0.00      -0.0    9368.2                          
-    0:02:24   16770.4      0.00      -0.0    9368.2                          
-    0:02:48   12494.1      0.03       0.0    9368.2                          
-    0:02:51   12493.8      0.02       0.0    9391.7                          
-    0:02:59   12493.8      0.00      -0.0    9391.7                          
-    0:02:59   12493.8      0.00      -0.0    9391.7                          
-    0:03:00   12493.8      0.00      -0.0    9391.7                          
-    0:03:00   12493.8      0.00      -0.0    9391.7                          
-    0:03:00   12484.6      0.00      -0.0    9391.7                          
-    0:03:00   12484.6      0.00      -0.0    9391.7                          
-    0:03:39   12522.1      0.00      -0.0    8756.7                          
-    0:04:20   12560.4      0.00      -0.0    8237.7                          
-    0:04:42   12584.8      0.00      -0.0    7978.7                          
-    0:04:54   12597.6      0.00      -0.0    7828.7                          
-    0:05:01   12606.9      0.00      -0.0    7746.7                          
-    0:05:04   12609.7      0.00      -0.0    7716.7                          
-    0:05:07   12611.8      0.00      -0.0    7698.7                          
-    0:05:08   12613.3      0.00      -0.0    7686.7                          
-    0:05:08   12613.8      0.00      -0.0    7683.7                          
-    0:05:08   12613.8      0.00      -0.0    7683.7                          
+    0:02:26   16770.4      0.00      -0.0    9368.2                          
+    0:02:26   16770.4      0.00      -0.0    9368.2                          
+    0:02:26   16770.4      0.00      -0.0    9368.2                          
+    0:02:26   16770.4      0.00      -0.0    9368.2                          
+    0:02:27   16770.4      0.00      -0.0    9368.2                          
+    0:02:53   12494.1      0.03       0.0    9368.2                          
+    0:02:56   12493.8      0.02       0.0    9391.7                          
+    0:03:04   12493.8      0.00      -0.0    9391.7                          
+    0:03:04   12493.8      0.00      -0.0    9391.7                          
+    0:03:05   12493.8      0.00      -0.0    9391.7                          
+    0:03:05   12493.8      0.00      -0.0    9391.7                          
+    0:03:05   12484.6      0.00      -0.0    9391.7                          
+    0:03:05   12484.6      0.00      -0.0    9391.7                          
+    0:03:45   12522.1      0.00      -0.0    8756.7                          
+    0:04:29   12560.4      0.00      -0.0    8237.7                          
+    0:04:51   12584.8      0.00      -0.0    7978.7                          
+    0:05:03   12597.6      0.00      -0.0    7828.7                          
+    0:05:10   12606.9      0.00      -0.0    7746.7                          
+    0:05:13   12609.7      0.00      -0.0    7716.7                          
+    0:05:16   12611.8      0.00      -0.0    7698.7                          
+    0:05:17   12613.3      0.00      -0.0    7686.7                          
+    0:05:17   12613.8      0.00      -0.0    7683.7                          
+    0:05:17   12613.8      0.00      -0.0    7683.7                          
 
 
 
@@ -2583,9 +2580,9 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:05:08   12613.8      0.00      -0.0    7683.7                          
-    0:05:08   12613.8      0.00      -0.0    7683.7                          
-    0:05:09   12611.2      0.00      -0.0    7684.7                          
+    0:05:17   12613.8      0.00      -0.0    7683.7                          
+    0:05:17   12613.8      0.00      -0.0    7683.7                          
+    0:05:18   12611.2      0.00      -0.0    7684.7                          
 
 
   Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
@@ -2595,64 +2592,64 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:05:09   12611.2      0.00      -0.0    7684.7                          
-    0:05:10   12624.1      0.00      -0.0    7524.7 core_i/cs_registers_i/n743
-    0:05:10   12637.4      0.00      -0.0    7344.7 core_i/ex_stage_i/alu_i/srl_300/net81377
-    0:05:11   12653.4      0.00      -0.0    7128.7 core_i/ex_stage_i/mult_i/mult_110/net92683
-    0:05:11   12667.6      0.00      -0.0    6936.7 core_i/ex_stage_i/mult_i/mult_110/net92658
-    0:05:12   12681.8      0.00      -0.0    6744.7 core_i/ex_stage_i/mult_i/mult_300/net92621
-    0:05:12   12698.7      0.00      -0.0    6516.7 core_i/ex_stage_i/mult_i/mult_300/net92632
-    0:05:12   12716.5      0.00      -0.0    6276.7 core_i/ex_stage_i/mult_i/mult_299/net92577
-    0:05:12   12736.9      0.00      -0.0    6000.7 core_i/ex_stage_i/alu_i/srl_300/net138959
-    0:05:13   12751.1      0.00      -0.0    5814.7 core_i/ex_stage_i/alu_i/net99541
-    0:05:14   12761.8      0.00      -0.0    5694.7 core_i/cs_registers_i/net90143
-    0:05:15   12775.1      0.00      -0.0    5550.7 core_i/cs_registers_i/net90128
-    0:05:15   12781.8      0.00      -0.0    5476.7 core_i/cs_registers_i/net90152
-    0:05:35   12788.6      0.00      -0.0    5410.7 core_i/id_stage_i/alu_operand_a_ex_o[7]
-    0:05:36   12839.3      0.00      -0.0    5337.7 core_i/id_stage_i/net145462
-    0:05:37   12872.5      0.00      -0.0    5284.7 core_i/if_stage_i/instr_rdata_id_o[18]
-    0:05:38   12930.5      0.00      -0.0    5195.7 core_i/id_stage_i/net145885
-    0:05:39   12995.6      0.00      -0.0    5099.7 core_i/if_stage_i/net145917
-    0:05:39   13012.1      0.00      -0.0    4996.7 core_i/id_stage_i/net146004
-    0:05:40   13024.5      0.00      -0.0    4911.7 core_i/id_stage_i/alu_operand_b_ex_o[8]
-    0:05:41   13042.9      0.00      -0.0    4864.7 core_i/id_stage_i/net146920
-    0:05:42   13053.6      0.00      -0.0    4809.7 core_i/id_stage_i/net147041
-    0:05:44   13064.4      0.00      -0.0    4754.7 core_i/id_stage_i/net147162
-    0:05:45   13087.1      0.00      -0.0    4693.7 core_i/id_stage_i/net146818
-    0:05:46   13119.1      0.00      -0.0    4619.7 core_i/ex_stage_i/alu_i/net98987
-    0:05:46   13129.7      0.00      -0.0    4539.7 core_i/ex_stage_i/alu_i/net98680
-    0:05:47   13143.2      0.00      -0.0    4451.7 core_i/if_stage_i/aligner_i/pc_o[20]
-    0:05:48   13160.3      0.00      -0.0    4356.7 core_i/if_stage_i/pc_id_o[20]
-    0:05:48   13179.6      0.00      -0.0    4291.7 core_i/if_stage_i/instr_rdata_id_o[30]
-    0:05:49   13212.9      0.00      -0.0    4237.7 core_i/cs_registers_i/n516
-    0:05:49   13222.5      0.00      -0.0    4177.7 core_i/load_store_unit_i/net89771
-    0:05:50   13231.2      0.00      -0.0    4117.7 core_i/ex_stage_i/alu_i/net99226
-    0:05:51   13247.6      0.00      -0.0    4060.7 core_i/id_stage_i/alu_operand_c_ex_o[10]
-    0:05:51   13281.2      0.00      -0.0    4014.7 core_i/id_stage_i/net148131
-    0:05:52   13304.9      0.00      -0.0    3970.7 core_i/ex_stage_i/alu_i/net99862
-    0:05:52   13316.7      0.00      -0.0    3926.7 core_i/ex_stage_i/alu_i/net99754
-    0:05:53   13327.3      0.00      -0.0    3886.7 core_i/ex_stage_i/alu_i/net145680
-    0:05:53   13335.9      0.00      -0.0    3843.7 core_i/ex_stage_i/alu_i/net99648
-    0:05:54   13347.6      0.00      -0.0    3799.7 core_i/ex_stage_i/alu_i/net99061
-    0:05:54   13356.1      0.00      -0.0    3756.7 core_i/ex_stage_i/mult_i/mult_224/net138888
-    0:05:55   13371.0      0.00      -0.0    3710.7 core_i/id_stage_i/alu_operand_c_ex_o[11]
-    0:05:55   13397.1      0.00      -0.0    3677.7 core_i/id_stage_i/net148784
-    0:05:56   13440.1      0.00      -0.0    3645.7 core_i/id_stage_i/net148688
-    0:05:56   13456.4      0.00      -0.0    3620.7 core_i/ex_stage_i/alu_i/net98834
-    0:05:57   13468.2      0.00      -0.0    3598.7 core_i/id_stage_i/decoder_i/n176
-    0:05:57   13481.0      0.00      -0.0    3574.7 core_i/cs_registers_i/net139254
-    0:05:57   13487.3      0.00      -0.0    3543.7 core_i/id_stage_i/controller_i/net90551
-    0:05:58   13496.9      0.00      -0.0    3520.7 core_i/ex_stage_i/alu_i/net137880
-    0:05:58   13507.1      0.00      -0.0    3497.7 core_i/ex_stage_i/alu_i/net99724
-    0:05:59   13518.2      0.00      -0.0    3475.7 core_i/ex_stage_i/alu_i/srl_300/net139164
-    0:05:59   13524.1      0.00      -0.0    3449.7 core_i/ex_stage_i/mult_i/mult_224/net138984
-    0:05:59   13530.0      0.00      -0.0    3423.7 core_i/ex_stage_i/mult_i/mult_110/net137368
-    0:06:00   13545.2      0.00      -0.0    3394.7 core_i/id_stage_i/controller_i/deassert_we_o
-    0:06:00   13569.3      0.00      -0.0    3376.7 core_i/id_stage_i/net149832
-    0:06:01   13591.5      0.00      -0.0    3360.7 core_i/if_stage_i/net148056
-    0:06:01   13611.4      0.00      -0.0    3346.7 core_i/if_stage_i/net147972
-    0:06:02   13615.7      0.00      -0.0    3318.7 core_i/id_stage_i/instr_rdata_i[15]
-    0:06:03   13619.3      0.00      -0.0    3291.7                          
+    0:05:18   12611.2      0.00      -0.0    7684.7                          
+    0:05:19   12624.1      0.00      -0.0    7524.7 core_i/cs_registers_i/n743
+    0:05:19   12637.4      0.00      -0.0    7344.7 core_i/ex_stage_i/alu_i/srl_300/net81377
+    0:05:20   12653.4      0.00      -0.0    7128.7 core_i/ex_stage_i/mult_i/mult_110/net92683
+    0:05:21   12667.6      0.00      -0.0    6936.7 core_i/ex_stage_i/mult_i/mult_110/net92658
+    0:05:21   12681.8      0.00      -0.0    6744.7 core_i/ex_stage_i/mult_i/mult_300/net92621
+    0:05:21   12698.7      0.00      -0.0    6516.7 core_i/ex_stage_i/mult_i/mult_300/net92632
+    0:05:21   12716.5      0.00      -0.0    6276.7 core_i/ex_stage_i/mult_i/mult_299/net92577
+    0:05:22   12736.9      0.00      -0.0    6000.7 core_i/ex_stage_i/alu_i/srl_300/net138959
+    0:05:22   12751.1      0.00      -0.0    5814.7 core_i/ex_stage_i/alu_i/net99541
+    0:05:24   12761.8      0.00      -0.0    5694.7 core_i/cs_registers_i/net90143
+    0:05:24   12775.1      0.00      -0.0    5550.7 core_i/cs_registers_i/net90128
+    0:05:25   12781.8      0.00      -0.0    5476.7 core_i/cs_registers_i/net90152
+    0:05:45   12788.6      0.00      -0.0    5410.7 core_i/id_stage_i/alu_operand_a_ex_o[7]
+    0:05:47   12839.3      0.00      -0.0    5337.7 core_i/id_stage_i/net145462
+    0:05:48   12872.5      0.00      -0.0    5284.7 core_i/if_stage_i/instr_rdata_id_o[18]
+    0:05:49   12930.5      0.00      -0.0    5195.7 core_i/id_stage_i/net145885
+    0:05:50   12995.6      0.00      -0.0    5099.7 core_i/if_stage_i/net145917
+    0:05:50   13012.1      0.00      -0.0    4996.7 core_i/id_stage_i/net146004
+    0:05:51   13024.5      0.00      -0.0    4911.7 core_i/id_stage_i/alu_operand_b_ex_o[8]
+    0:05:52   13042.9      0.00      -0.0    4864.7 core_i/id_stage_i/net146920
+    0:05:53   13053.6      0.00      -0.0    4809.7 core_i/id_stage_i/net147041
+    0:05:55   13064.4      0.00      -0.0    4754.7 core_i/id_stage_i/net147162
+    0:05:56   13087.1      0.00      -0.0    4693.7 core_i/id_stage_i/net146818
+    0:05:57   13119.1      0.00      -0.0    4619.7 core_i/ex_stage_i/alu_i/net98987
+    0:05:57   13129.7      0.00      -0.0    4539.7 core_i/ex_stage_i/alu_i/net98680
+    0:05:58   13143.2      0.00      -0.0    4451.7 core_i/if_stage_i/aligner_i/pc_o[20]
+    0:05:59   13160.3      0.00      -0.0    4356.7 core_i/if_stage_i/pc_id_o[20]
+    0:06:00   13179.6      0.00      -0.0    4291.7 core_i/if_stage_i/instr_rdata_id_o[30]
+    0:06:00   13212.9      0.00      -0.0    4237.7 core_i/cs_registers_i/n516
+    0:06:01   13222.5      0.00      -0.0    4177.7 core_i/load_store_unit_i/net89771
+    0:06:01   13231.2      0.00      -0.0    4117.7 core_i/ex_stage_i/alu_i/net99226
+    0:06:02   13247.6      0.00      -0.0    4060.7 core_i/id_stage_i/alu_operand_c_ex_o[10]
+    0:06:03   13281.2      0.00      -0.0    4014.7 core_i/id_stage_i/net148131
+    0:06:03   13304.9      0.00      -0.0    3970.7 core_i/ex_stage_i/alu_i/net99862
+    0:06:04   13316.7      0.00      -0.0    3926.7 core_i/ex_stage_i/alu_i/net99754
+    0:06:04   13327.3      0.00      -0.0    3886.7 core_i/ex_stage_i/alu_i/net145680
+    0:06:05   13335.9      0.00      -0.0    3843.7 core_i/ex_stage_i/alu_i/net99648
+    0:06:05   13347.6      0.00      -0.0    3799.7 core_i/ex_stage_i/alu_i/net99061
+    0:06:05   13356.1      0.00      -0.0    3756.7 core_i/ex_stage_i/mult_i/mult_224/net138888
+    0:06:06   13371.0      0.00      -0.0    3710.7 core_i/id_stage_i/alu_operand_c_ex_o[11]
+    0:06:07   13397.1      0.00      -0.0    3677.7 core_i/id_stage_i/net148784
+    0:06:07   13440.1      0.00      -0.0    3645.7 core_i/id_stage_i/net148688
+    0:06:08   13456.4      0.00      -0.0    3620.7 core_i/ex_stage_i/alu_i/net98834
+    0:06:08   13468.2      0.00      -0.0    3598.7 core_i/id_stage_i/decoder_i/n176
+    0:06:09   13481.0      0.00      -0.0    3574.7 core_i/cs_registers_i/net139254
+    0:06:09   13487.3      0.00      -0.0    3543.7 core_i/id_stage_i/controller_i/net90551
+    0:06:09   13496.9      0.00      -0.0    3520.7 core_i/ex_stage_i/alu_i/net137880
+    0:06:10   13507.1      0.00      -0.0    3497.7 core_i/ex_stage_i/alu_i/net99724
+    0:06:10   13518.2      0.00      -0.0    3475.7 core_i/ex_stage_i/alu_i/srl_300/net139164
+    0:06:11   13524.1      0.00      -0.0    3449.7 core_i/ex_stage_i/mult_i/mult_224/net138984
+    0:06:11   13530.0      0.00      -0.0    3423.7 core_i/ex_stage_i/mult_i/mult_110/net137368
+    0:06:12   13545.2      0.00      -0.0    3394.7 core_i/id_stage_i/controller_i/deassert_we_o
+    0:06:12   13569.3      0.00      -0.0    3376.7 core_i/id_stage_i/net149832
+    0:06:13   13591.5      0.00      -0.0    3360.7 core_i/if_stage_i/net148056
+    0:06:13   13611.4      0.00      -0.0    3346.7 core_i/if_stage_i/net147972
+    0:06:14   13615.7      0.00      -0.0    3318.7 core_i/id_stage_i/instr_rdata_i[15]
+    0:06:15   13619.3      0.00      -0.0    3291.7                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -2662,22 +2659,22 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:06:03   13619.3      0.00      -0.0    3291.7                          
-    0:06:03   13619.3      0.00      -0.0    3291.7                          
-    0:06:16   13505.9      0.00      -0.0    3291.7                          
-    0:06:20   13448.9      0.00      -0.0    3291.7                          
-    0:06:22   13428.4      0.00      -0.0    3291.7                          
-    0:06:22   13422.1      0.00      -0.0    3291.7                          
-    0:06:23   13420.4      0.00      -0.0    3291.7                          
-    0:06:23   13420.4      0.00      -0.0    3291.7                          
-    0:06:23   13420.4      0.00      -0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:24   13417.2      0.00       0.0    3291.7                          
-    0:06:28   13256.3      0.00      -0.0    3291.7                          
+    0:06:15   13619.3      0.00      -0.0    3291.7                          
+    0:06:15   13619.3      0.00      -0.0    3291.7                          
+    0:06:28   13505.9      0.00      -0.0    3291.7                          
+    0:06:32   13448.9      0.00      -0.0    3291.7                          
+    0:06:33   13428.4      0.00      -0.0    3291.7                          
+    0:06:34   13422.1      0.00      -0.0    3291.7                          
+    0:06:34   13420.4      0.00      -0.0    3291.7                          
+    0:06:35   13420.4      0.00      -0.0    3291.7                          
+    0:06:35   13420.4      0.00      -0.0    3291.7                          
+    0:06:35   13417.2      0.00       0.0    3291.7                          
+    0:06:35   13417.2      0.00       0.0    3291.7                          
+    0:06:35   13417.2      0.00       0.0    3291.7                          
+    0:06:36   13417.2      0.00       0.0    3291.7                          
+    0:06:36   13417.2      0.00       0.0    3291.7                          
+    0:06:36   13417.2      0.00       0.0    3291.7                          
+    0:06:41   13256.3      0.00      -0.0    3291.7                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -2700,7 +2697,7 @@ write -f ddc -hierarchy -output netlists/$top_module.ddc
 Writing ddc file 'netlists/cv32e40p_top.ddc'.
 1
 write_file -format verilog -hierarchy -output netlists/$top_module.v
-Writing verilog file '/home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/netlists/cv32e40p_top.v'.
+Writing verilog file '/home/ICer/ITI/PnR_Grad/Backend/Synthesis/netlists/cv32e40p_top.v'.
 Warning: Verilog writer has added 2 nets to module cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
 Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
 Warning: Verilog writer has added 2 nets to module cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
@@ -2715,7 +2712,7 @@ Warning: Verilog writer has added 35 nets to module cv32e40p_core_COREV_PULP0_CO
 1
 write_sdf  sdf/$top_module.sdf
 Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/sdf/cv32e40p_top.sdf'. (WT-3)
+Information: Writing timing information to file '/home/ICer/ITI/PnR_Grad/Backend/Synthesis/sdf/cv32e40p_top.sdf'. (WT-3)
 Information: Updating design information... (UID-85)
 Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
 1
@@ -2750,6 +2747,6 @@ exit
 
 Memory usage for main task 1670 Mbytes.
 Memory usage for this session 1670 Mbytes.
-CPU usage for this session 513 seconds ( 0.14 hours ).
+CPU usage for this session 536 seconds ( 0.15 hours ).
 
 Thank you...

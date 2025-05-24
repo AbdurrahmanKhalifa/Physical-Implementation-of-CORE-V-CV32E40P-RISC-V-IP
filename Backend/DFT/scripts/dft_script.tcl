@@ -145,10 +145,10 @@ set test_default_strobe_width 0
 set_dft_signal -port [get_ports scan_clk]  -type ScanClock   -view existing_dft  -timing {30 60}
 set_dft_signal -port [get_ports scan_rst]  -type Reset       -view existing_dft  -active_state 0
 set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft  -active_state 1 
-set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec          -active_state 1 
-set_dft_signal -port [get_ports SE]        -type ScanEnable  -view spec          -active_state 1   -usage scan
-set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view spec 
-set_dft_signal -port [get_ports SO]        -type ScanDataOut -view spec  
+set_dft_signal -port [get_ports test_mode] -type TestMode    -view existing_dft  -active_state 1 
+set_dft_signal -port [get_ports SE]        -type ScanEnable  -view existing_dft  -active_state 1   -usage scan
+set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view existing_dft 
+set_dft_signal -port [get_ports SO]        -type ScanDataOut -view existing_dft  
 
 ############################# Create Test Protocol #######################
                                            
@@ -186,6 +186,7 @@ write_file -format verilog -hierarchy -output netlists/$top_module.ddc
 write_file -format verilog -hierarchy -output netlists/$top_module.v
 write_sdf  sdf/$top_module.sdf
 write_sdc  -nosplit sdc/$top_module.sdc
+write_scan_def -output netlists/$top_module.scandef
 
 ################# reporting #######################
 

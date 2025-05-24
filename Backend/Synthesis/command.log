@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Wed May 21 23:06:09 2025
+#@ # Date:   Sat May 24 22:35:35 2025
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6624,8 +6624,8 @@ source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 
 #@ # -- End source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 
-source -echo -verbose /home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/scripts/syn_script.tcl
-#@ # -- Starting source /home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/scripts/syn_script.tcl
+source -echo -verbose /home/ICer/ITI/PnR_Grad/Backend/Synthesis/scripts/syn_script.tcl
+#@ # -- Starting source /home/ICer/ITI/PnR_Grad/Backend/Synthesis/scripts/syn_script.tcl
 
 #@ 
 #@ ########################### Define Top Module ############################
@@ -6918,8 +6918,6 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/scripts/syn
 #@ #########################################################
 #@ ####################################################################################
 #@ set_load 0.3956 [all_outputs] 
-#@ #input cap of buf_1
-#@ #set_load 1.59 [all_outputs]   input cap of buf_16
 #@ #set_load 10 [all_outputs]
 #@ set_max_fanout 4 [current_design]
 #@ 
@@ -6934,8 +6932,6 @@ source -echo -verbose /home/ICer/ITI/PnR_Grad/Backend/Synthesis_test/scripts/syn
 #@ # Define the Best Library for Min(hold) analysis
 #@ 
 #@ set_operating_conditions -min_library "saed14rvt_ff0p88v125c" -min "ff0p88v125c" -max_library "saed14rvt_ss0p6v125c" -max "ss0p6v125c"
-#@ 
-#@ #set_operating_conditions -min_library "saed14rvt_ss0p6v125c" -min "ss0p6v125c" -max_library "saed14rvt_ss0p6v125c" -max "ss0p6v125c"
 #@ 
 #@ #ungroup -flatten -all
 #@ # -- End source cons/cons.tcl

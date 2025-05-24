@@ -75,6 +75,7 @@ sverilog
 analyze -format $file_format cv32e40p_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_pkg.sv
+Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_pkg.sv:26: The package cv32e40p_pkg has already been analyzed. It is being replaced. (VER-26)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_pkg.sv:37: Parameter keyword used in local parameter declaration. (VER-329)
 Presto compilation completed successfully.
 Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ss0p6v125c.db'
@@ -85,17 +86,20 @@ Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ff0p88v125c.d
 analyze -format $file_format cv32e40p_fpu_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_fpu_pkg.sv
+Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_fpu_pkg.sv:38: The package cv32e40p_fpu_pkg has already been analyzed. It is being replaced. (VER-26)
 Presto compilation completed successfully.
 1
 analyze -format $file_format cv32e40p_apu_core_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_apu_core_pkg.sv
+Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_apu_core_pkg.sv:22: The package cv32e40p_apu_core_pkg has already been analyzed. It is being replaced. (VER-26)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/include/cv32e40p_apu_core_pkg.sv:25: Parameter keyword used in local parameter declaration. (VER-329)
 Presto compilation completed successfully.
 1
 analyze -format $file_format fpnew_pkg.sv
 Running PRESTO HDLC
 Compiling source file /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv
+Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:16: The package fpnew_pkg has already been analyzed. It is being replaced. (VER-26)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:359: signed to unsigned assignment occurs. (VER-318)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:360: signed to unsigned conversion occurs. (VER-318)
 Warning:  /home/ICer/ITI/PnR_Grad/rtl/vendor/pulp_platform_fpnew/src/fpnew_pkg.sv:490: signed to unsigned assignment occurs. (VER-318)
@@ -2061,7 +2065,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 4236 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 4232 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Warning: No single bit degenerate for multibit library cell 'SAEDRVT14_FSDN4_V2_4'. (OPT-914)
@@ -2312,7 +2316,6 @@ Information: The register 'is_fetch_failed_o_reg' is a constant and will be remo
   Processing 'cv32e40p_clock_gate'
   Processing 'cv32e40p_sleep_unit_COREV_CLUSTER0'
   Processing 'cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1'
-  Processing 'mux2X1_1'
   Processing 'mux2X1_0'
   Processing 'cv32e40p_top'
 
@@ -2375,11 +2378,6 @@ Information: Updating design information... (UID-85)
   Processing 'cv32e40p_aligner_DW01_add_0'
   Processing 'cv32e40p_aligner_DW01_add_1'
   Processing 'cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_DW01_add_0'
-  Allocating blocks in 'DW02_mult_A_width1_B_width32'
-  Building model 'DW01_NAND2'
-  Processing 'DW01_NAND2'
-  Building model 'DW02_mult_A_width1_B_width32' (csa)
-  Processing 'DW02_mult_A_width1_B_width32'
   Processing 'cv32e40p_load_store_unit_PULP_OBI0_DW01_add_0'
   Processing 'cv32e40p_load_store_unit_PULP_OBI0_DW02_mult_0'
   Processing 'cv32e40p_popcnt_DW01_add_0'
@@ -2437,9 +2435,9 @@ Information: Updating design information... (UID-85)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:01:56   14870.1      3.72     209.4   20856.3                          
-    0:01:56   14870.1      3.72     209.4   20856.3                          
-    0:02:01   16622.5      0.45       0.5   12460.2                          
+    0:02:30   14868.7      3.72     209.4   20855.3                          
+    0:02:30   14868.7      3.72     209.4   20855.3                          
+    0:02:35   16621.1      0.45       0.5   12459.2                          
 Information: The register 'core_i/id_stage_i/mult_dot_op_a_ex_o_reg[31]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/mult_dot_op_c_ex_o_reg[31]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/mult_dot_op_c_ex_o_reg[30]' is a constant and will be removed. (OPT-1206)
@@ -2585,32 +2583,32 @@ Information: The register 'core_i/id_stage_i/mult_imm_ex_o_reg[0]' is a constant
 Information: The register 'core_i/id_stage_i/mult_imm_ex_o_reg[1]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/mult_imm_ex_o_reg[4]' is a constant and will be removed. (OPT-1206)
 Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a constant and will be removed. (OPT-1206)
-    0:02:16   18013.4      0.00       0.0    9416.2                          
-    0:02:16   18013.4      0.00       0.0    9416.2                          
-    0:02:16   18013.4      0.00       0.0    9416.2                          
-    0:02:16   18013.4      0.00       0.0    9416.2                          
-    0:02:16   18013.4      0.00       0.0    9416.2                          
-    0:02:27   13235.8      0.03       0.0    9416.2                          
-    0:02:30   13235.8      0.00       0.0    9439.8                          
-    0:02:38   13234.8      0.00       0.0    9439.8                          
-    0:02:40   13235.0      0.01       0.0    9439.8                          
-    0:02:41   13235.4      0.00       0.0    9439.8                          
-    0:02:42   13235.5      0.00       0.0    9439.8                          
-    0:02:42   13235.5      0.00       0.0    9439.8                          
-    0:02:43   13235.5      0.00       0.0    9439.8                          
-    0:02:43   13235.5      0.00       0.0    9439.8                          
-    0:02:44   13226.3      0.00       0.0    9439.8                          
-    0:02:44   13226.3      0.00       0.0    9439.8                          
-    0:03:07   13271.2      0.00       0.0    8902.8                          
-    0:03:42   13311.6      0.00       0.0    8452.8                          
-    0:04:06   13337.1      0.00       0.0    8181.8                          
-    0:04:20   13354.9      0.00       0.0    7997.8                          
-    0:04:27   13365.0      0.00       0.0    7900.8                          
-    0:04:32   13369.4      0.00       0.0    7860.8                          
-    0:04:34   13372.1      0.00       0.0    7834.8                          
-    0:04:36   13373.9      0.00       0.0    7822.8                          
-    0:04:36   13374.3      0.00       0.0    7819.8                          
-    0:04:36   13374.3      0.00       0.0    7819.8                          
+    0:03:10   18871.8      0.00       0.0    9415.2                          
+    0:03:11   18871.8      0.00       0.0    9415.2                          
+    0:03:11   18871.8      0.00       0.0    9415.2                          
+    0:03:11   18871.8      0.00       0.0    9415.2                          
+    0:03:12   18871.8      0.00       0.0    9415.2                          
+    0:03:45   14094.9      0.03       0.0    9415.2                          
+    0:03:48   14094.9      0.00       0.0    9438.8                          
+    0:03:58   14093.9      0.00       0.0    9438.8                          
+    0:04:06   14094.1      0.01       0.0    9438.8                          
+    0:04:07   14094.5      0.00       0.0    9438.8                          
+    0:04:08   14094.6      0.00       0.0    9438.8                          
+    0:04:09   14094.6      0.00       0.0    9438.8                          
+    0:04:09   14094.6      0.00       0.0    9438.8                          
+    0:04:10   14094.6      0.00       0.0    9438.8                          
+    0:04:10   14085.4      0.00       0.0    9438.8                          
+    0:04:10   14085.4      0.00       0.0    9438.8                          
+    0:04:50   14128.0      0.00       0.0    8784.8                          
+    0:05:35   14171.9      0.00       0.0    8235.8                          
+    0:05:56   14200.1      0.00       0.0    7927.8                          
+    0:06:10   14218.4      0.00       0.0    7735.8                          
+    0:06:18   14228.6      0.00       0.0    7638.8                          
+    0:06:23   14233.0      0.00       0.0    7598.8                          
+    0:06:26   14235.6      0.00       0.0    7572.8                          
+    0:06:27   14237.5      0.00       0.0    7560.8                          
+    0:06:28   14237.8      0.00       0.0    7557.8                          
+    0:06:28   14237.8      0.00       0.0    7557.8                          
 
 
 
@@ -2621,9 +2619,9 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:04:36   13374.3      0.00       0.0    7819.8                          
-    0:04:37   13374.3      0.00       0.0    7819.8                          
-    0:04:37   13374.3      0.00       0.0    7819.8                          
+    0:06:28   14237.8      0.00       0.0    7557.8                          
+    0:06:28   14237.8      0.00       0.0    7557.8                          
+    0:06:29   14237.8      0.00       0.0    7557.8                          
 
 
   Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
@@ -2633,64 +2631,61 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:04:37   13374.3      0.00       0.0    7819.8                          
-    0:04:38   13387.2      0.00       0.0    7659.8 core_i/cs_registers_i/n346
-    0:04:39   13400.5      0.00       0.0    7479.8 core_i/ex_stage_i/alu_i/srl_300/net83812
-    0:04:39   13415.6      0.00       0.0    7275.8 core_i/ex_stage_i/mult_i/mult_110/net95101
-    0:04:39   13429.8      0.00       0.0    7083.8 core_i/ex_stage_i/mult_i/mult_110/net95107
-    0:04:39   13444.0      0.00       0.0    6891.8 core_i/ex_stage_i/mult_i/mult_300/net95059
-    0:04:39   13461.8      0.00       0.0    6651.8 core_i/ex_stage_i/mult_i/mult_300/net95075
-    0:04:39   13478.6      0.00       0.0    6423.8 core_i/ex_stage_i/mult_i/mult_299/net95016
-    0:04:39   13499.1      0.00       0.0    6147.8 core_i/ex_stage_i/alu_i/net113692
-    0:04:40   13513.3      0.00       0.0    5961.8 core_i/ex_stage_i/alu_i/net101978
-    0:04:40   13523.9      0.00       0.0    5841.8 core_i/cs_registers_i/net92574
-    0:04:40   13538.1      0.00       0.0    5688.8 core_i/ex_stage_i/alu_i/srl_300/net83672
-    0:04:40   13544.7      0.00       0.0    5615.8 core_i/cs_registers_i/net92570
-    0:04:55   13550.0      0.00       0.0    5565.8 core_i/if_stage_i/instr_rdata_id_o[30]
-    0:04:55   13598.0      0.00       0.0    5480.8 core_i/id_stage_i/net150363
-    0:04:55   13631.6      0.00       0.0    5418.8 core_i/id_stage_i/alu_operand_a_ex_o[16]
-    0:04:55   13677.7      0.00       0.0    5339.8 core_i/id_stage_i/net150755
-    0:04:56   13736.9      0.00       0.0    5243.8 core_i/id_stage_i/net150683
-    0:04:56   13749.1      0.00       0.0    5142.8 core_i/ex_stage_i/alu_i/net113678
-    0:04:56   13765.6      0.00       0.0    5048.8 core_i/ex_stage_i/alu_i/shift_amt_int[1]
-    0:04:57   13787.3      0.00       0.0    4967.8 core_i/id_stage_i/decoder_i/net92903
-    0:04:58   13801.2      0.00       0.0    4875.8 core_i/id_stage_i/alu_operand_b_ex_o[27]
-    0:04:59   13837.1      0.00       0.0    4806.8 core_i/id_stage_i/net151516
-    0:05:00   13853.6      0.00       0.0    4731.8 core_i/ex_stage_i/alu_i/srl_300/net83738
-    0:05:00   13864.2      0.00       0.0    4651.8 core_i/ex_stage_i/mult_i/mult_266/net94855
-    0:05:00   13875.9      0.00       0.0    4563.8 core_i/ex_stage_i/mult_i/mult_267/net94886
-    0:05:01   13888.7      0.00       0.0    4467.8 core_i/ex_stage_i/mult_i/mult_269/net94923
-    0:05:01   13902.2      0.00       0.0    4371.8 core_i/if_stage_i/aligner_i/pc_o[8]
-    0:05:02   13918.6      0.00       0.0    4279.8 core_i/if_stage_i/pc_id_o[24]
-    0:05:03   13943.1      0.00       0.0    4224.8 core_i/id_stage_i/net151877
-    0:05:03   13963.9      0.00       0.0    4169.8 core_i/id_stage_i/decoder_i/n285
-    0:05:04   13971.1      0.00       0.0    4115.8 core_i/ex_stage_i/alu_i/net113705
-    0:05:04   13982.3      0.00       0.0    4049.8 core_i/ex_stage_i/alu_i/shift_op_a[26]
-    0:05:05   14005.9      0.00       0.0    3998.8 core_i/id_stage_i/decoder_i/ecall_insn_o
-    0:05:05   14038.3      0.00       0.0    3957.8 core_i/if_stage_i/net153044
-    0:05:06   14050.1      0.00       0.0    3913.8 core_i/cs_registers_i/n308
-    0:05:06   14061.8      0.00       0.0    3869.8 core_i/id_stage_i/controller_i/net92953
-    0:05:07   14072.4      0.00       0.0    3824.8 core_i/ex_stage_i/alu_i/net101962
-    0:05:07   14084.2      0.00       0.0    3780.8 core_i/ex_stage_i/alu_i/net101730
-    0:05:08   14092.7      0.00       0.0    3736.8 core_i/ex_stage_i/mult_i/mult_224/net143561
-    0:05:08   14107.6      0.00       0.0    3690.8 core_i/id_stage_i/alu_operand_c_ex_o[12]
-    0:05:09   14142.4      0.00       0.0    3652.8 core_i/id_stage_i/net153554
-    0:05:09   14173.0      0.00       0.0    3628.8 core_i/id_stage_i/net153470
-    0:05:10   14188.1      0.00       0.0    3603.8 core_i/if_stage_i/n117   
-    0:05:11   14199.8      0.00       0.0    3581.8 core_i/id_stage_i/decoder_i/net151618
-    0:05:11   14211.5      0.00       0.0    3559.8 core_i/if_stage_i/compressed_decoder_i/n56
-    0:05:11   14218.4      0.00       0.0    3530.8 core_i/cs_registers_i/net92274
-    0:05:12   14227.0      0.00       0.0    3507.8 core_i/ex_stage_i/alu_i/net143798
-    0:05:12   14235.0      0.00       0.0    3484.8 core_i/ex_stage_i/alu_i/net102056
-    0:05:13   14247.7      0.00       0.0    3460.8 core_i/ex_stage_i/alu_i/net101815
-    0:05:13   14254.7      0.00       0.0    3438.8 core_i/ex_stage_i/mult_i/mult_224/net143777
-    0:05:14   14260.5      0.00       0.0    3408.8 core_i/ex_stage_i/mult_i/mult_299/net140289
-    0:05:14   14270.3      0.00       0.0    3384.8 core_i/ex_stage_i/ex_ready_o
-    0:05:15   14293.6      0.00       0.0    3360.8 core_i/id_stage_i/net154584
-    0:05:15   14314.2      0.00       0.0    3344.8 core_i/ex_stage_i/net130447
-    0:05:16   14332.8      0.00       0.0    3330.8 core_i/if_stage_i/net152870
-    0:05:16   14350.7      0.00       0.0    3316.8 core_i/id_stage_i/net153506
-    0:05:17   14353.9      0.00       0.0    3291.8                          
+    0:06:29   14237.8      0.00       0.0    7557.8                          
+    0:06:30   14250.7      0.00       0.0    7397.8 core_i/cs_registers_i/n346
+    0:06:30   14264.0      0.00       0.0    7217.8 core_i/ex_stage_i/alu_i/srl_300/net83790
+    0:06:31   14279.1      0.00       0.0    7013.8 core_i/ex_stage_i/mult_i/mult_110/net95078
+    0:06:32   14293.3      0.00       0.0    6821.8 core_i/ex_stage_i/mult_i/mult_110/net95084
+    0:06:32   14307.5      0.00       0.0    6629.8 core_i/ex_stage_i/mult_i/mult_300/net95036
+    0:06:32   14325.3      0.00       0.0    6389.8 core_i/ex_stage_i/mult_i/mult_300/net95052
+    0:06:32   14342.2      0.00       0.0    6161.8 core_i/ex_stage_i/mult_i/mult_299/net94993
+    0:06:33   14362.6      0.00       0.0    5885.8 core_i/ex_stage_i/alu_i/net113669
+    0:06:34   14376.8      0.00       0.0    5699.8 core_i/ex_stage_i/alu_i/net101955
+    0:06:35   14387.5      0.00       0.0    5579.8 core_i/cs_registers_i/net92551
+    0:06:36   14401.7      0.00       0.0    5426.8 core_i/ex_stage_i/alu_i/srl_300/net83650
+    0:06:37   14408.2      0.00       0.0    5353.8 core_i/cs_registers_i/net92547
+    0:06:58   14413.6      0.00       0.0    5303.8 core_i/if_stage_i/instr_rdata_id_o[30]
+    0:07:00   14461.6      0.00       0.0    5218.8 core_i/id_stage_i/net150123
+    0:07:01   14495.1      0.00       0.0    5156.8 core_i/id_stage_i/alu_operand_a_ex_o[16]
+    0:07:02   14541.3      0.00       0.0    5077.8 core_i/id_stage_i/net150515
+    0:07:03   14600.4      0.00       0.0    4981.8 core_i/id_stage_i/net150443
+    0:07:03   14612.7      0.00       0.0    4880.8 core_i/ex_stage_i/alu_i/net113655
+    0:07:04   14629.2      0.00       0.0    4786.8 core_i/ex_stage_i/alu_i/shift_amt_int[1]
+    0:07:05   14650.8      0.00       0.0    4705.8 core_i/id_stage_i/decoder_i/net92880
+    0:07:06   14664.7      0.00       0.0    4613.8 core_i/id_stage_i/alu_operand_b_ex_o[27]
+    0:07:07   14700.7      0.00       0.0    4544.8 core_i/id_stage_i/net151276
+    0:07:07   14717.1      0.00       0.0    4469.8 core_i/ex_stage_i/alu_i/srl_300/net83716
+    0:07:08   14727.9      0.00       0.0    4389.8 core_i/ex_stage_i/alu_i/shift_op_a[30]
+    0:07:09   14743.7      0.00       0.0    4297.8 core_i/if_stage_i/pc_id_o[9]
+    0:07:10   14764.0      0.00       0.0    4233.8 core_i/id_stage_i/net151660
+    0:07:11   14791.8      0.00       0.0    4175.8 core_i/id_stage_i/controller_i/n110
+    0:07:11   14800.0      0.00       0.0    4118.8 core_i/ex_stage_i/alu_i/net113673
+    0:07:12   14810.7      0.00       0.0    4052.8 core_i/ex_stage_i/alu_i/shift_op_a[11]
+    0:07:13   14831.4      0.00       0.0    4001.8 core_i/if_stage_i/aligner_i/instr_aligned_o[13]
+    0:07:13   14865.9      0.00       0.0    3959.8 core_i/id_stage_i/net152333
+    0:07:14   14878.4      0.00       0.0    3914.8 core_i/cs_registers_i/n1108
+    0:07:14   14890.2      0.00       0.0    3870.8 core_i/id_stage_i/controller_i/net92991
+    0:07:15   14900.8      0.00       0.0    3825.8 core_i/ex_stage_i/alu_i/net101355
+    0:07:15   14912.5      0.00       0.0    3781.8 core_i/ex_stage_i/alu_i/net100887
+    0:07:15   14921.6      0.00       0.0    3738.8 core_i/ex_stage_i/mult_i/mult_224/net143737
+    0:07:16   14934.9      0.00       0.0    3691.8 core_i/id_stage_i/alu_operand_c_ex_o[23]
+    0:07:17   14966.5      0.00       0.0    3653.8 core_i/id_stage_i/net152942
+    0:07:17   14997.1      0.00       0.0    3629.8 core_i/id_stage_i/net152858
+    0:07:18   15016.4      0.00       0.0    3602.8 core_i/id_stage_i/n1391  
+    0:07:18   15028.2      0.00       0.0    3580.8 core_i/id_stage_i/decoder_i/net151834
+    0:07:19   15039.9      0.00       0.0    3558.8 core_i/if_stage_i/compressed_decoder_i/n134
+    0:07:19   15046.3      0.00       0.0    3530.8 core_i/cs_registers_i/net92267
+    0:07:20   15055.3      0.00       0.0    3507.8 core_i/ex_stage_i/alu_i/net144024
+    0:07:20   15062.8      0.00       0.0    3484.8 core_i/ex_stage_i/alu_i/net101678
+    0:07:20   15075.6      0.00       0.0    3460.8 core_i/ex_stage_i/alu_i/net101697
+    0:07:21   15083.0      0.00       0.0    3438.8 core_i/ex_stage_i/mult_i/mult_224/net143953
+    0:07:21   15088.9      0.00       0.0    3408.8 core_i/ex_stage_i/alu_i/sll_812/net94610
+    0:07:22   15096.9      0.00       0.0    3386.8 core_i/id_stage_i/id_ready_o
+    0:07:22   15116.4      0.00       0.0    3364.8 core_i/csr_addr[3]       
+    0:07:23   15136.7      0.00       0.0    3348.8 core_i/ex_stage_i/net153976
+    0:07:23   15158.0      0.00       0.0    3332.8 core_i/if_stage_i/net152261
+    0:07:24   15175.3      0.00       0.0    3319.8 core_i/if_stage_i/net151010
+    0:07:25   15181.3      0.00       0.0    3291.8                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -2700,23 +2695,23 @@ Information: The register 'core_i/id_stage_i/alu_operator_ex_o_reg[6]' is a cons
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:05:17   14353.9      0.00       0.0    3291.8                          
-    0:05:17   14353.9      0.00       0.0    3291.8                          
-    0:05:31   14252.7      0.00       0.0    3291.8                          
-    0:05:35   14200.9      0.00       0.0    3291.8                          
-    0:05:36   14185.3      0.00       0.0    3291.8                          
-    0:05:37   14179.7      0.00       0.0    3291.8                          
-    0:05:37   14178.2      0.00       0.0    3291.8                          
-    0:05:37   14178.2      0.00       0.0    3291.8                          
-    0:05:38   14178.2      0.00       0.0    3291.8                          
-    0:05:38   14175.5      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:38   14175.4      0.01       0.0    3291.8                          
-    0:05:44   13758.0      0.00       0.0    3291.8                          
+    0:07:25   15181.3      0.00       0.0    3291.8                          
+    0:07:25   15181.3      0.00       0.0    3291.8                          
+    0:07:39   15075.0      0.00       0.0    3291.8                          
+    0:07:43   15024.7      0.00       0.0    3291.8                          
+    0:07:44   15008.8      0.00       0.0    3291.8                          
+    0:07:45   15003.1      0.00       0.0    3291.8                          
+    0:07:45   15001.6      0.00       0.0    3291.8                          
+    0:07:45   15001.6      0.00       0.0    3291.8                          
+    0:07:46   15001.6      0.00       0.0    3291.8                          
+    0:07:46   14998.9      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:47   14998.8      0.01       0.0    3291.8                          
+    0:07:53   13739.7      0.00       0.0    3291.8                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -2753,16 +2748,16 @@ Accepted dft signal specification for modes: all_dft
 set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft  -active_state 1 
 Accepted dft signal specification for modes: all_dft
 1
-set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec          -active_state 1 
+set_dft_signal -port [get_ports test_mode] -type TestMode    -view existing_dft  -active_state 1 
 Accepted dft signal specification for modes: all_dft
 1
-set_dft_signal -port [get_ports SE]        -type ScanEnable  -view spec          -active_state 1   -usage scan
+set_dft_signal -port [get_ports SE]        -type ScanEnable  -view existing_dft  -active_state 1   -usage scan
 Accepted dft signal specification for modes: all_dft
 1
-set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view spec 
+set_dft_signal -port [get_ports SI]        -type ScanDataIn  -view existing_dft 
 Accepted dft signal specification for modes: all_dft
 1
-set_dft_signal -port [get_ports SO]        -type ScanDataOut -view spec  
+set_dft_signal -port [get_ports SO]        -type ScanDataOut -view existing_dft  
 Accepted dft signal specification for modes: all_dft
 1
 ############################# Create Test Protocol #######################
@@ -2790,25 +2785,14 @@ Information: Starting test design rule checking. (TEST-222)
   ...checking pre-dft rules...
 
 -----------------------------------------------------------------
-Begin Other violations...
-
-Warning: Cell core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate has constant 1 value. (TEST-505)
-
-Other violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
   DRC Report
 
-  Total violations: 1
+  Total violations: 0
 
 -----------------------------------------------------------------
 
-1 OTHER VIOLATION
-     1 Cell is constant 1 violation (TEST-505)
 
-
-Warning: Violations occurred during test design rule checking. (TEST-124)
+Test Design rule checking did not find violations
 
 -----------------------------------------------------------------
   Sequential Cell Report
@@ -2818,7 +2802,7 @@ Warning: Violations occurred during test design rule checking. (TEST-124)
 -----------------------------------------------------------------
 
 SEQUENTIAL CELLS WITH VIOLATIONS
-      *   1 cell has constant 1 value
+      *   1 cell is a clock gating cell
          core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate
 SEQUENTIAL CELLS WITHOUT VIOLATIONS
       *2257 cells are valid scan cells
@@ -5093,25 +5077,26 @@ Preview_dft report
 For    : 'Insert_dft' command
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Wed May 21 23:50:10 2025
+Date   : Sat May 24 22:42:29 2025
 ****************************************
 
 Number of chains: 5
 Scan methodology: full_scan
 Scan style: multiplexed_flip_flop
 Clock domain: no_mix
+Scan enable: SE (no hookup pin)
 
 Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
 -----      ----------------------        ----------   ----------               ------------------------
-S 1        SI[4] -->  SO[4]                     452   core_i/cs_registers_i/dcsr_q_reg[cause][6]
+S 1        SI[0] -->  SO[0]                     452   core_i/cs_registers_i/dcsr_q_reg[cause][6]
                             (scan_clk, 30.0, rising) 
-S 2        SI[3] -->  SO[3]                     452   core_i/cs_registers_i/mtvec_q_reg[14]
+S 2        SI[1] -->  SO[1]                     452   core_i/cs_registers_i/mtvec_q_reg[14]
                             (scan_clk, 30.0, rising) 
 S 3        SI[2] -->  SO[2]                     451   core_i/id_stage_i/register_file_i/mem_reg[1][15]
                             (scan_clk, 30.0, rising) 
-S 4        SI[1] -->  SO[1]                     451   core_i/id_stage_i/register_file_i/mem_reg[15][18]
+S 4        SI[3] -->  SO[3]                     451   core_i/id_stage_i/register_file_i/mem_reg[15][18]
                             (scan_clk, 30.0, rising) 
-S 5        SI[0] -->  SO[0]                     451   core_i/id_stage_i/register_file_i/mem_reg[29][21]
+S 5        SI[4] -->  SO[4]                     451   core_i/id_stage_i/register_file_i/mem_reg[29][21]
                             (scan_clk, 30.0, rising) 
 1
 ############################# Insert DFT ##############################
@@ -5149,14 +5134,14 @@ Warning: Design 'cv32e40p_top' contains 3 high-fanout nets. A fanout number of 1
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:06:44   13756.4      2.82    3811.7    2077.5                          
+    0:08:55   13738.1      2.82    3812.7    2077.5                          
 
 1
 ######################## Optimize Logic post DFT #######################
 compile -scan -incremental
 Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
 
-Information: There are 1231 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 1229 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Warning: Operating condition ss0p6v125c set on design cv32e40p_top has different process,
@@ -5203,18 +5188,12 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_6.
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
  	Skipping incremental implementation selection for that design. (SYNH-45)
   Selecting implementations
-  Building model 'DW01_NAND2'
-  Building model 'DW01_add_width32' (rpl)
   Selecting implementations
   Selecting implementations
   Selecting implementations
-  Building model 'DW01_inc_width64' (rpl)
   Selecting implementations
   Selecting implementations
-  Building model 'DW01_add_width37' (rpl)
   Selecting implementations
-  Building model 'DW01_add_width19' (rpl)
-  Building model 'DW01_add_width20' (rpl)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_0.
  	Skipping incremental implementation selection for that design. (SYNH-45)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_1.
@@ -5227,12 +5206,10 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_5.
  	Skipping incremental implementation selection for that design. (SYNH-45)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_6.
  	Skipping incremental implementation selection for that design. (SYNH-45)
-  Building model 'DW01_add_width34' (rpl)
 Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
  	Skipping incremental implementation selection for that design. (SYNH-45)
   Selecting implementations
   Selecting implementations
-  Building model 'DW01_sub_width32' (rpl)
 
   Beginning Delay Optimization Phase
   ----------------------------------
@@ -5241,9 +5218,9 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:30   13472.0      2.82    3811.7    7591.5                          
-    0:00:37   14346.4      0.00       0.0    4299.8                          
-    0:00:38   14346.4      0.00       0.0    4299.8                          
+    0:00:30   13453.7      2.82    3812.7    7593.5                          
+    0:00:37   14756.1      0.00       0.0    4300.8                          
+    0:00:37   14756.1      0.00       0.0    4300.8                          
 
 
   Beginning Design Rule Fixing  (max_fanout)  (max_capacitance)
@@ -5253,54 +5230,54 @@ Warning: Test logic has been inserted in cv32e40p_mult_DW02_mult_7.
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:38   14346.4      0.00       0.0    4299.8                          
-    0:01:11   14347.4      0.00       0.0    4297.8 core_i/id_stage_i/controller_i/debug_havereset_o
-    0:01:12   14359.1      0.00       0.0    4275.8 core_i/id_stage_i/register_file_i/mem[31][16]
-    0:01:12   14370.9      0.00       0.0    4253.8 core_i/id_stage_i/register_file_i/mem[25][16]
-    0:01:13   14382.6      0.00       0.0    4231.8 core_i/id_stage_i/register_file_i/mem[21][16]
-    0:01:14   14394.3      0.00       0.0    4209.8 core_i/id_stage_i/register_file_i/mem[17][16]
-    0:01:14   14406.0      0.00       0.0    4187.8 core_i/id_stage_i/register_file_i/mem[15][18]
-    0:01:15   14417.7      0.00       0.0    4165.8 core_i/id_stage_i/register_file_i/mem[9][18]
-    0:01:15   14429.5      0.00       0.0    4143.8 core_i/id_stage_i/register_file_i/mem[5][18]
-    0:01:16   14441.2      0.00       0.0    4121.8 core_i/id_stage_i/register_file_i/mem[28][18]
-    0:01:17   14452.9      0.00       0.0    4099.8 core_i/id_stage_i/register_file_i/mem[22][0]
-    0:01:17   14464.6      0.00       0.0    4077.8 core_i/id_stage_i/register_file_i/mem[18][2]
-    0:01:18   14476.4      0.00       0.0    4055.8 core_i/id_stage_i/register_file_i/mem[12][4]
-    0:01:18   14488.1      0.00       0.0    4033.8 core_i/id_stage_i/register_file_i/mem[10][6]
-    0:01:19   14499.8      0.00       0.0    4011.8 core_i/id_stage_i/register_file_i/mem[6][8]
-    0:01:19   14511.5      0.00       0.0    3989.8 core_i/id_stage_i/register_file_i/mem[2][10]
-    0:01:20   14523.2      0.00       0.0    3967.8 core_i/id_stage_i/register_file_i/mem[29][12]
-    0:01:20   14535.0      0.00       0.0    3945.8 core_i/id_stage_i/register_file_i/mem[27][14]
-    0:01:21   14546.7      0.00       0.0    3923.8 core_i/id_stage_i/register_file_i/mem[23][16]
-    0:01:22   14558.4      0.00       0.0    3901.8 core_i/id_stage_i/register_file_i/mem[19][18]
-    0:01:22   14570.1      0.00       0.0    3879.8 core_i/id_stage_i/register_file_i/mem[11][1]
-    0:01:23   14581.8      0.00       0.0    3857.8 core_i/id_stage_i/register_file_i/mem[7][3]
-    0:01:24   14593.6      0.00       0.0    3835.8 core_i/id_stage_i/register_file_i/mem[3][5]
-    0:01:24   14605.3      0.00       0.0    3813.8 core_i/id_stage_i/register_file_i/mem[30][8]
-    0:01:25   14617.0      0.00       0.0    3791.8 core_i/id_stage_i/register_file_i/mem[24][9]
-    0:01:25   14628.7      0.00       0.0    3769.8 core_i/id_stage_i/register_file_i/mem[20][10]
-    0:01:26   14640.5      0.00       0.0    3747.8 core_i/id_stage_i/register_file_i/mem[16][11]
-    0:01:26   14652.2      0.00       0.0    3725.8 core_i/id_stage_i/register_file_i/mem[14][13]
-    0:01:27   14663.9      0.00       0.0    3703.8 core_i/id_stage_i/register_file_i/mem[8][14]
-    0:01:27   14675.6      0.00       0.0    3681.8 core_i/id_stage_i/register_file_i/mem[4][15]
-    0:01:28   14687.3      0.00       0.0    3659.8 core_i/id_stage_i/register_file_i/mem[25][29]
-    0:01:28   14699.1      0.00       0.0    3637.8 core_i/id_stage_i/register_file_i/mem[17][30]
-    0:01:29   14710.8      0.00       0.0    3615.8 core_i/id_stage_i/register_file_i/mem[5][22]
-    0:01:29   14722.5      0.00       0.0    3593.8 core_i/id_stage_i/register_file_i/mem[26][20]
-    0:01:30   14734.2      0.00       0.0    3571.8 core_i/id_stage_i/register_file_i/mem[22][30]
-    0:01:31   14746.0      0.00       0.0    3549.8 core_i/id_stage_i/register_file_i/mem[12][28]
-    0:01:31   14757.7      0.00       0.0    3527.8 core_i/id_stage_i/register_file_i/mem[6][26]
-    0:01:32   14769.4      0.00       0.0    3505.8 core_i/id_stage_i/register_file_i/mem[29][25]
-    0:01:32   14781.1      0.00       0.0    3483.8 core_i/id_stage_i/register_file_i/mem[23][23]
-    0:01:33   14792.8      0.00       0.0    3461.8 core_i/id_stage_i/register_file_i/mem[13][20]
-    0:01:33   14804.6      0.00       0.0    3439.8 core_i/id_stage_i/register_file_i/mem[11][30]
-    0:01:34   14816.3      0.00       0.0    3417.8 core_i/id_stage_i/register_file_i/mem[3][27]
-    0:01:34   14828.0      0.00       0.0    3395.8 core_i/id_stage_i/register_file_i/mem[24][27]
-    0:01:35   14839.7      0.00       0.0    3373.8 core_i/id_stage_i/register_file_i/mem[16][26]
-    0:01:36   14851.4      0.00       0.0    3351.8 core_i/id_stage_i/register_file_i/mem[8][26]
-    0:01:36   14863.2      0.00       0.0    3329.8 core_i/ex_stage_i/alu_i/alu_div_i/Cnt_DP[0]
-    0:01:37   14876.3      0.00       0.0    3305.8 core_i/id_stage_i/alu_operator_ex_o[2]
-    0:01:42   14823.0      0.00       0.0    3291.8                          
+    0:00:37   14756.1      0.00       0.0    4300.8                          
+    0:01:06   14757.1      0.00       0.0    4298.8 core_i/id_stage_i/controller_i/debug_havereset_o
+    0:01:07   14768.9      0.00       0.0    4276.8 core_i/id_stage_i/register_file_i/mem[31][16]
+    0:01:07   14780.6      0.00       0.0    4254.8 core_i/id_stage_i/register_file_i/mem[25][16]
+    0:01:08   14792.3      0.00       0.0    4232.8 core_i/id_stage_i/register_file_i/mem[21][16]
+    0:01:08   14804.0      0.00       0.0    4210.8 core_i/id_stage_i/register_file_i/mem[17][16]
+    0:01:09   14815.7      0.00       0.0    4188.8 core_i/id_stage_i/register_file_i/mem[15][18]
+    0:01:10   14827.5      0.00       0.0    4166.8 core_i/id_stage_i/register_file_i/mem[9][18]
+    0:01:10   14839.2      0.00       0.0    4144.8 core_i/id_stage_i/register_file_i/mem[5][18]
+    0:01:11   14850.9      0.00       0.0    4122.8 core_i/id_stage_i/register_file_i/mem[28][18]
+    0:01:11   14862.6      0.00       0.0    4100.8 core_i/id_stage_i/register_file_i/mem[22][0]
+    0:01:12   14874.4      0.00       0.0    4078.8 core_i/id_stage_i/register_file_i/mem[18][2]
+    0:01:13   14886.1      0.00       0.0    4056.8 core_i/id_stage_i/register_file_i/mem[12][4]
+    0:01:13   14897.8      0.00       0.0    4034.8 core_i/id_stage_i/register_file_i/mem[10][6]
+    0:01:14   14909.5      0.00       0.0    4012.8 core_i/id_stage_i/register_file_i/mem[6][8]
+    0:01:14   14921.2      0.00       0.0    3990.8 core_i/id_stage_i/register_file_i/mem[2][10]
+    0:01:15   14933.0      0.00       0.0    3968.8 core_i/id_stage_i/register_file_i/mem[29][12]
+    0:01:15   14944.7      0.00       0.0    3946.8 core_i/id_stage_i/register_file_i/mem[27][14]
+    0:01:16   14956.4      0.00       0.0    3924.8 core_i/id_stage_i/register_file_i/mem[23][16]
+    0:01:16   14968.1      0.00       0.0    3902.8 core_i/id_stage_i/register_file_i/mem[19][18]
+    0:01:17   14979.8      0.00       0.0    3880.8 core_i/id_stage_i/register_file_i/mem[11][1]
+    0:01:18   14991.6      0.00       0.0    3858.8 core_i/id_stage_i/register_file_i/mem[7][3]
+    0:01:18   15003.3      0.00       0.0    3836.8 core_i/id_stage_i/register_file_i/mem[3][5]
+    0:01:19   15015.0      0.00       0.0    3814.8 core_i/id_stage_i/register_file_i/mem[30][8]
+    0:01:19   15026.7      0.00       0.0    3792.8 core_i/id_stage_i/register_file_i/mem[24][9]
+    0:01:20   15038.5      0.00       0.0    3770.8 core_i/id_stage_i/register_file_i/mem[20][10]
+    0:01:20   15050.2      0.00       0.0    3748.8 core_i/id_stage_i/register_file_i/mem[16][11]
+    0:01:21   15061.9      0.00       0.0    3726.8 core_i/id_stage_i/register_file_i/mem[14][13]
+    0:01:22   15073.6      0.00       0.0    3704.8 core_i/id_stage_i/register_file_i/mem[8][14]
+    0:01:22   15085.3      0.00       0.0    3682.8 core_i/id_stage_i/register_file_i/mem[4][15]
+    0:01:23   15097.1      0.00       0.0    3660.8 core_i/id_stage_i/register_file_i/mem[25][29]
+    0:01:23   15108.8      0.00       0.0    3638.8 core_i/id_stage_i/register_file_i/mem[17][30]
+    0:01:24   15120.5      0.00       0.0    3616.8 core_i/id_stage_i/register_file_i/mem[5][22]
+    0:01:24   15132.2      0.00       0.0    3594.8 core_i/id_stage_i/register_file_i/mem[26][20]
+    0:01:25   15144.0      0.00       0.0    3572.8 core_i/id_stage_i/register_file_i/mem[22][30]
+    0:01:26   15155.7      0.00       0.0    3550.8 core_i/id_stage_i/register_file_i/mem[12][28]
+    0:01:26   15167.4      0.00       0.0    3528.8 core_i/id_stage_i/register_file_i/mem[6][26]
+    0:01:27   15179.1      0.00       0.0    3506.8 core_i/id_stage_i/register_file_i/mem[29][25]
+    0:01:28   15190.8      0.00       0.0    3484.8 core_i/id_stage_i/register_file_i/mem[23][23]
+    0:01:28   15202.6      0.00       0.0    3462.8 core_i/id_stage_i/register_file_i/mem[13][20]
+    0:01:29   15214.3      0.00       0.0    3440.8 core_i/id_stage_i/register_file_i/mem[11][30]
+    0:01:29   15226.0      0.00       0.0    3418.8 core_i/id_stage_i/register_file_i/mem[3][27]
+    0:01:30   15237.7      0.00       0.0    3396.8 core_i/id_stage_i/register_file_i/mem[24][27]
+    0:01:30   15249.4      0.00       0.0    3374.8 core_i/id_stage_i/register_file_i/mem[16][26]
+    0:01:31   15261.2      0.00       0.0    3352.8 core_i/id_stage_i/register_file_i/mem[8][26]
+    0:01:32   15272.9      0.00       0.0    3330.8 core_i/ex_stage_i/alu_i/alu_div_i/Cnt_DP[0]
+    0:01:33   15286.0      0.00       0.0    3306.8 core_i/id_stage_i/alu_operator_ex_o[2]
+    0:01:37   14805.2      0.00       0.0    3291.8                          
 
 
 Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
@@ -5332,25 +5309,14 @@ Information: Starting test design rule checking. (TEST-222)
   ...extracting scan details...
 
 -----------------------------------------------------------------
-Begin Other violations...
-
-Warning: Cell core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate has constant 1 value. (TEST-505)
-
-Other violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
   DRC Report
 
-  Total violations: 1
+  Total violations: 0
 
 -----------------------------------------------------------------
 
-1 OTHER VIOLATION
-     1 Cell is constant 1 violation (TEST-505)
 
-
-Warning: Violations occurred during test design rule checking. (TEST-124)
+Test Design rule checking did not find violations
 
 -----------------------------------------------------------------
   Sequential Cell Report
@@ -5360,7 +5326,7 @@ Warning: Violations occurred during test design rule checking. (TEST-124)
 -----------------------------------------------------------------
 
 SEQUENTIAL CELLS WITH VIOLATIONS
-      *   1 cell has constant 1 value
+      *   1 cell is a clock gating cell
          core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate
 SEQUENTIAL CELLS WITHOUT VIOLATIONS
       *2257 cells are valid scan cells
@@ -7625,84 +7591,85 @@ SEQUENTIAL CELLS WITHOUT VIOLATIONS
 ....Inferring feed-through connections....
 Information: Test design rule checking completed. (TEST-123)
   Running test coverage estimation...
- 236222 faults were added to fault list.
- 0           91433  93030         0/0/0    56.18%      0.58
- 0           18553  74471         4/0/1    64.91%      1.01
- 0           16198  58265         8/0/2    72.54%      1.36
- 0            8067  50192        13/0/3    76.35%      1.66
- 0            6500  43680        21/0/3    79.41%      1.92
- 0            4307  39365        27/0/3    81.44%      2.18
- 0            3344  36003        38/0/3    83.02%      2.45
- 0            2703  33274        52/0/3    84.31%      2.74
- 0            2406  30843        65/0/3    85.45%      3.00
- 0            1787  29039        79/0/3    86.30%      3.31
- 0            1682  27323       102/0/4    87.11%      3.57
- 0            2068  25227       118/0/4    88.09%      3.82
- 0            1342  23846       139/1/4    88.74%      4.14
- 0            1011  22812       157/1/4    89.23%      4.42
- 0             970  21810       176/1/5    89.70%      4.75
- 0             713  21064       196/1/5    90.05%      5.06
- 0             843  20184       218/1/6    90.46%      5.40
- 0             780  19380       234/1/6    90.84%      5.71
- 0             391  18960       255/1/8    91.04%      6.01
- 0             530  18388      284/1/12    91.31%      6.59
- 0             571  17782      304/1/13    91.59%      6.93
- 0             599  17152      326/1/15    91.89%      7.25
- 0             516  16600      349/1/15    92.14%      7.57
- 0             410  16143      382/1/15    92.36%      7.90
- 0             577  15529      408/1/15    92.65%      8.24
- 0             338  15062      494/1/17    92.86%      8.75
- 0             331  14687      521/1/17    93.04%      9.16
- 0             326  14307      551/1/17    93.22%      9.50
- 0             209  14061      575/1/24    93.33%      9.89
- 0             146  13837      613/2/25    93.44%     10.28
- 0             210  13491      699/2/25    93.59%     10.78
- 0             156  13294      726/2/25    93.69%     11.21
- 0             232  13019      753/2/25    93.82%     11.65
- 0             261  12708      782/2/26    93.96%     12.14
- 0             116  12550      808/2/26    94.04%     12.56
- 0             169  12189      932/2/35    94.20%     13.18
- 0             116  12021      965/2/35    94.28%     13.53
- 0             141  11832      997/2/36    94.37%     13.99
- 0             122  11626     1047/2/37    94.46%     14.40
- 0             158  11301     1178/2/39    94.61%     15.03
- 0             173  10952     1309/2/40    94.77%     15.55
- 0             114  10781     1348/2/41    94.85%     16.00
- 0             102  10631     1379/2/41    94.92%     16.29
- 0              96  10490     1407/2/41    94.99%     16.58
- 0             122  10317     1443/2/42    95.07%     16.95
- 0             104  10159     1478/2/42    95.15%     17.32
- 0              67  10045     1508/2/42    95.20%     17.67
- 0              68   9930     1542/2/42    95.25%     18.09
- 0              73   9809     1573/2/42    95.31%     18.57
- 0              91   9665     1604/2/42    95.38%     19.09
- 0              96   9506     1642/2/42    95.45%     19.64
- 0              95   9358     1673/2/42    95.52%     20.12
- 0              70   9238     1707/2/42    95.58%     20.62
- 0             126   9061     1740/2/42    95.66%     21.09
- 0              44   8945     1783/2/42    95.71%     21.63
- 0              68   8815     1823/2/43    95.77%     22.05
- 0              95   8664     1857/2/44    95.85%     22.44
- 0              75   8540     1889/2/46    95.90%     22.89
- 0              68   8387     1953/2/59    95.98%     23.57
- 0              74   8252     1991/2/68    96.04%     24.16
- 0              49   8144     2034/2/80    96.09%     24.75
- 0              54   7978     2090/2/85    96.17%     25.27
- 0              56   7810     2159/2/86    96.24%     25.74
- 0              83   7665     2197/2/86    96.31%     26.30
- 0              90   7176     2464/3/87    96.54%     28.25
- 0              90   7025     2499/3/91    96.61%     28.96
- 0              65   6842     2559/4/93    96.70%     29.90
- 0              52   6734     2594/4/93    96.75%     30.51
- 0              57   6617     2637/4/93    96.80%     31.27
- 0              50   6498     2674/4/93    96.86%     31.96
- 0              37   5704     3066/5/95    97.23%     35.36
- 0              44   5594     3106/5/95    97.28%     35.79
- 0              73   5461     3145/5/98    97.35%     36.30
- 0              63   5336     3184/5/98    97.40%     36.68
- 0              41    476    6183/5/101    99.74%     62.81
- 0              44    403    6206/5/101    99.78%     62.95
- 0              36    138    6363/5/104    99.91%     63.35
+ 235834 faults were added to fault list.
+ 0           81457 102818         0/0/0    51.53%      0.50
+ 0           28702  74108         5/0/0    65.06%      0.91
+ 0           15395  58705        11/0/0    72.32%      1.21
+ 0            8450  50242        19/0/0    76.31%      1.44
+ 0            4701  45535        20/0/0    78.53%      1.60
+ 0            3756  41770        26/0/0    80.30%      1.80
+ 0            3803  37956        34/0/0    82.10%      2.04
+ 0            4076  33860        45/0/0    84.03%      2.28
+ 0            2840  30999        57/0/1    85.38%      2.52
+ 0            1598  29378        72/0/1    86.14%      2.79
+ 0            1539  27822        85/0/1    86.87%      3.04
+ 0            1757  26035       107/0/2    87.71%      3.29
+ 0            1875  24127       125/0/3    88.61%      3.56
+ 0            1194  22914       140/0/3    89.18%      3.80
+ 0             967  21928       156/0/3    89.65%      4.05
+ 0             660  21241       173/0/4    89.97%      4.30
+ 0             886  20323       194/0/5    90.40%      4.59
+ 0             955  19337       216/0/6    90.87%      4.85
+ 0             673  18641       234/0/7    91.19%      5.10
+ 0             443  18167       255/0/9    91.42%      5.38
+ 0             452  17672      286/1/13    91.65%      5.96
+ 0             642  16991      308/1/14    91.97%      6.26
+ 0             429  16526      332/1/14    92.19%      6.55
+ 0             423  16053      362/1/16    92.41%      6.89
+ 0             332  15679      388/1/16    92.58%      7.24
+ 0             363  15178      474/1/17    92.82%      7.69
+ 0             440  14695      501/1/17    93.04%      8.01
+ 0             328  14321      527/2/18    93.22%      8.35
+ 0             271  14015      552/2/19    93.36%      8.62
+ 0             165  13816      575/2/25    93.45%      8.97
+ 0             269  13375      673/3/26    93.66%      9.38
+ 0             103  13228      704/3/26    93.72%      9.79
+ 0             312  12880      729/3/26    93.89%     10.17
+ 0             180  12659      755/3/27    93.99%     10.61
+ 0             162  12451      782/3/27    94.09%     11.05
+ 0             189  12192      826/4/27    94.21%     11.47
+ 0             136  11891      932/4/37    94.35%     12.00
+ 0             149  11685      966/4/37    94.44%     12.40
+ 0             145  11490      996/4/38    94.54%     12.78
+ 0             126  11300     1036/4/38    94.62%     13.17
+ 0             119  10996     1175/4/38    94.76%     13.83
+ 0             127  10703     1303/4/41    94.90%     14.45
+ 0              93  10546     1342/4/41    94.97%     14.90
+ 0             138  10342     1379/4/42    95.07%     15.43
+ 0              99  10197     1408/4/42    95.14%     15.84
+ 0             167   9987     1438/4/42    95.24%     16.23
+ 0              74   9854     1476/5/42    95.30%     16.58
+ 0              78   9730     1506/5/42    95.35%     16.87
+ 0              82   9599     1536/5/43    95.41%     17.16
+ 0              76   9468     1570/5/44    95.48%     17.58
+ 0              63   9350     1605/5/44    95.53%     18.06
+ 0              75   9209     1643/5/45    95.60%     18.60
+ 0              97   9065     1672/5/45    95.66%     19.14
+ 0              89   8928     1704/5/46    95.73%     19.71
+ 0              60   8820     1737/5/46    95.78%     20.26
+ 0              42   8696     1785/5/47    95.84%     20.76
+ 0              75   8555     1820/5/48    95.90%     21.11
+ 0              70   8422     1856/6/48    95.97%     21.43
+ 0              55   8320     1888/6/49    96.01%     21.76
+ 0              78   8160     1950/6/63    96.09%     22.34
+ 0              55   8047     1989/6/73    96.14%     22.94
+ 0              54   7928     2035/6/82    96.20%     23.43
+ 0              56   7764     2093/9/83    96.27%     23.84
+ 0              44   7609    2160/11/83    96.34%     24.35
+ 0              66   7342    2288/14/83    96.47%     25.27
+ 0              77   6997    2472/14/84    96.63%     26.57
+ 0              81   6858    2508/14/90    96.69%     27.20
+ 0              88   6649    2566/16/94    96.79%     28.01
+ 0              54   6533    2602/16/94    96.84%     28.54
+ 0              51   6421    2646/16/94    96.90%     29.23
+ 0              47   6313    2682/16/94    96.95%     29.86
+ 0              43   5523    3075/16/96    97.32%     33.33
+ 0              33   5427    3113/16/96    97.36%     33.71
+ 0             117   5248    3152/16/97    97.45%     34.16
+ 0              47   5136    3194/16/98    97.50%     34.59
+ 0              33    469   6140/16/102    99.75%     66.20
+ 0              54    376   6165/16/103    99.80%     66.53
+ 0              12    142   6317/16/107    99.91%     67.88
  
             Pattern Summary Report
  -----------------------------------------------
@@ -7714,13 +7681,13 @@ Information: Test design rule checking completed. (TEST-123)
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT     201998
+ Detected                         DT     201982
  Possibly detected                PT          0
- Undetectable                     UD      34043
- ATPG untestable                  AU         43
- Not detected                     ND        138
+ Undetectable                     UD      33675
+ ATPG untestable                  AU         35
+ Not detected                     ND        142
  -----------------------------------------------
- total faults                            236222
+ total faults                            235834
  test coverage                            99.91%
  -----------------------------------------------
   Information: The test coverage above may be inferior
@@ -7769,6 +7736,8 @@ Warning: Design 'cv32e40p_top' contains 2 high-fanout nets. A fanout number of 1
 1
 write_sdc  -nosplit sdc/$top_module.sdc
 1
+write_scan_def -output netlists/$top_module.scandef
+1
 ################# reporting #######################
 report_area -hierarchy > reports/area.rpt
 report_power -hierarchy > reports/power.rpt
@@ -7784,6 +7753,6 @@ exit
 
 Memory usage for main task 1670 Mbytes.
 Memory usage for this session 1670 Mbytes.
-CPU usage for this session 706 seconds ( 0.20 hours ).
+CPU usage for this session 856 seconds ( 0.24 hours ).
 
 Thank you...
