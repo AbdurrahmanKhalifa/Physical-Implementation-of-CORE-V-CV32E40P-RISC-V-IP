@@ -186,7 +186,7 @@ write_file -format verilog -hierarchy -output netlists/$top_module.ddc
 write_file -format verilog -hierarchy -output netlists/$top_module.v
 write_sdf  sdf/$top_module.sdf
 write_sdc  -nosplit sdc/$top_module.sdc
-write_scan_def -output netlists/$top_module.scandef
+write_scan_def -output outputs/$top_module.scandef
 
 ################# reporting #######################
 
