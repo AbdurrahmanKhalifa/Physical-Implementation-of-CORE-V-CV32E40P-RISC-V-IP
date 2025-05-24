@@ -7,14 +7,37 @@
 # Prevent assign statements in the generated netlist (must be applied before compile command)
 set_fix_multiple_port_nets -all -buffer_constants -feedthroughs
 
+####################################################################################
+           #########################################################
+                  #### Section 1 : Clock Definition ####
+           #########################################################
+#################################################################################### 
+
+set scan_clock_period 100
+
+
+create_clock \
+      -name scan_clk \
+      -period 100 \
+      [get_ports scan_clk] 
+
+
 #set_input_transition 0.1 [remove_from_collection [all_inputs] [get_ports clk_i]]
 
 set_clock_uncertainty [expr 0.01 * $clock_period] [get_clocks clk_i]
 
+set_clock_uncertainty [expr 0.01 * $scan_clock_period] [get_clocks scan_clk]
+
+
+set_clock_groups -physically_exclusive -group {scan_clk} -group {clk_i}
+
+
 # Clocks
 set_dont_touch_network [get_clocks clk_i]
+set_dont_touch_network [get_ports scan_clk]
 # Resets
 set_dont_touch_network [get_ports rst_ni]
+set_dont_touch_network [get_ports scan_rst]
 
 ####################################################################################
            #########################################################

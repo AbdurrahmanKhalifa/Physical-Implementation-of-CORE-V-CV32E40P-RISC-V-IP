@@ -796,3 +796,5 @@ set_output_delay -clock clk_i  3  [get_ports {SO[1]}]
 set_output_delay -clock clk_i  3  [get_ports {SO[0]}]
 set_output_delay -clock clk_i  1.25  [get_ports core_sleep_o]
 set_clock_groups -physically_exclusive -name scan_clk_1 -group [get_clocks scan_clk] -group [get_clocks clk_i]
+
+set_case_analysis 1 [get_ports test_mode]
