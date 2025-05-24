@@ -18,7 +18,7 @@ module cv32e40p_clock_gate (
 */
 
 
-  SAEDHVT14_CKGTPL_V5_1 core_clock_gate (
+  SAEDRVT14_CKGTPL_V5_1 core_clock_gate (
       .CK      (clk_i),
       .EN      (en_i | scan_cg_en_i),
       .Q       (clk_o)

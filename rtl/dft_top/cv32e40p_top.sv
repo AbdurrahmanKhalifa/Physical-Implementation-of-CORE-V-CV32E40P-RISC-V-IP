@@ -121,13 +121,6 @@ module cv32e40p_top #(
       .SEL(test_mode),
       .OUT(clk_i_scan)
   );
- 
-  mux2X1 U1_mux2X1 (
-      .IN_0(apu_clk),
-      .IN_1(scan_clk),
-      .SEL(test_mode),
-      .OUT(apu_clk_scan)
-  );
            
 ////////////// RESET //////////////
 
@@ -156,7 +149,7 @@ module cv32e40p_top #(
       .rst_ni(rst_ni_scan),              // replaced for DFT               
 
       .pulp_clock_en_i(pulp_clock_en_i),
-      .scan_cg_en_i   (test_mode),
+      .scan_cg_en_i   (SE),              // replaced for DFT
 
       .boot_addr_i        (boot_addr_i),
       .mtvec_addr_i       (mtvec_addr_i),
@@ -211,7 +204,7 @@ module cv32e40p_top #(
       cv32e40p_clock_gate core_clock_gate_i (
           .clk_i       (clk_i_scan),       // replaced for DFT
           .en_i        (apu_clk_en),      
-          .scan_cg_en_i(test_mode),        // replaced for DFT
+          .scan_cg_en_i(SE),               // replaced for DFT
           .clk_o       (apu_clk)
       );
 
@@ -220,7 +213,7 @@ module cv32e40p_top #(
           .FPU_ADDMUL_LAT(FPU_ADDMUL_LAT),
           .FPU_OTHERS_LAT(FPU_OTHERS_LAT)
       ) fp_wrapper_i (
-          .clk_i         (apu_clk_scan),    // replaced for DFT
+          .clk_i         (apu_clk),
           .rst_ni        (rst_ni_scan),     // replaced for DFT
           .apu_req_i     (apu_req),
           .apu_gnt_o     (apu_gnt),
