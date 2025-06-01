@@ -1,0 +1,133 @@
+****************************************
+Report : qor
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May 29 05:29:11 2025
+****************************************
+
+
+Scenario           'func_fast'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     48
+Critical Path Length:              2.89
+Critical Path Slack:               2.10
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_fast'
+Timing Path Group  'scan_clk'
+----------------------------------------
+Levels of Logic:                     48
+Critical Path Length:              2.89
+Critical Path Slack:               2.10
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     51
+Critical Path Length:              1.75
+Critical Path Slack:               0.20
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.03
+Total Hold Violation:            -84.09
+No. of Hold Violations:            4570
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'scan_clk'
+----------------------------------------
+Levels of Logic:                     20
+Critical Path Length:             98.10
+Critical Path Slack:               1.82
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.03
+Total Hold Violation:            -84.09
+No. of Hold Violations:            4570
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             74
+Hierarchical Port Count:          11937
+Leaf Cell Count:                  26107
+Buf/Inv Cell Count:                5948
+Buf Cell Count:                     604
+Inv Cell Count:                    5344
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         23703
+Sequential Cell Count:             2404
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            13626.85
+Noncombinational Area:          3227.52
+Buf/Inv Area:                   1874.57
+Total Buffer Area:               651.08
+Total Inverter Area:            1223.49
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          16854.37
+Cell Area (netlist and physical only):        18364.86
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             28614
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1
+****************************************
+Report : qor
+        -summary
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May 29 05:29:11 2025
+****************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+func_fast          (Setup)             2.10           0.00              0
+func_slow          (Setup)             0.20           0.00              0
+Design             (Setup)             0.20           0.00              0
+
+func_fast          (Hold)              0.05           0.00              0
+func_slow          (Hold)             -0.03         -84.09           4570
+Design             (Hold)             -0.03         -84.09           4570
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                          16854.37
+Cell Area (netlist and physical only):        18364.86
+Nets with DRC Violations:        0
+1

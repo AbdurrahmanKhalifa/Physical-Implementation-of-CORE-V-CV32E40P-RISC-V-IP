@@ -1,0 +1,522 @@
+SI analysis is not enabled, so delta delays are unavailable.
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type min
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May 29 05:29:12 2025
+****************************************
+
+  Startpoint: core_i/id_stage_i/apu_op_ex_o_reg[4] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/apu_op_ex_o_reg[4] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: clk_i
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.04      0.04 f    (89.47,154.11)    s, n
+  core_i/id_stage_i/_gOb236_apu_op_ex_o[4] (net)    2      1.31
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.00      0.04 f    (91.20,154.16)    s, n
+  data arrival time                                                                                        0.04
+
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+
+  library hold time                                                            1.00             -0.01     -0.01
+  data required time                                                                                      -0.01
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      -0.01
+  data arrival time                                                                                       -0.04
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.05
+
+
+
+  Startpoint: core_i/id_stage_i/apu_op_ex_o_reg[4] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/apu_op_ex_o_reg[4] (rising edge-triggered flip-flop clocked by scan_clk)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: scan_clk
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.04      0.04 f    (89.47,154.11)    s, n
+  core_i/id_stage_i/_gOb236_apu_op_ex_o[4] (net)    2      1.31
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.01      1.00              0.00      0.04 f    (91.20,154.16)    s, n
+  data arrival time                                                                                        0.04
+
+  clock scan_clk (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (0.13,37.04)
+  scan_clk (net)                                    1      2.04
+  U0_mux2X1/IN_1 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_1 (net)                              1      2.04
+  U0_mux2X1/U1/D1 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.84,32.90)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/apu_op_ex_o_reg[4]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (90.47,153.98)    s, n
+
+  library hold time                                                            1.00             -0.01     -0.01
+  data required time                                                                                      -0.01
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      -0.01
+  data arrival time                                                                                       -0.04
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.05
+
+
+
+  Startpoint: core_i/id_stage_i/atop_ex_o_reg[0] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/atop_ex_o_reg[1] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: clk_i
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     33.09
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     33.09
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.99
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.97
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.97
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.97
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/atop_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (98.46,151.22)    s, n
+
+  core_i/id_stage_i/atop_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (98.46,151.22)    s, n
+  core_i/id_stage_i/atop_ex_o_reg[0]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)    0.00      1.00              0.02      0.02 f    (99.46,151.09)    s, n
+  core_i/id_stage_i/_gOb354_atop_ex_o[0] (net)      2      1.06
+  core_i/id_stage_i/atop_ex_o_reg[1]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.02 f    (100.14,153.56)   s, n
+  data arrival time                                                                                        0.02
+
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     33.03
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     33.03
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.74
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.58
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.58
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.58
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/atop_ex_o_reg[1]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (100.83,153.62)   s, n
+
+  clock uncertainty                                                                              0.05      0.05
+  library hold time                                                            1.00             -0.00      0.05
+  data required time                                                                                       0.05
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.05
+  data arrival time                                                                                       -0.02
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                        -0.03
+
+
+
+  Startpoint: core_i/id_stage_i/atop_ex_o_reg[0] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/atop_ex_o_reg[1] (rising edge-triggered flip-flop clocked by scan_clk)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: scan_clk
+  Path Type: min
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     33.09
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     33.09
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.99
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.97
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.97
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.97
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/atop_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (98.46,151.22)    s, n
+
+  core_i/id_stage_i/atop_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (98.46,151.22)    s, n
+  core_i/id_stage_i/atop_ex_o_reg[0]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)    0.00      1.00              0.02      0.02 f    (99.46,151.09)    s, n
+  core_i/id_stage_i/_gOb354_atop_ex_o[0] (net)      2      1.06
+  core_i/id_stage_i/atop_ex_o_reg[1]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.02 f    (100.14,153.56)   s, n
+  data arrival time                                                                                        0.02
+
+  clock scan_clk (rise edge)                                                                     0.00      0.00
+  source latency                                                                                 0.00      0.00
+  scan_clk (in)                                                      0.00      1.00              0.00      0.00 r    (0.13,37.04)
+  scan_clk (net)                                    1      2.26
+  U0_mux2X1/IN_1 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_1 (net)                              1      2.26
+  U0_mux2X1/U1/D1 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.84,32.90)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.74
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.58
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.58
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.58
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/atop_ex_o_reg[1]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)   0.00      1.00              0.00      0.00 r    (100.83,153.62)   s, n
+
+  clock uncertainty                                                                              0.05      0.05
+  library hold time                                                            1.00             -0.00      0.05
+  data required time                                                                                       0.05
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       0.05
+  data arrival time                                                                                       -0.02
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                                        -0.03
+
+
+1

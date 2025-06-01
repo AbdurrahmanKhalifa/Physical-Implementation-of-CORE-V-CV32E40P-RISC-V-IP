@@ -1,0 +1,106 @@
+****************************************
+Report : qor
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Fri May 30 18:15:12 2025
+****************************************
+
+
+Scenario           'func_fast'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                    112
+Critical Path Length:              4.30
+Critical Path Slack:               0.71
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_fast'
+Timing Path Group  'scan_clk'
+----------------------------------------
+Levels of Logic:                    112
+Critical Path Length:              4.30
+Critical Path Slack:               0.70
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     48
+Critical Path Length:              1.75
+Critical Path Slack:              -0.00
+Critical Path Clk Period:          5.00
+Total Negative Slack:             -0.00
+No. of Violating Paths:               5
+Worst Hold Violation:             -0.26
+Total Hold Violation:             -1.49
+No. of Hold Violations:              79
+----------------------------------------
+
+Scenario           'func_slow'
+Timing Path Group  'scan_clk'
+----------------------------------------
+Levels of Logic:                    112
+Critical Path Length:              4.42
+Critical Path Slack:               0.30
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.17
+Total Hold Violation:             -0.64
+No. of Hold Violations:               4
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             74
+Hierarchical Port Count:          12561
+Leaf Cell Count:                  61892
+Buf/Inv Cell Count:               41735
+Buf Cell Count:                   36304
+Inv Cell Count:                    5431
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         59488
+Sequential Cell Count:             2404
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            28084.38
+Noncombinational Area:          3225.97
+Buf/Inv Area:                  16362.78
+Total Buffer Area:             15137.65
+Total Inverter Area:            1225.13
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          31310.35
+Cell Area (netlist and physical only):        32820.83
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             64399
+Nets with Violations:                 7
+Max Trans Violations:                 2
+Max Cap Violations:                   5
+----------------------------------------
+
+1

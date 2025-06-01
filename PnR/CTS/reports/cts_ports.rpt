@@ -1,0 +1,51 @@
+****************************************
+Report : port
+        -design_rule
+        -input_delay
+        -drive
+        -output_delay
+Module : cv32e40p_top
+Mode   : func
+Corner : slow
+Scenario: func_slow
+Version: O-2018.06-SP1
+Date   : Fri May 30 18:14:40 2025
+****************************************
+                      Pin Cap                    Wire Cap
+                   Min          Max           Min          Max
+Port      Dir    rise/fall    rise/fall     rise/fall    rise/fall    Attributes
+--------------------------------------------------------------------------------
+clk_i     in     0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+scan_clk  in     0.00/0.00    0.00/0.00     0.00/0.00    0.00/0.00
+
+Port           MaxTrans MaxCap   MinCap
+-------------------------------------------
+clk_i          --       --       --
+scan_clk       --       23.35    0.15
+
+                      Input Delay
+                    Min             Max       Related Related
+ Input Port     Rise    Fall    Rise    Fall   Clock   Pin
+-----------------------------------------------------------------
+clk_i           --      --      --      --      --      --
+scan_clk        0.50    0.50    0.50    0.50  clk_i     -- 
+
+            Resistance (min/max)
+Input Port  Rise             Fall
+--------------------------------------------------------------------------------
+clk_i       --               --
+scan_clk    --               --
+
+            Transition (min/max)
+Input Port  Rise             Fall             Related Clock
+--------------------------------------------------------------------------------
+clk_i       0.30/0.30        0.20/0.20
+
+                      Driving Cell
+Input Port     Type     Cell                Mult      Clock     Attrs
+--------------------------------------------------------------------------------
+scan_clk       min_rise saed14rvt_ss0p6v125c/SAEDRVT14_BUF_1/X
+scan_clk       min_fall saed14rvt_ss0p6v125c/SAEDRVT14_BUF_1/X
+scan_clk       max_rise saed14rvt_ss0p6v125c/SAEDRVT14_BUF_1/X
+scan_clk       max_fall saed14rvt_ss0p6v125c/SAEDRVT14_BUF_1/X
+1

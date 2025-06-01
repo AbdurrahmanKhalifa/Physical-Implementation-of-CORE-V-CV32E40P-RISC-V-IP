@@ -1,0 +1,1173 @@
+SI analysis is not enabled, so delta delays are unavailable.
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type max
+        -nworst 1
+        -max_paths 1
+        -report_by group
+        -input_pins
+        -nets
+        -include_hierarchical_pins
+        -transition_time
+        -capacitance
+        -crosstalk_delta
+        -derate
+        -attributes
+        -physical
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu May 29 05:29:11 2025
+****************************************
+
+  Startpoint: core_i/id_stage_i/mult_operator_ex_o_reg[2] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/alu_operand_a_ex_o_reg[31] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: clk_i
+  Path Type: max
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (129.54,136.82)   s, n
+
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      0.00 r    (129.54,136.82)   s, n
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.03      1.00              0.07      0.07 r    (130.54,136.69)   s, n
+  core_i/id_stage_i/mult_operator_ex_o[2] (net)     5      9.26
+  core_i/id_stage_i/mult_operator_ex_o[2] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.03      1.00              0.00      0.07 r    (hierarchical)    h
+  core_i/mult_operator_ex[2] (net)                         9.26
+  core_i/ex_stage_i/mult_operator_i[2] (cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.03      1.00              0.00      0.07 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_operator_i[2] (net)               9.26
+  core_i/ex_stage_i/mult_i/operator_i[2] (cv32e40p_mult_test_1)      0.03      1.00              0.00      0.07 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/operator_i[2] (net)             9.26
+  core_i/ex_stage_i/mult_i/U1019/A (SAEDRVT14_INV_S_2)               0.03      1.00              0.00      0.07 r    (160.14,148.11)
+  core_i/ex_stage_i/mult_i/U1019/X (SAEDRVT14_INV_S_2)               0.02      1.00              0.02      0.09 f    (160.21,148.11)
+  core_i/ex_stage_i/mult_i/n576 (net)               3      3.37
+  core_i/ex_stage_i/mult_i/U704/A1 (SAEDRVT14_AN2_MM_3)              0.02      1.00              0.00      0.09 f    (161.99,153.50)
+  core_i/ex_stage_i/mult_i/U704/X (SAEDRVT14_AN2_MM_3)               0.05      1.00              0.06      0.15 f    (162.29,153.50)
+  core_i/ex_stage_i/mult_i/n117 (net)              33     26.88
+  core_i/ex_stage_i/mult_i/U851/A2 (SAEDRVT14_AN2_MM_3)              0.05      1.00              0.00      0.15 f    (168.58,145.06)
+  core_i/ex_stage_i/mult_i/U851/X (SAEDRVT14_AN2_MM_3)               0.05      1.00              0.08      0.23 f    (169.02,145.10)
+  core_i/ex_stage_i/mult_i/n194 (net)              32     27.43
+  core_i/ex_stage_i/mult_i/U402/A2 (SAEDRVT14_EO2_3)                 0.05      1.00              0.00      0.23 f    (186.19,122.28)
+  core_i/ex_stage_i/mult_i/U402/X (SAEDRVT14_EO2_3)                  0.05      1.00              0.09      0.32 r    (187.08,122.29)
+  core_i/ex_stage_i/mult_i/int_op_a_msu[0] (net)   32     24.99
+  core_i/ex_stage_i/mult_i/mult_224/A[0] (cv32e40p_mult_DW02_mult_4)
+                                                                     0.05      1.00              0.00      0.32 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/mult_224/A[0] (net)            24.99
+  core_i/ex_stage_i/mult_i/mult_224/U356/A2 (SAEDRVT14_OR2_2)        0.05      1.00              0.00      0.33 r    (186.34,130.70)
+  core_i/ex_stage_i/mult_i/mult_224/U356/X (SAEDRVT14_OR2_2)         0.01      1.00              0.04      0.36 r    (186.04,130.69)
+  core_i/ex_stage_i/mult_i/mult_224/n172 (net)      1      1.36
+  core_i/ex_stage_i/mult_i/mult_224/U355/A2 (SAEDRVT14_EN2_3)        0.01      1.00              0.00      0.36 r    (186.34,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/U355/X (SAEDRVT14_EN2_3)         0.01      1.00              0.04      0.40 f    (187.23,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[1][30] (net)
+                                                    1      0.88
+  core_i/ex_stage_i/mult_i/mult_224/S2_2_29/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00      0.40 f    (188.71,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_2_29/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.46 r    (190.18,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[2][29] (net)
+                                                    1      0.45
+  core_i/ex_stage_i/mult_i/mult_224/S2_3_28/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.46 r    (190.33,119.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_3_28/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.52 f    (191.81,119.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[3][28] (net)
+                                                    1      0.59
+  core_i/ex_stage_i/mult_i/mult_224/S2_4_27/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.52 f    (192.04,117.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_4_27/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.59 r    (193.51,117.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[4][27] (net)
+                                                    1      0.44
+  core_i/ex_stage_i/mult_i/mult_224/S2_5_26/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.59 r    (194.18,118.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_5_26/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.65 f    (195.66,118.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[5][26] (net)
+                                                    1      0.42
+  core_i/ex_stage_i/mult_i/mult_224/S2_6_25/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.65 f    (196.18,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_6_25/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.71 r    (197.66,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[6][25] (net)
+                                                    1      0.32
+  core_i/ex_stage_i/mult_i/mult_224/S2_7_24/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.71 r    (197.96,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_7_24/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.77 f    (199.43,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[7][24] (net)
+                                                    1      0.65
+  core_i/ex_stage_i/mult_i/mult_224/S2_8_23/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.77 f    (200.10,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_8_23/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.83 r    (201.58,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[8][23] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_9_22/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      0.83 r    (202.17,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_9_22/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      0.89 f    (203.65,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[9][22] (net)
+                                                    1      0.35
+  core_i/ex_stage_i/mult_i/mult_224/S2_10_21/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      0.89 f    (204.24,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_10_21/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      0.96 r    (205.73,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[10][21] (net)
+                                                    1      0.50
+  core_i/ex_stage_i/mult_i/mult_224/S2_11_20/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      0.96 r    (206.46,122.91)
+  core_i/ex_stage_i/mult_i/mult_224/S2_11_20/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.02 f    (207.95,122.91)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[11][20] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_12_19/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.02 f    (208.61,123.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_12_19/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.08 r    (210.09,123.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[12][19] (net)
+                                                    1      0.63
+  core_i/ex_stage_i/mult_i/mult_224/S2_13_18/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.08 r    (212.46,124.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_13_18/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.14 f    (213.94,124.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[13][18] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_14_17/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.14 f    (214.53,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_14_17/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.21 r    (216.01,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[14][17] (net)
+                                                    1      0.64
+  core_i/ex_stage_i/mult_i/mult_224/S2_15_16/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.21 r    (216.82,126.51)
+  core_i/ex_stage_i/mult_i/mult_224/S2_15_16/X (SAEDRVT14_EO3_2)     0.01      1.00              0.07      1.28 f    (218.30,126.51)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[15][16] (net)
+                                                    1      3.06
+  core_i/ex_stage_i/mult_i/mult_224/S2_16_15/A3 (SAEDRVT14_EO3_2)    0.01      1.00              0.00      1.28 f    (217.86,145.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_16_15/X (SAEDRVT14_EO3_2)     0.01      1.00              0.07      1.35 r    (219.34,145.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[16][15] (net)
+                                                    1      1.06
+  core_i/ex_stage_i/mult_i/mult_224/S2_17_14/A3 (SAEDRVT14_EO3_2)    0.01      1.00              0.00      1.35 r    (220.08,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_17_14/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.41 f    (218.60,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[17][14] (net)
+                                                    1      0.64
+  core_i/ex_stage_i/mult_i/mult_224/S2_18_13/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.41 f    (218.53,152.29)
+  core_i/ex_stage_i/mult_i/mult_224/S2_18_13/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.47 r    (217.05,152.29)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[18][13] (net)
+                                                    1      0.71
+  core_i/ex_stage_i/mult_i/mult_224/S2_19_12/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.47 r    (217.86,154.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_19_12/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.54 f    (216.38,154.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[19][12] (net)
+                                                    1      0.81
+  core_i/ex_stage_i/mult_i/mult_224/S2_20_11/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.54 f    (215.27,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_20_11/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.60 r    (213.79,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[20][11] (net)
+                                                    1      0.73
+  core_i/ex_stage_i/mult_i/mult_224/S2_21_10/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      1.60 r    (212.24,160.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_21_10/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      1.66 f    (210.76,160.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[21][10] (net)
+                                                    1      0.58
+  core_i/ex_stage_i/mult_i/mult_224/S2_22_9/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      1.66 f    (209.79,161.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_22_9/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      1.73 r    (208.32,161.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[22][9] (net)
+                                                    1      0.71
+  core_i/ex_stage_i/mult_i/mult_224/S2_23_8/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      1.73 r    (205.43,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_23_8/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      1.79 f    (203.95,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[23][8] (net)
+                                                    1      0.55
+  core_i/ex_stage_i/mult_i/mult_224/S2_24_7/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      1.79 f    (201.43,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_24_7/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      1.85 r    (199.95,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[24][7] (net)
+                                                    1      0.77
+  core_i/ex_stage_i/mult_i/mult_224/S2_25_6/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      1.85 r    (198.70,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_25_6/X (SAEDRVT14_EO3_2)      0.01      1.00              0.06      1.92 f    (197.21,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[25][6] (net)
+                                                    1      1.07
+  core_i/ex_stage_i/mult_i/mult_224/S2_26_5/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00      1.92 f    (194.48,153.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_26_5/X (SAEDRVT14_EO3_2)      0.01      1.00              0.07      1.98 r    (193.00,153.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[26][5] (net)
+                                                    1      1.10
+  core_i/ex_stage_i/mult_i/mult_224/S2_27_4/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00      1.98 r    (189.52,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_27_4/X (SAEDRVT14_EO3_2)      0.01      1.00              0.06      2.05 f    (188.04,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[27][4] (net)
+                                                    1      1.28
+  core_i/ex_stage_i/mult_i/mult_224/S2_28_3/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00      2.05 f    (183.45,146.29)
+  core_i/ex_stage_i/mult_i/mult_224/S2_28_3/X (SAEDRVT14_EO3_2)      0.01      1.00              0.07      2.11 r    (181.97,146.29)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[28][3] (net)
+                                                    1      0.88
+  core_i/ex_stage_i/mult_i/mult_224/S2_29_2/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00      2.11 r    (179.82,143.31)
+  core_i/ex_stage_i/mult_i/mult_224/S2_29_2/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      2.17 f    (178.35,143.31)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[29][2] (net)
+                                                    1      0.51
+  core_i/ex_stage_i/mult_i/mult_224/S2_30_1/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00      2.17 f    (177.68,142.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_30_1/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06      2.24 r    (176.20,142.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[30][1] (net)
+                                                    1      0.37
+  core_i/ex_stage_i/mult_i/mult_224/S4_0/A3 (SAEDRVT14_EO3_2)        0.00      1.00              0.00      2.24 r    (176.12,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/S4_0/X (SAEDRVT14_EO3_2)         0.00      1.00              0.06      2.30 f    (174.65,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[31][0] (net)
+                                                    1      0.33
+  core_i/ex_stage_i/mult_i/mult_224/S14_31_0/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00      2.30 f    (174.35,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/S14_31_0/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06      2.36 r    (172.87,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/PRODUCT[31] (net)
+                                                    1      0.54
+  core_i/ex_stage_i/mult_i/mult_224/PRODUCT[31] (cv32e40p_mult_DW02_mult_4)
+                                                                     0.00      1.00              0.00      2.36 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/N162 (net)                      0.54
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/B[31] (cv32e40p_mult_DW01_add_8)
+                                                                     0.00      1.00              0.00      2.36 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/B[31] (net)
+                                                           0.54
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/U1_31/A2 (SAEDRVT14_EO3_2)
+                                                                     0.00      1.00              0.00      2.36 r    (172.19,141.44)
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/U1_31/X (SAEDRVT14_EO3_2)
+                                                                     0.01      1.00              0.06      2.42 f    (171.09,141.49)
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/SUM[31] (net)
+                                                    1      3.21
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/SUM[31] (cv32e40p_mult_DW01_add_8)
+                                                                     0.01      1.00              0.00      2.42 f    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/int_result[31] (net)            3.21
+  core_i/ex_stage_i/mult_i/U291/A1 (SAEDRVT14_AOI222_2)              0.01      1.00              0.00      2.42 f    (171.32,162.50)
+  core_i/ex_stage_i/mult_i/U291/X (SAEDRVT14_AOI222_2)               0.01      1.00              0.05      2.47 r    (171.83,162.49)
+  core_i/ex_stage_i/mult_i/n131 (net)               1      1.83
+  core_i/ex_stage_i/mult_i/U289/A1 (SAEDRVT14_ND2_CDC_4)             0.01      1.00              0.00      2.47 r    (173.08,163.75)
+  core_i/ex_stage_i/mult_i/U289/X (SAEDRVT14_ND2_CDC_4)              0.02      1.00              0.02      2.49 f    (173.09,163.58)
+  core_i/ex_stage_i/mult_i/result_o[31] (net)       1      6.35
+  core_i/ex_stage_i/mult_i/result_o[31] (cv32e40p_mult_test_1)       0.02      1.00              0.00      2.49 f    (hierarchical)    h
+  core_i/ex_stage_i/mult_result[31] (net)                  6.35
+  core_i/ex_stage_i/U45/B1 (SAEDRVT14_AOI222_2)                      0.02      1.00              0.00      2.49 f    (130.53,158.24)
+  core_i/ex_stage_i/U45/X (SAEDRVT14_AOI222_2)                       0.03      1.00              0.08      2.57 r    (129.88,158.31)
+  core_i/ex_stage_i/n24 (net)                       1      8.08
+  core_i/ex_stage_i/U44/A (SAEDRVT14_INV_S_2)                        0.03      1.00              0.00      2.57 r    (84.07,145.09)
+  core_i/ex_stage_i/U44/X (SAEDRVT14_INV_S_2)                        0.11      1.00              0.09      2.66 f    (84.00,145.09)
+  core_i/ex_stage_i/regfile_alu_wdata_fw_o[31] (net)
+                                                   34     37.71
+  core_i/ex_stage_i/regfile_alu_wdata_fw_o[31] (cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.11      1.00              0.00      2.66 f    (hierarchical)    h
+  core_i/regfile_alu_wdata_fw[31] (net)                   37.71
+  core_i/id_stage_i/regfile_alu_wdata_fw_i[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.11      1.00              0.00      2.66 f    (hierarchical)    h
+  core_i/id_stage_i/regfile_alu_wdata_fw_i[31] (net)      37.71
+  core_i/id_stage_i/U1471/A2 (SAEDRVT14_AOI222_2)                    0.11      1.00              0.00      2.67 f    (80.97,122.24)
+  core_i/id_stage_i/U1471/X (SAEDRVT14_AOI222_2)                     0.01      1.00              0.07      2.74 r    (81.33,122.31)
+  core_i/id_stage_i/n836 (net)                      1      0.85
+  core_i/id_stage_i/U2544/A (SAEDRVT14_INV_S_2)                      0.01      1.00              0.00      2.74 r    (82.96,122.29)
+  core_i/id_stage_i/U2544/X (SAEDRVT14_INV_S_2)                      0.02      1.00              0.02      2.76 f    (83.03,122.29)
+  core_i/id_stage_i/n2420 (net)                     3      6.48
+  core_i/id_stage_i/U1879/B1 (SAEDRVT14_AO22_2)                      0.02      1.00              0.00      2.76 f    (93.32,122.34)
+  core_i/id_stage_i/U1879/X (SAEDRVT14_AO22_2)                       0.01      1.00              0.03      2.79 f    (94.13,122.30)
+  core_i/id_stage_i/n830 (net)                      1      0.70
+  core_i/id_stage_i/U1878/A1 (SAEDRVT14_OR2_2)                       0.01      1.00              0.00      2.79 f    (94.28,124.70)
+  core_i/id_stage_i/U1878/X (SAEDRVT14_OR2_2)                        0.02      1.00              0.03      2.82 f    (94.43,124.69)
+  core_i/id_stage_i/n763 (net)                      2      5.67
+  core_i/id_stage_i/U1436/B2 (SAEDRVT14_AOI222_2)                    0.02      1.00              0.00      2.82 f    (118.12,125.30)
+  core_i/id_stage_i/U1436/X (SAEDRVT14_AOI222_2)                     0.01      1.00              0.06      2.88 r    (118.92,125.29)
+  core_i/id_stage_i/n760 (net)                      1      0.69
+  core_i/id_stage_i/U2543/A (SAEDRVT14_INV_S_2)                      0.01      1.00              0.00      2.88 r    (119.22,125.31)
+  core_i/id_stage_i/U2543/X (SAEDRVT14_INV_S_2)                      0.00      1.00              0.00      2.89 f    (119.29,125.31)
+  core_i/id_stage_i/n2419 (net)                     1      0.35
+  core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      2.89 f    (119.79,125.36)   s, n
+  data arrival time                                                                                        2.89
+
+  clock clk_i (rise edge)                                                                        5.00      5.00
+  source latency                                                                                 0.00      5.00
+  clk_i (in)                                                         0.00      1.00              0.00      5.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      5.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      5.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      5.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      5.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      5.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      5.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00      5.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00      5.00 r    (120.52,125.18)   s, n
+
+  library setup time                                                           1.00             -0.02      4.98
+  data required time                                                                                       4.98
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       4.98
+  data arrival time                                                                                       -2.89
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.10
+
+
+
+  Startpoint: core_i/id_stage_i/mult_operator_ex_o_reg[2] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/alu_operand_a_ex_o_reg[31] (rising edge-triggered flip-flop clocked by scan_clk)
+  Mode: func
+  Corner: fast
+  Scenario: func_fast
+  Path Group: scan_clk
+  Path Type: max
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                       95.00     95.00
+  source latency                                                                                 0.00     95.00
+  clk_i (in)                                                         0.00      1.00              0.00     95.00 r    (234.03,0.13)
+  clk_i (net)                                       1     29.23
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     29.23
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00     95.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00     95.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00     95.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00     95.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00     95.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00     95.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00     95.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00     95.00 r    (129.54,136.82)   s, n
+
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00     95.00 r    (129.54,136.82)   s, n
+  core_i/id_stage_i/mult_operator_ex_o_reg[2]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.03      1.00              0.07     95.07 r    (130.54,136.69)   s, n
+  core_i/id_stage_i/mult_operator_ex_o[2] (net)     5      9.26
+  core_i/id_stage_i/mult_operator_ex_o[2] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.03      1.00              0.00     95.07 r    (hierarchical)    h
+  core_i/mult_operator_ex[2] (net)                         9.26
+  core_i/ex_stage_i/mult_operator_i[2] (cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.03      1.00              0.00     95.07 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_operator_i[2] (net)               9.26
+  core_i/ex_stage_i/mult_i/operator_i[2] (cv32e40p_mult_test_1)      0.03      1.00              0.00     95.07 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/operator_i[2] (net)             9.26
+  core_i/ex_stage_i/mult_i/U1019/A (SAEDRVT14_INV_S_2)               0.03      1.00              0.00     95.07 r    (160.14,148.11)
+  core_i/ex_stage_i/mult_i/U1019/X (SAEDRVT14_INV_S_2)               0.02      1.00              0.02     95.09 f    (160.21,148.11)
+  core_i/ex_stage_i/mult_i/n576 (net)               3      3.37
+  core_i/ex_stage_i/mult_i/U704/A1 (SAEDRVT14_AN2_MM_3)              0.02      1.00              0.00     95.09 f    (161.99,153.50)
+  core_i/ex_stage_i/mult_i/U704/X (SAEDRVT14_AN2_MM_3)               0.05      1.00              0.06     95.15 f    (162.29,153.50)
+  core_i/ex_stage_i/mult_i/n117 (net)              33     26.88
+  core_i/ex_stage_i/mult_i/U851/A2 (SAEDRVT14_AN2_MM_3)              0.05      1.00              0.00     95.15 f    (168.58,145.06)
+  core_i/ex_stage_i/mult_i/U851/X (SAEDRVT14_AN2_MM_3)               0.05      1.00              0.08     95.23 f    (169.02,145.10)
+  core_i/ex_stage_i/mult_i/n194 (net)              32     27.43
+  core_i/ex_stage_i/mult_i/U402/A2 (SAEDRVT14_EO2_3)                 0.05      1.00              0.00     95.23 f    (186.19,122.28)
+  core_i/ex_stage_i/mult_i/U402/X (SAEDRVT14_EO2_3)                  0.05      1.00              0.09     95.32 r    (187.08,122.29)
+  core_i/ex_stage_i/mult_i/int_op_a_msu[0] (net)   32     24.99
+  core_i/ex_stage_i/mult_i/mult_224/A[0] (cv32e40p_mult_DW02_mult_4)
+                                                                     0.05      1.00              0.00     95.32 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/mult_224/A[0] (net)            24.99
+  core_i/ex_stage_i/mult_i/mult_224/U356/A2 (SAEDRVT14_OR2_2)        0.05      1.00              0.00     95.33 r    (186.34,130.70)
+  core_i/ex_stage_i/mult_i/mult_224/U356/X (SAEDRVT14_OR2_2)         0.01      1.00              0.04     95.36 r    (186.04,130.69)
+  core_i/ex_stage_i/mult_i/mult_224/n172 (net)      1      1.36
+  core_i/ex_stage_i/mult_i/mult_224/U355/A2 (SAEDRVT14_EN2_3)        0.01      1.00              0.00     95.36 r    (186.34,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/U355/X (SAEDRVT14_EN2_3)         0.01      1.00              0.04     95.40 f    (187.23,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[1][30] (net)
+                                                    1      0.88
+  core_i/ex_stage_i/mult_i/mult_224/S2_2_29/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00     95.40 f    (188.71,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_2_29/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.46 r    (190.18,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[2][29] (net)
+                                                    1      0.45
+  core_i/ex_stage_i/mult_i/mult_224/S2_3_28/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.46 r    (190.33,119.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_3_28/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.52 f    (191.81,119.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[3][28] (net)
+                                                    1      0.59
+  core_i/ex_stage_i/mult_i/mult_224/S2_4_27/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.52 f    (192.04,117.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_4_27/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.59 r    (193.51,117.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[4][27] (net)
+                                                    1      0.44
+  core_i/ex_stage_i/mult_i/mult_224/S2_5_26/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.59 r    (194.18,118.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_5_26/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.65 f    (195.66,118.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[5][26] (net)
+                                                    1      0.42
+  core_i/ex_stage_i/mult_i/mult_224/S2_6_25/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.65 f    (196.18,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_6_25/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.71 r    (197.66,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[6][25] (net)
+                                                    1      0.32
+  core_i/ex_stage_i/mult_i/mult_224/S2_7_24/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.71 r    (197.96,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_7_24/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.77 f    (199.43,118.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[7][24] (net)
+                                                    1      0.65
+  core_i/ex_stage_i/mult_i/mult_224/S2_8_23/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.77 f    (200.10,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_8_23/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.83 r    (201.58,121.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[8][23] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_9_22/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     95.83 r    (202.17,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_9_22/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     95.89 f    (203.65,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[9][22] (net)
+                                                    1      0.35
+  core_i/ex_stage_i/mult_i/mult_224/S2_10_21/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     95.89 f    (204.24,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_10_21/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     95.96 r    (205.73,121.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[10][21] (net)
+                                                    1      0.50
+  core_i/ex_stage_i/mult_i/mult_224/S2_11_20/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     95.96 r    (206.46,122.91)
+  core_i/ex_stage_i/mult_i/mult_224/S2_11_20/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.02 f    (207.95,122.91)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[11][20] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_12_19/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.02 f    (208.61,123.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_12_19/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.08 r    (210.09,123.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[12][19] (net)
+                                                    1      0.63
+  core_i/ex_stage_i/mult_i/mult_224/S2_13_18/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.08 r    (212.46,124.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_13_18/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.14 f    (213.94,124.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[13][18] (net)
+                                                    1      0.43
+  core_i/ex_stage_i/mult_i/mult_224/S2_14_17/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.14 f    (214.53,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_14_17/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.21 r    (216.01,124.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[14][17] (net)
+                                                    1      0.64
+  core_i/ex_stage_i/mult_i/mult_224/S2_15_16/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.21 r    (216.82,126.51)
+  core_i/ex_stage_i/mult_i/mult_224/S2_15_16/X (SAEDRVT14_EO3_2)     0.01      1.00              0.07     96.28 f    (218.30,126.51)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[15][16] (net)
+                                                    1      3.06
+  core_i/ex_stage_i/mult_i/mult_224/S2_16_15/A3 (SAEDRVT14_EO3_2)    0.01      1.00              0.00     96.28 f    (217.86,145.09)
+  core_i/ex_stage_i/mult_i/mult_224/S2_16_15/X (SAEDRVT14_EO3_2)     0.01      1.00              0.07     96.35 r    (219.34,145.09)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[16][15] (net)
+                                                    1      1.06
+  core_i/ex_stage_i/mult_i/mult_224/S2_17_14/A3 (SAEDRVT14_EO3_2)    0.01      1.00              0.00     96.35 r    (220.08,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_17_14/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.41 f    (218.60,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[17][14] (net)
+                                                    1      0.64
+  core_i/ex_stage_i/mult_i/mult_224/S2_18_13/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.41 f    (218.53,152.29)
+  core_i/ex_stage_i/mult_i/mult_224/S2_18_13/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.47 r    (217.05,152.29)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[18][13] (net)
+                                                    1      0.71
+  core_i/ex_stage_i/mult_i/mult_224/S2_19_12/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.47 r    (217.86,154.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_19_12/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.54 f    (216.38,154.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[19][12] (net)
+                                                    1      0.81
+  core_i/ex_stage_i/mult_i/mult_224/S2_20_11/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.54 f    (215.27,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_20_11/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.60 r    (213.79,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[20][11] (net)
+                                                    1      0.73
+  core_i/ex_stage_i/mult_i/mult_224/S2_21_10/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     96.60 r    (212.24,160.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_21_10/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     96.66 f    (210.76,160.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[21][10] (net)
+                                                    1      0.58
+  core_i/ex_stage_i/mult_i/mult_224/S2_22_9/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     96.66 f    (209.79,161.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_22_9/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     96.73 r    (208.32,161.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[22][9] (net)
+                                                    1      0.71
+  core_i/ex_stage_i/mult_i/mult_224/S2_23_8/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     96.73 r    (205.43,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_23_8/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     96.79 f    (203.95,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[23][8] (net)
+                                                    1      0.55
+  core_i/ex_stage_i/mult_i/mult_224/S2_24_7/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     96.79 f    (201.43,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/S2_24_7/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     96.85 r    (199.95,160.69)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[24][7] (net)
+                                                    1      0.77
+  core_i/ex_stage_i/mult_i/mult_224/S2_25_6/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     96.85 r    (198.70,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/S2_25_6/X (SAEDRVT14_EO3_2)      0.01      1.00              0.06     96.92 f    (197.21,157.71)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[25][6] (net)
+                                                    1      1.07
+  core_i/ex_stage_i/mult_i/mult_224/S2_26_5/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00     96.92 f    (194.48,153.49)
+  core_i/ex_stage_i/mult_i/mult_224/S2_26_5/X (SAEDRVT14_EO3_2)      0.01      1.00              0.07     96.98 r    (193.00,153.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[26][5] (net)
+                                                    1      1.10
+  core_i/ex_stage_i/mult_i/mult_224/S2_27_4/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00     96.98 r    (189.52,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/S2_27_4/X (SAEDRVT14_EO3_2)      0.01      1.00              0.06     97.05 f    (188.04,149.89)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[27][4] (net)
+                                                    1      1.28
+  core_i/ex_stage_i/mult_i/mult_224/S2_28_3/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00     97.05 f    (183.45,146.29)
+  core_i/ex_stage_i/mult_i/mult_224/S2_28_3/X (SAEDRVT14_EO3_2)      0.01      1.00              0.07     97.11 r    (181.97,146.29)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[28][3] (net)
+                                                    1      0.88
+  core_i/ex_stage_i/mult_i/mult_224/S2_29_2/A3 (SAEDRVT14_EO3_2)     0.01      1.00              0.00     97.11 r    (179.82,143.31)
+  core_i/ex_stage_i/mult_i/mult_224/S2_29_2/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     97.17 f    (178.35,143.31)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[29][2] (net)
+                                                    1      0.51
+  core_i/ex_stage_i/mult_i/mult_224/S2_30_1/A3 (SAEDRVT14_EO3_2)     0.00      1.00              0.00     97.17 f    (177.68,142.11)
+  core_i/ex_stage_i/mult_i/mult_224/S2_30_1/X (SAEDRVT14_EO3_2)      0.00      1.00              0.06     97.24 r    (176.20,142.11)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[30][1] (net)
+                                                    1      0.37
+  core_i/ex_stage_i/mult_i/mult_224/S4_0/A3 (SAEDRVT14_EO3_2)        0.00      1.00              0.00     97.24 r    (176.12,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/S4_0/X (SAEDRVT14_EO3_2)         0.00      1.00              0.06     97.30 f    (174.65,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/SUMB[31][0] (net)
+                                                    1      0.33
+  core_i/ex_stage_i/mult_i/mult_224/S14_31_0/A3 (SAEDRVT14_EO3_2)    0.00      1.00              0.00     97.30 f    (174.35,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/S14_31_0/X (SAEDRVT14_EO3_2)     0.00      1.00              0.06     97.36 r    (172.87,141.49)
+  core_i/ex_stage_i/mult_i/mult_224/PRODUCT[31] (net)
+                                                    1      0.54
+  core_i/ex_stage_i/mult_i/mult_224/PRODUCT[31] (cv32e40p_mult_DW02_mult_4)
+                                                                     0.00      1.00              0.00     97.36 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/N162 (net)                      0.54
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/B[31] (cv32e40p_mult_DW01_add_8)
+                                                                     0.00      1.00              0.00     97.36 r    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/B[31] (net)
+                                                           0.54
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/U1_31/A2 (SAEDRVT14_EO3_2)
+                                                                     0.00      1.00              0.00     97.36 r    (172.19,141.44)
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/U1_31/X (SAEDRVT14_EO3_2)
+                                                                     0.01      1.00              0.06     97.42 f    (171.09,141.49)
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/SUM[31] (net)
+                                                    1      3.21
+  core_i/ex_stage_i/mult_i/add_0_root_add_0_root_add_224_2/SUM[31] (cv32e40p_mult_DW01_add_8)
+                                                                     0.01      1.00              0.00     97.42 f    (hierarchical)    h
+  core_i/ex_stage_i/mult_i/int_result[31] (net)            3.21
+  core_i/ex_stage_i/mult_i/U291/A1 (SAEDRVT14_AOI222_2)              0.01      1.00              0.00     97.42 f    (171.32,162.50)
+  core_i/ex_stage_i/mult_i/U291/X (SAEDRVT14_AOI222_2)               0.01      1.00              0.05     97.47 r    (171.83,162.49)
+  core_i/ex_stage_i/mult_i/n131 (net)               1      1.83
+  core_i/ex_stage_i/mult_i/U289/A1 (SAEDRVT14_ND2_CDC_4)             0.01      1.00              0.00     97.47 r    (173.08,163.75)
+  core_i/ex_stage_i/mult_i/U289/X (SAEDRVT14_ND2_CDC_4)              0.02      1.00              0.02     97.49 f    (173.09,163.58)
+  core_i/ex_stage_i/mult_i/result_o[31] (net)       1      6.35
+  core_i/ex_stage_i/mult_i/result_o[31] (cv32e40p_mult_test_1)       0.02      1.00              0.00     97.49 f    (hierarchical)    h
+  core_i/ex_stage_i/mult_result[31] (net)                  6.35
+  core_i/ex_stage_i/U45/B1 (SAEDRVT14_AOI222_2)                      0.02      1.00              0.00     97.49 f    (130.53,158.24)
+  core_i/ex_stage_i/U45/X (SAEDRVT14_AOI222_2)                       0.03      1.00              0.08     97.57 r    (129.88,158.31)
+  core_i/ex_stage_i/n24 (net)                       1      8.08
+  core_i/ex_stage_i/U44/A (SAEDRVT14_INV_S_2)                        0.03      1.00              0.00     97.57 r    (84.07,145.09)
+  core_i/ex_stage_i/U44/X (SAEDRVT14_INV_S_2)                        0.11      1.00              0.09     97.66 f    (84.00,145.09)
+  core_i/ex_stage_i/regfile_alu_wdata_fw_o[31] (net)
+                                                   34     37.71
+  core_i/ex_stage_i/regfile_alu_wdata_fw_o[31] (cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_test_1)
+                                                                     0.11      1.00              0.00     97.66 f    (hierarchical)    h
+  core_i/regfile_alu_wdata_fw[31] (net)                   37.71
+  core_i/id_stage_i/regfile_alu_wdata_fw_i[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.11      1.00              0.00     97.66 f    (hierarchical)    h
+  core_i/id_stage_i/regfile_alu_wdata_fw_i[31] (net)      37.71
+  core_i/id_stage_i/U1471/A2 (SAEDRVT14_AOI222_2)                    0.11      1.00              0.00     97.67 f    (80.97,122.24)
+  core_i/id_stage_i/U1471/X (SAEDRVT14_AOI222_2)                     0.01      1.00              0.07     97.74 r    (81.33,122.31)
+  core_i/id_stage_i/n836 (net)                      1      0.85
+  core_i/id_stage_i/U2544/A (SAEDRVT14_INV_S_2)                      0.01      1.00              0.00     97.74 r    (82.96,122.29)
+  core_i/id_stage_i/U2544/X (SAEDRVT14_INV_S_2)                      0.02      1.00              0.02     97.76 f    (83.03,122.29)
+  core_i/id_stage_i/n2420 (net)                     3      6.48
+  core_i/id_stage_i/U1879/B1 (SAEDRVT14_AO22_2)                      0.02      1.00              0.00     97.76 f    (93.32,122.34)
+  core_i/id_stage_i/U1879/X (SAEDRVT14_AO22_2)                       0.01      1.00              0.03     97.79 f    (94.13,122.30)
+  core_i/id_stage_i/n830 (net)                      1      0.70
+  core_i/id_stage_i/U1878/A1 (SAEDRVT14_OR2_2)                       0.01      1.00              0.00     97.79 f    (94.28,124.70)
+  core_i/id_stage_i/U1878/X (SAEDRVT14_OR2_2)                        0.02      1.00              0.03     97.82 f    (94.43,124.69)
+  core_i/id_stage_i/n763 (net)                      2      5.67
+  core_i/id_stage_i/U1436/B2 (SAEDRVT14_AOI222_2)                    0.02      1.00              0.00     97.82 f    (118.12,125.30)
+  core_i/id_stage_i/U1436/X (SAEDRVT14_AOI222_2)                     0.01      1.00              0.06     97.88 r    (118.92,125.29)
+  core_i/id_stage_i/n760 (net)                      1      0.69
+  core_i/id_stage_i/U2543/A (SAEDRVT14_INV_S_2)                      0.01      1.00              0.00     97.88 r    (119.22,125.31)
+  core_i/id_stage_i/U2543/X (SAEDRVT14_INV_S_2)                      0.00      1.00              0.00     97.89 f    (119.29,125.31)
+  core_i/id_stage_i/n2419 (net)                     1      0.35
+  core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/D (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00     97.89 f    (119.79,125.36)   s, n
+  data arrival time                                                                                       97.89
+
+  clock scan_clk (rise edge)                                                                   100.00    100.00
+  source latency                                                                                 0.00    100.00
+  scan_clk (in)                                                      0.00      1.00              0.00    100.00 r    (0.13,37.04)
+  scan_clk (net)                                    1      2.04
+  U0_mux2X1/IN_1 (mux2X1_0)                                          0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  U0_mux2X1/IN_1 (net)                              1      2.04
+  U0_mux2X1/U1/D1 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00    100.00 r    (13.84,32.90)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00    100.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.01
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00    100.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00    100.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     11.19
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     11.19
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     11.19
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     11.19
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00    100.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00    100.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                                     0.00      1.00              0.00    100.00 r    (120.52,125.18)   s, n
+
+  library setup time                                                           1.00             -0.02     99.98
+  data required time                                                                                      99.98
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      99.98
+  data arrival time                                                                                      -97.89
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              2.10
+
+
+
+  Startpoint: core_i/if_stage_i/instr_rdata_id_o_reg[16] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: instr_addr_o[31] (output port clocked by clk_i)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: clk_i
+  Path Type: max
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                        0.00      0.00
+  source latency                                                                                 0.00      0.00
+  clk_i (in)                                                         0.00      1.00              0.00      0.00 r    (234.03,0.13)
+  clk_i (net)                                       1     33.03
+  U0_mux2X1/IN_0 (mux2X1_0)                                          0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  U0_mux2X1/IN_0 (net)                              1     33.03
+  U0_mux2X1/U1/D0 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00      0.00 r    (13.55,32.98)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00      0.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.74
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00      0.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.58
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.58
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.58
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.58
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00      0.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/if_stage_i/clk (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
+                                                                     0.00      1.00              0.00      0.00 r    (hierarchical)    h
+  core_i/if_stage_i/clk (net)                    2400    1000000.00
+  core_i/if_stage_i/instr_rdata_id_o_reg[16]/CK (SAEDRVT14_FSDPRBQ_V2_2)
+                                                                     0.00      1.00              0.00      0.00 r    (192.29,100.82)   s, n
+
+  core_i/if_stage_i/instr_rdata_id_o_reg[16]/CK (SAEDRVT14_FSDPRBQ_V2_2)
+                                                                     0.00      1.00              0.00      0.00 r    (192.29,100.82)   s, n
+  core_i/if_stage_i/instr_rdata_id_o_reg[16]/Q (SAEDRVT14_FSDPRBQ_V2_2)
+                                                                     0.06      1.00              0.08      0.08 r    (191.29,100.69)   s, n
+  core_i/if_stage_i/instr_rdata_id_o[16] (net)      4     19.36
+  core_i/if_stage_i/instr_rdata_id_o[16] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
+                                                                     0.06      1.00              0.00      0.08 r    (hierarchical)    h
+  core_i/instr_rdata_id[16] (net)                         19.36
+  core_i/id_stage_i/instr_rdata_i[16] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.06      1.00              0.00      0.08 r    (hierarchical)    h
+  core_i/id_stage_i/instr_rdata_i[16] (net)               19.36
+  core_i/id_stage_i/U474/CK (SAEDRVT14_CLKSPLT_8)                    0.06      1.00              0.00      0.08 r    (98.57,91.09)
+  core_i/id_stage_i/U474/CKOUT (SAEDRVT14_CLKSPLT_8)                 0.01      1.00              0.04      0.12 r    (98.15,91.10)
+  core_i/id_stage_i/n472 (net)                      4      8.25
+  core_i/id_stage_i/register_file_i/raddr_a_i[1] (cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0_test_1)
+                                                                     0.01      1.00              0.00      0.12 r    (hierarchical)    h
+  core_i/id_stage_i/register_file_i/raddr_a_i[1] (net)     8.25
+  core_i/id_stage_i/register_file_i/U100/CK (SAEDRVT14_CLKSPLT_8)    0.01      1.00              0.00      0.12 r    (84.07,77.89)
+  core_i/id_stage_i/register_file_i/U100/CKOUTB (SAEDRVT14_CLKSPLT_8)
+                                                                     0.00      1.00              0.05      0.17 f    (81.91,78.02)
+  core_i/id_stage_i/register_file_i/n98 (net)       2      1.33
+  core_i/id_stage_i/register_file_i/U3913/A2 (SAEDRVT14_OR2_2)       0.00      1.00              0.00      0.17 f    (82.29,76.70)
+  core_i/id_stage_i/register_file_i/U3913/X (SAEDRVT14_OR2_2)        0.05      1.00              0.05      0.22 f    (82.00,76.69)
+  core_i/id_stage_i/register_file_i/n134 (net)      4     18.20
+  core_i/id_stage_i/register_file_i/U3914/A1 (SAEDRVT14_NR2_8)       0.05      1.00              0.00      0.22 f    (73.82,69.44)
+  core_i/id_stage_i/register_file_i/U3914/X (SAEDRVT14_NR2_8)        0.05      1.00              0.06      0.28 r    (73.82,69.38)
+  core_i/id_stage_i/register_file_i/n1046 (net)    17     28.69
+  core_i/id_stage_i/register_file_i/PLACE_HFSINV_482_486/A (SAEDRVT14_INV_S_2)
+                                                                     0.05      1.00              0.00      0.29 r    (33.16,70.11)
+  core_i/id_stage_i/register_file_i/PLACE_HFSINV_482_486/X (SAEDRVT14_INV_S_2)
+                                                                     0.03      1.00              0.04      0.33 f    (33.23,70.11)
+  core_i/id_stage_i/register_file_i/PLACE_HFSNET_445 (net)
+                                                    2      6.49
+  core_i/id_stage_i/register_file_i/PLACE_HFSINV_232_485/A (SAEDRVT14_INV_S_2)
+                                                                     0.03      1.00              0.00      0.33 f    (32.42,47.89)
+  core_i/id_stage_i/register_file_i/PLACE_HFSINV_232_485/X (SAEDRVT14_INV_S_2)
+                                                                     0.05      1.00              0.05      0.38 r    (32.49,47.89)
+  core_i/id_stage_i/register_file_i/PLACE_HFSNET_444 (net)
+                                                   16     16.28
+  core_i/id_stage_i/register_file_i/U3976/A2 (SAEDRVT14_AO22_2)      0.05      1.00              0.00      0.38 r    (15.62,40.66)
+  core_i/id_stage_i/register_file_i/U3976/X (SAEDRVT14_AO22_2)       0.01      1.00              0.04      0.42 r    (15.77,40.70)
+  core_i/id_stage_i/register_file_i/n172 (net)      1      1.22
+  core_i/id_stage_i/register_file_i/U3977/A2 (SAEDRVT14_OR2_2)       0.01      1.00              0.00      0.42 r    (17.40,44.30)
+  core_i/id_stage_i/register_file_i/U3977/X (SAEDRVT14_OR2_2)        0.00      1.00              0.02      0.44 r    (17.69,44.29)
+  core_i/id_stage_i/register_file_i/n176 (net)      1      0.77
+  core_i/id_stage_i/register_file_i/U3981/A1 (SAEDRVT14_OR2_2)       0.00      1.00              0.00      0.44 r    (18.28,46.70)
+  core_i/id_stage_i/register_file_i/U3981/X (SAEDRVT14_OR2_2)        0.02      1.00              0.02      0.46 r    (18.43,46.69)
+  core_i/id_stage_i/register_file_i/n184 (net)      1      5.24
+  core_i/id_stage_i/register_file_i/U3989/A1 (SAEDRVT14_OA21_MM_2)   0.02      1.00              0.00      0.46 r    (52.56,45.98)
+  core_i/id_stage_i/register_file_i/U3989/X (SAEDRVT14_OA21_MM_2)    0.01      1.00              0.03      0.50 r    (52.84,46.11)
+  core_i/id_stage_i/register_file_i/n185 (net)      1      2.23
+  core_i/id_stage_i/register_file_i/U3990/A2 (SAEDRVT14_OR2_2)       0.01      1.00              0.00      0.50 r    (52.92,56.30)
+  core_i/id_stage_i/register_file_i/U3990/X (SAEDRVT14_OR2_2)        0.03      1.00              0.04      0.53 r    (53.21,56.29)
+  core_i/id_stage_i/register_file_i/N205 (net)      1     10.92
+  core_i/id_stage_i/register_file_i/U3759/A1 (SAEDRVT14_AN2_MM_2)    0.03      1.00              0.00      0.53 r    (86.58,92.90)
+  core_i/id_stage_i/register_file_i/U3759/X (SAEDRVT14_AN2_MM_2)     0.01      1.00              0.04      0.57 r    (86.86,92.90)
+  core_i/id_stage_i/register_file_i/rdata_a_o[1] (net)
+                                                    2      3.12
+  core_i/id_stage_i/register_file_i/rdata_a_o[1] (cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0_test_1)
+                                                                     0.01      1.00              0.00      0.57 r    (hierarchical)    h
+  core_i/id_stage_i/regfile_data_ra_id[1] (net)            3.12
+  core_i/id_stage_i/r153/A[1] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
+                                                                     0.01      1.00              0.00      0.57 r    (hierarchical)    h
+  core_i/id_stage_i/r153/A[1] (net)                        3.12
+  core_i/id_stage_i/r153/U1_1/A (SAEDRVT14_ADDF_V2_2)                0.01      1.00              0.00      0.57 r    (96.35,92.91)
+  core_i/id_stage_i/r153/U1_1/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.05      0.63 r    (98.28,92.93)
+  core_i/id_stage_i/r153/carry[2] (net)             1      0.80
+  core_i/id_stage_i/r153/U1_2/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.63 r    (99.75,92.96)
+  core_i/id_stage_i/r153/U1_2/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.02      0.65 r    (100.50,92.93)
+  core_i/id_stage_i/r153/carry[3] (net)             1      0.85
+  core_i/id_stage_i/r153/U1_3/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.65 r    (101.60,92.24)
+  core_i/id_stage_i/r153/U1_3/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.02      0.67 r    (102.35,92.28)
+  core_i/id_stage_i/r153/carry[4] (net)             1      0.80
+  core_i/id_stage_i/r153/U1_4/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.67 r    (103.82,92.24)
+  core_i/id_stage_i/r153/U1_4/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.70 r    (104.57,92.28)
+  core_i/id_stage_i/r153/carry[5] (net)             1      1.90
+  core_i/id_stage_i/r153/U1_5/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.70 r    (112.92,92.96)
+  core_i/id_stage_i/r153/U1_5/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.73 r    (113.67,92.93)
+  core_i/id_stage_i/r153/carry[6] (net)             1      0.98
+  core_i/id_stage_i/r153/U1_6/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.73 r    (114.99,94.16)
+  core_i/id_stage_i/r153/U1_6/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.75 r    (115.74,94.12)
+  core_i/id_stage_i/r153/carry[7] (net)             1      1.13
+  core_i/id_stage_i/r153/U1_7/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.75 r    (113.95,95.84)
+  core_i/id_stage_i/r153/U1_7/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.78 r    (114.71,95.88)
+  core_i/id_stage_i/r153/carry[8] (net)             1      1.03
+  core_i/id_stage_i/r153/U1_8/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.78 r    (115.58,97.76)
+  core_i/id_stage_i/r153/U1_8/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.81 r    (116.33,97.72)
+  core_i/id_stage_i/r153/carry[9] (net)             1      1.57
+  core_i/id_stage_i/r153/U1_9/CI (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.00      0.81 r    (112.47,100.16)
+  core_i/id_stage_i/r153/U1_9/CO (SAEDRVT14_ADDF_V2_2)               0.01      1.00              0.03      0.83 r    (113.22,100.12)
+  core_i/id_stage_i/r153/carry[10] (net)            1      1.52
+  core_i/id_stage_i/r153/U1_10/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.83 r    (109.66,97.76)
+  core_i/id_stage_i/r153/U1_10/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.86 r    (110.41,97.72)
+  core_i/id_stage_i/r153/carry[11] (net)            1      2.40
+  core_i/id_stage_i/r153/U1_11/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.86 r    (99.23,98.96)
+  core_i/id_stage_i/r153/U1_11/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.89 r    (99.98,98.93)
+  core_i/id_stage_i/r153/carry[12] (net)            1      1.01
+  core_i/id_stage_i/r153/U1_12/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.89 r    (97.75,99.44)
+  core_i/id_stage_i/r153/U1_12/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.92 r    (98.50,99.47)
+  core_i/id_stage_i/r153/carry[13] (net)            1      1.10
+  core_i/id_stage_i/r153/U1_13/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.92 r    (95.68,98.96)
+  core_i/id_stage_i/r153/U1_13/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.94 r    (96.43,98.93)
+  core_i/id_stage_i/r153/carry[14] (net)            1      1.04
+  core_i/id_stage_i/r153/U1_14/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.94 r    (93.97,99.44)
+  core_i/id_stage_i/r153/U1_14/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.97 r    (94.72,99.47)
+  core_i/id_stage_i/r153/carry[15] (net)            1      1.03
+  core_i/id_stage_i/r153/U1_15/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.97 r    (91.75,99.44)
+  core_i/id_stage_i/r153/U1_15/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      0.99 r    (92.50,99.47)
+  core_i/id_stage_i/r153/carry[16] (net)            1      1.03
+  core_i/id_stage_i/r153/U1_16/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      0.99 r    (89.53,99.44)
+  core_i/id_stage_i/r153/U1_16/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.02 r    (90.29,99.47)
+  core_i/id_stage_i/r153/carry[17] (net)            1      1.15
+  core_i/id_stage_i/r153/U1_17/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.02 r    (88.65,101.36)
+  core_i/id_stage_i/r153/U1_17/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.05 r    (89.40,101.32)
+  core_i/id_stage_i/r153/carry[18] (net)            1      1.11
+  core_i/id_stage_i/r153/U1_18/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.05 r    (88.65,103.76)
+  core_i/id_stage_i/r153/U1_18/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.07 r    (89.40,103.72)
+  core_i/id_stage_i/r153/carry[19] (net)            1      1.04
+  core_i/id_stage_i/r153/U1_19/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.07 r    (89.16,106.16)
+  core_i/id_stage_i/r153/U1_19/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.10 r    (89.92,106.12)
+  core_i/id_stage_i/r153/carry[20] (net)            1      0.93
+  core_i/id_stage_i/r153/U1_20/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.10 r    (89.53,107.84)
+  core_i/id_stage_i/r153/U1_20/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.12 r    (90.29,107.88)
+  core_i/id_stage_i/r153/carry[21] (net)            1      1.17
+  core_i/id_stage_i/r153/U1_21/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.12 r    (87.02,108.56)
+  core_i/id_stage_i/r153/U1_21/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.15 r    (87.77,108.53)
+  core_i/id_stage_i/r153/carry[22] (net)            1      1.07
+  core_i/id_stage_i/r153/U1_22/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.15 r    (86.43,110.24)
+  core_i/id_stage_i/r153/U1_22/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.17 r    (87.18,110.28)
+  core_i/id_stage_i/r153/carry[23] (net)            1      1.05
+  core_i/id_stage_i/r153/U1_23/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.17 r    (86.13,112.16)
+  core_i/id_stage_i/r153/U1_23/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.20 r    (86.88,112.12)
+  core_i/id_stage_i/r153/carry[24] (net)            1      1.06
+  core_i/id_stage_i/r153/U1_24/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.20 r    (86.43,114.56)
+  core_i/id_stage_i/r153/U1_24/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.23 r    (87.18,114.53)
+  core_i/id_stage_i/r153/carry[25] (net)            1      1.07
+  core_i/id_stage_i/r153/U1_25/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.23 r    (84.50,113.84)
+  core_i/id_stage_i/r153/U1_25/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.25 r    (85.25,113.88)
+  core_i/id_stage_i/r153/carry[26] (net)            1      1.12
+  core_i/id_stage_i/r153/U1_26/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.25 r    (86.20,116.24)
+  core_i/id_stage_i/r153/U1_26/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.28 r    (86.96,116.28)
+  core_i/id_stage_i/r153/carry[27] (net)            1      1.09
+  core_i/id_stage_i/r153/U1_27/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.28 r    (86.20,118.64)
+  core_i/id_stage_i/r153/U1_27/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.30 r    (86.96,118.68)
+  core_i/id_stage_i/r153/carry[28] (net)            1      1.03
+  core_i/id_stage_i/r153/U1_28/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.30 r    (84.43,118.16)
+  core_i/id_stage_i/r153/U1_28/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.03      1.33 r    (85.18,118.12)
+  core_i/id_stage_i/r153/carry[29] (net)            1      1.12
+  core_i/id_stage_i/r153/U1_29/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.33 r    (83.54,119.84)
+  core_i/id_stage_i/r153/U1_29/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.02      1.35 r    (84.29,119.88)
+  core_i/id_stage_i/r153/carry[30] (net)            1      0.85
+  core_i/id_stage_i/r153/U1_30/CI (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.00      1.35 r    (85.32,120.56)
+  core_i/id_stage_i/r153/U1_30/CO (SAEDRVT14_ADDF_V2_2)              0.01      1.00              0.02      1.37 r    (86.07,120.53)
+  core_i/id_stage_i/r153/carry[31] (net)            1      0.34
+  core_i/id_stage_i/r153/U1_31/A3 (SAEDRVT14_EO3_2)                  0.01      1.00              0.00      1.37 r    (86.36,120.51)
+  core_i/id_stage_i/r153/U1_31/X (SAEDRVT14_EO3_2)                   0.00      1.00              0.06      1.44 f    (87.84,120.51)
+  core_i/id_stage_i/r153/SUM[31] (net)              1      0.70
+  core_i/id_stage_i/r153/SUM[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_DW01_add_2)
+                                                                     0.00      1.00              0.00      1.44 f    (hierarchical)    h
+  core_i/id_stage_i/N231 (net)                             0.70
+  core_i/id_stage_i/U1781/B1 (SAEDRVT14_AOI222_2)                    0.00      1.00              0.00      1.44 f    (89.31,119.84)
+  core_i/id_stage_i/U1781/X (SAEDRVT14_AOI222_2)                     0.01      1.00              0.05      1.49 r    (88.66,119.91)
+  core_i/id_stage_i/n1201 (net)                     1      0.98
+  core_i/id_stage_i/U1780/A (SAEDRVT14_INV_S_2)                      0.01      1.00              0.00      1.49 r    (88.88,121.71)
+  core_i/id_stage_i/U1780/X (SAEDRVT14_INV_S_2)                      0.01      1.00              0.01      1.50 f    (88.95,121.71)
+  core_i/id_stage_i/jump_target_o[31] (net)         2      3.19
+  core_i/id_stage_i/jump_target_o[31] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.01      1.00              0.00      1.50 f    (hierarchical)    h
+  core_i/jump_target_id[31] (net)                          3.19
+  core_i/if_stage_i/jump_target_id_i[31] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
+                                                                     0.01      1.00              0.00      1.50 f    (hierarchical)    h
+  core_i/if_stage_i/jump_target_id_i[31] (net)             3.19
+  core_i/if_stage_i/U316/A1 (SAEDRVT14_AOI21_V1_4)                   0.01      1.00              0.00      1.50 f    (89.52,123.50)
+  core_i/if_stage_i/U316/X (SAEDRVT14_AOI21_V1_4)                    0.07      1.00              0.06      1.56 r    (89.27,123.49)
+  core_i/if_stage_i/n179 (net)                      1     21.93
+  core_i/if_stage_i/U312/A1 (SAEDRVT14_AN4_2)                        0.08      1.00              0.00      1.56 r    (183.23,64.70)
+  core_i/if_stage_i/U312/X (SAEDRVT14_AN4_2)                         0.02      1.00              0.06      1.62 r    (183.45,64.69)
+  core_i/if_stage_i/n178 (net)                      1      5.72
+  core_i/if_stage_i/U224/A (SAEDRVT14_INV_S_2)                       0.02      1.00              0.00      1.62 r    (220.38,65.31)
+  core_i/if_stage_i/U224/X (SAEDRVT14_INV_S_2)                       0.01      1.00              0.02      1.64 f    (220.45,65.31)
+  core_i/if_stage_i/n73 (net)                       2      1.71
+  core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[31] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
+                                                                     0.01      1.00              0.00      1.64 f    (hierarchical)    h
+  core_i/if_stage_i/prefetch_buffer_i/branch_addr_i[31] (net)
+                                                           1.71
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[31] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
+                                                                     0.01      1.00              0.00      1.64 f    (hierarchical)    h
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/branch_addr_i[31] (net)
+                                                           1.71
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U168/A1 (SAEDRVT14_AO22_2)
+                                                                     0.01      1.00              0.00      1.64 f    (221.56,63.51)
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U168/X (SAEDRVT14_AO22_2)
+                                                                     0.01      1.00              0.03      1.67 f    (221.04,63.50)
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/n89 (net)
+                                                    1      0.82
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U166/A2 (SAEDRVT14_OR2_2)
+                                                                     0.01      1.00              0.00      1.67 f    (220.90,61.10)
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U166/X (SAEDRVT14_OR2_2)
+                                                                     0.02      1.00              0.03      1.70 f    (221.19,61.09)
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/trans_addr_o[31] (net)
+                                                    3      5.35
+  core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/trans_addr_o[31] (cv32e40p_prefetch_controller_PULP_OBI0_COREV_PULP0_DEPTH2_test_1)
+                                                                     0.02      1.00              0.00      1.70 f    (hierarchical)    h
+  core_i/if_stage_i/prefetch_buffer_i/trans_addr[31] (net)
+                                                           5.35
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/trans_addr_i[31] (cv32e40p_obi_interface_TRANS_STABLE0_test_1)
+                                                                     0.02      1.00              0.00      1.70 f    (hierarchical)    h
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/trans_addr_i[31] (net)
+                                                           5.35
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U275/A2 (SAEDRVT14_AO22_2)
+                                                                     0.02      1.00              0.00      1.70 f    (230.29,46.66)
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U275/X (SAEDRVT14_AO22_2)
+                                                                     0.03      1.00              0.04      1.75 f    (230.44,46.70)
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/obi_addr_o[31] (net)
+                                                    1      3.93
+  core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/obi_addr_o[31] (cv32e40p_obi_interface_TRANS_STABLE0_test_1)
+                                                                     0.03      1.00              0.00      1.75 f    (hierarchical)    h
+  core_i/if_stage_i/prefetch_buffer_i/instr_addr_o[31] (net)
+                                                           3.93
+  core_i/if_stage_i/prefetch_buffer_i/instr_addr_o[31] (cv32e40p_prefetch_buffer_PULP_OBI0_COREV_PULP0_test_1)
+                                                                     0.03      1.00              0.00      1.75 f    (hierarchical)    h
+  core_i/if_stage_i/instr_addr_o[31] (net)                 3.93
+  core_i/if_stage_i/instr_addr_o[31] (cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0_test_1)
+                                                                     0.03      1.00              0.00      1.75 f    (hierarchical)    h
+  core_i/instr_addr_o[31] (net)                            3.93
+  core_i/instr_addr_o[31] (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.03      1.00              0.00      1.75 f    (hierarchical)    h
+  instr_addr_o[31] (net)                                   3.93
+  instr_addr_o[31] (out)                                             0.03      1.00              0.00      1.75 f    (235.49,72.92)
+  data arrival time                                                                                        1.75
+
+  clock clk_i (rise edge)                                                                        5.00      5.00
+  clock network delay (ideal)                                                                    0.00      5.00
+  clock uncertainty                                                                             -0.05      4.95
+  output external delay                                                                         -3.00      1.95
+  data required time                                                                                       1.95
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                       1.95
+  data arrival time                                                                                       -1.75
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              0.20
+
+
+
+  Startpoint: irq_i[18] (input port clocked by clk_i)
+  Endpoint: core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0] (rising edge-triggered flip-flop clocked by scan_clk)
+  Mode: func
+  Corner: slow
+  Scenario: func_slow
+  Path Group: scan_clk
+  Path Type: max
+
+
+Attributes
+    b - black-box (unknown)
+    s - size_only
+    d - dont_touch
+    u - dont_use
+    g - generic
+    h - hierarchical
+    i - ideal
+    n - noncombinational
+    E - extracted timing model
+    Q - Quick timing model
+
+
+  Point                                          Fanout    Cap      Trans     Derate   Delta     Incr      Path          Location       Attributes
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock clk_i (rise edge)                                                                       95.00     95.00
+  clock network delay (ideal)                                                                    0.00     95.00
+  input external delay                                                                           2.50     97.50
+
+  irq_i[18] (in)                                                     0.13      1.00              0.09     97.59 f    (0.13,111.20)
+  irq_i[18] (net)                                   2     23.44
+  core_i/irq_i[18] (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.13      1.00              0.09     97.59 f    (hierarchical)    h
+  core_i/irq_i[18] (net)                                  23.44
+  core_i/id_stage_i/irq_i[18] (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.13      1.00              0.09     97.59 f    (hierarchical)    h
+  core_i/id_stage_i/irq_i[18] (net)                       23.44
+  core_i/id_stage_i/int_controller_i/irq_i[18] (cv32e40p_int_controller_PULP_SECURE0_test_1)
+                                                                     0.13      1.00              0.09     97.59 f    (hierarchical)    h
+  core_i/id_stage_i/int_controller_i/irq_i[18] (net)      23.44
+  core_i/id_stage_i/int_controller_i/U36/A2 (SAEDRVT14_AO22_2)       0.13      1.00              0.00     97.59 f    (125.73,79.06)
+  core_i/id_stage_i/int_controller_i/U36/X (SAEDRVT14_AO22_2)        0.03      1.00              0.09     97.69 f    (125.58,79.10)
+  core_i/id_stage_i/int_controller_i/n69 (net)      1      5.58
+  core_i/id_stage_i/int_controller_i/U152/A1 (SAEDRVT14_NR2_4)       0.03      1.00              0.00     97.69 f    (93.34,78.56)
+  core_i/id_stage_i/int_controller_i/U152/X (SAEDRVT14_NR2_4)        0.01      1.00              0.01     97.70 r    (93.34,78.62)
+  core_i/id_stage_i/int_controller_i/n62 (net)      1      0.70
+  core_i/id_stage_i/int_controller_i/U149/A2 (SAEDRVT14_AN4_2)       0.01      1.00              0.00     97.70 r    (92.50,79.74)
+  core_i/id_stage_i/int_controller_i/U149/X (SAEDRVT14_AN4_2)        0.01      1.00              0.03     97.73 r    (92.80,79.71)
+  core_i/id_stage_i/int_controller_i/n60 (net)      1      0.83
+  core_i/id_stage_i/int_controller_i/U148/A4 (SAEDRVT14_AN4_2)       0.01      1.00              0.00     97.73 r    (93.02,77.34)
+  core_i/id_stage_i/int_controller_i/U148/X (SAEDRVT14_AN4_2)        0.01      1.00              0.03     97.77 r    (93.47,77.31)
+  core_i/id_stage_i/int_controller_i/n56 (net)      1      0.88
+  core_i/id_stage_i/int_controller_i/U147/A (SAEDRVT14_INV_S_2)      0.01      1.00              0.00     97.77 r    (93.61,76.11)
+  core_i/id_stage_i/int_controller_i/U147/X (SAEDRVT14_INV_S_2)      0.00      1.00              0.01     97.77 f    (93.69,76.11)
+  core_i/id_stage_i/int_controller_i/irq_wu_ctrl_o (net)
+                                                    1      0.85
+  core_i/id_stage_i/int_controller_i/irq_wu_ctrl_o (cv32e40p_int_controller_PULP_SECURE0_test_1)
+                                                                     0.00      1.00              0.00     97.77 f    (hierarchical)    h
+  core_i/id_stage_i/irq_wu_ctrl (net)                      0.85
+  core_i/id_stage_i/controller_i/irq_wu_ctrl_i (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0_test_1)
+                                                                     0.00      1.00              0.00     97.77 f    (hierarchical)    h
+  core_i/id_stage_i/controller_i/irq_wu_ctrl_i (net)       0.85
+  core_i/id_stage_i/controller_i/U183/A1 (SAEDRVT14_OR2_2)           0.00      1.00              0.00     97.77 f    (93.76,73.10)
+  core_i/id_stage_i/controller_i/U183/X (SAEDRVT14_OR2_2)            0.01      1.00              0.02     97.79 f    (93.61,73.09)
+  core_i/id_stage_i/controller_i/n347 (net)         1      1.51
+  core_i/id_stage_i/controller_i/U15/A2 (SAEDRVT14_NR2_4)            0.01      1.00              0.00     97.79 f    (94.35,70.06)
+  core_i/id_stage_i/controller_i/U15/X (SAEDRVT14_NR2_4)             0.01      1.00              0.01     97.81 r    (94.37,70.22)
+  core_i/id_stage_i/controller_i/n12 (net)          2      1.60
+  core_i/id_stage_i/controller_i/U33/A (SAEDRVT14_INV_S_2)           0.01      1.00              0.00     97.81 r    (95.02,70.11)
+  core_i/id_stage_i/controller_i/U33/X (SAEDRVT14_INV_S_2)           0.01      1.00              0.01     97.82 f    (94.95,70.11)
+  core_i/id_stage_i/controller_i/wake_from_sleep_o (net)
+                                                    3      3.44
+  core_i/id_stage_i/controller_i/U291/A2 (SAEDRVT14_OR2_2)           0.01      1.00              0.00     97.82 f    (94.80,74.90)
+  core_i/id_stage_i/controller_i/U291/X (SAEDRVT14_OR2_2)            0.01      1.00              0.02     97.84 f    (95.10,74.91)
+  core_i/id_stage_i/controller_i/N167 (net)         1      0.86
+  core_i/id_stage_i/controller_i/U495/A1 (SAEDRVT14_AO22_2)          0.01      1.00              0.00     97.84 f    (97.39,74.89)
+  core_i/id_stage_i/controller_i/U495/X (SAEDRVT14_AO22_2)           0.01      1.00              0.03     97.87 f    (97.91,74.90)
+  core_i/id_stage_i/controller_i/n391 (net)         1      0.88
+  core_i/id_stage_i/controller_i/U496/A2 (SAEDRVT14_OR2_2)           0.01      1.00              0.00     97.87 f    (99.46,76.10)
+  core_i/id_stage_i/controller_i/U496/X (SAEDRVT14_OR2_2)            0.01      1.00              0.02     97.89 f    (99.76,76.11)
+  core_i/id_stage_i/controller_i/n392 (net)         1      1.47
+  core_i/id_stage_i/controller_i/U497/B1 (SAEDRVT14_AO22_2)          0.01      1.00              0.00     97.89 f    (103.09,77.94)
+  core_i/id_stage_i/controller_i/U497/X (SAEDRVT14_AO22_2)           0.01      1.00              0.03     97.92 f    (102.27,77.90)
+  core_i/id_stage_i/controller_i/n395 (net)         1      0.74
+  core_i/id_stage_i/controller_i/U500/B1 (SAEDRVT14_AOI311_2)        0.01      1.00              0.00     97.92 f    (100.50,76.08)
+  core_i/id_stage_i/controller_i/U500/X (SAEDRVT14_AOI311_2)         0.01      1.00              0.04     97.96 r    (100.13,76.10)
+  core_i/id_stage_i/controller_i/n397 (net)         1      1.46
+  core_i/id_stage_i/controller_i/U501/A (SAEDRVT14_INV_S_2)          0.01      1.00              0.00     97.96 r    (95.76,74.91)
+  core_i/id_stage_i/controller_i/U501/X (SAEDRVT14_INV_S_2)          0.00      1.00              0.01     97.97 f    (95.69,74.91)
+  core_i/id_stage_i/controller_i/N469 (net)         1      0.70
+  core_i/id_stage_i/controller_i/U286/A1 (SAEDRVT14_AN2_MM_2)        0.00      1.00              0.00     97.97 f    (94.65,73.10)
+  core_i/id_stage_i/controller_i/U286/X (SAEDRVT14_AN2_MM_2)         0.01      1.00              0.02     97.99 f    (94.38,73.10)
+  core_i/id_stage_i/controller_i/ctrl_fsm_ns[2] (net)
+                                                    2      2.03
+  core_i/id_stage_i/controller_i/U389/A1 (SAEDRVT14_AN4_2)           0.01      1.00              0.00     97.99 f    (95.61,68.30)
+  core_i/id_stage_i/controller_i/U389/X (SAEDRVT14_AN4_2)            0.01      1.00              0.02     98.01 f    (95.39,68.29)
+  core_i/id_stage_i/controller_i/n226 (net)         1      1.20
+  core_i/id_stage_i/controller_i/U388/A2 (SAEDRVT14_NR2_4)           0.01      1.00              0.00     98.01 f    (93.84,68.86)
+  core_i/id_stage_i/controller_i/U388/X (SAEDRVT14_NR2_4)            0.02      1.00              0.01     98.02 r    (93.82,69.02)
+  core_i/id_stage_i/controller_i/n223 (net)         2      1.75
+  core_i/id_stage_i/controller_i/U196/A2 (SAEDRVT14_AO22_2)          0.02      1.00              0.00     98.02 r    (90.51,68.94)
+  core_i/id_stage_i/controller_i/U196/X (SAEDRVT14_AO22_2)           0.01      1.00              0.03     98.06 r    (90.65,68.90)
+  core_i/id_stage_i/controller_i/n219 (net)         2      1.69
+  core_i/id_stage_i/controller_i/U544/A (SAEDRVT14_INV_S_2)          0.01      1.00              0.00     98.06 r    (88.36,70.11)
+  core_i/id_stage_i/controller_i/U544/X (SAEDRVT14_INV_S_2)          0.01      1.00              0.01     98.07 f    (88.29,70.11)
+  core_i/id_stage_i/controller_i/n452 (net)         1      0.57
+  core_i/id_stage_i/controller_i/U387/B1 (SAEDRVT14_OAI32_4)         0.01      1.00              0.00     98.07 f    (87.99,68.93)
+  core_i/id_stage_i/controller_i/U387/X (SAEDRVT14_OAI32_4)          0.01      1.00              0.04     98.10 r    (87.40,68.92)
+  core_i/id_stage_i/controller_i/debug_fsm_ns[0] (net)
+                                                    1      0.69
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0]/D (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                                     0.01      1.00              0.00     98.10 r    (85.88,67.82)     s, n
+  data arrival time                                                                                       98.10
+
+  clock scan_clk (rise edge)                                                                   100.00    100.00
+  source latency                                                                                 0.00    100.00
+  scan_clk (in)                                                      0.00      1.00              0.00    100.00 r    (0.13,37.04)
+  scan_clk (net)                                    1      2.32
+  U0_mux2X1/IN_1 (mux2X1_0)                                          0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  U0_mux2X1/IN_1 (net)                              1      2.32
+  U0_mux2X1/U1/D1 (SAEDRVT14_MUXI2_2)                                0.00      1.00              0.00    100.00 r    (13.84,32.90)     s
+  U0_mux2X1/U1/X (SAEDRVT14_MUXI2_2)                                 0.00      1.00              0.00    100.00 f    (14.21,32.90)     s
+  U0_mux2X1/n1 (net)                                1      6.99
+  U0_mux2X1/U2/A (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00    100.00 f    (30.94,58.69)
+  U0_mux2X1/U2/X (SAEDRVT14_INV_S_2)                                 0.00      1.00              0.00    100.00 r    (31.01,58.69)
+  U0_mux2X1/OUT (net)                               4     12.97
+  U0_mux2X1/OUT (mux2X1_0)                                           0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  clk_i_scan (net)                                  4     12.97
+  core_i/clk_i (cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/clk_i (net)                                4     12.97
+  core_i/sleep_unit_i/clk_ungated_i (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_ungated_i (net)           4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/core_clock_gate_i/clk_i (net)
+                                                    4     12.97
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/CK (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00    100.00 r    (91.27,66.44)     n
+  core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate/Q (SAEDRVT14_CKGTPL_V5_1)
+                                                                     0.00      1.00              0.00    100.00 r    (90.88,66.51)     n
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (net)
+                                                 2400    1000000.00
+  core_i/sleep_unit_i/core_clock_gate_i/clk_o (cv32e40p_clock_gate)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/sleep_unit_i/clk_gated_o (net)          2400    1000000.00
+  core_i/sleep_unit_i/clk_gated_o (cv32e40p_sleep_unit_COREV_CLUSTER0_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/clk (net)                               2400    1000000.00
+  core_i/id_stage_i/clk (cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/id_stage_i/clk (net)                    2400    1000000.00
+  core_i/id_stage_i/controller_i/clk (cv32e40p_controller_COREV_CLUSTER0_COREV_PULP0_FPU0_test_1)
+                                                                     0.00      1.00              0.00    100.00 r    (hierarchical)    h
+  core_i/id_stage_i/controller_i/clk (net)       2400    1000000.00
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0]/CK (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                                     0.00      1.00              0.00    100.00 r    (85.26,67.64)     s, n
+
+  clock uncertainty                                                                             -0.05     99.95
+  library setup time                                                           1.00             -0.03     99.92
+  data required time                                                                                      99.92
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                      99.92
+  data arrival time                                                                                      -98.10
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                              1.82
+
+
+1

@@ -1,0 +1,9 @@
+****************************************
+ Report : clock routing rules
+ Design : cv32e40p_top
+ Date   : Fri May 30 18:14:40 2025
+****************************************
+   Design Base; Net Type: all;      Rule: default rule; Min Layer: M3; Max Layer: M9
+   Design Base; Net Type: internal; Rule: clknet_NDR; Min Layer: M3; Max Layer: M9
+   Design Base; Net Type: root;     Rule: clknet_NDR; Min Layer: M3; Max Layer: M9
+

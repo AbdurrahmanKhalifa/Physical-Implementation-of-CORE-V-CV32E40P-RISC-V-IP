@@ -1,0 +1,82 @@
+****************************************
+Report : qor
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun May 25 23:32:47 2025
+****************************************
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Information: Corner fast: no PVT mismatches. (PVT-032)
+Information: Corner typical: no PVT mismatches. (PVT-032)
+Information: Corner slow: no PVT mismatches. (PVT-032)
+Warning: no valid parasitic for typical corner(LATE) (NEX-018)
+Warning: no valid parasitic for typical corner(EARLY) (NEX-018)
+Information: The stitching and editing of coupling caps is turned OFF for design 'cv32e40p_top:cv32e40p_floorplan.design'. (TIM-125)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: Design Average RC for design cv32e40p_floorplan  (NEX-011)
+Information: r = 2.541468 ohm/um, via_r = 0.640309 ohm/cut, c = 0.091103 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 2.163229 ohm/um, via_r = 1.012435 ohm/cut, c = 0.096337 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'cv32e40p_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 40228, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             74
+Hierarchical Port Count:          11591
+Leaf Cell Count:                  39189
+Buf/Inv Cell Count:               19101
+Buf Cell Count:                    7339
+Inv Cell Count:                   11762
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         36785
+Sequential Cell Count:             2404
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            17165.08
+Noncombinational Area:          3201.95
+Buf/Inv Area:                   5497.34
+Total Buffer Area:              2886.18
+Total Inverter Area:            2611.16
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          20367.03
+Cell Area (netlist and physical only):        21877.52
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             42034
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

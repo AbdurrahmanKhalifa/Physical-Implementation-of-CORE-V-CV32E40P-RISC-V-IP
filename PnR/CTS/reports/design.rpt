@@ -1,0 +1,62 @@
+****************************************
+Report : design
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Fri May 30 18:15:09 2025
+****************************************
+
+Total number of std cells in library : 881
+Total number of dont_use lib cells   : 541
+Total number of dont_touch lib cells : 18
+Total number of buffers              : 59
+Total number of inverters            : 51
+Total number of flip-flops           : 171
+Total number of latches              : 45
+Total number of ICGs                 : 30
+
+Cell Instance Type  Count         Area
+--------------------------------------
+TOTAL LEAF CELLS    64727    32820.835
+Standard cells      61892    31310.347
+Hard macro cells        0        0.000
+Soft macro cells        0        0.000
+Always on cells         0        0.000
+Physical only        2835     1510.488
+Fixed cells          2885     1528.248
+Moveable cells      61842    31292.587
+Sequential           2404     3225.971
+Buffer/inverter     41735    16362.776
+ICG cells               1        0.888
+
+Logic Hierarchies                    : 74
+Design Masters count                 : 99
+Total Flat nets count                : 64399
+Total FloatingNets count             : 20
+Total no of Ports                    : 396
+Number of Master Clocks in design    : 2
+Number of Generated Clocks in design : 0
+Number of Path Groups in design      : 14 (2 of them Non Default)
+Number of Scan Chains in design      : 6
+List of Modes                        : func, Scan
+List of Corners                      : slow, fast
+List of Scenarios                    : func_fast, func_slow
+
+Core Area                            : 50901.226
+Chip Area                            : 55513.486
+Total Site Row Area                  : 50901.226
+Number of Blockages                  : 0
+Total area of Blockages              : 0.000
+Number of Power Domains              : 1
+Number of Voltage Areas              : 1
+Number of Group Bounds               : 0
+Number of Exclusive MoveBounds       : 0
+Number of Hard or Soft MoveBounds    : 0
+Number of Multibit Registers         : 0
+Number of Multibit LS/ISO Cells      : 0
+Number of Top Level RP Groups        : 0
+Number of Tech Layers                : 63 (53 of them have unknown routing dir.)
+
+Total wire length                    : 12874.30 micron
+Total number of wires                : 10975
+Total number of contacts             : 24468
+1

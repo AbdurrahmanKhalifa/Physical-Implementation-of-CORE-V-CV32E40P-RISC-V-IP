@@ -1,0 +1,33 @@
+
+Warning: Technology used to create frame-view and current technology have inconsistency: Min spacings are different for layer 'M1'. (FRAM-054)
+Warning: Technology 'saed14rvt_1p9m.tf' used for frame-view creation in library 'saed14rvt_ss0p6v125c', is inconsistent with the current technology 'saed14nm_1p9m_mw.tf' of library "cv32e40p_top'. (NDM-102)
+icc2_shell> open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_powerplan.design
+Information: User units loaded from library 'saed14rvt_ss0p6v125c' (LNK-040)
+Opening block 'cv32e40p_top:cv32e40p_powerplan.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block cv32e40p_top:cv32e40p_powerplan.design
+Done building search trees for block cv32e40p_top:cv32e40p_powerplan.design (time 0s)
+icc2_shell> link_block
+Using libraries: cv32e40p_top saed14rvt_ss0p6v125c
+Warning: In library cv32e40p_top, no block views exist for block cv32e40p_top. (LNK-064)
+Visiting block cv32e40p_top:cv32e40p_powerplan.design
+Design 'cv32e40p_top' was successfully linked.
+1
+icc2_shell> gui_show_error_data
+icc2_shell> close_blocks -force -purge
+Closing block 'cv32e40p_top:cv32e40p_powerplan.design'
+icc2_shell> open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_placement.design
+Error: 'open_block' failed. Block 'cv32e40p_top:cv32e40p_placement.design' is locked by process 6342 ICer@IC_EDA. (NDM-029)
+icc2_shell> open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_placement.design
+Opening block 'cv32e40p_top:cv32e40p_placement.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block cv32e40p_top:cv32e40p_placement.design
+Done building search trees for block cv32e40p_top:cv32e40p_placement.design (time 0s)
+icc2_shell> link_block
+Using libraries: cv32e40p_top saed14rvt_ss0p6v125c
+Warning: In library cv32e40p_top, no block views exist for block cv32e40p_top. (LNK-064)
+Visiting block cv32e40p_top:cv32e40p_placement.design
+Design 'cv32e40p_top' was successfully linked.
+1
+icc2_shell> gui_show_error_data
+icc2_shell> 
