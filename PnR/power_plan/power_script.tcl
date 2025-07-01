@@ -2,7 +2,6 @@
 # ================== Start_Step ================== #
 # ================================================ #
 
-# sh rm -rf "../ndm/cv32e40p_top/cv32e40p_powerplan/"
 open_block ../ndm/cv32e40p_top:cv32e40p_floorplan
 copy_block -from_block cv32e40p_top:cv32e40p_floorplan -to_block cv32e40p_powerplan
 current_block cv32e40p_powerplan
@@ -91,7 +90,7 @@ compile_pg -strategies std_rail_1
 #             #  Creates vias  #
 # ================================================ #
 create_pg_vias -nets { VDD VSS } -from_layers M8 -to_layers M1 -drc no_check
-set_via_def -pitch "0.27 0.27" -vias [get_vias -filter "via_def.name != VIA89_C"] -size "1 7"
+set_via_def -pitch "0.27 0.27" -vias [get_vias -filter "via_def.name != VIA89_C"] -size "1 4"
 # set_via_def -via_def VIA23SQ_C -pitch "0.2 0.2" -vias [get_vias -filter "via_def.name == VIA23SQ_C"] -size "1 10"
 
 ## 

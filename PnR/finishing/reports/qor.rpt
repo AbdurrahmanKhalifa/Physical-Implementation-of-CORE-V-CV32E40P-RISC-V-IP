@@ -1,0 +1,225 @@
+****************************************
+Report : qor
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 23:27:53 2025
+****************************************
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+************************************************************
+Information: Corner slow_Cmin: no PVT mismatches. (PVT-032)
+Information: Corner slow_Cmax: no PVT mismatches. (PVT-032)
+Information: Corner fast_Cmin: no PVT mismatches. (PVT-032)
+Information: Corner fast_Cmax: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'cv32e40p_top:cv32e40p_finish.design'. (TIM-125)
+Information: Design cv32e40p_finish has 26978 nets, 0 global routed, 26976 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: The RC mode used is DR for design 'cv32e40p_top'. (NEX-022)
+---extraction options---
+Corner: fast_Cmax
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: fast_Cmin
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: slow_Cmax
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: slow_Cmin
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design(INC): cv32e40p_finish 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 26976 nets are successfully extracted. (NEX-028)
+Information: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 26976, routed nets = 26976, across physical hierarchy nets = 0, parasitics cached nets = 26976, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+
+Scenario           'func_fast_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              2.66
+Critical Path Slack:               1.09
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_fast_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      9
+Critical Path Length:              2.65
+Critical Path Slack:               1.10
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     52
+Critical Path Length:              1.85
+Critical Path Slack:               0.16
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     52
+Critical Path Length:              1.77
+Critical Path Slack:               0.24
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_fast_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     19
+Critical Path Length:             80.52
+Critical Path Slack:              19.46
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_fast_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     19
+Critical Path Length:             80.49
+Critical Path Slack:              19.50
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     19
+Critical Path Length:             81.28
+Critical Path Slack:              18.69
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     19
+Critical Path Length:             81.19
+Critical Path Slack:              18.78
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             72
+Hierarchical Port Count:          14222
+Leaf Cell Count:                  24669
+Buf/Inv Cell Count:                4449
+Buf Cell Count:                     518
+Inv Cell Count:                    3931
+CT Buf/Inv Cell Count:                0
+Combinational Cell Count:         22410
+Sequential Cell Count:             2259
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            12894.47
+Noncombinational Area:          3010.45
+Buf/Inv Area:                   1107.51
+Total Buffer Area:               222.31
+Total Inverter Area:             885.20
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                       0.00
+Net YLength:                       0.00
+----------------------------------------
+Cell Area (netlist):                          15904.92
+Cell Area (netlist and physical only):        41619.67
+Net Length:                        0.00
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             27005
+Nets with Violations:                 0
+Max Trans Violations:                 0
+Max Cap Violations:                   0
+----------------------------------------
+
+1

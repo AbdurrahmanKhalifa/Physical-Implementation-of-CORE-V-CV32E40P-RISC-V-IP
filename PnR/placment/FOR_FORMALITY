@@ -1,0 +1,21 @@
+#scan in
+set_dont_verify_points -type port r:/WORK/*/SI*
+set_dont_verify_points -type port i:/WORK/*/SI*
+
+#scan_out
+set_dont_verify_points -type port r:/WORK/*/SO*
+set_dont_verify_points -type port i:/WORK/*/SO*
+
+
+############################### contants ##########################
+
+# all atpg enable (test_mode, scan_enable) are zero during formal compare
+
+#test_mode
+set_constant r:/WORK/*/test_mode 0
+set_constant i:/WORK/*/test_mode 0
+
+#scan_enable
+set_constant r:/WORK/*/SE 0
+set_constant i:/WORK/*/SE 0
+

@@ -1,0 +1,15 @@
+****************************************
+Report : global timing
+        -format { narrow }
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 23:29:11 2025
+****************************************
+
+No setup violations found.
+
+
+No hold violations found.
+
+
+1

@@ -1,0 +1,24 @@
+
+Loading user preference file /home/ICer/.synopsys_icc2_gui/preferences.tcl
+Warning: Technology used to create frame-view and current technology have inconsistency: Min spacings are different for layer 'M1'. (FRAM-054)
+Warning: Technology 'saed14rvt_1p9m.tf' used for frame-view creation in library 'saed14rvt', is inconsistent with the current technology 'saed14nm_1p9m_mw.tf' of library "cv32e40p_top'. (NDM-102)
+icc2_shell> open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_routing.design
+Information: User units loaded from library 'saed14rvt' (LNK-040)
+Opening block 'cv32e40p_top:cv32e40p_routing.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block cv32e40p_top:cv32e40p_routing.design
+Done building search trees for block cv32e40p_top:cv32e40p_routing.design (time 0s)
+icc2_shell> link_block
+Using libraries: cv32e40p_top saed14rvt
+Warning: In library cv32e40p_top, no block views exist for block cv32e40p_top. (LNK-064)
+Visiting block cv32e40p_top:cv32e40p_routing.design
+Design 'cv32e40p_top' was successfully linked.
+1
+icc2_shell> foreach scenario {func_fast_Cmax func_fast_Cmin func_slow_Cmax func_slow_Cmin} {
+    write_sdc -nosplit -output ./output/$scenario.sdc -scenario $scenario }
+icc2_shell> quit
+Maximum memory usage for this session: 379.07 MB
+CPU usage for this session:    289 seconds (  0.08 hours)
+Elapsed time for this session:  11104 seconds (  3.08 hours)
+Thank you for using IC Compiler II.
+

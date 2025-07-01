@@ -1,0 +1,26 @@
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : multi-scenario design
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 22:53:10 2025
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+-----------------------------------
+End of Master/Slave Task Processing
+
+No setup violations found.
+
+No hold violations found.
+1

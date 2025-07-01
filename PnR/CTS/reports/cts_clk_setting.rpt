@@ -1,7 +1,7 @@
 ****************************************
  Report : clock settings
  Design : cv32e40p_CTS
- Date   : Fri May 30 18:14:40 2025
+ Date   : Sun Jun 29 18:46:47 2025
 ****************************************
 
 
@@ -11,40 +11,94 @@ Configurations
 
 ##Global
 Mode = func
-  Corner = fast
+  Corner = fast_Cmax
     Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
     Target latency: Not specified
-  Corner = slow
+  Corner = fast_Cmin
     Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmax
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+
+Mode = scan
+  Corner = fast_Cmax
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = fast_Cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmax
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
     Target latency: Not specified
 
 Mode = func
 ##clk_i
-  Corner = fast
+  Corner = fast_Cmax
     Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
     Target latency: Not specified
-  Corner = slow
-    Max transition: 0.100
+  Corner = fast_Cmin
+    Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmax
+    Max transition: 0.300
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
     Target latency: Not specified
 
-##scan_clk
-  Corner = fast
+
+Mode = scan
+##clk_i
+  Corner = fast_Cmax
     Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
     Target latency: Not specified
-  Corner = slow
+  Corner = fast_Cmin
     Max transition: 0.500
     Max capacitance: 600.000
-    Target skew: 0.050
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmax
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
+    Target latency: Not specified
+  Corner = slow_Cmin
+    Max transition: 0.500
+    Max capacitance: 600.000
+    Target skew: 0 (default)
     Target latency: Not specified
 
 
@@ -70,7 +124,9 @@ Routing rule for all nets: Not specified
 Net-based routing rules (by set_clock_routing_rule): Not specified
 Net-based routing rules (by set_routing_rule): Not specified
 
-##scan_clk
+Mode = scan
+
+##clk_i
 Routing rule for sink nets: Not specified
 Routing rule for internal nets: Not specified
 Routing rule for root nets: Not specified
@@ -86,84 +142,45 @@ Buffers and Inverters
 ##Buffers
 Name                                   Area      Max Transition       Max Load
 ------------------------------------------------------------------------------
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_10
-                                      0.710                 inf        225.600
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_12
-                                      0.844                 inf        271.900
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_16
-                                      1.066                 inf        362.800
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_20
-                                      1.288                 inf        456.800
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_2
-                                      0.311                 inf         45.310
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_3
-                                      0.355                 inf         68.200
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_4
-                                      0.400                 inf         90.650
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_6
-                                      0.488                 inf        135.700
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_8
-                                      0.622                 inf        181.200
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_CDC_2
-                                      0.311                 inf         45.310
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_CDC_4
-                                      0.400                 inf         90.650
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_10
-                                      0.755                 inf        225.800
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_12
-                                      0.844                 inf        266.000
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_16
-                                      1.110                 inf        357.700
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_20
-                                      1.288                 inf        449.500
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_2
-                                      0.311                 inf         45.260
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_6
-                                      0.488                 inf        135.700
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_S_8
-                                      0.666                 inf        180.900
-saed14rvt_ss0p6v125c/SAEDRVT14_DEL_L4D100_2
-                                      0.533                 inf         46.370
-saed14rvt_ss0p6v125c/SAEDRVT14_DEL_R2V1_2
-                                      0.355                 inf         44.540
-saed14rvt_ss0p6v125c/SAEDRVT14_DEL_R2V2_2
-                                      0.488                 inf         22.280
-saed14rvt_ss0p6v125c/SAEDRVT14_DEL_R2V3_2
-                                      0.488                 inf         23.720
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PECO_12
-                                      0.888                 inf         71.120
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PECO_2
-                                      0.488                 inf         35.290
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PECO_4
-                                      0.888                 inf         71.120
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PECO_8
-                                      0.888                 inf         71.120
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PS_3
-                                      0.444                 inf         60.110
-saed14rvt_ss0p6v125c/SAEDRVT14_BUF_PS_6
-                                      0.710                 inf        117.300
-saed14rvt_ss0p6v125c/SAEDRVT14_AOBUF_IW_3
-                                      0.533                 inf         17.750
-saed14rvt_ss0p6v125c/SAEDRVT14_AOBUF_IW_6
-                                      0.533                 inf         17.710
+saed14rvt/SAEDRVT14_BUF_10            0.710                 inf        225.600
+saed14rvt/SAEDRVT14_BUF_12            0.844                 inf        271.900
+saed14rvt/SAEDRVT14_BUF_16            1.066                 inf        362.800
+saed14rvt/SAEDRVT14_BUF_20            1.288                 inf        456.800
+saed14rvt/SAEDRVT14_BUF_2             0.311                 inf         45.310
+saed14rvt/SAEDRVT14_BUF_3             0.355                 inf         68.200
+saed14rvt/SAEDRVT14_BUF_4             0.400                 inf         90.650
+saed14rvt/SAEDRVT14_BUF_6             0.488                 inf        135.700
+saed14rvt/SAEDRVT14_BUF_8             0.622                 inf        181.200
+saed14rvt/SAEDRVT14_BUF_CDC_2         0.311                 inf         45.310
+saed14rvt/SAEDRVT14_BUF_CDC_4         0.400                 inf         90.650
+saed14rvt/SAEDRVT14_BUF_S_10          0.755                 inf        225.800
+saed14rvt/SAEDRVT14_BUF_S_12          0.844                 inf        266.000
+saed14rvt/SAEDRVT14_BUF_S_16          1.110                 inf        357.700
+saed14rvt/SAEDRVT14_BUF_S_20          1.288                 inf        449.500
+saed14rvt/SAEDRVT14_BUF_S_2           0.311                 inf         45.260
+saed14rvt/SAEDRVT14_BUF_S_6           0.488                 inf        135.700
+saed14rvt/SAEDRVT14_BUF_S_8           0.666                 inf        180.900
+saed14rvt/SAEDRVT14_DEL_L4D100_2      0.533                 inf         46.370
+saed14rvt/SAEDRVT14_DEL_R2V3_2        0.488                 inf         23.720
+saed14rvt/SAEDRVT14_BUF_PECO_12       0.888                 inf         71.120
+saed14rvt/SAEDRVT14_BUF_PECO_2        0.488                 inf         35.290
+saed14rvt/SAEDRVT14_BUF_PECO_4        0.888                 inf         71.120
+saed14rvt/SAEDRVT14_BUF_PECO_8        0.888                 inf         71.120
+saed14rvt/SAEDRVT14_BUF_PS_3          0.444                 inf         60.110
+saed14rvt/SAEDRVT14_BUF_PS_6          0.710                 inf        117.300
+saed14rvt/SAEDRVT14_AOBUF_IW_3        0.533                 inf         17.750
+saed14rvt/SAEDRVT14_AOBUF_IW_6        0.533                 inf         17.710
 
 ##Inverters
 Name                                   Area      Max Transition       Max Load
 ------------------------------------------------------------------------------
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_2
-                                      0.222                 inf         41.670
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_3
-                                      0.311                 inf         62.580
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_4
-                                      0.311                 inf         83.830
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_5
-                                      0.400                 inf        105.000
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_6
-                                      0.400                 inf        126.300
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_7
-                                      0.488                 inf        147.700
-saed14rvt_ss0p6v125c/SAEDRVT14_INV_S_8
-                                      0.488                 inf        169.200
+saed14rvt/SAEDRVT14_INV_S_2           0.222                 inf         41.670
+saed14rvt/SAEDRVT14_INV_S_3           0.311                 inf         62.580
+saed14rvt/SAEDRVT14_INV_S_4           0.311                 inf         83.830
+saed14rvt/SAEDRVT14_INV_S_5           0.400                 inf        105.000
+saed14rvt/SAEDRVT14_INV_S_6           0.400                 inf        126.300
+saed14rvt/SAEDRVT14_INV_S_7           0.488                 inf        147.700
+saed14rvt/SAEDRVT14_INV_S_8           0.488                 inf        169.200
 
 
 ======================================

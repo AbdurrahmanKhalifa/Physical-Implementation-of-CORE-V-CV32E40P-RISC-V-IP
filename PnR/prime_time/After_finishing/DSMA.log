@@ -1,0 +1,106 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+file delete -force ./work
+set multi_scenario_working_directory ./work 
+./work
+create_scenario -name slow_Cmax -image func_fast_Cmax
+1
+create_scenario -name slow_Cmin -image func_fast_Cmin
+1
+create_scenario -name fast_Cmax -image func_slow_Cmax
+1
+create_scenario -name fast_Cmin -image func_slow_Cmin
+1
+set_host_options -num_processes 4 -max_cores 4
+1
+start_hosts
+Launching 4 Distributed Worker(s)
+   1] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   4 (of   4) workers    : Sun Jun 29 23:14:27 2025
+  Waiting for   0 (of   4) workers    : Sun Jun 29 23:14:37 2025
+  ---------------------------------------------------------------------------
+
+1
+current_session {slow_Cmax slow_Cmin fast_Cmax fast_Cmin}
+{"slow_Cmax", "slow_Cmin", "fast_Cmax", "fast_Cmin"}
+report_constraints -all_violators > constraint_violations_final.rpt 
+report_global_timing > globar_timing_final.rpt
+# report_constraints -all_violators > constraint_violations_before.rpt 
+# report_global_timing > globar_timing_before.rpt
+# remote_execute {source /mnt/hgfs/Test_GP/DFT/cons/dont_use.tcl}
+# # fix_eco_timing -type setup -buffer_list {SAEDRVT14_BUF_1 SAEDRVT14_BUF_2 SAEDRVT14_BUF_3 SAEDRVT14_BUF_4 SAEDRVT14_BUF_6 SAEDRVT14_BUF_8 SAEDRVT14_BUF_10}
+# fix_eco_drc -type max_capacitance -buffer_list {SAEDRVT14_BUF_1 SAEDRVT14_BUF_2 SAEDRVT14_BUF_3 SAEDRVT14_BUF_4 SAEDRVT14_BUF_6 SAEDRVT14_BUF_8 SAEDRVT14_BUF_10}
+# report_constraints -all_violators > constraint_violations_after.rpt 
+# report_global_timing > globar_timing_after.rpt
+# remote_execute {write_changes -o /mnt/hgfs/Test_GP/PnR/prime_time/After_finishing/eco.tcl}
+save_session all_cornersSaving slave data.....
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'fast_Cmin'
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+1
+1
+pt_shell> quit
+
+Timing updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+
+Maximum memory usage for distributed processes:
+AUTO_0          3   localhost          1447.58 MB
+                1   localhost          1447.55 MB
+                2   localhost          1464.82 MB
+                4   localhost          1464.82 MB
+CPU time usage for distributed processes:
+AUTO_0          3   localhost          23 seconds
+                1   localhost          24 seconds
+                2   localhost          54 seconds
+                4   localhost          43 seconds
+Elapsed time for distributed processes:
+AUTO_0          3   localhost          163 seconds
+                1   localhost          163 seconds
+                2   localhost          163 seconds
+                4   localhost          163 seconds
+Maximum memory usage for this session: 1000.90 MB
+CPU usage for this session: 1 seconds 
+Elapsed time for this session: 170 seconds
+Shutting down worker processes ...
+ Shutdown Process 3
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 4
+Diagnostics summary: 1 error, 4 informationals
+
+Thank you for using pt_shell!

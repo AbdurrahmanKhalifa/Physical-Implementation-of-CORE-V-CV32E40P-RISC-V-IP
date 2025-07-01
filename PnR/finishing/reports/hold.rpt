@@ -1,0 +1,116 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 3
+        -report_by design
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 23:35:25 2025
+****************************************
+
+  Startpoint: core_i/sleep_unit_i/core_busy_q_reg (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: fast_Cmax
+  Scenario: func_fast_Cmax
+  Path Group: clk_i
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.063      0.063
+
+  core_i/sleep_unit_i/core_busy_q_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.063 r
+  core_i/sleep_unit_i/core_busy_q_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.024      0.087 f
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0]/SI (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                   0.000      0.087 f
+  data arrival time                                           0.087
+
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.073      0.073
+  core_i/id_stage_i/controller_i/debug_fsm_cs_reg[0]/CK (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                   0.000      0.073 r
+  library hold time                                0.007      0.080
+  data required time                                          0.080
+  --------------------------------------------------------------------------
+  data required time                                          0.080
+  data arrival time                                          -0.087
+  --------------------------------------------------------------------------
+  slack (MET)                                                 0.007
+
+
+
+  Startpoint: core_i/load_store_unit_i/rdata_q_reg[11] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/load_store_unit_i/rdata_q_reg[8] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: fast_Cmax
+  Scenario: func_fast_Cmax
+  Path Group: clk_i
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.068      0.068
+
+  core_i/load_store_unit_i/rdata_q_reg[11]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.068 r
+  core_i/load_store_unit_i/rdata_q_reg[11]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.024      0.091 f
+  core_i/load_store_unit_i/rdata_q_reg[8]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.091 f
+  data arrival time                                           0.091
+
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.074      0.074
+  core_i/load_store_unit_i/rdata_q_reg[8]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.074 r
+  library hold time                                0.008      0.082
+  data required time                                          0.082
+  --------------------------------------------------------------------------
+  data required time                                          0.082
+  data arrival time                                          -0.091
+  --------------------------------------------------------------------------
+  slack (MET)                                                 0.010
+
+
+
+  Startpoint: core_i/id_stage_i/register_file_i/mem_reg[24][6] (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/register_file_i/mem_reg[25][8] (rising edge-triggered flip-flop clocked by clk_i)
+  Mode: func
+  Corner: fast_Cmax
+  Scenario: func_fast_Cmax
+  Path Group: clk_i
+  Path Type: min
+
+  Point                                            Incr       Path  
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.067      0.067
+
+  core_i/id_stage_i/register_file_i/mem_reg[24][6]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.067 r
+  core_i/id_stage_i/register_file_i/mem_reg[24][6]/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.027      0.094 f
+  core_i/id_stage_i/register_file_i/mem_reg[25][8]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.094 f
+  data arrival time                                           0.094
+
+  clock clk_i (rise edge)                          0.000      0.000
+  clock network delay (propagated)                 0.076      0.076
+  core_i/id_stage_i/register_file_i/mem_reg[25][8]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                   0.000      0.076 r
+  library hold time                                0.008      0.084
+  data required time                                          0.084
+  --------------------------------------------------------------------------
+  data required time                                          0.084
+  data arrival time                                          -0.094
+  --------------------------------------------------------------------------
+  slack (MET)                                                 0.010
+
+
+1

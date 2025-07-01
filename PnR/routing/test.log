@@ -1,0 +1,3 @@
+Error: Directory './wscript' already exists (FILE-008)
+Error: problem in write_script command
+	Use error_info for more info. (CMD-013)

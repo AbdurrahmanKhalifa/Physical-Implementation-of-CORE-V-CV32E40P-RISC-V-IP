@@ -1,0 +1,1542 @@
+Error: Library Compiler executable path is not set. (PT-063)
+
+                                 PrimeTime (R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+create_scenario -name slow_Cmax -image slow_cmax
+1
+create_scenario -name slow_Cmin -image slow_cmin
+1
+create_scenario -name fast_Cmax -image fast_cmax
+1
+create_scenario -name fast_Cmin -image fast_cmin
+1
+set_host_options -num_processes 1 -max_cores 1
+1
+start_hosts
+Launching 1 Distributed Worker(s)
+   1] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 1
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   1 (of   1) workers    : Tue Jun 24 13:15:59 2025
+  Waiting for   0 (of   1) workers    : Tue Jun 24 13:16:09 2025
+  ---------------------------------------------------------------------------
+
+1
+current_session {slow_Cmax slow_Cmin fast_Cmax fast_Cmin}
+{"slow_Cmax", "slow_Cmin", "fast_Cmax", "fast_Cmin"}
+{"slow_Cmax", "slow_Cmin", "fast_Cmax", "fast_Cmin"}
+{"slow_Cmax", "slow_Cmin", "fast_Cmax", "fast_Cmin"}
+pt_shell> report_co
+report_constraint  report_constraints 
+pt_shell> report_constraint -all_violators 
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmax'
+Restoring  : User image for scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+Saving     : Current image for scenario 'slow_Cmax'
+Started    : Command execution in scenario 'slow_Cmin'
+Restoring  : User image for scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Saving     : Current image for scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Restoring  : User image for scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Saving     : Current image for scenario 'fast_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Restoring  : User image for scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+-----------------------------------
+End of Master/Slave Task Processing
+
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : multi_scenario design
+Version: O-2018.06-SP1
+Date   : Tue Jun 24 13:17:20 2025
+****************************************
+
+Scenarios: slow_Cmax slow_Cmin fast_Cmax fast_Cmin 
+
+
+   max_delay/setup ('clk_i' group)
+
+   Endpoint                 Scenario                                   Slack
+   ---------------------------------------------------------------------------
+   instr_addr_o[31]         slow_Cmax                                  -0.15  (VIOLATED)
+   instr_addr_o[30]         slow_Cmax                                  -0.09  (VIOLATED)
+   instr_addr_o[29]         slow_Cmax                                  -0.07  (VIOLATED)
+   instr_addr_o[28]         slow_Cmax                                  -0.01  (VIOLATED)
+
+
+
+
+
+
+
+   max_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_227_335/X
+                            slow_Cmax         41.67          57.21    -15.54  (VIOLATED)
+   core_i/ex_stage_i/U70/X  slow_Cmax         41.67          55.23    -13.56  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_249_426/X
+                            slow_Cmax         41.67          55.10    -13.43  (VIOLATED)
+   core_i/load_store_unit_i/U132/X
+                            slow_Cmax         45.17          58.09    -12.92  (VIOLATED)
+   core_i/ex_stage_i/U238/X slow_Cmax         45.26          58.07    -12.81  (VIOLATED)
+   core_i/ex_stage_i/U58/X  slow_Cmax         41.67          54.29    -12.62  (VIOLATED)
+   core_i/ex_stage_i/U32/X  slow_Cmax         41.67          54.22    -12.55  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_233_434/X
+                            slow_Cmax         41.67          53.97    -12.30  (VIOLATED)
+   core_i/ex_stage_i/U54/X  slow_Cmax         41.67          53.78    -12.11  (VIOLATED)
+   core_i/load_store_unit_i/U133/X
+                            slow_Cmax         45.17          56.96    -11.79  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_230_432/X
+                            slow_Cmax         41.67          53.37    -11.70  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_227_333/X
+                            slow_Cmax         41.67          53.30    -11.63  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_197_444/X
+                            slow_Cmax         41.67          53.15    -11.48  (VIOLATED)
+   core_i/ex_stage_i/U48/X  slow_Cmax         41.67          53.06    -11.39  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_206_347/X
+                            slow_Cmax         41.67          52.32    -10.65  (VIOLATED)
+   core_i/ex_stage_i/U42/X  slow_Cmax         41.67          51.86    -10.19  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_221_339/X
+                            slow_Cmax         41.67          51.76    -10.09  (VIOLATED)
+   core_i/ex_stage_i/U92/X  slow_Cmax         41.67          51.63     -9.96  (VIOLATED)
+   core_i/ex_stage_i/U88/X  slow_Cmax         41.67          51.36     -9.69  (VIOLATED)
+   core_i/load_store_unit_i/PLACE_HFSINV_2811_391/X
+                            slow_Cmax         41.67          50.93     -9.26  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_229_327/X
+                            slow_Cmax         41.67          50.65     -8.98  (VIOLATED)
+   core_i/id_stage_i/PLACE_HFSINV_790_317/X
+                            slow_Cmax         41.67          50.08     -8.41  (VIOLATED)
+   core_i/ex_stage_i/U40/X  slow_Cmax         41.67          50.08     -8.41  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_238_443/X
+                            slow_Cmax         68.20          76.37     -8.17  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_233_436/X
+                            slow_Cmax         41.67          49.82     -8.15  (VIOLATED)
+   core_i/ex_stage_i/U248/X slow_Cmax         45.26          52.88     -7.62  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/PLACE_HFSINV_745_157/X
+                            slow_Cmax         41.67          49.22     -7.55  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_233_438/X
+                            slow_Cmax         41.67          49.19     -7.52  (VIOLATED)
+   core_i/ex_stage_i/U240/X slow_Cmax         45.26          52.56     -7.30  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_2120_166/X
+                            slow_Cmax         41.67          48.84     -7.17  (VIOLATED)
+   core_i/ex_stage_i/U239/X slow_Cmax         45.26          52.17     -6.91  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_439_441/X
+                            slow_Cmax         68.20          74.82     -6.62  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_250_342/X
+                            slow_Cmax         68.20          74.62     -6.42  (VIOLATED)
+   core_i/id_stage_i/U1830/X
+                            slow_Cmax         34.86          41.13     -6.27  (VIOLATED)
+   core_i/ex_stage_i/U46/X  slow_Cmax         41.67          47.89     -6.22  (VIOLATED)
+   core_i/ex_stage_i/U245/X slow_Cmax         45.26          51.42     -6.16  (VIOLATED)
+   core_i/id_stage_i/U1319/X
+                            slow_Cmax         39.93          45.94     -6.01  (VIOLATED)
+   core_i/ex_stage_i/alu_i/U2713/X
+                            slow_Cmax         41.67          47.65     -5.98  (VIOLATED)
+   core_i/ex_stage_i/U237/X slow_Cmax         45.26          51.13     -5.87  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_228_446/X
+                            slow_Cmax         68.20          73.95     -5.75  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_433_442/X
+                            slow_Cmax         68.20          73.73     -5.53  (VIOLATED)
+   core_i/if_stage_i/aligner_i/U62/X
+                            slow_Cmax         38.13          43.51     -5.38  (VIOLATED)
+   core_i/cs_registers_i/U885/X
+                            slow_Cmax         34.86          40.24     -5.38  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_218_337/X
+                            slow_Cmax         41.67          46.95     -5.28  (VIOLATED)
+   core_i/id_stage_i/U612/X slow_Cmax         44.81          50.08     -5.27  (VIOLATED)
+   core_i/ex_stage_i/U30/X  slow_Cmax         41.67          46.71     -5.04  (VIOLATED)
+   core_i/ex_stage_i/U44/X  slow_Cmax         41.67          46.66     -4.99  (VIOLATED)
+   core_i/ex_stage_i/U34/X  slow_Cmax         41.67          46.38     -4.71  (VIOLATED)
+   core_i/ex_stage_i/U247/X slow_Cmax         45.26          49.79     -4.53  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U732/X
+                            slow_Cmax         67.82          72.28     -4.46  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_241_341/X
+                            slow_Cmax         68.20          72.44     -4.24  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_238_343/X
+                            slow_Cmax         68.20          72.25     -4.05  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1099/X
+                            slow_Cmax         53.55          57.50     -3.95  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U733/X
+                            slow_Cmax         70.11          74.03     -3.92  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1100/X
+                            slow_Cmax         53.55          57.29     -3.74  (VIOLATED)
+   core_i/if_stage_i/U124/X slow_Cmax         44.81          48.47     -3.66  (VIOLATED)
+   core_i/if_stage_i/aligner_i/PLACE_HFSINV_614_177/X
+                            slow_Cmax         41.67          45.21     -3.54  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1090/X
+                            slow_Cmax         34.86          38.35     -3.49  (VIOLATED)
+   core_i/id_stage_i/U1103/X
+                            slow_Cmax         34.86          38.35     -3.49  (VIOLATED)
+   core_i/if_stage_i/U6/X   slow_Cmax         35.55          38.94     -3.39  (VIOLATED)
+   core_i/ex_stage_i/U241/X slow_Cmax         45.26          48.64     -3.38  (VIOLATED)
+   core_i/ex_stage_i/U246/X slow_Cmax         45.26          48.41     -3.15  (VIOLATED)
+   core_i/ex_stage_i/U38/X  slow_Cmax         41.67          44.72     -3.05  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/read_pointer_q_reg[0]/Q
+                            slow_Cmax         45.50          48.51     -3.01  (VIOLATED)
+   core_i/id_stage_i/CTS_ZBUF_inst_25128/X
+                            slow_Cmax         45.26          48.13     -2.87  (VIOLATED)
+   core_i/load_store_unit_i/U71/X
+                            slow_Cmax         45.17          47.99     -2.82  (VIOLATED)
+   core_i/id_stage_i/U712/X slow_Cmax         34.86          37.39     -2.53  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2087/X
+                            slow_Cmax         53.55          55.98     -2.43  (VIOLATED)
+   core_i/cs_registers_i/U405/X
+                            slow_Cmax         34.25          36.66     -2.41  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/PLACE_HFSINV_559_390/X
+                            slow_Cmax         41.67          44.00     -2.33  (VIOLATED)
+   core_i/cs_registers_i/U1150/X
+                            slow_Cmax         34.86          37.18     -2.32  (VIOLATED)
+   core_i/cs_registers_i/U2617/X
+                            slow_Cmax         41.67          43.97     -2.30  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_921_168/X
+                            slow_Cmax         41.67          43.91     -2.24  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/U20/X
+                            slow_Cmax         44.81          46.98     -2.17  (VIOLATED)
+   core_i/load_store_unit_i/U131/X
+                            slow_Cmax         45.17          47.11     -1.94  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[18]/Q
+                            slow_Cmax         45.50          47.41     -1.91  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[7]/Q
+                            slow_Cmax         45.50          47.17     -1.67  (VIOLATED)
+   core_i/cs_registers_i/U1167/X
+                            slow_Cmax         34.86          36.46     -1.60  (VIOLATED)
+   core_i/id_stage_i/U1104/X
+                            slow_Cmax         34.86          36.36     -1.50  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/Q
+                            slow_Cmax         45.50          46.90     -1.40  (VIOLATED)
+   core_i/id_stage_i/U1706/X
+                            slow_Cmax         34.86          36.25     -1.39  (VIOLATED)
+   core_i/ex_stage_i/U36/X  slow_Cmax         41.67          43.05     -1.38  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[6]/Q
+                            slow_Cmax         45.50          46.87     -1.37  (VIOLATED)
+   core_i/id_stage_i/U1582/X
+                            slow_Cmax         34.86          36.22     -1.36  (VIOLATED)
+   core_i/if_stage_i/U211/X slow_Cmax         41.67          43.01     -1.34  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1087/X
+                            slow_Cmax         53.55          54.88     -1.33  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_834_167/X
+                            slow_Cmax         41.67          42.96     -1.29  (VIOLATED)
+   core_i/if_stage_i/U331/X slow_Cmax         32.34          33.54     -1.20  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U69/X
+                            slow_Cmax         46.47          47.66     -1.19  (VIOLATED)
+   core_i/if_stage_i/U208/X slow_Cmax         41.67          42.83     -1.16  (VIOLATED)
+   core_i/ex_stage_i/U242/X slow_Cmax         45.26          46.39     -1.13  (VIOLATED)
+   core_i/id_stage_i/U1745/X
+                            slow_Cmax         34.86          35.89     -1.03  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/PLACE_HFSINV_958_161/X
+                            slow_Cmax         41.67          42.69     -1.02  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2078/X
+                            slow_Cmax         53.55          54.54     -0.99  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_235_440/X
+                            slow_Cmax         68.20          69.17     -0.97  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[30]/Q
+                            slow_Cmax         45.50          46.44     -0.94  (VIOLATED)
+   core_i/PLACE_HFSBUF_40242_80/X
+                            slow_Cmax         45.26          46.19     -0.93  (VIOLATED)
+   core_i/if_stage_i/PLACE_HFSINV_711_385/X
+                            slow_Cmax         41.67          42.47     -0.80  (VIOLATED)
+   core_i/ex_stage_i/mult_i/U537/X
+                            slow_Cmax         23.22          23.95     -0.73  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U735/X
+                            slow_Cmax         67.82          68.50     -0.68  (VIOLATED)
+   core_i/if_stage_i/PLACE_HFSINV_1972_151/X
+                            slow_Cmax         41.67          42.34     -0.67  (VIOLATED)
+   core_i/PLACE_HFSBUF_25207_78/X
+                            slow_Cmax         68.20          68.79     -0.59  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/PLACE_HFSINV_841_156/X
+                            slow_Cmax         41.67          42.23     -0.56  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U6101/X
+                            slow_Cmax         41.67          42.19     -0.52  (VIOLATED)
+   core_i/PLACE_HFSBUF_53782_101/X
+                            slow_Cmax         68.20          68.61     -0.41  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[23]/Q
+                            slow_Cmax         45.50          45.91     -0.41  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2108/X
+                            slow_Cmax         53.55          53.84     -0.29  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[14]/Q
+                            slow_Cmax         45.50          45.78     -0.28  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U728/X
+                            slow_Cmax         67.82          68.04     -0.22  (VIOLATED)
+   core_i/ex_stage_i/alu_i/alu_div_i/PLACE_HFSINV_1441_173/X
+                            slow_Cmax         41.67          41.76     -0.09  (VIOLATED)
+   core_i/cs_registers_i/U414/X
+                            slow_Cmax         34.86          34.94     -0.08  (VIOLATED)
+
+
+   min_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   boot_addr_i[0]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   boot_addr_i[1]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[0]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[1]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[0]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[1]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[0]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[1]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[2]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[3]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[4]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[5]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[6]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[7]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   pulp_clock_en_i          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+
+
+1
+pt_shell> fix_ec
+fix_eco_drc     fix_eco_leakage fix_eco_power   fix_eco_timing  
+pt_shell> fix_eco_timing -type set[K[K[K[K[K[K[Kde[K[Ktype setup[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kfix_eco_timing -type setup -buffer_list {SAEDRVT14_BUF_1 SAEDRVT14_BUF_2 SAEDRVT14_B UF_3 SAEDRVT14_BUF_4 SAEDRVT14_BUF_6 SAEDRVT14_BUF_8 SAEDRVT14_BUF_10}
+Error: The number of hosts is different from the number of scenarios (PTECO-015)
+0
+pt_shell> gwt_hpt_shell> gwt_[K[K[Ket_
+get_alternative_lib_cells get_cells                 get_defined_attributes    get_license               get_nets                  get_random_numbers        get_timing_paths          
+get_app_var               get_clock                 get_defined_commands      get_message_ids           get_pins                  get_selection             get_unix_variable         
+get_attribute             get_command_option_values get_distributed_variables get_message_info          get_ports                 get_switching_activity    
+pt_shell> get_nu[K[Kho[K[K[K[K[K[Kset_host_options -num_processes 4 -max_cores 4
+1
+pt_shell> start_hosts
+Launching 4 Distributed Worker(s)
+   1] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : sh localhost /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   4 (of   5) workers    : Tue Jun 24 13:23:53 2025
+  Waiting for   0 (of   5) workers    : Tue Jun 24 13:24:03 2025
+  ---------------------------------------------------------------------------
+
+1
+pt_shell> 
+pt_shell> current_session {slow_Cmax slow_Cmin fast_Cmax fast_Cmin}
+Warning: Following scenarios are reset: slow_Cmax, slow_Cmin, fast_Cmax, fast_Cmin. (MS-003)
+{"slow_Cmax", "slow_Cmin", "fast_Cmax", "fast_Cmin"}
+pt_shell> current_session {slow_Cmax slow_Cmin fast_Cmax fast_Cmin}[11Gstart_hosts[K[12Get_host_options -num_processes 4 -max_cores 4[11Gfix_eco_timing -type setup -buffer_list {SAEDRVT14_BUF_1 SAEDRVT14_BUF_2 SAEDRVT14_BUF_3 SAEDRVT14_BUF_4 SAEDRVT14_BUF_6 SAEDRVT14_BUF_8 SAEDRVT14_BUF_10}
+Information: Starting timing fix iteration 1 at [ Tue Jun 24 13:25:26 2025 ]...
+Information: Analyzing scenarios...
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: 4 violating endpoints located in the slow_Cmax scenario... (PTECO-023)
+Information: 5 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Tue Jun 24 13:26:12 2025 ]...
+Information: Finished updating timing at [ Tue Jun 24 13:26:14 2025 ]...
+Information: 19 cells have been resized.
+
+Information: Starting timing fix iteration 2 at [ Tue Jun 24 13:26:14 2025 ]...
+Information: Analyzing scenarios...
+Information: 3 violating endpoints located in the slow_Cmax scenario... (PTECO-023)
+Information: 3 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Tue Jun 24 13:26:19 2025 ]...
+Information: Finished updating timing at [ Tue Jun 24 13:26:20 2025 ]...
+Information: 7 cells have been resized.
+
+Information: Starting timing fix iteration 3 at [ Tue Jun 24 13:26:20 2025 ]...
+Information: Analyzing scenarios...
+Information: 2 violating endpoints located in the slow_Cmax scenario... (PTECO-023)
+Information: 2 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Tue Jun 24 13:26:25 2025 ]...
+Information: Finished updating timing at [ Tue Jun 24 13:26:26 2025 ]...
+Information: 7 cells have been resized.
+
+Information: Starting timing fix iteration 4 at [ Tue Jun 24 13:26:26 2025 ]...
+Information: Analyzing scenarios...
+Information: 1 violating endpoints located in the slow_Cmax scenario... (PTECO-023)
+Information: 1 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Tue Jun 24 13:26:30 2025 ]...
+Information: Finished updating timing at [ Tue Jun 24 13:26:31 2025 ]...
+Information: 4 cells have been resized.
+
+Information: Starting timing fix iteration 5 at [ Tue Jun 24 13:26:31 2025 ]...
+Information: Analyzing scenarios...
+Information: 0 violating endpoints located in all scenarios... (PTECO-024)
+Information: No timing violations have been detected.
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          37
+Total number of commands                              37
+Area increased by cell sizing                       7.81
+Total area increased                                7.81
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                        5
+Total violating endpoints fixed                        5
+Total violating endpoints remaining                    0
+Total percentage of violations fixed               100.0%
+
+Information: Elapsed time [               66 seconds ]
+Information: Completed at [ Tue Jun 24 13:26:32 2025 ]
+
+1
+pt_shell> repo
+report_analysis_coverage     report_clock_timing          report_global_timing         report_min_pulse_width       report_qor                   
+report_app_var               report_clocks                report_host_usage            report_multi_scenario_design report_si_bottleneck         
+report_attribute             report_constraint            report_hosts                 report_noise                 report_timing                
+report_clock_gate_savings    report_constraints           report_license_limit         report_power                 
+pt_shell> report_constra
+report_constraint  report_constraints 
+pt_shell> report_constraints -all_violators
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+-----------------------------------
+End of Master/Slave Task Processing
+
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : multi_scenario design
+Version: O-2018.06-SP1
+Date   : Tue Jun 24 13:30:15 2025
+****************************************
+
+Scenarios: slow_Cmax slow_Cmin fast_Cmax fast_Cmin 
+
+
+
+
+
+
+
+
+   max_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_227_335/X
+                            slow_Cmax         41.67          57.21    -15.54  (VIOLATED)
+   core_i/ex_stage_i/U70/X  slow_Cmax         41.67          55.23    -13.56  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_249_426/X
+                            slow_Cmax         41.67          55.10    -13.43  (VIOLATED)
+   core_i/load_store_unit_i/U132/X
+                            slow_Cmax         45.17          58.09    -12.92  (VIOLATED)
+   core_i/ex_stage_i/U238/X slow_Cmax         45.26          58.07    -12.81  (VIOLATED)
+   core_i/ex_stage_i/U58/X  slow_Cmax         41.67          54.29    -12.62  (VIOLATED)
+   core_i/ex_stage_i/U32/X  slow_Cmax         41.67          54.22    -12.55  (VIOLATED)
+   core_i/ex_stage_i/U54/X  slow_Cmax         41.67          53.78    -12.11  (VIOLATED)
+   core_i/load_store_unit_i/U133/X
+                            slow_Cmax         45.17          56.96    -11.79  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_230_432/X
+                            slow_Cmax         41.67          53.37    -11.70  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_227_333/X
+                            slow_Cmax         41.67          53.30    -11.63  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_197_444/X
+                            slow_Cmax         41.67          53.15    -11.48  (VIOLATED)
+   core_i/ex_stage_i/U48/X  slow_Cmax         41.67          53.06    -11.39  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_206_347/X
+                            slow_Cmax         41.67          52.32    -10.65  (VIOLATED)
+   core_i/ex_stage_i/U42/X  slow_Cmax         41.67          51.86    -10.19  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_221_339/X
+                            slow_Cmax         41.67          51.76    -10.09  (VIOLATED)
+   core_i/ex_stage_i/U92/X  slow_Cmax         41.67          51.63     -9.96  (VIOLATED)
+   core_i/ex_stage_i/U88/X  slow_Cmax         41.67          51.36     -9.69  (VIOLATED)
+   core_i/load_store_unit_i/PLACE_HFSINV_2811_391/X
+                            slow_Cmax         41.67          50.93     -9.26  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_229_327/X
+                            slow_Cmax         41.67          50.65     -8.98  (VIOLATED)
+   core_i/id_stage_i/PLACE_HFSINV_790_317/X
+                            slow_Cmax         41.67          50.08     -8.41  (VIOLATED)
+   core_i/ex_stage_i/U40/X  slow_Cmax         41.67          50.08     -8.41  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_238_443/X
+                            slow_Cmax         68.20          76.37     -8.17  (VIOLATED)
+   core_i/ex_stage_i/U248/X slow_Cmax         45.26          52.88     -7.62  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/PLACE_HFSINV_745_157/X
+                            slow_Cmax         41.67          49.22     -7.55  (VIOLATED)
+   core_i/ex_stage_i/U240/X slow_Cmax         45.26          52.56     -7.30  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_2120_166/X
+                            slow_Cmax         41.67          48.84     -7.17  (VIOLATED)
+   core_i/ex_stage_i/U239/X slow_Cmax         45.26          52.17     -6.91  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_439_441/X
+                            slow_Cmax         68.20          74.82     -6.62  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_250_342/X
+                            slow_Cmax         68.20          74.62     -6.42  (VIOLATED)
+   core_i/id_stage_i/U1830/X
+                            slow_Cmax         34.86          41.13     -6.27  (VIOLATED)
+   core_i/ex_stage_i/U46/X  slow_Cmax         41.67          47.89     -6.22  (VIOLATED)
+   core_i/ex_stage_i/U245/X slow_Cmax         45.26          51.42     -6.16  (VIOLATED)
+   core_i/id_stage_i/U1319/X
+                            slow_Cmax         39.93          45.94     -6.01  (VIOLATED)
+   core_i/ex_stage_i/alu_i/U2713/X
+                            slow_Cmax         41.67          47.65     -5.98  (VIOLATED)
+   core_i/ex_stage_i/U237/X slow_Cmax         45.26          51.13     -5.87  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_228_446/X
+                            slow_Cmax         68.20          73.95     -5.75  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_433_442/X
+                            slow_Cmax         68.20          73.73     -5.53  (VIOLATED)
+   core_i/if_stage_i/aligner_i/U62/X
+                            slow_Cmax         38.13          43.51     -5.38  (VIOLATED)
+   core_i/cs_registers_i/U885/X
+                            slow_Cmax         34.86          40.24     -5.38  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_218_337/X
+                            slow_Cmax         41.67          46.95     -5.28  (VIOLATED)
+   core_i/id_stage_i/U612/X slow_Cmax         44.81          50.08     -5.27  (VIOLATED)
+   core_i/ex_stage_i/U30/X  slow_Cmax         41.67          46.71     -5.04  (VIOLATED)
+   core_i/ex_stage_i/U44/X  slow_Cmax         41.67          46.66     -4.99  (VIOLATED)
+   core_i/ex_stage_i/U34/X  slow_Cmax         41.67          46.38     -4.71  (VIOLATED)
+   core_i/ex_stage_i/U247/X slow_Cmax         45.26          49.79     -4.53  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U732/X
+                            slow_Cmax         67.82          72.28     -4.46  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_241_341/X
+                            slow_Cmax         68.20          72.44     -4.24  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_238_343/X
+                            slow_Cmax         68.20          72.25     -4.05  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1099/X
+                            slow_Cmax         53.55          57.49     -3.94  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U733/X
+                            slow_Cmax         70.11          74.03     -3.92  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1100/X
+                            slow_Cmax         53.55          57.28     -3.73  (VIOLATED)
+   core_i/if_stage_i/U124/X slow_Cmax         44.81          48.47     -3.66  (VIOLATED)
+   core_i/if_stage_i/aligner_i/PLACE_HFSINV_614_177/X
+                            slow_Cmax         41.67          45.21     -3.54  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1090/X
+                            slow_Cmax         34.86          38.35     -3.49  (VIOLATED)
+   core_i/id_stage_i/U1103/X
+                            slow_Cmax         34.86          38.35     -3.49  (VIOLATED)
+   core_i/if_stage_i/U6/X   slow_Cmax         35.55          38.94     -3.39  (VIOLATED)
+   core_i/ex_stage_i/U241/X slow_Cmax         45.26          48.64     -3.38  (VIOLATED)
+   core_i/ex_stage_i/U246/X slow_Cmax         45.26          48.41     -3.15  (VIOLATED)
+   core_i/ex_stage_i/U38/X  slow_Cmax         41.67          44.72     -3.05  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/read_pointer_q_reg[0]/Q
+                            slow_Cmax         45.50          48.51     -3.01  (VIOLATED)
+   core_i/id_stage_i/CTS_ZBUF_inst_25128/X
+                            slow_Cmax         45.26          48.13     -2.87  (VIOLATED)
+   core_i/load_store_unit_i/U71/X
+                            slow_Cmax         45.17          47.99     -2.82  (VIOLATED)
+   core_i/id_stage_i/U712/X slow_Cmax         34.86          37.39     -2.53  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2087/X
+                            slow_Cmax         53.55          55.98     -2.43  (VIOLATED)
+   core_i/cs_registers_i/U405/X
+                            slow_Cmax         34.25          36.66     -2.41  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/PLACE_HFSINV_559_390/X
+                            slow_Cmax         41.67          44.00     -2.33  (VIOLATED)
+   core_i/cs_registers_i/U1150/X
+                            slow_Cmax         34.86          37.18     -2.32  (VIOLATED)
+   core_i/cs_registers_i/U2617/X
+                            slow_Cmax         41.67          43.97     -2.30  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_921_168/X
+                            slow_Cmax         41.67          43.91     -2.24  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/U20/X
+                            slow_Cmax         44.81          46.98     -2.17  (VIOLATED)
+   core_i/load_store_unit_i/U131/X
+                            slow_Cmax         45.17          47.11     -1.94  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[18]/Q
+                            slow_Cmax         45.50          47.41     -1.91  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[7]/Q
+                            slow_Cmax         45.50          47.17     -1.67  (VIOLATED)
+   core_i/cs_registers_i/U1167/X
+                            slow_Cmax         34.86          36.46     -1.60  (VIOLATED)
+   core_i/id_stage_i/U1104/X
+                            slow_Cmax         34.86          36.36     -1.50  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[31]/Q
+                            slow_Cmax         45.50          46.90     -1.40  (VIOLATED)
+   core_i/id_stage_i/U1706/X
+                            slow_Cmax         34.86          36.25     -1.39  (VIOLATED)
+   core_i/ex_stage_i/U36/X  slow_Cmax         41.67          43.05     -1.38  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[6]/Q
+                            slow_Cmax         45.50          46.87     -1.37  (VIOLATED)
+   core_i/id_stage_i/U1582/X
+                            slow_Cmax         34.86          36.22     -1.36  (VIOLATED)
+   core_i/if_stage_i/U211/X slow_Cmax         41.67          43.01     -1.34  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1087/X
+                            slow_Cmax         53.55          54.88     -1.33  (VIOLATED)
+   core_i/cs_registers_i/PLACE_HFSINV_834_167/X
+                            slow_Cmax         41.67          42.96     -1.29  (VIOLATED)
+   core_i/if_stage_i/U331/X slow_Cmax         32.34          33.54     -1.20  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/U69/X
+                            slow_Cmax         46.47          47.66     -1.19  (VIOLATED)
+   core_i/if_stage_i/U208/X slow_Cmax         41.67          42.83     -1.16  (VIOLATED)
+   core_i/ex_stage_i/U242/X slow_Cmax         45.26          46.39     -1.13  (VIOLATED)
+   core_i/id_stage_i/U1745/X
+                            slow_Cmax         34.86          35.89     -1.03  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/PLACE_HFSINV_958_161/X
+                            slow_Cmax         41.67          42.69     -1.02  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2078/X
+                            slow_Cmax         53.55          54.54     -0.99  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_235_440/X
+                            slow_Cmax         68.20          69.17     -0.97  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[30]/Q
+                            slow_Cmax         45.50          46.44     -0.94  (VIOLATED)
+   core_i/PLACE_HFSBUF_40242_80/X
+                            slow_Cmax         45.26          46.19     -0.93  (VIOLATED)
+   core_i/if_stage_i/PLACE_HFSINV_711_385/X
+                            slow_Cmax         41.67          42.47     -0.80  (VIOLATED)
+   core_i/ex_stage_i/mult_i/U537/X
+                            slow_Cmax         23.22          23.95     -0.73  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U735/X
+                            slow_Cmax         67.82          68.50     -0.68  (VIOLATED)
+   core_i/if_stage_i/PLACE_HFSINV_1972_151/X
+                            slow_Cmax         41.67          42.34     -0.67  (VIOLATED)
+   core_i/PLACE_HFSBUF_25207_78/X
+                            slow_Cmax         68.20          68.79     -0.59  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/PLACE_HFSINV_841_156/X
+                            slow_Cmax         41.67          42.23     -0.56  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U6101/X
+                            slow_Cmax         41.67          42.19     -0.52  (VIOLATED)
+   core_i/PLACE_HFSBUF_53782_101/X
+                            slow_Cmax         68.20          68.61     -0.41  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[23]/Q
+                            slow_Cmax         45.50          45.91     -0.41  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U182/X
+                            slow_Cmax         41.67          42.03     -0.36  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U2108/X
+                            slow_Cmax         53.55          53.84     -0.29  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[14]/Q
+                            slow_Cmax         45.50          45.78     -0.28  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U728/X
+                            slow_Cmax         67.82          68.04     -0.22  (VIOLATED)
+   core_i/ex_stage_i/alu_i/alu_div_i/PLACE_HFSINV_1441_173/X
+                            slow_Cmax         41.67          41.76     -0.09  (VIOLATED)
+   core_i/cs_registers_i/U414/X
+                            slow_Cmax         34.86          34.94     -0.08  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/state_q_reg/Q
+                            slow_Cmax         45.50          45.56     -0.06  (VIOLATED)
+
+
+   min_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   boot_addr_i[0]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   boot_addr_i[1]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[0]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[1]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[0]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[1]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[0]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[1]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[2]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[3]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[4]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[5]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[6]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[7]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   pulp_clock_en_i          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+
+
+1
+pt_shell> report_constraints -all_violators[11G[Kfix_eco_drc -type max_capacitance -buffer_list {SAEDRVT14_BUF_1 SAEDRVT14_BUF_2 SAEDRVT14_BUF_3 SAEDRVT14_BUF_4 SAEDRVT14_BUF_6 SAEDRVT14_BUF_8 SAEDRVT14_BUF_10}
+Information: Starting DRC fix iteration 1 at [ Tue Jun 24 13:35:49 2025 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+SAEDRVT14_BUF_10       0.71
+SAEDRVT14_BUF_8        0.62
+SAEDRVT14_BUF_6        0.49
+SAEDRVT14_BUF_4        0.40
+SAEDRVT14_BUF_3        0.36
+SAEDRVT14_BUF_2        0.31
+SAEDRVT14_BUF_1        0.27
+
+Information: 110 max capacitance violations located in the slow_Cmax scenario... (PTECO-023)
+Information: 157 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Tue Jun 24 13:36:27 2025 ]...
+Information: Finished updating timing at [ Tue Jun 24 13:36:38 2025 ]...
+Information: 98 cells have been resized.
+Information: 13 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Tue Jun 24 13:36:38 2025 ]...
+Information: Analyzing scenarios...
+Information: 0 max capacitance violations located in all scenarios... (PTECO-024)
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+slow_Cmax                                  0          0
+slow_Cmin                                  0          0
+fast_Cmax                                  0          0
+fast_Cmin                                  0          0
+--------------------------------------------------------
+Total                                      0          0
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+       3 SAEDRVT14_BUF_2        0.31                0.93
+      10 SAEDRVT14_BUF_3        0.36                3.55
+--------------------------------------------------------
+      13 TOTAL                                      4.48
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          98
+Number of insert_buffer commands                      13
+Total number of commands                             111
+Area increased by cell sizing                      11.19
+Area increased by buffer insertion                  4.48
+Total area increased                               15.67
+
+Information: Elapsed time [               50 seconds ]
+Information: Completed at [ Tue Jun 24 13:36:39 2025 ]
+
+1
+pt_shell> report_vio[K[K[Kcoo[Knstr
+report_constraint  report_constraints 
+pt_shell> report_constraint -aa[Kll_violators 
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+-----------------------------------
+End of Master/Slave Task Processing
+
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : multi_scenario design
+Version: O-2018.06-SP1
+Date   : Tue Jun 24 13:41:53 2025
+****************************************
+
+Scenarios: slow_Cmax slow_Cmin fast_Cmax fast_Cmin 
+
+
+
+
+
+
+
+
+   min_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   boot_addr_i[0]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   boot_addr_i[1]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[0]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[1]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[0]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[1]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[0]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[1]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[2]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[3]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[4]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[5]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[6]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[7]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   pulp_clock_en_i          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+
+
+1
+pt_shell> save_session all_corners/[K
+Information: Cleaning and overwriting all data in the existing directory '/mnt/hgfs/GP/PnR/prime_time/all_corners'. (SR-002)
+Saving slave data.....
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Started    : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+pt_shell> wri
+write_app_var    write_eco_design 
+pt_shell> write_eco_design [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kwrite_changes -o eco.tcl
+Error: unknown command 'write_changes' (CMD-005)
+pt_shell> wi[Kr
+write_app_var    write_eco_design 
+pt_shell> write_eco_design -
+dir_name       endpoints      force          merge_sessions type           verbose        
+pt_shell> write_eco_design -[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kwri
+write_app_var    write_eco_design 
+pt_shell> write_[K[K[K[K[K[Kman wri
+write_app_var                             write_eco_design                          write_script_include_library_constraints  write_script_output_lumped_net_annotation 
+pt_shell> man write_eco_design 
+2.  Synopsys Commands                                        Command Reference
+                               write_eco_design
+
+NAME
+       write_eco_design
+              Writes  an  ECO  design that consumes less memory to perform ECO
+              than the original design.
+
+SYNTAX
+       status write_eco_design
+              [-type type_list]
+              [-endpoints endpoint_list]
+              [-force]
+              [-merge_sessions session_list]
+              [-verbose]
+              [dir_name]
+
+   Data Types
+       type_list               list
+       endpoint_list           list
+       session_list            list
+       dir_name                string
+
+ARGUMENTS
+       -type type_list
+              Writes an ECO design  that  preserves  the  specified  violation
+              types  compared to those in the original design. You can specify
+              one or more of the following violation types:
+              o setup - Preserves setup timing results.
+              o hold - Preserves hold timing results.
+              o max_transistion - Preserves max_transition results.
+              o max_capacitance - Preserves max_capacitance results.
+              o max_fanout - Preserves max_fanout results.
+              o noise - Preserves noise results.
+              o timing - Preserves setup and hold timing results.
+              o drc  -  Preserves  max_transition,  max_capacitance,  and  max
+                fanout results.
+
+              If  you  specify  both  the  setup and hold violation types (the
+              default behavior), the resulting ECO design will have setup  and
+              hold  timing reports similar to those of the original design. If
+              you specify only the hold violation type, the hold timing report
+              will  be similar, but the setup timing report could be different
+              because the ECO design does not contain  setup  timing  informa-
+              tion.   If you specify more violation types, the ECO design size
+              becomes larger. To minimize the ECO design  size,  specify  only
+              necessary violation types.
+
+       -endpoints endpoint_list
+              Creates  an  ECO design with the specified timing endpoints. Use
+              this option to customize your ECO design instead of creating  an
+              ECO  design  with violation types. For example, if you have spe-
+              cific timing endpoints for hold fixing but no interest in  other
+              violating  endpoints,  using  this  option creates an ECO design
+              that preserves hold timing to only these endpoints.
+
+              This option provides great flexibility  to  customize  your  ECO
+              design.  You can write your own scripts to collect specific end-
+              points based on path groups, timing  margins,  and  slacks.  For
+              more examples, see the EXAMPLES section.
+
+       -merge_sessions session_list
+              Creates  an  ECO  design  based on the endpoints merged from the
+              specified PrimeTime saved sessions. Once the  option  is  speci-
+              fied,  the  write_eco_design  command  merges endpoints from the
+              specified directories and writes an  ECO  design  based  on  the
+              merged  endpoints. Note that the eco_save_session_data_type must
+              have been specified before saving the PrimeTime sessions to have
+              violating endpoint data in the saved sessions.
+
+              This  option  is  useful when an ECO design is generated without
+              running DMSA, and works only in non-DMSA mode. See  the  details
+              in the example section.
+
+       -force This  options forces to write an ECO design even if ECO informa-
+              tion is missing in the saved sessions.
+
+       -verbose
+              Shows additional information such as endpoint names and progress
+              status.
+
+       dir_name
+              Specifies  a  directory  name in which an ECO design is created.
+              The specified directory will contain multiple files  after  cre-
+              ation. In Distributed Multi Scenario Analysis (DMSA), the speci-
+              fied directory will have subdirectories in which  each  sechario
+              creates its own ECO design.
+
+              If  you  do  not  specify  a  directory  name,  the  default  is
+              eco_design_directory.
+
+DESCRIPTION
+       This command reduces hardware requirements during timing closure ECO by
+       creating an ECO design that requires less memory to perform ECO fixing.
+       An ECO design is a small subset of the original  design  that  contains
+       only  ECO-related  design  data. For example, it retains only cells and
+       nets on critical paths and omits cells and nets on  noncritical  paths.
+       Special  timing  and crosstalk models are created for disconnected nets
+       and pins in the ECO design so that timing quality of results  (QoR)  in
+       the  ECO design is very close to the timing QoR of the original design.
+       Its goal is to have timing QoR close  enough  to  produce  similar  ECO
+       change  lists for the place-and-route tool compared to the change lists
+       generated from the original design.
+
+       Note: it is not recommended to signoff with ECO designs.  Instead,  ECO
+       designs  should  be  used only for ECO purposes, especially when you do
+       not have enough hardware resources to perform timing closure ECO.
+
+   Creating an ECO Design With Violation Types
+       The write_eco_design command creates an ECO design that  preserves  the
+       violation  type  you specify with the -type option. If the -type option
+       is not specified, setup and hold will be used as a default. The follow-
+       ing  command creates an ECO design that preserves setup and hold viola-
+       tions under the default directory, eco_design_directory.
+
+         write_eco_design
+
+       The command creates a new directory, eco_design_directory,  which  con-
+       tains  ECO  design  data.  If  a  directory  with the same name already
+       exists, the command replaces the contents with new data. You  can  also
+       specify  a  new  directory  name  if you do not want to use the default
+       name. For example, this command creates an ECO  design  with  the  name
+       my_eco_design.
+
+         write_eco_design my_eco_design
+
+       After  the command creates your new ECO design, use the read_eco_design
+       command to load it and run ECO fixing.  Suppose  your  original  design
+       consumes  100  gigabytes  (GB), but the ECO design consumes only 20 GB.
+       Although you need machines bigger than 100  GB  to  run  static  timing
+       analysis  (STA),  you can perform your ECO on smaller 32-GB machines as
+       the ECO design consumes only 20 GB. For example,  after  the  preceding
+       ECO  design is created in the my_eco_design directory, you can log into
+       smaller machines with less memory, run the read_eco_design command, and
+       perform timing fixing with the fix_eco_timing command:
+
+         read_eco_design my_eco_design
+         fix_eco_timing ...
+
+       Use the -type option to specify the violation types that you are inter-
+       estein to minimize your ECO design size. For example, this command pre-
+       serves only hold violations:
+
+         write_eco_design -type hold
+
+       The resulting ECO design will preserve hold timing violations but might
+       have different other timing violations such as  setup  and  max_transi-
+       tion.  However,  hold  fixing results should be close to the results of
+       the original design because the ECO design has the same  critical  hold
+       paths preserved.
+
+       Specifying  more violation types increases the size of an ECO design as
+       it includes more paths. In the following  example,  the  first  command
+       creates a bigger ECO design than the second command because it has more
+       violation types.
+
+         write_eco_design -type {setup hold max_transition max_capacitance}
+         write_eco_design -type hold
+
+   Creating an ECO Design in Distributed Multi-Scenario Analysis (DMSA)
+       In a DMSA flow, run the write_eco_design command in the master to  cre-
+       ate  an ECO design that includes all current scenarios. Suppose you are
+       running DMSA with two scenarios, scen_1 and scen_2.  In  the  following
+       example,   a   DMSA   master   creates   an   ECO   design   under  the
+       my_dmsa_eco_design directory.
+
+         write_eco_design my_dmsa_eco_design
+
+       Under the my_dmsa_eco_design directory, the command creates the  scen_1
+       and  scen_2 subdirectories, which contain ECO design data for each sce-
+       nario. Next, load the ECO design by running the read_eco_design command
+       in the master. The following example launches two slave hosts automati-
+       cally and loads an ECO design under the my_dmsa_eco_design directory in
+       each  scenario.  For  more  DMSA  examples,  see  the  man  page of the
+       read_eco_design command.
+
+         read_eco_design my_dmsa_eco_design
+
+   Creating an ECO Design With Saved Sessions
+       If you perform ECO from PrimeTime sessions that were saved  from  indi-
+       vidual  PrimeTime  STA runs, follow the steps described in this section
+       to run the write_eco_design command efficiently.
+
+       First, set the eco_save_session_data_type variable to your desired vio-
+       lation  types  before  saving sessions with the save_session command in
+       individual PrimeTime STA runs. Setting this variable saves ECO informa-
+       tion  in addition to timing data while PrimeTime saves its session. The
+       saved ECO information will be used by the write_eco_design  command  to
+       analyze  ECO  data  from  different scenarios efficiently. This example
+       script saves setup and hold timing ECO information.
+
+         set eco_save_session_data_type {setup hold}
+         save_session scen_1_session
+
+       Second, start DMSA as you normally do with your DMSA ECO. Since you are
+       running  DMSA  from  individually saved sessions, the following typical
+       DMSA script example restores saved sessions with the -image  option  of
+       the  create_scenario  command.  Suppose  there  are two saved sessions,
+       scen_1_session and scen_2_session:
+
+         create_scenario -name scen_1 -image scen_1_session
+         create_scenario -name scen_2 -image scen_2_session
+         set_host_options -num_processes 2
+         start_host
+         current_session -all
+         report_global_timing
+
+       Third, run the write_eco_design command in the DMSA master to create an
+       ECO  design that includes both scen_1 and scen_2 scenarios. In the fol-
+       lowing example, PrimeTime writes an ECO design under the default direc-
+       tory, eco_design_directory:
+
+         write_eco_design
+
+   Creating an ECO Design With Fewer Hosts Than Scenarios
+       You can use fewer hosts than scenarios to create an ECO design. This is
+       especially useful when your machine resource is limited.  For  example,
+       suppose  there  are four scenarios that consume 100 GB to run PrimeTime
+       STA for each scenario. However, at the time of ECO,  suppose  you  have
+       only two 100-GB machines available. The following example uses only two
+       machines to create an ECO design from four scenarios:
+
+         #
+         # Define four scenarios and their session locations
+         #
+         create_scenario -name scen_1 -image scen_1_session
+         create_scenario -name scen_2 -image scen_2_session
+         create_scenario -name scen_3 -image scen_3_session
+         create_scenario -name scen_4 -image scen_4_session
+
+         #
+         # Configure hosts with two machines
+         #
+         set_host_options -num_processes 2
+         start_host
+
+         #
+         # Create an ECO design from four scenarios
+         #
+         current_session -all
+         current_scenario -all
+         write_eco_design
+
+         #
+         # Exit or additional reporting
+         # Note that reporting incurs session swapping that may cause runtime penalty.
+         #
+         # report...
+         exit
+
+       It is recommended to have the write_eco_design  command  as  the  first
+       command  right  after the current_session and current_scenario commands
+       before any reporting commands. This avoids scenario  swapping  that  is
+       caused by merging reports from all scenarios.
+
+   Creating an ECO Design With Timing Endpoints
+       Specifying  specific  endpoint  list  for the -endpoints option enables
+       PrimeTime to create an ECO design that preserves timing to  those  end-
+       points. The following example creates an ECO design that preserves tim-
+       ing to FF100/D and FF101/D pins.
+
+         write_eco_design -endpoints { FF100/D FF101/D }
+
+       The -endpoints option is a powerful tool to customize your ECO  design.
+       You  can  write a TCL script that collects endpoints you are interested
+       in and specify the endpoints for the option. For example, suppose  your
+       design  has  100 hold violations, but you are interested in fixing only
+       the 10 worst hold violations. The following example shows how  to  col-
+       lect 10 worst hold violations and create an ECO design for them.
+
+         set paths [get_timing_paths -nw 1 -max 10 -delay min]
+         set hold_10_endpoints [get_attr $paths endpoint]
+         write_eco_design -endpoints $hold_10_endpoints
+
+       The following example creates an ECO design to perform hold fixing only
+       for the CLOCK_GROUP_A clock group.
+
+         set paths [get_timing_paths -group CLOCK_GROUP_A -delay min]
+         set clk_group_a [get_attr $paths endpoint]
+         write_eco_design -endpoints $clk_group_a
+
+   Memory Reduction
+       After an ECO design is written, memory reduction  may  not  be  propor-
+       tional  to  the number of reduced cells because PrimeTime's memory con-
+       sumption also includes fixed memory overhead like loading library.  For
+       example,  a design loaded with a large number of larger libraries shows
+       lower memory reduction than a design loaded with one small library.
+
+       PrimeTime  shows  an  estimated  design  reduction  summary  after  the
+       write_eco_design  command finishes. Note that the numbers are not exact
+       but estimated values. The purpose of the estimate is to  provide  rough
+       numbers  for  design reduction. Exact cell, net, and pin counts as well
+       as peak memory will be available when the read_eco_design command  fin-
+       ishes.
+
+   Optimizing disk usage
+       If  saved  sessions  are kept only for ECO purpose, you can reduce disk
+       usage by removing the saved sessions after creating an ECO design. This
+       is especially useful when there are many scenarios that take large disk
+       space.
+
+   Creating an ECO design in non-DMSA mode
+       Specifying saved session directories for the -merge_sessions option  in
+       non-DMSA  mode  enables PrimeTime to merge the violating endpoints from
+       the saved sessions and create an ECO design based on  the  merged  end-
+       points.  This  option  is designed to support to generate an ECO design
+       without running DMSA.
+
+       Suppose there are two STA scripts as shown below.
+
+         # Script STA for FF running in Host1
+         read_verilog...
+         update_timing...
+         set eco_save_sessions_data_type timing
+         save_session $my_sessions/STA_SESSION_FF
+
+         # Script STA for SS running in Host2
+         read_verilog...
+         update_timing...
+         set eco_save_sessions_data_type timing
+         save_session $my_sessions/STA_SESSION_SS
+
+       Note that the  eco_save_sessions_data_type  variable  is  specified  to
+       store  violating  endpoint  data in the saved sessions. After the saved
+       sessions are created and available, the following scripts can  be  used
+       to generate an ECO design under $rreco_db directory.
+
+         # Script to write ECO design for FF running in Host1
+         restore_session $my_sessions/STA_SESSIONS_FF
+         set sess_list "$my_sessions/STA_SESSION_FF $my_sessions/STA_SESSION_SS"
+         write_eco_design $rreco_db/FF -merge_sessions $sess_list
+
+         # Script to write ECO design for SS running in Host2
+         restore_session $my_sessions/STA_SESSIONS_SS
+         set sess_list "$my_sessions/STA_SESSION_FF $my_sessions/STA_SESSION_SS"
+         write_eco_design $rreco_db/SS -merge_sessions $sess_list
+
+       Note  that  the write_eco_design command specifies a subdirectory under
+       $rreco_db so that each subdirectory is assigned to  each  scenario.  In
+       this  directory  structure,  the  following read_eco_design command can
+       read in the ECO design in DMSA mode.
+
+         # Script to read RRECO design in DMSA mode
+         read_eco_design $rreco_db
+
+EXAMPLES
+       This section describes a few examples to convert existing  ECO  scripts
+       to  new scripts utilizing the write_eco_design and read_eco_design com-
+       mands.
+
+   Single-Scenario Example Scripts
+       The following example is a typical script  for  STA  and  ECO  combined
+       together.
+
+         ##################################################
+         # FILE: run_sta_eco.tcl
+         #   Typical script for STA and ECO in PrimeTime.
+         #   Runs in 100 GB machine.
+         ##################################################
+         #
+         # STA
+         #
+         read_verilog...
+         read_parasitics...
+         read_sdf...
+         update_timing...
+         report_timing...
+         #
+         # ECO
+         #
+         set_eco_options...
+         fix_eco_timing...
+         write_changes...
+         exit
+
+       The  preceding  script is separated into the two following scripts. The
+       first script creates an ECO design after STA,  and  the  second  script
+       loads  the  ECO  design  and  performs  ECO.  The second script runs on
+       smaller machines assuming peak memory is reduced from 100 GB to 20  GB.
+
+         ##################################################
+         # FILE: run_sta_and_write_eco_design.tcl
+         #   To run STA and write_eco_design.
+         #   Runs in 100 GB machine.
+         ##################################################
+         #
+         # STA
+         #
+         read_verilog...
+         read_parasitics...
+         read_sdf...
+         update_timing...
+         report_timing...
+         #
+         # Creates an ECO design
+         #
+         write_eco_design
+         exit
+
+         ##################################################
+         # FILE: run_read_eco_design_and_eco.tcl
+         #   To run ECO.
+         #   Runs in 20 GB machine.
+         ##################################################
+         #
+         # Read the ECO design
+         #
+         read_eco_design
+         #
+         # ECO
+         #
+         set_eco_options...
+         fix_eco_timing...
+         write_changes...
+         exit
+
+   Muti-Scenario Example Scripts
+       The  following  example  is a typical script for DMSA ECO that restores
+       saved sessions and performs ECO.
+
+         ####################################################################
+         # FILE: run_dmsa_eco.tcl
+         #   Typical script for DMSA ECO running from saved sessions.
+         #   Runs in four 100 GB machine assuming each scenario takes 100 GB.
+         ####################################################################
+         #
+         # Define four scenarios and their session locations
+         #
+         create_scenario -name scen_1 -image scen_1_session
+         create_scenario -name scen_2 -image scen_2_session
+         create_scenario -name scen_3 -image scen_3_session
+         create_scenario -name scen_4 -image scen_4_session
+         #
+         # Configure hosts with two machines
+         #
+         set_host_options -num_processes 4
+         start_host
+         #
+         # Create an ECO design from four scenarios
+         #
+         current_session -all
+         current_scenario -all
+         #
+         # ECO
+         #
+         fix_eco_timing...
+         remote_exec { write_changes... }
+         exit
+
+       The preceding script is separated into the two following  scripts.  The
+       first  script  creates  an ECO design with only one 100-GB machine, and
+       the second script loads the ECO design and performs ECO. Assuming  each
+       scenario is reduced from 100 GB to 20 GB, all four scenarios can run in
+       a single 100-GB machine.
+
+       The first script to create an ECO design in one host is shown below.
+
+         ####################################################################
+         # FILE: run_write_eco_design_in_one_host.tcl
+         #   Creates an ECO design in DMSA four scenarios with one host.
+         #   Runs in one 100 GB machine assuming each scenario takes 100 GB.
+         ####################################################################
+         #
+         # Define four scenarios and their session locations
+         #
+         create_scenario -name scen_1 -image scen_1_session
+         create_scenario -name scen_2 -image scen_2_session
+         create_scenario -name scen_3 -image scen_3_session
+         create_scenario -name scen_4 -image scen_4_session
+         #
+         # Configure one host
+         #
+         set_host_options -num_processes 1
+         start_host
+         #
+         # Create an ECO design from four scenarios
+         #
+         current_session -all
+         write_eco_design my_dmsa_eco_design
+         exit
+
+       The second script to run four scenarios in one 100 GB machine is  shown
+       below.
+
+         ####################################################################
+         # FILE: run_read_eco_design_and_eco_in_one_host.tcl
+         #   Load the ECO design with DMSA four scenarios and performs ECO.
+         #   Runs in one 100 GB machine running four scenarios simulataneously.
+         #   Assumes each scenario takes 20 GB.
+         ####################################################################
+         #
+         # Load the ECO design
+         #
+         read_eco_design my_dmsa_eco_design
+         #
+         # ECO
+         #
+         fix_eco_timing...
+         remote_exec { write_changes... }
+         exit
+
+SEE ALSO
+       read_eco_design(2)
+       eco_save_session_data_type(3)
+
+                          Version O-2018.06-SP1
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+pt_shell> wri
+write_app_var    write_eco_design 
+pt_shell> write_chanf[Kges
+Error: unknown command 'write_changes' (CMD-005)
+pt_shell> write_changes[K
+Error: unknown command 'write_change' (CMD-005)
+pt_shell> write_changeremote_exec { write_changes.[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kremote_exec { write_changes.
+? [K[11G? }3[K
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Error: unknown command 'write_changes.' (CMD-005)
+ ( scenario slow_Cmin ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario slow_Cmin ) 
+Error: unknown command 'write_changes.' (CMD-005)
+ ( scenario fast_Cmax ) 
+Error: unknown command 'write_changes.' (CMD-005)
+ ( scenario fast_Cmin ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario fast_Cmin ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario fast_Cmax ) 
+Error: unknown command 'write_changes.' (CMD-005)
+ ( scenario slow_Cmax ) 
+Failed     : Command execution in scenario 'slow_Cmin'
+Failed     : Command execution in scenario 'slow_Cmin'
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario slow_Cmax ) 
+Failed     : Command execution in scenario 'fast_Cmax'
+Failed     : Command execution in scenario 'fast_Cmin'
+Failed     : Command execution in scenario 'fast_Cmax'
+Failed     : Command execution in scenario 'fast_Cmin'
+Failed     : Command execution in scenario 'slow_Cmax'
+Failed     : Command execution in scenario 'slow_Cmax'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+0
+pt_shell> remote_exec { write_changes.[188G          }}[K[A[39G}[188G }[K[A[39G}[K }-}}[K-}o} }e}c}o}.}t}c}l}}
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+pt_shell> rem
+remote_execute               remove_cell                  remove_from_collection       remove_license               remove_multi_scenario_design remove_scenario              
+remove_buffer                remove_current_session       remove_host_options          remove_license_limit         remove_net                   
+pt_shell> remo_ec[Kxe[K[K[K[K[K[K[K[Kremote_execute {}s}t}a}r}t}_}g}u}i}
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'slow_Cmax'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Started    : Command execution in scenario 'slow_Cmin'
+Error: unknown command 'start_gui' (CMD-005)
+ ( scenario slow_Cmin ) 
+Error: unknown command 'start_gui' (CMD-005)
+ ( scenario fast_Cmax ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario slow_Cmin ) 
+Error: unknown command 'start_gui' (CMD-005)
+ ( scenario slow_Cmax ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario fast_Cmax ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario slow_Cmax ) 
+Error: unknown command 'start_gui' (CMD-005)
+ ( scenario fast_Cmin ) 
+Error: 
+	Use error_info for more info. (CMD-013)
+ ( scenario fast_Cmin ) 
+Failed     : Command execution in scenario 'slow_Cmin'
+Failed     : Command execution in scenario 'slow_Cmin'
+Failed     : Command execution in scenario 'fast_Cmax'
+Failed     : Command execution in scenario 'fast_Cmax'
+Failed     : Command execution in scenario 'slow_Cmax'
+Failed     : Command execution in scenario 'fast_Cmin'
+Failed     : Command execution in scenario 'slow_Cmax'
+Failed     : Command execution in scenario 'fast_Cmin'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+0
+pt_shell> wr
+write_app_var    write_eco_design 
+pt_shell> write_eco_design -
+dir_name       endpoints      force          merge_sessions type           verbose        
+pt_shell> write_eco_design -o eco.tcl
+Error: unknown option '-o' (CMD-010)
+pt_shell> write_eco_design -o eco.tcl[Pe[Pe[Pe
+Information: Starting at [Tue Jun 24 14:00:14 2025]
+Information: Identifying ECO information for 'setup hold' violations...
+Error: Cannot find ECO information in the saved sessions. Use '-force' option to continue. (PTECO-070)
+Error: No endpoints found.
+Warning: No ECO design has been written. (PTECO-071)
+Information: Elapsed time [                0 seconds ]
+Information: Completed at [ Tue Jun 24 14:00:15 2025 ]
+0
+1
+pt_shell> write_eco_design eco.tcl[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+write_app_var    write_eco_design 
+pt_shell> write_eco_design -
+dir_name       endpoints      force          merge_sessions type           verbose        
+pt_shell> write_eco_design -merge_sessions 
+Error: value not specified for option '-merge_sessions' (CMD-008)
+pt_shell> write_eco_design -merge_sessions[K[K[K[K[K[K[K[K[K[K[K[K[K[Kverbose 
+Information: Starting at [Tue Jun 24 14:00:57 2025]
+Information: Identifying ECO information for 'setup hold' violations...
+Error: Cannot find ECO information in the saved sessions. Use '-force' option to continue. (PTECO-070)
+Error: No endpoints found.
+Warning: No ECO design has been written. (PTECO-071)
+Information: Elapsed time [                0 seconds ]
+Information: Completed at [ Tue Jun 24 14:00:58 2025 ]
+0
+1
+pt_shell> repor
+report_analysis_coverage     report_clock_timing          report_global_timing         report_min_pulse_width       report_qor                   
+report_app_var               report_clocks                report_host_usage            report_multi_scenario_design report_si_bottleneck         
+report_attribute             report_constraint            report_hosts                 report_noise                 report_timing                
+report_clock_gate_savings    report_constraints           report_license_limit         report_power                 
+pt_shell> report_global_timing > globar_timing.re[Kpt
+pt_shell> report_constr
+report_constraint  report_constraints 
+pt_shell> report_constraint -all_violators > constraint_violations.rt[Kpt
+pt_shell> writ
+write_app_var    write_eco_design 
+pt_shell> write_[K[K[K[K[K[Kopen 
+./                              all_corners/                    eco.tcl/                        log.log                         slow_cmin/                      
+../                             command_log/                    eco_design_directory/           parasitics_command.log          system_log/                     
+.pt_custom.env                  common_data/                    fast_cmax/                      pt.tcl                          
+DSMA.tcl                        constraint_violations.rpt       fast_cmin/                      pt_shell_command.log            
+Synopsys_stack_trace_120267.txt crte_000120267.txt              globar_timing.rpt               slow_cmax/                      
+pt_shell> open s
+slow_cmax/  slow_cmin/  system_log/ 
+pt_shell> open s[Kslow
+slow_cmax/ slow_cmin/ 
+pt_shell> open slow_cmm[Kin/
+file47
+pt_shell> write_
+write_app_var    write_eco_design 
+pt_shell> write_[K[K[K[K[K[K write_changes -o eco.tcl
+Error: unknown command 'write_changes' (CMD-005)
+pt_shell> close _[K_[K[K[Kse [K[K[K[K[Kopen_session -[Kslow_cmin
+Error: unknown command 'open_session' (CMD-005)
+pt_shell> quit
+
+Timing updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+
+Maximum memory usage for distributed processes:
+AUTO_0          1   localhost          1352.05 MB
+AUTO_1          2   localhost          874.02 MB
+                3   localhost          1464.75 MB
+                4   localhost          1447.46 MB
+                5   localhost          1447.41 MB
+CPU time usage for distributed processes:
+AUTO_0          1   localhost          81 seconds
+AUTO_1          2   localhost          1 seconds
+                3   localhost          77 seconds
+                4   localhost          78 seconds
+                5   localhost          86 seconds
+Elapsed time for distributed processes:
+AUTO_0          1   localhost          3004 seconds
+AUTO_1          2   localhost          2529 seconds
+                3   localhost          2529 seconds
+                4   localhost          2529 seconds
+                5   localhost          2529 seconds
+Maximum memory usage for this session: 1012.63 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 3010 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+Diagnostics summary: 13 errors, 3 warnings, 21 informationals
+
+Thank you for using pt_shell!

@@ -2,7 +2,7 @@
 Report : design
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Fri May 30 18:15:09 2025
+Date   : Sun Jun 29 18:46:56 2025
 ****************************************
 
 Total number of std cells in library : 881
@@ -16,34 +16,34 @@ Total number of ICGs                 : 30
 
 Cell Instance Type  Count         Area
 --------------------------------------
-TOTAL LEAF CELLS    64727    32820.835
-Standard cells      61892    31310.347
+TOTAL LEAF CELLS    27038    17155.849
+Standard cells      24644    15880.326
 Hard macro cells        0        0.000
 Soft macro cells        0        0.000
 Always on cells         0        0.000
-Physical only        2835     1510.488
-Fixed cells          2885     1528.248
-Moveable cells      61842    31292.587
-Sequential           2404     3225.971
-Buffer/inverter     41735    16362.776
+Physical only        2394     1275.523
+Fixed cells          2437     1289.953
+Moveable cells      24601    15865.896
+Sequential           2259     3010.453
+Buffer/inverter      4424     1096.680
 ICG cells               1        0.888
 
-Logic Hierarchies                    : 74
-Design Masters count                 : 99
-Total Flat nets count                : 64399
-Total FloatingNets count             : 20
-Total no of Ports                    : 396
+Logic Hierarchies                    : 72
+Design Masters count                 : 65
+Total Flat nets count                : 26980
+Total FloatingNets count             : 27
+Total no of Ports                    : 391
 Number of Master Clocks in design    : 2
 Number of Generated Clocks in design : 0
 Number of Path Groups in design      : 14 (2 of them Non Default)
-Number of Scan Chains in design      : 6
-List of Modes                        : func, Scan
-List of Corners                      : slow, fast
-List of Scenarios                    : func_fast, func_slow
+Number of Scan Chains in design      : 5
+List of Modes                        : func, scan
+List of Corners                      : fast_Cmax, fast_Cmin, slow_Cmax, slow_Cmin
+List of Scenarios                    : func_fast_Cmax, func_fast_Cmin, func_slow_Cmax, func_slow_Cmin, scan_fast_Cmax, scan_fast_Cmin, scan_slow_Cmax, scan_slow_Cmin
 
-Core Area                            : 50901.226
-Chip Area                            : 55513.486
-Total Site Row Area                  : 50901.226
+Core Area                            : 41619.672
+Chip Area                            : 45799.852
+Total Site Row Area                  : 41619.672
 Number of Blockages                  : 0
 Total area of Blockages              : 0.000
 Number of Power Domains              : 1
@@ -56,7 +56,7 @@ Number of Multibit LS/ISO Cells      : 0
 Number of Top Level RP Groups        : 0
 Number of Tech Layers                : 63 (53 of them have unknown routing dir.)
 
-Total wire length                    : 12874.30 micron
-Total number of wires                : 10975
-Total number of contacts             : 24468
+Total wire length                    : 11392.71 micron
+Total number of wires                : 9070
+Total number of contacts             : 22042
 1

@@ -1,0 +1,61 @@
+
+Loading user preference file /home/ICer/.synopsys_icc2_gui/preferences.tcl
+Warning: Technology used to create frame-view and current technology have inconsistency: Min spacings are different for layer 'M1'. (FRAM-054)
+Warning: Technology 'saed14rvt_1p9m.tf' used for frame-view creation in library 'saed14rvt', is inconsistent with the current technology 'saed14nm_1p9m_mw.tf' of library "cv32e40p_top'. (NDM-102)
+icc2_shell> open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_finish.design
+Information: User units loaded from library 'saed14rvt' (LNK-040)
+Opening block 'cv32e40p_top:cv32e40p_finish.design' in edit mode
+Information: loading PG routing via master rules, patterns, strategies and strategy via rules.
+Begin building search trees for block cv32e40p_top:cv32e40p_finish.design
+Done building search trees for block cv32e40p_top:cv32e40p_finish.design (time 0s)
+icc2_shell> link_block
+Using libraries: cv32e40p_top saed14rvt
+Warning: In library cv32e40p_top, no block views exist for block cv32e40p_top. (LNK-064)
+Visiting block cv32e40p_top:cv32e40p_finish.design
+Design 'cv32e40p_top' was successfully linked.
+1
+icc2_shell> report_power > ./reports/power.rpt
+icc2_shell> set_scenario_status -leakage_power true -dynamic_power true [get_scenarios ]
+Scenario func_fast_Cmax (mode func corner fast_Cmax) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario func_fast_Cmin (mode func corner fast_Cmin) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario func_slow_Cmax (mode func corner slow_Cmax) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario func_slow_Cmin (mode func corner slow_Cmin) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario scan_fast_Cmax (mode scan corner fast_Cmax) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario scan_fast_Cmin (mode scan corner fast_Cmin) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario scan_slow_Cmax (mode scan corner slow_Cmax) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+Scenario scan_slow_Cmin (mode scan corner slow_Cmin) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+1
+icc2_shell> report_scenarios
+****************************************
+Report : scenario
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Mon Jun 30 00:04:37 2025
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+-------------------------------------------------------------------------------------------------------------------------------
+func_fast_Cmax *
+                func            fast_Cmax       true    true   true  true     true     true      true     true     false false
+func_fast_Cmin *
+                func            fast_Cmin       true    true   true  true     true     true      true     true     false false
+func_slow_Cmax *
+                func            slow_Cmax       true    true   true  true     true     true      true     true     false false
+func_slow_Cmin *
+                func            slow_Cmin       true    true   true  true     true     true      true     true     false false
+scan_fast_Cmax *
+                scan            fast_Cmax       true    true   true  true     true     true      true     true     false false
+scan_fast_Cmin *
+                scan            fast_Cmin       true    true   true  true     true     true      true     true     false false
+scan_slow_Cmax *
+                scan            slow_Cmax       true    true   true  true     true     true      true     true     false false
+scan_slow_Cmin *
+                scan            slow_Cmin       true    true   true  true     true     true      true     true     false false
+
+1
+icc2_shell> report_power > ./reports/power.rpt
+icc2_shell> save_block
+Information: Saving block 'cv32e40p_top:cv32e40p_finish.design'
+1
+icc2_shell> 

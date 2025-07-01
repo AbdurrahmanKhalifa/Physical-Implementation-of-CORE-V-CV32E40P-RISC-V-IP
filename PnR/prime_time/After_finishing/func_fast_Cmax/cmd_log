@@ -1,0 +1,32 @@
+source /home/synopsys/pts/O-2018.06-SP1/admin/setup/.synopsys_pt.setup
+set DB_PATH 	"/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs"
+set scenario func_fast_Cmax
+switch $scenario {
+        func_fast_Cmax {
+            set LIB "saed14rvt_ff0p88v25c.db"
+            set parasitics {/mnt/hgfs/GP/PnR/finishing/output/cv32e40p.spef.tlup_max_25.spef}
+        }
+        func_fast_Cmin {
+            set LIB "saed14rvt_ff0p88v25c.db"
+            set parasitics {/mnt/hgfs/GP/PnR/finishing/output/cv32e40p.spef.tlup_min_25.spef}
+        }
+        func_slow_Cmax {
+            set LIB "saed14rvt_ss0p6v125c.db" 
+            set parasitics {/mnt/hgfs/GP/PnR/finishing/output/cv32e40p.spef.tlup_max_125.spef}
+        }
+        func_slow_Cmin {
+            set LIB "saed14rvt_ss0p6v125c.db" 
+            set parasitics {/mnt/hgfs/GP/PnR/finishing/output/cv32e40p.spef.tlup_min_125.spef}
+        }
+    }
+set SDC /mnt/hgfs/GP/PnR/finishing/output/${scenario}.sdc
+set_app_var search_path  "$DB_PATH"
+## Standard Cell & Hard Macros libraries 
+set link_library [list * $LIB]
+################# Load Design #################
+read_verilog /mnt/hgfs/GP/PnR/finishing/output/cv32e40p.v
+current_design cv32e40p_top
+################# Define Constraints File #################
+read_sdc -e $SDC
+read_parasitics $parasitics
+# use -check_type {hold, setup}

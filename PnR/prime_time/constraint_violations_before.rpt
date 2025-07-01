@@ -1,0 +1,224 @@
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'slow_Cmax'
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'slow_Cmin'
+Started    : Command execution in scenario 'fast_Cmax'
+Started    : Command execution in scenario 'fast_Cmin'
+Restoring  : User image for scenario 'slow_Cmax'
+Restoring  : User image for scenario 'fast_Cmin'
+Restoring  : User image for scenario 'fast_Cmax'
+Restoring  : User image for scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'slow_Cmin'
+Succeeded  : Command execution in scenario 'fast_Cmax'
+Succeeded  : Command execution in scenario 'slow_Cmax'
+Succeeded  : Command execution in scenario 'fast_Cmin'
+-----------------------------------
+End of Master/Slave Task Processing
+
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : multi_scenario design
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 22:48:07 2025
+****************************************
+
+Scenarios: slow_Cmax slow_Cmin fast_Cmax fast_Cmin 
+
+
+
+
+
+
+
+
+   max_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   core_i/ex_stage_i/U28/X  fast_Cmax         41.67          59.34    -17.67  (VIOLATED)
+   core_i/ex_stage_i/U245/X fast_Cmax         45.26          61.82    -16.56  (VIOLATED)
+   core_i/ex_stage_i/U278/X fast_Cmax         45.26          61.24    -15.98  (VIOLATED)
+   core_i/load_store_unit_i/U250/X
+                            fast_Cmax         45.17          60.21    -15.04  (VIOLATED)
+   core_i/id_stage_i/U815/X fast_Cmax         44.81          59.05    -14.24  (VIOLATED)
+   core_i/ex_stage_i/U277/X fast_Cmax         45.26          59.11    -13.85  (VIOLATED)
+   core_i/load_store_unit_i/U343/X
+                            fast_Cmax         44.22          58.01    -13.79  (VIOLATED)
+   core_i/load_store_unit_i/U336/X
+                            fast_Cmax         44.22          57.67    -13.45  (VIOLATED)
+   core_i/ex_stage_i/U279/X fast_Cmax         45.26          58.62    -13.36  (VIOLATED)
+   core_i/load_store_unit_i/U329/X
+                            fast_Cmax         44.22          57.45    -13.23  (VIOLATED)
+   core_i/ex_stage_i/U20/X  fast_Cmax         41.67          54.24    -12.57  (VIOLATED)
+   core_i/ex_stage_i/U275/X fast_Cmax         45.26          57.52    -12.26  (VIOLATED)
+   core_i/id_stage_i/U861/X fast_Cmax         44.81          56.87    -12.06  (VIOLATED)
+   core_i/ex_stage_i/U273/X fast_Cmax         45.26          56.93    -11.67  (VIOLATED)
+   core_i/load_store_unit_i/U251/X
+                            fast_Cmax         45.17          56.82    -11.65  (VIOLATED)
+   core_i/ex_stage_i/U26/X  fast_Cmax         41.67          53.19    -11.52  (VIOLATED)
+   core_i/ex_stage_i/U274/X fast_Cmax         45.26          56.31    -11.05  (VIOLATED)
+   core_i/load_store_unit_i/U531/X
+                            fast_Cmax         44.22          55.17    -10.95  (VIOLATED)
+   core_i/ex_stage_i/U22/X  fast_Cmax         41.67          52.49    -10.82  (VIOLATED)
+   core_i/ex_stage_i/U242/X fast_Cmax         45.26          53.84     -8.58  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/prefetch_controller_i/U98/X
+                            fast_Cmax         34.86          43.41     -8.55  (VIOLATED)
+   core_i/ex_stage_i/U24/X  fast_Cmax         41.67          50.04     -8.37  (VIOLATED)
+   core_i/id_stage_i/U851/X fast_Cmax         38.13          46.30     -8.17  (VIOLATED)
+   core_i/ex_stage_i/U240/X fast_Cmax         45.26          53.18     -7.92  (VIOLATED)
+   core_i/ex_stage_i/alu_i/U6/X
+                            fast_Cmax         41.67          49.30     -7.63  (VIOLATED)
+   core_i/load_store_unit_i/U375/X
+                            fast_Cmax         44.22          51.30     -7.08  (VIOLATED)
+   core_i/ex_stage_i/U253/X fast_Cmax         45.26          52.16     -6.90  (VIOLATED)
+   core_i/load_store_unit_i/U367/X
+                            fast_Cmax         44.22          51.08     -6.86  (VIOLATED)
+   core_i/cs_registers_i/U1861/X
+                            fast_Cmax         46.47          52.69     -6.22  (VIOLATED)
+   core_i/cs_registers_i/U1568/X
+                            fast_Cmax         46.47          52.36     -5.89  (VIOLATED)
+   core_i/cs_registers_i/U1632/X
+                            fast_Cmax         46.47          52.28     -5.81  (VIOLATED)
+   core_i/load_store_unit_i/U351/X
+                            fast_Cmax         44.22          49.68     -5.46  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/PLACE_HFSINV_2439_382/X
+                            fast_Cmax         41.67          47.05     -5.38  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1952/X
+                            fast_Cmax         53.55          58.65     -5.10  (VIOLATED)
+   core_i/load_store_unit_i/U359/X
+                            fast_Cmax         44.22          49.30     -5.08  (VIOLATED)
+   core_i/ex_stage_i/alu_i/U2701/X
+                            fast_Cmax         34.25          39.30     -5.05  (VIOLATED)
+   core_i/id_stage_i/U1469/X
+                            fast_Cmax         34.86          39.77     -4.91  (VIOLATED)
+   core_i/load_store_unit_i/U249/X
+                            fast_Cmax         45.17          49.92     -4.75  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/U35/X
+                            fast_Cmax         44.81          49.48     -4.67  (VIOLATED)
+   core_i/id_stage_i/PLACE_HFSINV_1161_300/X
+                            fast_Cmax         41.67          46.29     -4.62  (VIOLATED)
+   core_i/ex_stage_i/U244/X fast_Cmax         45.26          49.70     -4.44  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/fifo_i/PLACE_HFSINV_2950_383/X
+                            fast_Cmax         41.67          46.07     -4.40  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_264_311/X
+                            fast_Cmax         68.20          71.77     -3.57  (VIOLATED)
+   core_i/id_stage_i/U1470/X
+                            fast_Cmax         34.86          38.24     -3.38  (VIOLATED)
+   core_i/id_stage_i/U771/X fast_Cmax         44.81          48.06     -3.25  (VIOLATED)
+   core_i/ex_stage_i/alu_i/alu_div_i/U58/X
+                            fast_Cmax         46.47          49.62     -3.15  (VIOLATED)
+   core_i/load_store_unit_i/U133/X
+                            fast_Cmax         45.17          48.30     -3.13  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U3075/X
+                            fast_Cmax         53.55          56.61     -3.06  (VIOLATED)
+   core_i/id_stage_i/PLACE_HFSINV_810_460/X
+                            fast_Cmax         41.67          44.56     -2.89  (VIOLATED)
+   core_i/load_store_unit_i/U383/X
+                            fast_Cmax         54.42          57.22     -2.80  (VIOLATED)
+   core_i/PLACE_ZBUF_inst_9973/X
+                            fast_Cmax         45.31          47.94     -2.63  (VIOLATED)
+   core_i/cs_registers_i/U1522/X
+                            fast_Cmax         34.86          37.36     -2.50  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[11]/Q
+                            fast_Cmax         45.50          47.79     -2.29  (VIOLATED)
+   core_i/if_stage_i/PLACE_HFSINV_2266_227/X
+                            fast_Cmax         41.67          43.85     -2.18  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[15]/Q
+                            fast_Cmax         45.50          47.28     -1.78  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1273/X
+                            fast_Cmax         70.11          71.87     -1.76  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[6]/Q
+                            fast_Cmax         45.50          47.25     -1.75  (VIOLATED)
+   core_i/PLACE_ZBUF_inst_9971/X
+                            fast_Cmax         45.31          46.99     -1.68  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_421_457/X
+                            fast_Cmax         41.67          43.32     -1.65  (VIOLATED)
+   core_i/id_stage_i/U357/X fast_Cmax         34.86          36.38     -1.52  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1231/X
+                            fast_Cmax         67.82          69.33     -1.51  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1280/X
+                            fast_Cmax         70.11          71.48     -1.37  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[12]/Q
+                            fast_Cmax         45.50          46.87     -1.37  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1237/X
+                            fast_Cmax         67.82          69.15     -1.33  (VIOLATED)
+   core_i/id_stage_i/PLACE_HFSINV_1127_305/X
+                            fast_Cmax         41.67          42.97     -1.30  (VIOLATED)
+   core_i/id_stage_i/U890/X fast_Cmax         34.86          36.16     -1.30  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1267/X
+                            fast_Cmax         70.11          71.39     -1.28  (VIOLATED)
+   core_i/PLACE_HFSBUF_1470_203/X
+                            fast_Cmax         45.26          46.44     -1.18  (VIOLATED)
+   core_i/cs_registers_i/U429/X
+                            fast_Cmax         34.86          36.03     -1.17  (VIOLATED)
+   core_i/cs_registers_i/U350/X
+                            fast_Cmax         34.86          35.97     -1.11  (VIOLATED)
+   core_i/cs_registers_i/U1113/X
+                            fast_Cmax         34.86          35.89     -1.03  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1974/X
+                            fast_Cmax         34.86          35.85     -0.99  (VIOLATED)
+   core_i/PLACE_HFSBUF_19957_73/X
+                            fast_Cmax         90.65          91.60     -0.95  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_14171_157/X
+                            fast_Cmax         45.26          46.18     -0.92  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_493_426/X
+                            fast_Cmax         68.20          69.06     -0.86  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[9]/Q
+                            fast_Cmax         45.50          46.28     -0.78  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1255/X
+                            fast_Cmax         70.11          70.88     -0.77  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_476_306/X
+                            fast_Cmax         68.20          68.94     -0.74  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[2]/Q
+                            fast_Cmax         45.50          46.11     -0.61  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSINV_266_452/X
+                            fast_Cmax         41.67          42.24     -0.57  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U1271/X
+                            fast_Cmax         70.11          70.40     -0.29  (VIOLATED)
+   core_i/if_stage_i/prefetch_buffer_i/instruction_obi_i/PLACE_HFSINV_1937_236/X
+                            fast_Cmax         41.67          41.89     -0.22  (VIOLATED)
+   core_i/id_stage_i/alu_operand_a_ex_o_reg[8]/Q
+                            fast_Cmax         45.50          45.72     -0.22  (VIOLATED)
+   core_i/id_stage_i/U359/X fast_Cmax         34.86          35.04     -0.18  (VIOLATED)
+   core_i/cs_registers_i/U2566/X
+                            fast_Cmax         41.67          41.81     -0.14  (VIOLATED)
+   hart_id_i[14]            fast_Cmax         23.35          23.44     -0.09  (VIOLATED)
+   core_i/id_stage_i/register_file_i/U3073/X
+                            fast_Cmax         53.55          53.63     -0.08  (VIOLATED)
+   core_i/id_stage_i/U1296/X
+                            fast_Cmax         53.55          53.62     -0.07  (VIOLATED)
+   core_i/id_stage_i/U362/X fast_Cmax         34.86          34.90     -0.04  (VIOLATED)
+   core_i/id_stage_i/register_file_i/PLACE_HFSBUF_252_421/X
+                            fast_Cmax         68.20          68.22     -0.02  (VIOLATED)
+
+
+   min_capacitance
+
+                                           Required       Actual
+   Pin                      Scenario       Capacitance    Capacitance    Slack
+   ---------------------------------------------------------------------------
+   boot_addr_i[0]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   boot_addr_i[1]           fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[0]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_exception_addr_i[1]   fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[0]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   dm_halt_addr_i[1]        fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[0]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[1]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[2]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[3]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[4]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[5]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[6]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   mtvec_addr_i[7]          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+   pulp_clock_en_i          fast_Cmax          0.15           0.00     -0.15  (VIOLATED)
+
+
+1

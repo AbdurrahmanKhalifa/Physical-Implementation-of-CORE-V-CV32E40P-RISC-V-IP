@@ -1,12 +1,11 @@
 <Database>
 Name/mnt/hgfs/GP/PnR/placment/check_design.ems
-Creation TimeThu May 29 05:22:19 2025
-Modified TimeThu May 29 05:22:19 2025
+Creation TimeSun Jun 29 18:01:44 2025
+Modified TimeSun Jun 29 18:01:44 2025
 Design Namecv32e40p_placement
 Library Namecv32e40p_top
 </Database>
 <RuleCount>
-DCHK-1011
 DCHK-1047
 DCHK-10537
 </RuleCount>
@@ -45,7 +44,6 @@ DCHK-105layerM7PIN10
 DCHK-105layerM8PIN10
 DCHK-105layerM9PIN10
 DCHK-105layerMRDL10
-DCHK-101layerM910
 DCHK-105layerMRPIN10
 DCHK-105layerprBoundary10
 DCHK-105layerLOGO10

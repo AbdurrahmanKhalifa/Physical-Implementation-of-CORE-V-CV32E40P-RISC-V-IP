@@ -1,0 +1,247 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC_EDA (RHEL64)
+Current time: Sun Jun 29 23:44:07 2025
+
+Loading db file '/home/synopsys/Formality2016/libraries/syn/gtech.db'
+############################  Search PATH ################################
+set top_module cv32e40p_top
+cv32e40p_top
+set syn       "/mnt/hgfs/GP/Synthesis"
+/mnt/hgfs/GP/Synthesis
+set LIB_PATH  "/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs"
+/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs
+lappend search_path $LIB_PATH
+/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs
+####################### Read Reference tech libs ########################
+set TTLIB "saed14rvt_tt0p6v25c.db"
+saed14rvt_tt0p6v25c.db
+######################### Formality Setup File ###########################
+# Synopsys setup variable
+set synopsys_auto_setup true
+true
+# Formality Setup File
+# set_svf $top_module.svf
+###################################################################
+###################### Reference Container ########################
+###################################################################
+read_verilog  -container Ref $syn/netlists/cv32e40p_top.v
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/GP/Synthesis/netlists/cv32e40p_top.v'
+Created container 'Ref'
+Current container set to 'Ref'
+1
+# Read Reference technology libraries
+read_db -container Ref [list $TTLIB]
+Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_tt0p6v25c.db'
+1
+# set the top Reference Design
+set_reference_design cv32e40p_top
+Reference design set to 'Ref:/WORK/cv32e40p_top'
+1
+set_top cv32e40p_top
+Setting top design to 'Ref:/WORK/cv32e40p_top'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  62 unlinked power cell(s) with unread pg pins.
+Warning:  845 unlinked power cell(s) with no power down functions on outputs.
+Warning:  2 unlinked power cell(s) with unread backup pg pins.
+Warning:  238 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/cv32e40p_top'
+Reference design set to 'Ref:/WORK/cv32e40p_top'
+1
+###################################################################
+#################### Implementation Container #####################
+###################################################################
+# Read Implementation Design Files
+read_verilog -container Imp -netlist "$syn/../PnR/finishing/output/cv32e40p.v"
+No target library specified, default is WORK
+Loading verilog file '/mnt/hgfs/GP/PnR/finishing/output/cv32e40p.v'
+Created container 'Imp'
+Current container set to 'Imp'
+1
+# Read Implementation technology libraries
+read_db -container Imp [list $TTLIB]
+Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_tt0p6v25c.db'
+1
+# set the top Implementation Design
+set_implementation_design cv32e40p_top
+Implementation design set to 'Imp:/WORK/cv32e40p_top'
+1
+set_top cv32e40p_top
+Setting top design to 'Imp:/WORK/cv32e40p_top'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  62 unlinked power cell(s) with unread pg pins.
+Warning:  845 unlinked power cell(s) with no power down functions on outputs.
+Warning:  2 unlinked power cell(s) with unread backup pg pins.
+Warning:  238 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/cv32e40p_top'
+Implementation design set to 'Imp:/WORK/cv32e40p_top'
+1
+########################## Don't verify ###########################
+# do not verify scan in & scan out ports as a compare point as it is existed only after synthesis and not existed in the RTL
+#scan in
+# set_dont_verify_points -type port Imp:/WORK/*/SI*
+#scan_out
+# set_dont_verify_points -type port Imp:/WORK/*/SO*
+############################### contants ##########################
+# all atpg enable (test_mode, scan_enable) are zero during formal compare
+#scan_enable
+set_constant Ref:/WORK/*/scan_cg_en_i 0
+Set 'Ref:/WORK/cv32e40p_clock_gate/scan_cg_en_i' to constant 0
+Set 'Ref:/WORK/cv32e40p_core_COREV_PULP0_COREV_CLUSTER0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_NUM_MHPMCOUNTERS1/scan_cg_en_i' to constant 0
+Set 'Ref:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1/scan_cg_en_i' to constant 0
+Set 'Ref:/WORK/cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0/scan_cg_en_i' to constant 0
+Set 'Ref:/WORK/cv32e40p_sleep_unit_COREV_CLUSTER0/scan_cg_en_i' to constant 0
+Set 'Ref:/WORK/cv32e40p_top/scan_cg_en_i' to constant 0
+1
+set_constant Imp:/WORK/*/scan_cg_en_i 0
+Set 'Imp:/WORK/cv32e40p_clock_gate/scan_cg_en_i' to constant 0
+Set 'Imp:/WORK/cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1/scan_cg_en_i' to constant 0
+Set 'Imp:/WORK/cv32e40p_register_file_ADDR_WIDTH6_DATA_WIDTH32_FPU0_ZFINX0/scan_cg_en_i' to constant 0
+Set 'Imp:/WORK/cv32e40p_sleep_unit_COREV_CLUSTER0/scan_cg_en_i' to constant 0
+Set 'Imp:/WORK/cv32e40p_top/scan_cg_en_i' to constant 0
+1
+###################### Matching Compare points ####################
+match
+Reference design is 'Ref:/WORK/cv32e40p_top'
+Implementation design is 'Imp:/WORK/cv32e40p_top'
+    Info:  Detected netlists in reference and implementation designs.
+           Starting fast netlist verification mode.
+Status:  Checking designs...
+    Warning: 94 (4576) undriven nets found in reference (implementation) design; see formality.log for list (FM-399)
+    Warning: 0 (2394) black-box references found in reference (implementation) design; see formality.log for list (FM-182)
+Status:  Building verification models...
+Status:  Matching...
+    Info:  Matching results from fast netlist verification mode may
+           change during the verification step.
+    
+*********************************** Matching Results ***********************************    
+ 2325 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 250 Matched primary inputs, black-box outputs    
+ 0(5) Unmatched reference(implementation) compare points    
+ 0(5) Unmatched reference(implementation) primary inputs, black-box outputs    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Black-boxes (BBox)                                                        0        2394    
+ Input ports (Port)                                                        0           5    
+ Output ports (Port)                                                       0           5    
+****************************************************************************************
+
+1
+######################### Run Verification ########################
+set successful [verify]
+Reference design is 'Ref:/WORK/cv32e40p_top'
+Implementation design is 'Imp:/WORK/cv32e40p_top'
+    
+****************************************************************************************
+
+Status:  Verifying...
+    
+*********************************** Matching Results ***********************************    
+ 2325 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 250 Matched primary inputs, black-box outputs    
+ 0(5) Unmatched reference(implementation) compare points    
+ 0(5) Unmatched reference(implementation) primary inputs, black-box outputs    
+----------------------------------------------------------------------------------------    
+Unmatched Objects                                                        REF        IMPL    
+----------------------------------------------------------------------------------------    
+ Black-boxes (BBox)                                                        0        2394    
+ Input ports (Port)                                                        0           5    
+ Output ports (Port)                                                       0           5    
+****************************************************************************************
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/cv32e40p_top
+ Implementation design: Imp:/WORK/cv32e40p_top
+ 2325 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0     113    2211       1    2325
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Unread                       0       0       0       0       0      47       0      47
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+########################### Reporting ############################# 
+sh mkdir -p reports
+report_passing_points > reports/passing_points.rpt
+report_failing_points > reports/failing_points.rpt
+report_aborted_points > reports/aborted_points.rpt
+report_unverified_points > reports/unverified_points.rpt
+start_gui
+     1  source -echo -verbose script.tcl
+1
+1
+fm_shell (verify)> quit
+
+Maximum memory usage for this session: 1585076 KB
+CPU usage for this session: 27.69 seconds
+Current time: Sun Jun 29 23:45:14 2025
+Elapsed time: 67 seconds
+
+Thank you for using Formality (R)!

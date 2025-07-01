@@ -1,0 +1,449 @@
+1751230039.416967: 17196-7f08562e4200: cdpl_log.c:221: in cdpl_log_open(): debug: @@start_of_log@@
+1751230039.417391: 17196-7f08562e4200: cdpl_log.c:729: in cdpl_log_dump_sysinfo(): info: time: 2025/06/29 22:47:19 EET +0200
+1751230039.417855: 17196-7f08562e4200: cdpl_log.c:731: in cdpl_log_dump_sysinfo(): info: version: O_2018.06_PRIVATE_CDPL_HO2 
+1751230039.418585: 17196-7f08562e4200: cdpl_log.c:736: in cdpl_log_dump_sysinfo(): info: system: Linux 3.10.0-1160.6.1.el7.x86_64 #1 SMP Tue Nov 17 13:59:11 UTC 2020
+1751230039.418958: 17196-7f08562e4200: cdpl_log.c:740: in cdpl_log_dump_sysinfo(): info: processor: x86_64 64-bits
+1751230039.429067: 17196-7f08562e4200: cdpl_log.c:742: in cdpl_log_dump_sysinfo(): info: hostname: IC_EDA
+1751230039.429573: 17196-7f08562e4200: cdpl_log.c:223: in cdpl_log_open(): debug: path: /mnt/hgfs/GP/PnR/prime_time/work/system_log/master.IC_EDA.17196.log
+1751230039.430484: 17196-7f08562e4200: cdpl_log.c:224: in cdpl_log_open(): debug: dir: /mnt/hgfs/GP/PnR/prime_time/work/system_log
+1751230039.431334: 17196-7f08562e4200: cdpl_log.c:621: in cdpl_log_set_filter(): info: filter level 1
+1751230039.431832: 17196-7f08562e4200: cdpl_server.c:522: in cdpl_sv_init(): info: new server S2063359209
+1751230039.433015: 17196-7f08562e4200: cdpl_ipc.c:2731: in cdpl_ipc_init(): info: using IPv4 protocol
+1751230039.437576: 17196-7f08562e4200: cdpl_server.c:649: in cdpl_sv_new_master(): info: new master M1
+1751230039.438073: 17196-7f08562e4200: cdpl_compat_master.c:1995: in cdplInitMaster(): info: bcast dir is `/mnt/hgfs/GP/PnR/prime_time/work/system_log'
+1751230039.440555: 17196-7f08562e4200: cdpl_compat_master.c:4048: in cdplMasterLogInfo(): info: PrimeTime Version   : O-2018.06-SP1
+1751230039.440931: 17196-7f08562e4200: cdpl_compat_master.c:4048: in cdplMasterLogInfo(): info: PrimeTime Build Date: Jul 19, 2018
+1751230039.441652: 17196-7f08562e4200: cdpl_compat_master.c:4048: in cdplMasterLogInfo(): info: PrimeTime Executable: /home/synopsys/pts/O-2018.06-SP1/linux64/syn/bin/pt_shell_exec
+1751230039.442365: 17196-7f08562e4200: cdpl_server.c:4347: in cdpl_sv_ctl_master(): warning: CUSTOM WORKER MANAGEMENT
+1751230039.443196: 17196-7f08562e4200: cdpl_server.c:4417: in cdpl_sv_ctl_master(): warning: master will ignore spurious communication
+1751230039.444342: 17196-7f0829d37700: cdpl_monitor.c:406: in cdpl_mn_init_client(): info: creating client monitor instance
+1751230039.444754: 17196-7f0829d37700: cdpl_ipc.c:2731: in cdpl_ipc_init(): info: using IPv4 protocol
+1751230039.447687: 17196-7f0829d37700: cdpl_ipc.c:3030: in cdpl_ipc_connect(): info: connecting to 192.168.65.135:46359
+1751230039.448385: 17196-7f0829d37700: cdpl_ipc.c:3099: in cdpl_ipc_connect(): info: connected as `192.168.65.135:51552'
+1751230039.449258: 17196-7f08562e4200: cdpl_farm.c:1427: in cdpl_farm_new_ssh(): info: creating SSH farm
+1751230039.449991: 17196-7f08562e4200: cdpl_farm.c:2557: in cdpl_farm_setcmd(): info: using custom command `ssh'
+1751230039.450367: 17196-7f08562e4200: cdpl_compat_master.c:281: in _set_farm_env(): info: exporting CDPL_LOGDIR as `/mnt/hgfs/GP/PnR/prime_time/work/system_log'
+1751230039.451205: 17196-7f08562e4200: cdpl_compat_master.c:301: in _set_farm_env(): info: exporting SNPSLMD_LICENSE_FILE as `27000@IC_EDA'
+1751230039.451532: 17196-7f08562e4200: cdpl_compat_master.c:321: in _set_farm_env(): info: exporting CDPL_OPTIONS as `[filter][nowlogs]'
+1751230039.452306: 17196-7f08562e4200: cdpl_compat_master.c:328: in _set_farm_env(): info: exporting DISPLAY as `:0'
+1751230039.452728: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting SNPSLMD_LICENSE_FILE as `27000@IC_EDA'
+1751230039.453310: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISPLAY as `:0'
+1751230039.453816: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISTRIBUTED_WORKING_DIR as `/mnt/hgfs/GP/PnR/prime_time/work'
+1751230039.454162: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISTRIBUTED_MASTER_LAUNCH_DIR as `/mnt/hgfs/GP/PnR/prime_time'
+1751230039.454906: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting SNPS_SML_DISABLED as `false'
+1751230039.455243: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting CMCR_WKR_LAUNCH_CMD as `/home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv'
+1751230039.455902: 17196-7f08562e4200: cdpl_server.c:725: in cdpl_sv_new_job(): info: new job J1 in M1
+1751230039.456365: 17196-7f08562e4200: cdpl_server.c:2491: in cdpl_sv_start_job(): info: starting job J1
+1751230039.457074: 17196-7f08562e4200: cdpl_compat_master.c:1180: in _add_worker(): info: new worker type 100, min:1, max:4, cmd:`/home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv -max_cores 4 -hoid 100 -master_uid IC_EDA_17196_100'
+1751230039.470430: 17196-7f08562e4200: cdpl_server.c:852: in cdpl_sv_new_bin_withfarm(): info: new bin B1 in J1
+1751230039.471148: 17196-7f08562e4200: cdpl_farm.c:1475: in cdpl_farm_new_sh(): info: creating SH farm on localhost
+1751230039.471902: 17196-7f08562e4200: cdpl_farm.c:2557: in cdpl_farm_setcmd(): info: using custom command `sh'
+1751230039.472817: 17196-7f08562e4200: cdpl_compat_master.c:281: in _set_farm_env(): info: exporting CDPL_LOGDIR as `/mnt/hgfs/GP/PnR/prime_time/work/system_log'
+1751230039.473246: 17196-7f08562e4200: cdpl_compat_master.c:301: in _set_farm_env(): info: exporting SNPSLMD_LICENSE_FILE as `27000@IC_EDA'
+1751230039.474071: 17196-7f08562e4200: cdpl_compat_master.c:321: in _set_farm_env(): info: exporting CDPL_OPTIONS as `[filter][nowlogs]'
+1751230039.474703: 17196-7f08562e4200: cdpl_compat_master.c:328: in _set_farm_env(): info: exporting DISPLAY as `:0'
+1751230039.475529: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting SNPSLMD_LICENSE_FILE as `27000@IC_EDA'
+1751230039.476500: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISPLAY as `:0'
+1751230039.476931: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISTRIBUTED_WORKING_DIR as `/mnt/hgfs/GP/PnR/prime_time/work'
+1751230039.477992: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting DISTRIBUTED_MASTER_LAUNCH_DIR as `/mnt/hgfs/GP/PnR/prime_time'
+1751230039.478452: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting SNPS_SML_DISABLED as `false'
+1751230039.479583: 17196-7f08562e4200: cdpl_compat_master.c:489: in _set_farm_env(): info: exporting CMCR_WKR_LAUNCH_CMD as `/home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv'
+1751230039.482022: 17196-7f0827d33700: cdpl_server_sched.c:478: in _sv_launch_worker(): info: started worker W1 (as C1) in bin B1
+1751230039.482695: 17196-7f0827d33700: cdpl_server_sched.c:478: in _sv_launch_worker(): info: started worker W2 (as C2) in bin B1
+1751230039.483609: 17196-7f0827532700: cdpl_sh.c:40: in cdpl_sh_submit(): info: SH : /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv -max_cores 4 -hoid 100 -master_uid IC_EDA_17196_100
+1751230039.487913: 17196-7f0827532700: cdpl_sh.c:40: in cdpl_sh_submit(): info: SH : /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv -max_cores 4 -hoid 100 -master_uid IC_EDA_17196_100
+1751230039.491095: 17196-7f0827d33700: cdpl_server_sched.c:478: in _sv_launch_worker(): info: started worker W3 (as C3) in bin B1
+1751230039.491505: 17196-7f0827532700: cdpl_sh.c:40: in cdpl_sh_submit(): info: SH : /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv -max_cores 4 -hoid 100 -master_uid IC_EDA_17196_100
+1751230039.495844: 17196-7f0827d33700: cdpl_server_sched.c:478: in _sv_launch_worker(): info: started worker W4 (as C4) in bin B1
+1751230039.496834: 17196-7f0827532700: cdpl_sh.c:40: in cdpl_sh_submit(): info: SH : /home/synopsys/pts/O-2018.06-SP1/bin/pt_shell -slv_type dmsa_slv -max_cores 4 -hoid 100 -master_uid IC_EDA_17196_100
+1751230040.481958: 17196-7f08562e4200: cdpl_server.c:3442: in cdpl_sv_prelaunch(): error: timed out
+1751230041.154647: 17196-7f082a538700: cdpl_server_ipc.c:496: in _sv_on_hello(): info: W3 is `192.168.65.135:51564'
+1751230041.155010: 17196-7f082a538700: cdpl_server_ipc.c:498: in _sv_on_hello(): info: W3 log file is /dev/null
+1751230041.208602: 17196-7f082a538700: cdpl_server_ipc.c:496: in _sv_on_hello(): info: W2 is `192.168.65.135:51576'
+1751230041.208987: 17196-7f082a538700: cdpl_server_ipc.c:498: in _sv_on_hello(): info: W2 log file is /dev/null
+1751230041.273223: 17196-7f082a538700: cdpl_server_ipc.c:496: in _sv_on_hello(): info: W1 is `192.168.65.135:51588'
+1751230041.273570: 17196-7f082a538700: cdpl_server_ipc.c:498: in _sv_on_hello(): info: W1 log file is /dev/null
+1751230041.333719: 17196-7f082a538700: cdpl_server_ipc.c:496: in _sv_on_hello(): info: W4 is `192.168.65.135:51600'
+1751230041.334304: 17196-7f082a538700: cdpl_server_ipc.c:498: in _sv_on_hello(): info: W4 log file is /dev/null
+1751230044.527797: 17196-7f0829d37700: cdpl_ipc.c:3030: in cdpl_ipc_connect(): info: connecting to 192.168.65.135:41894
+1751230044.528382: 17196-7f0829d37700: cdpl_ipc.c:3099: in cdpl_ipc_connect(): info: connected as `192.168.65.135:58262'
+1751230044.529146: 17196-7f0829d37700: cdpl_ipc.c:3030: in cdpl_ipc_connect(): info: connecting to 192.168.65.135:39652
+1751230044.530448: 17196-7f0829d37700: cdpl_ipc.c:3099: in cdpl_ipc_connect(): info: connected as `192.168.65.135:40732'
+1751230044.531223: 17196-7f0829d37700: cdpl_ipc.c:3030: in cdpl_ipc_connect(): info: connecting to 192.168.65.135:41376
+1751230044.532685: 17196-7f0829d37700: cdpl_ipc.c:3099: in cdpl_ipc_connect(): info: connected as `192.168.65.135:49770'
+1751230044.533424: 17196-7f0829d37700: cdpl_ipc.c:3030: in cdpl_ipc_connect(): info: connecting to 192.168.65.135:41890
+1751230044.534187: 17196-7f0829d37700: cdpl_ipc.c:3099: in cdpl_ipc_connect(): info: connected as `192.168.65.135:34536'
+1751230051.060726: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T0 in B1 (prio 0)
+1751230051.061186: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T1 in B1 (prio 0)
+1751230051.061566: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T2 in B1 (prio 0)
+1751230051.062377: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T3 in B1 (prio 0)
+1751230051.063331: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T0 to worker W3
+1751230051.064321: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T1 to worker W2
+1751230051.065574: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T2 to worker W1
+1751230051.066422: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T3 to worker W4
+1751230087.310887: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T1
+1751230087.311393: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T1: utime=18063 stime=14815
+1751230087.311790: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T1: vsize=1976924 rss=1088620 shared=10088 text=162984 data=1319180
+1751230087.368208: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T2
+1751230087.368592: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T2: utime=18515 stime=15362
+1751230087.368869: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T2: vsize=1994608 rss=1106348 shared=10152 text=162984 data=1336864
+1751230087.495531: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T0
+1751230087.496080: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T0: utime=18250 stime=14560
+1751230087.496421: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T0: vsize=1976920 rss=1088064 shared=9520 text=162984 data=1319176
+1751230087.565965: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T3
+1751230087.566241: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T3: utime=18320 stime=14432
+1751230087.566674: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T3: vsize=1994612 rss=1105440 shared=9308 text=162984 data=1336868
+1751230087.941781: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T4 in B1 (prio 0)
+1751230087.942723: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T5 in B1 (prio 0)
+1751230087.945932: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T6 in B1 (prio 0)
+1751230087.949515: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T7 in B1 (prio 0)
+1751230087.950871: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T5 to worker W2
+1751230088.042222: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T6 to worker W1
+1751230088.049308: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T4 to worker W3
+1751230088.052467: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T7 to worker W4
+1751230088.244076: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T6
+1751230088.244977: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T6: utime=134 stime=0
+1751230088.245601: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T6: vsize=1994608 rss=1104772 shared=8576 text=162984 data=1336864
+1751230088.254671: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T4
+1751230088.255547: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T4: utime=127 stime=20
+1751230088.256123: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T4: vsize=1976920 rss=1086920 shared=8376 text=162984 data=1319176
+1751230088.257056: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T5
+1751230088.258121: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T5: utime=133 stime=28
+1751230088.258655: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T5: vsize=1976924 rss=1086908 shared=8376 text=162984 data=1319180
+1751230088.260418: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T7
+1751230088.261472: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T7: utime=142 stime=26
+1751230088.261830: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T7: vsize=1994612 rss=1104512 shared=8380 text=162984 data=1336868
+1751230088.368455: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T8 in B1 (prio 0)
+1751230088.371558: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T9 in B1 (prio 0)
+1751230088.372048: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T10 in B1 (prio 0)
+1751230088.373495: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T11 in B1 (prio 0)
+1751230088.374816: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T10 to worker W1
+1751230088.375797: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T8 to worker W3
+1751230088.376139: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T9 to worker W2
+1751230088.377084: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T11 to worker W4
+1751230088.649816: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T8
+1751230088.650764: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T8: utime=178 stime=4
+1751230088.651422: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T8: vsize=1976920 rss=1084000 shared=5456 text=162984 data=1319176
+1751230088.653370: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T11
+1751230088.653748: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T11: utime=158 stime=10
+1751230088.654763: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T11: vsize=1994612 rss=1101592 shared=5460 text=162984 data=1336868
+1751230088.655227: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T10
+1751230088.656314: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T10: utime=164 stime=7
+1751230088.656980: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T10: vsize=1994608 rss=1101704 shared=5508 text=162984 data=1336864
+1751230088.657979: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T9
+1751230088.658734: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T9: utime=166 stime=8
+1751230088.659026: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T9: vsize=1976924 rss=1083988 shared=5456 text=162984 data=1319180
+1751230308.487576: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T12 in B1 (prio 0)
+1751230308.487943: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T13 in B1 (prio 0)
+1751230308.488211: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T14 in B1 (prio 0)
+1751230308.488787: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T15 in B1 (prio 0)
+1751230308.489341: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T12 to worker W3
+1751230308.489862: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T15 to worker W4
+1751230308.490487: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T14 to worker W1
+1751230308.490936: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T13 to worker W2
+1751230308.723090: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T12
+1751230308.723462: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T12: utime=157 stime=93
+1751230308.723863: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T12: vsize=1976920 rss=1041548 shared=2228 text=162984 data=1319176
+1751230308.724405: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T13
+1751230308.725032: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T13: utime=163 stime=68
+1751230308.725325: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T13: vsize=1976924 rss=1046884 shared=2228 text=162984 data=1319180
+1751230308.727312: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T15
+1751230308.727790: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T15: utime=147 stime=95
+1751230308.728068: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T15: vsize=1994612 rss=1076612 shared=2228 text=162984 data=1336868
+1751230308.729763: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T14
+1751230308.730007: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T14: utime=161 stime=84
+1751230308.730253: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T14: vsize=1994608 rss=1087276 shared=2228 text=162984 data=1336864
+1751230321.133721: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T16 in B1 (prio 0)
+1751230321.134061: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T17 in B1 (prio 0)
+1751230321.134331: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T18 in B1 (prio 0)
+1751230321.135091: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T19 in B1 (prio 0)
+1751230321.135884: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T16 to worker W3
+1751230321.136554: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T17 to worker W2
+1751230321.137361: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T19 to worker W4
+1751230321.137629: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T18 to worker W1
+1751230324.383213: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T17
+1751230324.384428: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T17: utime=4569 stime=146
+1751230324.385420: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T17: vsize=1982044 rss=1050884 shared=8860 text=162984 data=1319180
+1751230324.392148: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T16
+1751230324.393112: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T16: utime=4451 stime=79
+1751230324.396231: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T16: vsize=1982040 rss=1047484 shared=8856 text=162984 data=1319176
+1751230324.396537: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T18
+1751230324.397839: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T18: utime=4205 stime=98
+1751230324.398796: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T18: vsize=1999728 rss=1092192 shared=8732 text=162984 data=1336864
+1751230324.414941: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T19
+1751230324.416209: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T19: utime=4438 stime=105
+1751230324.416592: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T19: vsize=1999732 rss=1068356 shared=8728 text=162984 data=1336868
+1751230324.534059: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T20 in B1 (prio 0)
+1751230324.534860: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T21 in B1 (prio 0)
+1751230324.535747: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T22 in B1 (prio 0)
+1751230324.536767: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T23 in B1 (prio 0)
+1751230324.537680: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T21 to worker W2
+1751230324.538510: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T20 to worker W3
+1751230324.539516: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T22 to worker W1
+1751230324.540492: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T23 to worker W4
+1751230324.797808: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T22
+1751230324.798346: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T22: utime=134 stime=8
+1751230324.798657: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T22: vsize=1999728 rss=1090512 shared=8840 text=162984 data=1336864
+1751230324.800999: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T20
+1751230324.801292: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T20: utime=131 stime=8
+1751230324.801578: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T20: vsize=1982040 rss=1044976 shared=8964 text=162984 data=1319176
+1751230324.802335: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T23
+1751230324.802999: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T23: utime=131 stime=9
+1751230324.803300: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T23: vsize=1999732 rss=1068276 shared=8836 text=162984 data=1336868
+1751230324.805825: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T21
+1751230324.806138: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T21: utime=128 stime=6
+1751230324.806482: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T21: vsize=1982044 rss=1050508 shared=8968 text=162984 data=1319180
+1751230324.907326: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T24 in B1 (prio 0)
+1751230324.907762: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T25 in B1 (prio 0)
+1751230324.908115: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T26 in B1 (prio 0)
+1751230324.908745: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T27 in B1 (prio 0)
+1751230324.909201: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T26 to worker W1
+1751230324.909789: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T24 to worker W3
+1751230324.910130: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T27 to worker W4
+1751230324.910962: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T25 to worker W2
+1751230327.871362: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T24
+1751230327.871644: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T24: utime=2518 stime=185
+1751230327.871892: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T24: vsize=1982044 rss=1045276 shared=10132 text=162984 data=1319180
+1751230327.873356: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T25
+1751230327.873702: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T25: utime=2552 stime=199
+1751230327.874213: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T25: vsize=1982048 rss=1046968 shared=10136 text=162984 data=1319184
+1751230327.875026: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T26
+1751230327.875295: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T26: utime=2614 stime=134
+1751230327.875528: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T26: vsize=1999732 rss=1066636 shared=10008 text=162984 data=1336868
+1751230327.876234: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T27
+1751230327.876676: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T27: utime=2583 stime=117
+1751230327.876888: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T27: vsize=1999736 rss=1063972 shared=10004 text=162984 data=1336872
+1751230336.256907: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T28 in B1 (prio 0)
+1751230336.257626: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T29 in B1 (prio 0)
+1751230336.257838: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T30 in B1 (prio 0)
+1751230336.258030: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T31 in B1 (prio 0)
+1751230336.258634: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T28 to worker W3
+1751230336.259423: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T29 to worker W2
+1751230336.260342: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T30 to worker W1
+1751230336.261304: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T31 to worker W4
+1751230336.706110: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T28
+1751230336.826498: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T28: utime=229 stime=84
+1751230336.828936: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T28: vsize=1982044 rss=1040788 shared=5620 text=162984 data=1319180
+1751230336.832622: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T29
+1751230336.833046: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T29: utime=273 stime=63
+1751230336.836182: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T29: vsize=1982048 rss=1042476 shared=5620 text=162984 data=1319184
+1751230336.856317: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T31
+1751230336.876585: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T31: utime=246 stime=85
+1751230336.983271: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T31: vsize=1999736 rss=1060100 shared=6108 text=162984 data=1336872
+1751230337.005400: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T30
+1751230337.111506: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T30: utime=294 stime=80
+1751230337.111975: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T30: vsize=1999732 rss=1060936 shared=6212 text=162984 data=1336868
+1751230337.639371: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T32 in B1 (prio 0)
+1751230337.640529: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T33 in B1 (prio 0)
+1751230337.641412: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T34 in B1 (prio 0)
+1751230337.642383: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T35 in B1 (prio 0)
+1751230337.643492: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T32 to worker W3
+1751230337.644353: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T33 to worker W2
+1751230337.645398: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T35 to worker W4
+1751230337.646404: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T34 to worker W1
+1751230338.353738: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T34
+1751230338.354979: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T34: utime=133 stime=7
+1751230338.364866: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T34: vsize=1999732 rss=1060968 shared=6244 text=162984 data=1336868
+1751230338.368059: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T35
+1751230338.369439: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T35: utime=135 stime=4
+1751230338.370841: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T35: vsize=1999736 rss=1060236 shared=6244 text=162984 data=1336872
+1751230338.372352: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T32
+1751230338.373802: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T32: utime=125 stime=14
+1751230338.374181: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T32: vsize=1982044 rss=1041300 shared=6132 text=162984 data=1319180
+1751230338.390064: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T33
+1751230338.390784: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T33: utime=122 stime=10
+1751230338.391246: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T33: vsize=1982048 rss=1042996 shared=6140 text=162984 data=1319184
+1751230338.497803: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T36 in B1 (prio 0)
+1751230338.498293: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T37 in B1 (prio 0)
+1751230338.498943: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T38 in B1 (prio 0)
+1751230338.507496: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T39 in B1 (prio 0)
+1751230338.507928: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T38 to worker W1
+1751230338.508990: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T39 to worker W4
+1751230338.514311: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T36 to worker W3
+1751230338.515429: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T37 to worker W2
+1751230368.902094: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T37
+1751230368.903517: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T37: utime=253 stime=22
+1751230368.904070: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T37: vsize=1982048 rss=1043444 shared=6588 text=162984 data=1319184
+1751230368.914582: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T36
+1751230368.920005: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T36: utime=275 stime=30
+1751230368.920655: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T36: vsize=1982044 rss=1041748 shared=6580 text=162984 data=1319180
+1751230369.607531: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T39
+1751230369.615808: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T39: utime=742 stime=100
+1751230369.618667: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T39: vsize=1999736 rss=1061768 shared=7772 text=162984 data=1336872
+1751230369.642583: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T38
+1751230369.644890: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T38: utime=800 stime=78
+1751230369.645204: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T38: vsize=1999732 rss=1060704 shared=8172 text=162984 data=1336868
+1751230370.763197: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T40 in B1 (prio 0)
+1751230370.763659: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T41 in B1 (prio 0)
+1751230370.764027: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T42 in B1 (prio 0)
+1751230370.764699: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T43 in B1 (prio 0)
+1751230370.765478: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T41 to worker W2
+1751230370.766065: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T40 to worker W3
+1751230370.767076: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T43 to worker W4
+1751230370.767413: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T42 to worker W1
+1751230370.993154: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T43
+1751230370.995414: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T43: utime=138 stime=52
+1751230370.998316: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T43: vsize=2003832 rss=1063476 shared=10052 text=162984 data=1336872
+1751230371.009516: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T42
+1751230371.010016: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T42: utime=143 stime=50
+1751230371.010341: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T42: vsize=2003828 rss=1061080 shared=10444 text=162984 data=1336868
+1751230371.073785: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T41
+1751230371.074031: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T41: utime=203 stime=31
+1751230371.074468: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T41: vsize=1986144 rss=1045044 shared=9084 text=162984 data=1319184
+1751230371.080800: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T40
+1751230371.081218: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T40: utime=190 stime=43
+1751230371.081677: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T40: vsize=1986140 rss=1042748 shared=9076 text=162984 data=1319180
+1751230371.183189: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T44 in B1 (prio 0)
+1751230371.183855: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T45 in B1 (prio 0)
+1751230371.184750: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T46 in B1 (prio 0)
+1751230371.185283: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T47 in B1 (prio 0)
+1751230371.185673: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T47 to worker W4
+1751230371.186753: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T46 to worker W1
+1751230371.187690: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T45 to worker W2
+1751230371.188124: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T44 to worker W3
+1751230378.967456: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T46
+1751230379.042673: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T46: utime=11692 stime=49
+1751230379.047232: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T46: vsize=2009008 rss=1069700 shared=18676 text=162984 data=1336928
+1751230379.054769: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T47
+1751230379.055364: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T47: utime=11690 stime=67
+1751230379.055848: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T47: vsize=2009008 rss=1072136 shared=18648 text=162984 data=1336928
+1751230379.305233: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T44
+1751230379.306113: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T44: utime=14125 stime=52
+1751230379.307077: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T44: vsize=1991316 rss=1052400 shared=18344 text=162984 data=1319236
+1751230379.307943: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T45
+1751230379.308758: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T45: utime=13905 stime=60
+1751230379.309223: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T45: vsize=1991320 rss=1054696 shared=18340 text=162984 data=1319240
+1751230379.484547: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T48 in B1 (prio 0)
+1751230379.534336: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T49 in B1 (prio 0)
+1751230379.534727: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T50 in B1 (prio 0)
+1751230379.535440: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T51 in B1 (prio 0)
+1751230379.536615: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T50 to worker W1
+1751230379.537464: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T51 to worker W4
+1751230379.538438: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T48 to worker W3
+1751230379.539290: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T49 to worker W2
+1751230379.843877: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T51
+1751230379.845450: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T51: utime=238 stime=7
+1751230379.846818: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T51: vsize=2009008 rss=1072140 shared=18652 text=162984 data=1336928
+1751230379.859880: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T50
+1751230379.870282: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T50: utime=242 stime=2
+1751230379.870589: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T50: vsize=2009008 rss=1069704 shared=18680 text=162984 data=1336928
+1751230379.872759: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T48
+1751230379.875110: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T48: utime=230 stime=7
+1751230379.875571: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T48: vsize=1991316 rss=1052404 shared=18348 text=162984 data=1319236
+1751230379.879589: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T49
+1751230379.880051: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T49: utime=266 stime=14
+1751230379.882415: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T49: vsize=1991320 rss=1054700 shared=18344 text=162984 data=1319240
+1751230379.995201: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T52 in B1 (prio 0)
+1751230379.995909: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T53 in B1 (prio 0)
+1751230379.998309: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T54 in B1 (prio 0)
+1751230379.999213: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T55 in B1 (prio 0)
+1751230380.000269: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T55 to worker W4
+1751230380.000915: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T54 to worker W1
+1751230380.002176: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T52 to worker W3
+1751230380.002858: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T53 to worker W2
+1751230380.222075: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T55
+1751230380.222417: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T55: utime=241 stime=6
+1751230380.222877: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T55: vsize=2009008 rss=1072144 shared=18656 text=162984 data=1336928
+1751230380.223193: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T53
+1751230380.223788: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T53: utime=246 stime=0
+1751230380.225005: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T53: vsize=1991320 rss=1054704 shared=18348 text=162984 data=1319240
+1751230380.237352: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T52
+1751230380.237729: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T52: utime=246 stime=4
+1751230380.238062: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T52: vsize=1991316 rss=1052408 shared=18352 text=162984 data=1319236
+1751230380.238919: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T54
+1751230380.240319: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T54: utime=241 stime=3
+1751230380.240673: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T54: vsize=2009008 rss=1069708 shared=18684 text=162984 data=1336928
+1751230389.587347: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T56 in B1 (prio 0)
+1751230389.587805: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T57 in B1 (prio 0)
+1751230389.588196: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T58 in B1 (prio 0)
+1751230389.588998: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T59 in B1 (prio 0)
+1751230389.590160: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T59 to worker W4
+1751230389.590943: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T57 to worker W2
+1751230389.591388: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T56 to worker W3
+1751230389.592243: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T58 to worker W1
+1751230390.185533: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T57
+1751230390.185873: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T57: utime=827 stime=5
+1751230390.186557: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T57: vsize=1991320 rss=1055288 shared=18932 text=162984 data=1319240
+1751230390.231376: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T59
+1751230390.231700: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T59: utime=765 stime=8
+1751230390.232467: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T59: vsize=2009008 rss=1072720 shared=19232 text=162984 data=1336928
+1751230390.250974: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T56
+1751230390.251288: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T56: utime=951 stime=18
+1751230390.251513: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T56: vsize=1991316 rss=1052992 shared=18936 text=162984 data=1319236
+1751230390.254172: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T58
+1751230390.254437: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T58: utime=973 stime=5
+1751230390.254685: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T58: vsize=2009008 rss=1070280 shared=19256 text=162984 data=1336928
+1751230390.395608: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T60 in B1 (prio 0)
+1751230390.395915: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T61 in B1 (prio 0)
+1751230390.396201: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T62 in B1 (prio 0)
+1751230390.396734: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T63 in B1 (prio 0)
+1751230390.397033: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T61 to worker W2
+1751230390.397551: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T63 to worker W4
+1751230390.398472: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T60 to worker W3
+1751230390.399386: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T62 to worker W1
+1751230390.521795: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T61
+1751230390.522209: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T61: utime=111 stime=2
+1751230390.522710: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T61: vsize=1991320 rss=1055336 shared=18980 text=162984 data=1319240
+1751230390.526845: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T60
+1751230390.527150: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T60: utime=111 stime=2
+1751230390.527503: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T60: vsize=1991316 rss=1053040 shared=18984 text=162984 data=1319236
+1751230390.530646: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T63
+1751230390.530954: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T63: utime=108 stime=1
+1751230390.531270: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T63: vsize=2009008 rss=1072768 shared=19280 text=162984 data=1336928
+1751230390.531899: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T62
+1751230390.532729: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T62: utime=120 stime=1
+1751230390.533021: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T62: vsize=2009008 rss=1070328 shared=19304 text=162984 data=1336928
+1751230407.327914: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T64 in B1 (prio 0)
+1751230407.328298: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T65 in B1 (prio 0)
+1751230407.331598: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T66 in B1 (prio 0)
+1751230407.332500: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T67 in B1 (prio 0)
+1751230407.333479: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T65 to worker W2
+1751230407.334178: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T64 to worker W3
+1751230407.335211: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T67 to worker W4
+1751230407.336130: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T66 to worker W1
+1751230407.588297: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T66
+1751230407.595066: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T66: utime=137 stime=34
+1751230407.595453: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T66: vsize=2009008 rss=1069228 shared=19496 text=162984 data=1336928
+1751230407.597086: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T67
+1751230407.597996: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T67: utime=138 stime=38
+1751230407.598671: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T67: vsize=2009008 rss=1071652 shared=19472 text=162984 data=1336928
+1751230407.599482: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T64
+1751230407.600113: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T64: utime=162 stime=36
+1751230407.603950: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T64: vsize=1991316 rss=1050704 shared=19176 text=162984 data=1319236
+1751230407.604722: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T65
+1751230407.605320: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T65: utime=134 stime=47
+1751230407.608600: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T65: vsize=1991320 rss=1053364 shared=19172 text=162984 data=1319240
+1751230418.617655: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T68 in B1 (prio 0)
+1751230418.618243: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T69 in B1 (prio 0)
+1751230418.618536: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T70 in B1 (prio 0)
+1751230418.619386: 17196-7f08562e4200: cdpl_server.c:1622: in _sv_gen_task(): info: new task T71 in B1 (prio 0)
+1751230418.620267: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T70 to worker W1
+1751230418.620990: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T71 to worker W4
+1751230418.621925: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T68 to worker W3
+1751230418.624041: 17196-7f0827d33700: cdpl_server_sched.c:709: in _assign(): info: assigning task T69 to worker W2
+1751230428.896820: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W4 completed task T71
+1751230428.897170: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T71: utime=2482 stime=908
+1751230428.897859: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T71: vsize=1994672 rss=1069480 shared=17204 text=162984 data=1336928
+1751230430.057625: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W2 completed task T69
+1751230430.058464: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T69: utime=2082 stime=592
+1751230430.059189: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T69: vsize=1985176 rss=1052020 shared=18148 text=162984 data=1319240
+1751230430.754620: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W3 completed task T68
+1751230430.754880: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T68: utime=2989 stime=661
+1751230430.755147: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T68: vsize=1976980 rss=1048896 shared=16828 text=162984 data=1319236
+1751230439.871885: 17196-7f082a538700: cdpl_server_ipc.c:886: in _sv_on_finish(): info: worker W1 completed task T70
+1751230439.872479: 17196-7f082a538700: cdpl_server_ipc.c:893: in _sv_on_finish(): info: stat T70: utime=12042 stime=554
+1751230439.872827: 17196-7f082a538700: cdpl_server_ipc.c:901: in _sv_on_finish(): info: statm T70: vsize=2002864 rss=1069352 shared=18560 text=162984 data=1336928
+1751230513.665444: 17196-7f0829536700: cdpl_ipc.c:802: in _readv(): warning: read(): EOF
+1751230513.675751: 17196-7f0829536700: cdpl_ipc.c:802: in _readv(): warning: read(): EOF
+1751230513.676865: 17196-7f0829536700: cdpl_ipc.c:802: in _readv(): warning: read(): EOF
+1751230513.677401: 17196-7f0829536700: cdpl_ipc.c:802: in _readv(): warning: read(): EOF
+1751230513.794513: 17196-7f08562e4200: cdpl_server.c:2276: in cdpl_sv_halt_job_errno(): info: stopping job J1
+1751230513.796888: 17196-7f08562e4200: cdpl_farm.c:1581: in cdpl_farm_free(): info: freeing farm
+1751230513.810706: 17196-7f08562e4200: cdpl_server.c:281: in _sv_free_job(): info: freeing job J1
+1751230513.819101: 17196-7f08562e4200: cdpl_farm.c:1581: in cdpl_farm_free(): info: freeing farm
+1751230513.819607: 17196-7f08562e4200: cdpl_monitor.c:495: in cdpl_mn_kill(): info: killing monitor
+1751230513.820096: 17196-7f082ad39700: cdpl_ipc.c:802: in _readv(): warning: read(): EOF
+1751230513.822328: 17196-7f0829d37700: cdpl_ipc.c:2997: in cdpl_ipc_free(): warning: 1 host(s) were not released
+1751230513.825771: 17196-7f08562e4200: cdpl_server.c:2386: in cdpl_sv_free(): info: freeing server S2063359209
+1751230513.826211: 17196-7f08562e4200: cdpl_server.c:2351: in cdpl_sv_kill_errno(): info: killing server
+1751230513.826749: 17196-7f08562e4200: cdpl_server.c:314: in _sv_free_master(): info: freeing master M1

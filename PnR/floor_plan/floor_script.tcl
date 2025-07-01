@@ -1,4 +1,3 @@
-sh rm -rf ../ndm/cv32e40p_top/cv32e40p_floorplan
 open_block ../ndm/cv32e40p_top:cv32e40p_top_init
 copy_block -from_block cv32e40p_top:cv32e40p_top_init -to_block cv32e40p_floorplan
 current_block cv32e40p_floorplan
@@ -12,6 +11,8 @@ set NDM_GROUND_NET      "VSS"
 set NDM_GROUND_PORT     "VSS"
 
 ## Making layers perpendicular on each other
+set_attribute [get_site_defs unit] is_default true
+set_attribute [get_site_defs unit] symmetry Y
 set_attribute [get_layers {M1 M3 M5 M7 M9}] routing_direction horizontal
 set_attribute [get_layers {M2 M4 M6 M8}]    routing_direction vertical
 set_attribute [get_layers MRDL]           routing_direction horizontal

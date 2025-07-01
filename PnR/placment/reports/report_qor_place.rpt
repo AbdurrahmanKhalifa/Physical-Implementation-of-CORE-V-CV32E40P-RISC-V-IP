@@ -2,16 +2,16 @@
 Report : qor
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Thu May 29 05:29:11 2025
+Date   : Sun Jun 29 18:39:17 2025
 ****************************************
 
 
-Scenario           'func_fast'
+Scenario           'func_fast_Cmax'
 Timing Path Group  'clk_i'
 ----------------------------------------
-Levels of Logic:                     48
-Critical Path Length:              2.89
-Critical Path Slack:               2.10
+Levels of Logic:                      9
+Critical Path Length:              2.68
+Critical Path Slack:               1.07
 Critical Path Clk Period:          5.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -20,12 +20,54 @@ Total Hold Violation:              0.00
 No. of Hold Violations:               0
 ----------------------------------------
 
-Scenario           'func_fast'
-Timing Path Group  'scan_clk'
+Scenario           'func_fast_Cmin'
+Timing Path Group  'clk_i'
 ----------------------------------------
-Levels of Logic:                     48
-Critical Path Length:              2.89
-Critical Path Slack:               2.10
+Levels of Logic:                      9
+Critical Path Length:              2.67
+Critical Path Slack:               1.08
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     53
+Critical Path Length:              1.67
+Critical Path Slack:               0.33
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     53
+Critical Path Length:              1.62
+Critical Path Slack:               0.38
+Critical Path Clk Period:          5.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_fast_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     18
+Critical Path Length:             80.43
+Critical Path Slack:              19.56
 Critical Path Clk Period:        100.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -34,70 +76,84 @@ Total Hold Violation:              0.00
 No. of Hold Violations:               0
 ----------------------------------------
 
-Scenario           'func_slow'
+Scenario           'scan_fast_Cmin'
 Timing Path Group  'clk_i'
 ----------------------------------------
-Levels of Logic:                     51
-Critical Path Length:              1.75
-Critical Path Slack:               0.20
-Critical Path Clk Period:          5.00
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:             -0.03
-Total Hold Violation:            -84.09
-No. of Hold Violations:            4570
-----------------------------------------
-
-Scenario           'func_slow'
-Timing Path Group  'scan_clk'
-----------------------------------------
-Levels of Logic:                     20
-Critical Path Length:             98.10
-Critical Path Slack:               1.82
+Levels of Logic:                     18
+Critical Path Length:             80.40
+Critical Path Slack:              19.59
 Critical Path Clk Period:        100.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:             -0.03
-Total Hold Violation:            -84.09
-No. of Hold Violations:            4570
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     18
+Critical Path Length:             81.04
+Critical Path Slack:              18.92
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                     18
+Critical Path Length:             80.98
+Critical Path Slack:              18.98
+Critical Path Clk Period:        100.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
 ----------------------------------------
 
 
 Cell Count
 ----------------------------------------
-Hierarchical Cell Count:             74
-Hierarchical Port Count:          11937
-Leaf Cell Count:                  26107
-Buf/Inv Cell Count:                5948
-Buf Cell Count:                     604
-Inv Cell Count:                    5344
+Hierarchical Cell Count:             72
+Hierarchical Port Count:          13007
+Leaf Cell Count:                  24543
+Buf/Inv Cell Count:                4319
+Buf Cell Count:                     388
+Inv Cell Count:                    3931
 CT Buf/Inv Cell Count:                0
-Combinational Cell Count:         23703
-Sequential Cell Count:             2404
+Combinational Cell Count:         22284
+Sequential Cell Count:             2259
 Macro Count:                          0
 ----------------------------------------
 
 
 Area
 ----------------------------------------
-Combinational Area:            13626.85
-Noncombinational Area:          3227.52
-Buf/Inv Area:                   1874.57
-Total Buffer Area:               651.08
-Total Inverter Area:            1223.49
+Combinational Area:            12919.33
+Noncombinational Area:          3010.41
+Buf/Inv Area:                   1097.30
+Total Buffer Area:               184.39
+Total Inverter Area:             912.91
 Macro/Black Box Area:              0.00
 Net Area:                             0
 Net XLength:                       0.00
 Net YLength:                       0.00
 ----------------------------------------
-Cell Area (netlist):                          16854.37
-Cell Area (netlist and physical only):        18364.86
+Cell Area (netlist):                          15929.74
+Cell Area (netlist and physical only):        17205.27
 Net Length:                        0.00
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             28614
+Total Number of Nets:             26877
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0

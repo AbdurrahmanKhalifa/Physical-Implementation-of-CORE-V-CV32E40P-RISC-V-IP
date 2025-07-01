@@ -1,0 +1,16 @@
+./output/cv32e40p.spef.tlup_max_25.spef for scenarios: 
+	 scenario: func_fast_Cmax, corner type: late/early
+	 scenario: scan_fast_Cmax, corner type: late/early
+
+./output/cv32e40p.spef.tlup_min_25.spef for scenarios: 
+	 scenario: func_fast_Cmin, corner type: late/early
+	 scenario: scan_fast_Cmin, corner type: late/early
+
+./output/cv32e40p.spef.tlup_max_125.spef for scenarios: 
+	 scenario: func_slow_Cmax, corner type: late/early
+	 scenario: scan_slow_Cmax, corner type: late/early
+
+./output/cv32e40p.spef.tlup_min_125.spef for scenarios: 
+	 scenario: func_slow_Cmin, corner type: late/early
+	 scenario: scan_slow_Cmin, corner type: late/early
+

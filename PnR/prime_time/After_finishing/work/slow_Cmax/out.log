@@ -1,0 +1,48 @@
+sh sync
+
+restore_session /mnt/hgfs/GP/PnR/prime_time/After_finishing/func_fast_Cmax
+Information: Clean up the current session for restore:
+	 removing all loaded designs and libraries in memory.... (SR-004)
+Date session saved: Sun Jun 29 23:11:05 2025
+Restoring variable information.....
+Restoring netlist information.....
+Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ff0p88v25c.db'
+Restoring environmental constraints.....
+Restoring timing information.....
+Restoring miscellaneous application information.....
+Completing timing information.....
+Information: Defining new variable 'lc'. (CMD-041)
+Information: Defining new variable 'command'. (CMD-041)
+Information: Defining new variable 'SDC'. (CMD-041)
+Information: Defining new variable 'scenario'. (CMD-041)
+Information: Defining new variable 'gui_auto_start'. (CMD-041)
+Information: Defining new variable 'tcl_prompt1'. (CMD-041)
+Information: Defining new variable 'DB_PATH'. (CMD-041)
+Information: Defining new variable 'PI_CAT'. (CMD-041)
+Information: Defining new variable 'parasitics'. (CMD-041)
+Information: Defining new variable 'longstr'. (CMD-041)
+Information: Defining new variable 'gui_online_browser'. (CMD-041)
+Information: Defining new variable 'HIERARCHY_DELIMITER'. (CMD-041)
+Information: Defining new variable 'LIB'. (CMD-041)
+1
+report_constraint -all_violators
+1
+report_global_timing
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 23:15:03 2025
+****************************************
+
+1
+save_session /mnt/hgfs/GP/PnR/prime_time/After_finishing/all_corners/[get_current_task_label]
+Saving environmental constraints.....
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Information: Saved session uses shared data located in /mnt/hgfs/GP/PnR/prime_time/After_finishing/all_corners/common_data/b (SR-036)
+Saving variable information.....
+Information: Executed with 4 workers
+1

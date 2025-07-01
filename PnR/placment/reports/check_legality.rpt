@@ -13,13 +13,14 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer M1: cached 0 shapes out of 377 total shapes.
+Layer M1: cached 0 shapes out of 341 total shapes.
 Layer M2: cached 0 shapes out of 0 total shapes.
-Cached 7917 vias out of 18644 total vias.
+Layer M3: cached 0 shapes out of 0 total shapes.
+Cached 6651 vias out of 15672 total vias.
 
 check_legality for block design cv32e40p_top ... 
-Warning: Library cell saed14rvt_ss0p6v125c:SAEDRVT14_ISOFSDPQ_PECO_8.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
-Warning: Library cell saed14rvt_ss0p6v125c:SAEDRVT14_DCAP_PV1ECO_12.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
+Warning: Library cell saed14rvt:SAEDRVT14_ISOFSDPQ_PECO_8.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
+Warning: Library cell saed14rvt:SAEDRVT14_DCAP_PV1ECO_12.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 Design has no advanced rules
 Checking legality

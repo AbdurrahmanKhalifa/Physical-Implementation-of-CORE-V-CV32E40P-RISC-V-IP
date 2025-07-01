@@ -2,7 +2,7 @@
 Report : qor
 Design : cv32e40p_top
 Version: O-2018.06-SP1
-Date   : Sun May 25 23:32:47 2025
+Date   : Sun Jun 29 17:58:37 2025
 ****************************************
 ************************************************************
 Timer Settings:
@@ -14,11 +14,10 @@ Variation Type:                            fixed_derate
 Clock Reconvergence Pessimism Removal:     disabled
 Advanced Receiver Model:                   disabled
 ************************************************************
-Information: Corner fast: no PVT mismatches. (PVT-032)
-Information: Corner typical: no PVT mismatches. (PVT-032)
-Information: Corner slow: no PVT mismatches. (PVT-032)
-Warning: no valid parasitic for typical corner(LATE) (NEX-018)
-Warning: no valid parasitic for typical corner(EARLY) (NEX-018)
+Information: Corner slow_Cmin: no PVT mismatches. (PVT-032)
+Information: Corner slow_Cmax: no PVT mismatches. (PVT-032)
+Information: Corner fast_Cmin: no PVT mismatches. (PVT-032)
+Information: Corner fast_Cmax: no PVT mismatches. (PVT-032)
 Information: The stitching and editing of coupling caps is turned OFF for design 'cv32e40p_top:cv32e40p_floorplan.design'. (TIM-125)
 Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
@@ -35,45 +34,157 @@ Information: r = 2.541468 ohm/um, via_r = 0.640309 ohm/cut, c = 0.091103 ff/um, 
 Information: r = 2.163229 ohm/um, via_r = 1.012435 ohm/cut, c = 0.096337 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Information: The RC mode used is VR for design 'cv32e40p_top'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 40228, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 28510, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 
+
+Scenario           'func_fast_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           1769.36
+Critical Path Slack:           -2243.89
+Critical Path Clk Period:          5.00
+Total Negative Slack:        -7433365.94
+No. of Violating Paths:            4517
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_fast_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           1769.36
+Critical Path Slack:           -2243.89
+Critical Path Clk Period:          5.00
+Total Negative Slack:        -7433365.94
+No. of Violating Paths:            4517
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           3793.05
+Critical Path Slack:           -6511.41
+Critical Path Clk Period:          5.00
+Total Negative Slack:        -18207727.80
+No. of Violating Paths:            4517
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           3793.05
+Critical Path Slack:           -6511.41
+Critical Path Clk Period:          5.00
+Total Negative Slack:        -18207727.80
+No. of Violating Paths:            4517
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_fast_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           1778.86
+Critical Path Slack:           -2158.39
+Critical Path Clk Period:        100.00
+Total Negative Slack:        -4056768.91
+No. of Violating Paths:            2259
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_fast_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           1778.86
+Critical Path Slack:           -2158.39
+Critical Path Clk Period:        100.00
+Total Negative Slack:        -4056768.91
+No. of Violating Paths:            2259
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmax'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           3802.55
+Critical Path Slack:           -6425.91
+Critical Path Clk Period:        100.00
+Total Negative Slack:        -12650497.53
+No. of Violating Paths:            2259
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'scan_slow_Cmin'
+Timing Path Group  'clk_i'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:           3802.55
+Critical Path Slack:           -6425.91
+Critical Path Clk Period:        100.00
+Total Negative Slack:        -12650497.53
+No. of Violating Paths:            2259
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
 
 
 Cell Count
 ----------------------------------------
-Hierarchical Cell Count:             74
-Hierarchical Port Count:          11591
-Leaf Cell Count:                  39189
-Buf/Inv Cell Count:               19101
-Buf Cell Count:                    7339
-Inv Cell Count:                   11762
+Hierarchical Cell Count:             72
+Hierarchical Port Count:          11573
+Leaf Cell Count:                  27794
+Buf/Inv Cell Count:                7723
+Buf Cell Count:                    1953
+Inv Cell Count:                    5770
 CT Buf/Inv Cell Count:                0
-Combinational Cell Count:         36785
-Sequential Cell Count:             2404
+Combinational Cell Count:         25535
+Sequential Cell Count:             2259
 Macro Count:                          0
 ----------------------------------------
 
 
 Area
 ----------------------------------------
-Combinational Area:            17165.08
-Noncombinational Area:          3201.95
-Buf/Inv Area:                   5497.34
-Total Buffer Area:              2886.18
-Total Inverter Area:            2611.16
+Combinational Area:            13645.67
+Noncombinational Area:          3008.81
+Buf/Inv Area:                   1938.19
+Total Buffer Area:               657.25
+Total Inverter Area:            1280.94
 Macro/Black Box Area:              0.00
 Net Area:                             0
 Net XLength:                       0.00
 Net YLength:                       0.00
 ----------------------------------------
-Cell Area (netlist):                          20367.03
-Cell Area (netlist and physical only):        21877.52
+Cell Area (netlist):                          16654.48
+Cell Area (netlist and physical only):        17930.01
 Net Length:                        0.00
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             42034
+Total Number of Nets:             30458
 Nets with Violations:                 0
 Max Trans Violations:                 0
 Max Cap Violations:                   0

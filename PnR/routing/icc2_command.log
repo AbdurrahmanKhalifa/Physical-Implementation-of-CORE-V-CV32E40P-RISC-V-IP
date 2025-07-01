@@ -1,0 +1,30 @@
+#@ # 
+#@ # Running icc2_shell Version O-2018.06-SP1 for linux64 -- Jul 17, 2018
+#@ # Date:   Sun Jun 29 19:52:50 2025
+#@ # Run by: ICer@IC_EDA
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /mnt/hgfs/GP/PnR/ndm/cv32e40p_top -edit
+open_block /mnt/hgfs/GP/PnR/ndm/cv32e40p_top:cv32e40p_routing.design
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetX} -value {0.001}
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetY} -value {0.001}
+link_block
+foreach scenario {func_fast_Cmax func_fast_Cmin func_slow_Cmax func_slow_Cmin} {
+    write_sdc -nosplit -output ./output/$scenario.sdc -scenario $scenario }
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-72}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge edit_group shape via placement_blockage }
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {77.310 139.586}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {77.396 139.662}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {77.396 139.662}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {88.505 139.836}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 2 -at_point {88.499 139.862}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {88.493 139.859}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {88.488 139.855}
+gui_zoom -window [gui_get_current_window -types Layout -view] -factor 0.5 -at_point {88.481 139.882}
+quit

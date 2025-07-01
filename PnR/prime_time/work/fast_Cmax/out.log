@@ -1,0 +1,101 @@
+sh sync
+
+restore_session /mnt/hgfs/GP/PnR/prime_time/func_slow_Cmax
+Information: Clean up the current session for restore:
+	 removing all loaded designs and libraries in memory.... (SR-004)
+Date session saved: Sun Jun 29 22:45:06 2025
+Restoring variable information.....
+Restoring netlist information.....
+Loading db file '/mnt/hgfs/saed14_pdk/stdcell_rvt/db_ccs/saed14rvt_ss0p6v125c.db'
+Restoring environmental constraints.....
+Restoring timing information.....
+Restoring miscellaneous application information.....
+Completing timing information.....
+Information: Defining new variable 'lc'. (CMD-041)
+Information: Defining new variable 'command'. (CMD-041)
+Information: Defining new variable 'SDC'. (CMD-041)
+Information: Defining new variable 'scenario'. (CMD-041)
+Information: Defining new variable 'gui_auto_start'. (CMD-041)
+Information: Defining new variable 'tcl_prompt1'. (CMD-041)
+Information: Defining new variable 'DB_PATH'. (CMD-041)
+Information: Defining new variable 'PI_CAT'. (CMD-041)
+Information: Defining new variable 'parasitics'. (CMD-041)
+Information: Defining new variable 'longstr'. (CMD-041)
+Information: Defining new variable 'gui_online_browser'. (CMD-041)
+Information: Defining new variable 'HIERARCHY_DELIMITER'. (CMD-041)
+Information: Defining new variable 'LIB'. (CMD-041)
+1
+report_constraint -all_violators
+1
+report_global_timing
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 22:48:08 2025
+****************************************
+
+1
+source /mnt/hgfs/Test_GP/DFT/cons/dont_use.tcl
+Error: could not open script file "/mnt/hgfs/Test_GP/DFT/cons/dont_use.tcl" (CMD-015)
+Error: 
+	Use error_info for more info. (CMD-013)
+
+source /mnt/hgfs/GP/DFT/cons/dont_use.tcl
+1
+Information: Setting timing_save_pin_arrival_and_required to TRUE and updating timing. (PTE-076)
+Information: It is recommended that the variable timing_save_pin_arrival_and_required be set before the initial timing update for optimal performance of this command. (PTE-077)
+Information: Starting fix_eco_timing    at [ Sun Jun 29 22:52:03 2025 ] (memory usage:   1948.4 MB)
+Information: 0 violating endpoints have been found...
+Information: 0 violating endpoints found...
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+ECO Summary:
+--------------------------------------------------------
+Total number of commands                               0
+Total area increased                                0.00
+Information: Starting fix_eco_drc       at [ Sun Jun 29 22:52:16 2025 ] (memory usage:   1949.0 MB)
+Information: The library cell 'SAEDRVT14_BUF_1' in the buffer list has 'dont_use' attribute set to true. (PTECO-031)
+
+Available buffers:
+
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Loading library 'saed14rvt_ss0p6v125c' data due to accessing lib cells not linked in the current design. (LNK-041)
+Information: Starting ECO timing update at [ Sun Jun 29 22:52:51 2025 ] (memory usage:   1949.5 MB)
+Note - message 'RC-011' default limit (100) exceeded.  Remainder will be suppressed.
+Information: Finished ECO timing update at [ Sun Jun 29 22:52:58 2025 ] (memory usage:   1949.5 MB)
+report_constraint -all_violators
+1
+report_global_timing
+****************************************
+Report : global_timing
+	-format { narrow }
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Sun Jun 29 22:53:10 2025
+****************************************
+
+1
+write_changes -o /mnt/hgfs/GP/PnR/prime_time/eco.tcl
+Information: Writing change list file '/mnt/hgfs/GP/PnR/prime_time/eco.tcl'.
+1
+save_session /mnt/hgfs/GP/PnR/prime_time/all_corners/[get_current_task_label]
+Saving environmental constraints.....
+Saving netlist information.....
+Saving miscellaneous application information.....
+Saving timing information.....
+Information: Saved session uses shared data located in /mnt/hgfs/GP/PnR/prime_time/all_corners/common_data/b (SR-036)
+Saving variable information.....
+Information: Executed with 4 workers
+1

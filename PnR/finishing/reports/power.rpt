@@ -1,0 +1,118 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Mon Jun 30 00:04:52 2025
+****************************************
+Information: Doing activity propagation for mode 'func' and corner 'slow_Cmax' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario func_slow_Cmax (POW-052)
+Scenario func_slow_Cmax, iteration 1: expecting at least 5
+Scenario func_slow_Cmax, iteration 2: expecting at least 6
+Scenario func_slow_Cmax, iteration 3: expecting at least 6
+Scenario func_slow_Cmax, iteration 4: expecting at least 6
+Scenario func_slow_Cmax, iteration 5: expecting at least 6
+Scenario func_slow_Cmax, iteration 6: expecting at least 6
+Information: The stitching and editing of coupling caps is turned OFF for design 'cv32e40p_top:cv32e40p_finish.design'. (TIM-125)
+Information: Design cv32e40p_finish has 26978 nets, 0 global routed, 26976 detail routed. (NEX-024)
+Warning: Technology layer 'M4' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M1' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M2' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M3' parameter 'SMIN' = 0.040 does not match 0.026 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'WMIN' = 0.030 does not match 0.060 of technology file (NEX-007)
+Warning: Parasitic Tech Library layer 'M8' parameter 'SMIN' = 0.060 does not match 0.040 of technology file (NEX-007)
+Information: The RC mode used is DR for design 'cv32e40p_top'. (NEX-022)
+---extraction options---
+Corner: fast_Cmax
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: fast_Cmin
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: slow_Cmax
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Corner: slow_Cmin
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.incremental_extraction : true
+ extract.enable_coupling_cap    : false
+Extracting design: cv32e40p_finish 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 26976 nets are successfully extracted. (NEX-028)
+Information: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 26976, routed nets = 26976, across physical hierarchy nets = 0, parasitics cached nets = 26976, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Mode: func
+Corner: slow_Cmax
+Scenario: func_slow_Cmax
+Voltage: 0.60
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/sleep_unit_i/core_busy_q_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.027580 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port SI on cell core_i/sleep_unit_i/fetch_enable_q_reg for parameter Tinp. Lowest table value = 0.003000, highest table value = 0.133000, value = 0.000248 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/sleep_unit_i/fetch_enable_q_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.027580 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/sleep_unit_i/core_clock_gate_i/core_clock_gate for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.007095 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/is_compressed_id_o_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.053215 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/illegal_c_insn_id_o_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.018349 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/instr_valid_id_o_reg for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.063591 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/pc_id_o_reg[31] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.018673 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/pc_id_o_reg[18] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.055676 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CK on cell core_i/if_stage_i/pc_id_o_reg[21] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.055676 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 1.56e+08 pW ( 53.7%)
+  Net Switching Power    = 1.34e+08 pW ( 46.3%)
+Total Dynamic Power      = 2.90e+08 pW (100.0%)
+
+Cell Leakage Power       = 9.67e+07 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+black_box                 0.00e+00               0.00e+00               4.56e+05               4.56e+05    (  0.1%)      
+clock_network             1.44e+08               8.46e+07               4.88e+05               2.29e+08    ( 59.2%)      
+register                  5.77e+06               3.09e+06               1.19e+07               2.08e+07    (  5.4%)      
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)      
+combinational             6.19e+06               4.65e+07               8.39e+07               1.37e+08    ( 35.3%)      
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     1.56e+08 pW            1.34e+08 pW            9.67e+07 pW            3.87e+08 pW
+1
