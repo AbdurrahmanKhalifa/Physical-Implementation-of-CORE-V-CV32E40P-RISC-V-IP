@@ -1,0 +1,19 @@
+==============================
+[LINT-1] Warning: In design 'cv32e40p_if_stage_COREV_PULP0_PULP_OBI0_PULP_SECURE0_FPU0_ZFINX0', cell 'B_24' does not drive any nets. (LINT-1)
+
+[LINT-2] Warning: In design 'cv32e40p_top', net 'apu_flags[0]' driven by pin 'core_i/apu_flags_o[0]' has no loads. (LINT-2)
+
+[LINT-28] Warning: In design 'cv32e40p_sleep_unit_COREV_CLUSTER0', port 'pulp_clock_en_i' is not connected to any nets. (LINT-28)
+
+[LINT-29] Warning: In design 'cv32e40p_ex_stage_COREV_PULP0_FPU0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5', input port 'alu_operand_c_i[31]' is connected directly to output port 'jump_target_o[31]'. (LINT-29)
+
+[LINT-31] Warning: In design 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1', output port 'apu_read_regs_o[2][5]' is connected directly to output port 'hwlp_cnt_o[0][0]'. (LINT-31)
+
+[LINT-32] Warning: In design 'cv32e40p_top', a pin on submodule 'core_i' is connected to logic 1 or logic 0. (LINT-32)
+
+[LINT-33] Warning: In design 'cv32e40p_top', the same net is connected to more than one pin on submodule 'core_i'. (LINT-33)
+
+[LINT-52] Warning: In design 'cv32e40p_id_stage_COREV_PULP0_COREV_CLUSTER0_N_HWLP2_PULP_SECURE0_USE_PMP0_A_EXTENSION0_APU0_FPU0_FPU_ADDMUL_LAT0_FPU_OTHERS_LAT0_ZFINX0_APU_NARGS_CPU3_APU_WOP_CPU6_APU_NDSFLAGS_CPU15_APU_NUSFLAGS_CPU5_DEBUG_TRIGGER_EN1', output port 'apu_read_regs_o[2][5]' is connected directly to 'logic 0'. (LINT-52)
+
+
+TOTAL UNIQUE LINT TYPES FOUND: 8

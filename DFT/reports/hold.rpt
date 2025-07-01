@@ -1,0 +1,377 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Fri Jun 27 00:33:54 2025
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt0p6v25c   Library: saed14rvt_tt0p6v25c
+Wire Load Model Mode: top
+
+  Startpoint: core_i/id_stage_i/mhpmevent_pipe_stall_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_store_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_pipe_stall_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_pipe_stall_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_store_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_store_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: core_i/cs_registers_i/mcountinhibit_q_reg[2]
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/cs_registers_i/mcountinhibit_q_reg[3]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/cs_registers_i/mcountinhibit_q_reg[2]/CK (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/cs_registers_i/mcountinhibit_q_reg[2]/Q (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                          0.04       0.04 r
+  core_i/cs_registers_i/mcountinhibit_q_reg[3]/SI (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                          0.01       0.05 r
+  data arrival time                                                  0.05
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/cs_registers_i/mcountinhibit_q_reg[3]/CK (SAEDRVT14_FSDPSBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                       0.00       0.00
+  data required time                                                 0.00
+  --------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: core_i/id_stage_i/id_valid_q_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/imm_vec_ext_ex_o_reg[0]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/id_valid_q_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/id_valid_q_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/imm_vec_ext_ex_o_reg[0]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/imm_vec_ext_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/mhpmevent_imiss_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_jr_stall_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_imiss_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_imiss_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_jr_stall_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_jr_stall_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/mhpmevent_load_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_minstret_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_load_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_load_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_minstret_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_minstret_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/mhpmevent_jr_stall_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_jump_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_jr_stall_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_jr_stall_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_jump_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_jump_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/mhpmevent_compressed_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_imiss_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_compressed_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_compressed_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_imiss_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_imiss_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/mhpmevent_ld_stall_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/mhpmevent_load_o_reg
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_ld_stall_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/mhpmevent_ld_stall_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/mhpmevent_load_o_reg/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.04 f
+  data arrival time                                                  0.04
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/mhpmevent_load_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.04
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/ex_stage_i/alu_i/alu_div_i/ResInv_SP_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/ex_stage_i/alu_i/alu_div_i/ResReg_DP_reg[0]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/ex_stage_i/alu_i/alu_div_i/ResInv_SP_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/ex_stage_i/alu_i/alu_div_i/ResInv_SP_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/ex_stage_i/alu_i/alu_div_i/ResReg_DP_reg[0]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.05 f
+  data arrival time                                                  0.05
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/ex_stage_i/alu_i/alu_div_i/ResReg_DP_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: core_i/id_stage_i/csr_access_ex_o_reg
+              (rising edge-triggered flip-flop clocked by clk_i)
+  Endpoint: core_i/id_stage_i/csr_op_ex_o_reg[0]
+            (rising edge-triggered flip-flop clocked by clk_i)
+  Path Group: clk_i
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  cv32e40p_top       35000                 saed14rvt_tt0p6v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/csr_access_ex_o_reg/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00 #     0.00 r
+  core_i/id_stage_i/csr_access_ex_o_reg/Q (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.04       0.04 f
+  core_i/id_stage_i/csr_op_ex_o_reg[0]/SI (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.05 f
+  data arrival time                                                  0.05
+
+  clock clk_i (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  core_i/id_stage_i/csr_op_ex_o_reg[0]/CK (SAEDRVT14_FSDPRBQ_V2LP_2)
+                                                          0.00       0.00 r
+  library hold time                                      -0.01      -0.01
+  data required time                                                -0.01
+  --------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+1

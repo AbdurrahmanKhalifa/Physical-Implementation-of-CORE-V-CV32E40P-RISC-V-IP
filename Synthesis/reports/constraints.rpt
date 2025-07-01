@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Thu Jun 26 14:23:19 2025
+****************************************
+
+
+   max_fanout
+
+                             Required        Actual
+   Net                        Fanout         Fanout          Slack
+   -----------------------------------------------------------------
+   rst_ni (dont_touch)         15.00        2258.00       -2243.00  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1               -2243.00  
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   rst_ni (dont_touch)         23.35        1038.50       -1015.15  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      1               -1015.15  
+
+1

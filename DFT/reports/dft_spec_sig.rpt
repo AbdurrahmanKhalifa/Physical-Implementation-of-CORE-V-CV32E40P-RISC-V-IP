@@ -1,0 +1,27 @@
+ 
+****************************************
+Report : DFT signals
+Design : cv32e40p_top
+Version: O-2018.06-SP1
+Date   : Fri Jun 27 00:33:56 2025
+****************************************
+
+========================================
+TEST MODE: all_dft
+VIEW     : Specification
+========================================
+No DFT signals defined in this mode.
+
+========================================
+TEST MODE: Internal_scan
+VIEW     : Specification
+========================================
+No DFT signals defined in this mode.
+
+========================================
+TEST MODE: Mission_mode
+VIEW     : Specification
+========================================
+No DFT signals defined in this mode.
+
+0
